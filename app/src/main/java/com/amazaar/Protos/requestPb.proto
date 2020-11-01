@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+
+enum RequestMethodEnum {
+    UNKNOWN_METHOD = 0;
+    GET = 1;
+    POST = 2;
+    PUT = 3;
+}
+
+

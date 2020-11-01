@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+import "timePb.proto";
+
+enum StatusEnum {
+    UNKNOWN_STATUS = 0;
+    ACTIVE = 1;
+    DELETED = 2;
+    SUSPUNDED = 3;
+    BLOCKED = 4;
+}
+
+message EntityPb {
+    string id = 1;
+    StatusEnum lifeTime = 3;
+    LocalePb locale = 4;
+}
+
+message LocalePb {
+    TimeZoneEnum defaultTimeZone = 1;
+}
+
+
+

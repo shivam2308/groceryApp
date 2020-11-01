@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazaar.Comman.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_login_llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="horizontal">
+
+        <com.amazaar.CustomeComponent.CustomTextView
+            android:id="@+id/fragment_login_tab_tvSignUp"
+            style="@style/ganaral_header_style"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="@string/otp_verification"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_16sdp"
+            app:font_name="NunitoExtraBold.ttf" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fragment_signup_cvSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_2sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/mobileNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+                            <com.amazaar.CustomeComponent.CustomEdittext
+                                android:id="@+id/phone_number"
+                                style="@style/ganaral_edittext_style"
+                                android:hint="@string/enter_phone_number"
+                                android:inputType="number"
+                                app:font_name="NunitoLight.ttf" />
+
+                            <com.amazaar.CustomeComponent.CustomTextView
+                                android:id="@+id/getCode"
+                                style="@style/ganaral_facebook_style"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="@dimen/_6sdp"
+                                android:text="@string/get_code"
+                                app:font_name="NunitoExtraBold.ttf" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/otp_verify"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+                            <com.amazaar.CustomeComponent.CustomEdittext
+                                android:id="@+id/otpCode"
+                                style="@style/ganaral_edittext_style"
+                                android:hint="@string/enter_otp"
+                                android:inputType="text"
+                                app:font_name="NunitoLight.ttf" />
+
+                            <com.amazaar.CustomeComponent.CustomTextView
+                                android:id="@+id/verify"
+                                style="@style/ganaral_facebook_style"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="@dimen/_6sdp"
+                                android:text="@string/verify"
+                                app:font_name="NunitoExtraBold.ttf" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</com.amazaar.Comman.SlidingLinearLayout>

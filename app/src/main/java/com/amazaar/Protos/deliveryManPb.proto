@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+import "entityPb.proto";
+import "summaryPb.proto";
+import "namePb.proto";
+import "contactDetailPb.proto";
+import "imagePb.proto";
+import "timePb.proto";
+
+
+message DeliveryManPb {
+    EntityPb dbInfo = 1;
+    NamePb name =2;
+    ContactDetailPb contact = 3;
+    ImagePb profileImage = 4;
+    string adharNo = 5;
+    TimePb time = 6;
+}
+
+message DeliveryManSearchRequestPb {
+    
+}
+
+message DeliveryManSearchResponsePb {
+    SummaryPb summary = 1;
+    repeated DeliveryManPb results = 2;
+}
+
+
+

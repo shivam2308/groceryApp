@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "796220644087",
+    "firebase_url": "https://amazaargrocery.firebaseio.com",
+    "project_id": "amazaargrocery",
+    "storage_bucket": "amazaargrocery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796220644087:android:b4cce49b5bf4c2985b91f2",
+        "android_client_info": {
+          "package_name": "com.amazaar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796220644087-eu11p73mo9jepj0914plb6n8dscbsudh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amazaar",
+            "certificate_hash": "10853e662055f8aff72eb10535b938d2f3682f16"
+          }
+        },
+        {
+          "client_id": "796220644087-nbdv4t19bnusiaeuu6i191pnuoq9j1rh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBoWXh7LweIZrbanjOkV27ZPwbPzrzQis"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796220644087-nbdv4t19bnusiaeuu6i191pnuoq9j1rh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

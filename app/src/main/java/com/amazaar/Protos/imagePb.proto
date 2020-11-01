@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+
+message ImagePb {
+    string url = 1;
+}

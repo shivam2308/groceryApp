@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+import "entityPb.proto";
+import "timePb.proto";
+import "summaryPb.proto";
+import "customerPb.proto";
+
+
+message LoginPb {
+    EntityPb dbInfo = 1;
+    CustomerPbRef customerRef =2;
+    TimePb time = 3;
+}
+
+message LoginSearchRequestPb {
+    string mobileNo =1;
+}
+
+message LoginSearchResponsePb {
+    SummaryPb summary = 1;
+    repeated LoginPb results = 2;
+}
+
+

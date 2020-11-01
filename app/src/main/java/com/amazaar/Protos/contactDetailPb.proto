@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+message EmailPb {
+    string localPart = 1;
+    string domainPart = 2;
+}
+
+message MobilePb {
+    string mobileNo = 1;
+}
+
+message ContactDetailPb {
+    EmailPb email = 1;
+    MobilePb mobile = 2;
+}

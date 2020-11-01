@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+message NamePb {
+    string firstName = 1;
+    string lastName = 2;
+    string canonicalName = 3;
+}

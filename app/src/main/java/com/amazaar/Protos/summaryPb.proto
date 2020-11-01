@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+
+message SummaryPb{
+    int32 resultCount = 1;
+}
+
+

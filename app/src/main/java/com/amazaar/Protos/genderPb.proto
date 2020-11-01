@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+enum GenderEnum {
+    UNKNOWN_GENDER = 0;
+    MALE = 1;
+    FEMALE = 2;
+}

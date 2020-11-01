@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+message AddressPb {
+    string homeNo = 1;
+    string street = 2;
+    string landMark = 3;
+    CityEnum city = 4;
+    StateEnum state = 5;
+    int32 pincode = 6;
+}
+
+enum CityEnum{
+    UNKNOWN_CITY=0;
+    LUCKNOW=1;
+    SITAPUR=2;
+}
+
+enum StateEnum {
+    UNKNOWN_STATE = 0;
+    UTTAR_PRADESH = 1;
+
+
+
+}
+
+
+

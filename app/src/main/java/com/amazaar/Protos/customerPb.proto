@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+import "entityPb.proto";
+import "summaryPb.proto";
+import "namePb.proto";
+import "addressPb.proto";
+import "contactDetailPb.proto";
+import "genderPb.proto";
+import "imagePb.proto";
+import "timePb.proto";
+
+
+enum PrivilegeTypeEnum {
+    UNKNOWN_PREVILAGE=0;
+    NORMAL=1;
+    ADMIN =2;
+}
+
+
+message CustomerPb {
+    EntityPb dbInfo = 1;
+    PrivilegeTypeEnum privilege =2;
+    NamePb name =3;
+    AddressPb address =4;
+    ContactDetailPb contact = 5;
+    GenderEnum gender =6;
+    ImagePb profileImage = 7;
+    TimePb time = 8;
+}
+
+message CustomerPbRef {
+    string id = 1;
+    NamePb name =2;
+    ContactDetailPb contact = 3;
+}
+
+message CustomerSearchRequestPb {
+    PrivilegeTypeEnum privilege =1;
+}
+
+message CustomerSearchResponsePb {
+    SummaryPb summary = 1;
+    repeated CustomerPb results = 2;
+}
+
+
+

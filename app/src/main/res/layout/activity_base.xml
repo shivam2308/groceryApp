@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazaar.Comman.SlidingRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/box_inset_layout_padding">
+
+    <com.amazaar.Widget.LoadingWIdget.LoadingWidget
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.amazaar.Widget.OtpVerificationWidget.OTPVerificationWidget
+        android:id="@+id/otp_verification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.amazaar.Widget.ProfileSubmitWidget.ProfileSubmitWidget
+        android:id="@+id/profileSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</com.amazaar.Comman.SlidingRelativeLayout>

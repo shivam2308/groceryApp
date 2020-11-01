@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+import "customerPb.proto";
+import "loginPb.proto";
+
+
+message RegistrationPb {
+    CustomerPb customer = 1;
+    LoginPb login = 2;
+}
+
+

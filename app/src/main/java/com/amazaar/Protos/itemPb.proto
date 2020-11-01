@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+import "entityPb.proto";
+import "namePb.proto";
+import "imagePb.proto";
+import "summaryPb.proto";
+import "timePb.proto";
+
+enum ItemTypeEnum {
+    UNKNOWN_ITEM_TYPE = 0;
+    VEGETABLES = 1;
+    FRUITS = 2;
+    KIRANA = 3;
+    DAIRY =4;
+}
+
+
+enum ItemQuantityTypeEnum {
+    UNKNOWN_ITEM_QUANTITY_TYPE = 0;
+    KILO_GRAMS = 1;
+    GRAMS = 2;
+    PIECE = 3;
+    LITRE =4;
+
+}
+enum AvailabilityStatusEnum {
+    UNKNOWN_AVAILABILITY_STATUS = 0;
+    AVAILABLE = 1;
+    NOT_AVAILABLE = 2;
+}
+
+message ItemPb {
+    EntityPb dbInfo = 1;
+    NamePb itemName = 2;
+    ImagePb itemUrl = 3;
+    string quantity = 4;
+    float price = 5;
+    ItemTypeEnum itemType = 6;
+    AvailabilityStatusEnum availabilityStatus = 7;
+    ItemQuantityTypeEnum quantityType = 8;
+    TimePb time = 9;
+}
+message ItemSearchRequestPb {
+    
+}
+message ItemSearchResponsePb {
+    SummaryPb summary = 1;
+    repeated ItemPb results = 2;
+}
