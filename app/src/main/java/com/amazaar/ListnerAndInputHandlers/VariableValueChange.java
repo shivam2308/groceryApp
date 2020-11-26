@@ -12,6 +12,7 @@ public class VariableValueChange<T> {
     }
 
     public T getVar() {
+       // if (listener != null) listener.onChange();
         return var;
     }
 

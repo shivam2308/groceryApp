@@ -8,8 +8,11 @@ import android.view.ViewGroup;
 import com.amazaar.Activity.HomeActivity;
 import com.amazaar.Enums.TopBarUiEnum;
 import com.amazaar.R;
+import com.amazaar.Widget.MenuWIdget.MenuWidget;
 
 public class MenuFragment extends BaseFragment {
+
+    private MenuWidget m_menuWidget;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -26,7 +29,8 @@ public class MenuFragment extends BaseFragment {
 
     @Override
     public void initComponents(View rootView) {
-
+        m_menuWidget= rootView.findViewById(R.id.menuWIdget);
+        m_menuWidget.getView().setMainFragment(this);
     }
 
     @Override

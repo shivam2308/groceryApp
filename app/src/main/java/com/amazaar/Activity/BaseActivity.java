@@ -1,6 +1,6 @@
 package com.amazaar.Activity;
 
-import android.app.Activity;
+
 import android.os.Bundle;
 import android.view.View;
 
@@ -27,8 +27,8 @@ public class BaseActivity extends AppCompatActivity {
         m_profileSubmitWidget = (ProfileSubmitWidget) findViewById(R.id.profileSubmit);
         m_loadingWidget = (LoadingWidget) findViewById(R.id.loading);
         m_profileSubmitWidget.setVisibility(View.GONE);
-        m_otpOtpVerificationWidget.setVisibility(View.GONE);
-        m_loadingWidget.setVisibility(View.VISIBLE);
+        m_otpOtpVerificationWidget.setVisibility(View.VISIBLE);
+        //m_loadingWidget.setVisibility(View.VISIBLE);
         m_otpOtpVerificationWidget.getView().getPhoneNumber().setListener(new VariableValueChange.ChangeListener() {
             @Override
             public void onChange() {

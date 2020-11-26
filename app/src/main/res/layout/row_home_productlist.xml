@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_productlist_cvContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_3sdp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="@dimen/_3sdp"
+    app:cardElevation="0dp">
+
+    <ImageView
+        android:id="@+id/row_home_productlist_ivProImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal" />
+
+
+
+</androidx.cardview.widget.CardView>

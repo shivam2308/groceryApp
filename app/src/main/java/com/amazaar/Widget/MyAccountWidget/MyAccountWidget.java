@@ -2,29 +2,24 @@ package com.amazaar.Widget.MyAccountWidget;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
+import com.amazaar.CommonCode.DefaultImageUrl;
+import com.amazaar.ControlFlow.GetImageFromUrl;
+import com.amazaar.Fragments.UploadImageFragment;
 import com.amazaar.Interfaces.IView;
-import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
+import com.amazaar.SessionManager.CustomerSession;
 import com.amazaar.Utility.Utils;
-import com.amazaar.Widget.MenuWIdget.MenuView;
 import com.google.inject.Injector;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.inject.Inject;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 import roboguice.RoboGuice;
 
 public class MyAccountWidget extends LinearLayout implements IView<MyAccountView>, View.OnClickListener {
@@ -39,10 +34,11 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
     private RelativeLayout rlChangePsw;
     private RelativeLayout rlHistory;
     private RelativeLayout rlDeActive;
-   //* private ProfileAddressListAdapter addressListAdapterNew;
-   // private List<AddressListModelNew> addressListModelNewList;
-    private RecyclerView rvAddress;
-   /* private LinearLayoutManager mLayoutManager;*/
+    private TextView m_address;
+    @Inject
+    private CustomerSession m_customerSession;
+    @Inject
+    private GetImageFromUrl m_imageUrl;
 
 
     public MyAccountWidget(Context context, AttributeSet attrs) {
@@ -56,12 +52,12 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
         tvEmail = (TextView) findViewById(R.id.fragment_myaccount_tvEmail);
         tvPhone = (TextView) findViewById(R.id.fragment_myaccount_tvPhone);
         tvChangePsw = (TextView) findViewById(R.id.fragment_myaccount_tvChange);
+        m_address = (TextView) findViewById(R.id.fragment_myaccount_rvAddress);
         ivProfile = (ImageView) findViewById(R.id.fragment_myaccount_ivProfile);
         tvEdit = (ImageView) findViewById(R.id.fragment_myaccount_tvEdit);
         rlChangePsw = (RelativeLayout) findViewById(R.id.fragment_myaccount_rlChangePsw);
         rlHistory = (RelativeLayout) findViewById(R.id.fragment_myaccount_rlCleanHistory);
         rlDeActive = (RelativeLayout) findViewById(R.id.fragment_myaccount_rlDeActive);
-        //rvAddress = (RecyclerView) rootView.findViewById(R.id.fragment_myaccount_rvAddress);
         inflateLayout();
         if (!isInEditMode()) {
             injectMembers();
@@ -75,12 +71,24 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
         rlChangePsw.setOnClickListener(this);
         rlHistory.setOnClickListener(this);
         rlDeActive.setOnClickListener(this);
-        rvAddress.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
-        setAddress();
     }
 
     private void initWidget() {
+        m_imageUrl.setImageFromUrl(getContext(), m_customerSession.getSession().getProfileImage(), ivProfile, DefaultImageUrl.ImageShowTypeEnum.MALE_PROFILE);
+        tvName.setText(com.amazaar.CommonCode.Strings.titleCase(m_customerSession.getSession().getName()));
+        tvPhone.setText(m_customerSession.getSession().getContact().getMobile().getMobileNo());
+        tvEmail.setText(com.amazaar.CommonCode.Strings.getEmail(m_customerSession.getSession().getContact().getEmail()));
+        m_address.setText(com.amazaar.CommonCode.Strings.getAddress(m_customerSession.getSession().getAddress()));
 
+        tvChangePsw.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                UploadImageFragment uploadImageFragment = new UploadImageFragment();
+                Utils.addNextFragmentFadeAnim(uploadImageFragment, getView().getMainFragment());
+                return false;
+            }
+        });
     }
 
     private void injectMembers() {
@@ -93,22 +101,12 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
         return m_view;
     }
 
-    private void setAddress() {
-
-
-      /*  addressListModelNewList = new ArrayList<>();
-        TempListData tempListData = new TempListData();
-        addressListModelNewList = tempListData.getCheckoutAddress();
-
-        addressListAdapterNew = new ProfileAddressListAdapter(addressListModelNewList, getActivity(), MyAccountFragment.this);
-        rvAddress.setAdapter(addressListAdapterNew);*/
-
-
-    }
 
     @Override
     public void onClick(View v) {
+        if (v == tvChangePsw) {
 
+        }
        /* if(v==rlChangePsw)
         {
             DialogFragmentChangePsw dialogFragmentChangePsw = new DialogFragmentChangePsw();
@@ -136,9 +134,8 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
      * SetUp Toolbar & title
      */
     public void initToolbar() {
-      //  ((HomeActivity) getActivity()).setUpToolbar(getString(R.string.nav_my_account), false,true,false,false);
+        //  ((HomeActivity) getActivity()).setUpToolbar(getString(R.string.nav_my_account), false,true,false,false);
     }
-
 
 
 }

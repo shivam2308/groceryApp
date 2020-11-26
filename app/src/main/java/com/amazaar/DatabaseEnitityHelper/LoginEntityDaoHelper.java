@@ -58,7 +58,11 @@ public class LoginEntityDaoHelper extends AEnityToPbConvertor<LoginEntity, Login
 
     @Override
     public LoginPbOuterClass.LoginPb toPB(LoginEntity entity) throws IOException {
-        return fromEntity(entity, LoginPbOuterClass.LoginPb.class);
+        if(entity!=null) {
+            return fromEntity(entity, LoginPbOuterClass.LoginPb.class);
+        }else{
+            return LoginPbOuterClass.LoginPb.getDefaultInstance();
+        }
     }
     
 

@@ -7,7 +7,7 @@ public class UrlPathProvider {
         REGISTRATION_CUSTOMER,
         CUSTOMER,
         LOGIN,
-        WORKER_TYPE,
+        IMAGE,
         PUSH_NOTIFICATION,
     }
 
@@ -21,9 +21,9 @@ public class UrlPathProvider {
             case CUSTOMER:
                 return "customer";
             case LOGIN:
-                return "loginMain";
-            case WORKER_TYPE:
-                return "workerTypeMain";
+                return "login";
+            case IMAGE:
+                return "image";
             case PUSH_NOTIFICATION:
                 return "pushNotificationMain";
             default:

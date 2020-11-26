@@ -218,19 +218,19 @@ public final class CustomerPbOuterClass {
     com.amazaar.Protobuff.GenderPb.GenderEnum getGender();
 
     /**
-     * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+     * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
      * @return Whether the profileImage field is set.
      */
     boolean hasProfileImage();
     /**
-     * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+     * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
      * @return The profileImage.
      */
-    com.amazaar.Protobuff.ImagePbOuterClass.ImagePb getProfileImage();
+    com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb getProfileImage();
     /**
-     * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+     * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
      */
-    com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder getProfileImageOrBuilder();
+    com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder getProfileImageOrBuilder();
 
     /**
      * <code>.com.amazaar.Protobuff.TimePb time = 8;</code>
@@ -359,11 +359,11 @@ public final class CustomerPbOuterClass {
               break;
             }
             case 58: {
-              com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder subBuilder = null;
+              com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder subBuilder = null;
               if (profileImage_ != null) {
                 subBuilder = profileImage_.toBuilder();
               }
-              profileImage_ = input.readMessage(com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.parser(), extensionRegistry);
+              profileImage_ = input.readMessage(com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(profileImage_);
                 profileImage_ = subBuilder.buildPartial();
@@ -559,9 +559,9 @@ public final class CustomerPbOuterClass {
     }
 
     public static final int PROFILEIMAGE_FIELD_NUMBER = 7;
-    private com.amazaar.Protobuff.ImagePbOuterClass.ImagePb profileImage_;
+    private com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb profileImage_;
     /**
-     * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+     * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
      * @return Whether the profileImage field is set.
      */
     @java.lang.Override
@@ -569,18 +569,18 @@ public final class CustomerPbOuterClass {
       return profileImage_ != null;
     }
     /**
-     * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+     * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
      * @return The profileImage.
      */
     @java.lang.Override
-    public com.amazaar.Protobuff.ImagePbOuterClass.ImagePb getProfileImage() {
-      return profileImage_ == null ? com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.getDefaultInstance() : profileImage_;
+    public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb getProfileImage() {
+      return profileImage_ == null ? com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.getDefaultInstance() : profileImage_;
     }
     /**
-     * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+     * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
      */
     @java.lang.Override
-    public com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder getProfileImageOrBuilder() {
+    public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder getProfileImageOrBuilder() {
       return getProfileImage();
     }
 
@@ -1691,31 +1691,31 @@ public final class CustomerPbOuterClass {
         return this;
       }
 
-      private com.amazaar.Protobuff.ImagePbOuterClass.ImagePb profileImage_;
+      private com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb profileImage_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.amazaar.Protobuff.ImagePbOuterClass.ImagePb, com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder, com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder> profileImageBuilder_;
+          com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder> profileImageBuilder_;
       /**
-       * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
        * @return Whether the profileImage field is set.
        */
       public boolean hasProfileImage() {
         return profileImageBuilder_ != null || profileImage_ != null;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
        * @return The profileImage.
        */
-      public com.amazaar.Protobuff.ImagePbOuterClass.ImagePb getProfileImage() {
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb getProfileImage() {
         if (profileImageBuilder_ == null) {
-          return profileImage_ == null ? com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.getDefaultInstance() : profileImage_;
+          return profileImage_ == null ? com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.getDefaultInstance() : profileImage_;
         } else {
           return profileImageBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
        */
-      public Builder setProfileImage(com.amazaar.Protobuff.ImagePbOuterClass.ImagePb value) {
+      public Builder setProfileImage(com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb value) {
         if (profileImageBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1729,10 +1729,10 @@ public final class CustomerPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
        */
       public Builder setProfileImage(
-          com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder builderForValue) {
+          com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder builderForValue) {
         if (profileImageBuilder_ == null) {
           profileImage_ = builderForValue.build();
           onChanged();
@@ -1743,13 +1743,13 @@ public final class CustomerPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
        */
-      public Builder mergeProfileImage(com.amazaar.Protobuff.ImagePbOuterClass.ImagePb value) {
+      public Builder mergeProfileImage(com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb value) {
         if (profileImageBuilder_ == null) {
           if (profileImage_ != null) {
             profileImage_ =
-              com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.newBuilder(profileImage_).mergeFrom(value).buildPartial();
+              com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.newBuilder(profileImage_).mergeFrom(value).buildPartial();
           } else {
             profileImage_ = value;
           }
@@ -1761,7 +1761,7 @@ public final class CustomerPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
        */
       public Builder clearProfileImage() {
         if (profileImageBuilder_ == null) {
@@ -1775,33 +1775,33 @@ public final class CustomerPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
        */
-      public com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder getProfileImageBuilder() {
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder getProfileImageBuilder() {
         
         onChanged();
         return getProfileImageFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
        */
-      public com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder getProfileImageOrBuilder() {
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder getProfileImageOrBuilder() {
         if (profileImageBuilder_ != null) {
           return profileImageBuilder_.getMessageOrBuilder();
         } else {
           return profileImage_ == null ?
-              com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.getDefaultInstance() : profileImage_;
+              com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.getDefaultInstance() : profileImage_;
         }
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImagePb profileImage = 7;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb profileImage = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.amazaar.Protobuff.ImagePbOuterClass.ImagePb, com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder, com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder> 
+          com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder> 
           getProfileImageFieldBuilder() {
         if (profileImageBuilder_ == null) {
           profileImageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.amazaar.Protobuff.ImagePbOuterClass.ImagePb, com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder, com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder>(
+              com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder>(
                   getProfileImage(),
                   getParentForChildren(),
                   isClean());
@@ -4509,7 +4509,7 @@ public final class CustomerPbOuterClass {
       "f\032\016entityPb.proto\032\017summaryPb.proto\032\014name" +
       "Pb.proto\032\017addressPb.proto\032\025contactDetail" +
       "Pb.proto\032\016genderPb.proto\032\rimagePb.proto\032" +
-      "\014timePb.proto\"\251\003\n\nCustomerPb\022/\n\006dbInfo\030\001" +
+      "\014timePb.proto\"\254\003\n\nCustomerPb\022/\n\006dbInfo\030\001" +
       " \001(\0132\037.com.amazaar.Protobuff.EntityPb\022;\n" +
       "\tprivilege\030\002 \001(\0162(.com.amazaar.Protobuff" +
       ".PrivilegeTypeEnum\022+\n\004name\030\003 \001(\0132\035.com.a" +
@@ -4517,20 +4517,20 @@ public final class CustomerPbOuterClass {
       "2 .com.amazaar.Protobuff.AddressPb\0227\n\007co" +
       "ntact\030\005 \001(\0132&.com.amazaar.Protobuff.Cont" +
       "actDetailPb\0221\n\006gender\030\006 \001(\0162!.com.amazaa" +
-      "r.Protobuff.GenderEnum\0224\n\014profileImage\030\007" +
-      " \001(\0132\036.com.amazaar.Protobuff.ImagePb\022+\n\004" +
-      "time\030\010 \001(\0132\035.com.amazaar.Protobuff.TimeP" +
-      "b\"\201\001\n\rCustomerPbRef\022\n\n\002id\030\001 \001(\t\022+\n\004name\030" +
-      "\002 \001(\0132\035.com.amazaar.Protobuff.NamePb\0227\n\007" +
-      "contact\030\003 \001(\0132&.com.amazaar.Protobuff.Co" +
-      "ntactDetailPb\"V\n\027CustomerSearchRequestPb" +
-      "\022;\n\tprivilege\030\001 \001(\0162(.com.amazaar.Protob" +
-      "uff.PrivilegeTypeEnum\"\201\001\n\030CustomerSearch" +
-      "ResponsePb\0221\n\007summary\030\001 \001(\0132 .com.amazaa" +
-      "r.Protobuff.SummaryPb\0222\n\007results\030\002 \003(\0132!" +
-      ".com.amazaar.Protobuff.CustomerPb*A\n\021Pri" +
-      "vilegeTypeEnum\022\025\n\021UNKNOWN_PREVILAGE\020\000\022\n\n" +
-      "\006NORMAL\020\001\022\t\n\005ADMIN\020\002b\006proto3"
+      "r.Protobuff.GenderEnum\0227\n\014profileImage\030\007" +
+      " \001(\0132!.com.amazaar.Protobuff.ImageRefPb\022" +
+      "+\n\004time\030\010 \001(\0132\035.com.amazaar.Protobuff.Ti" +
+      "mePb\"\201\001\n\rCustomerPbRef\022\n\n\002id\030\001 \001(\t\022+\n\004na" +
+      "me\030\002 \001(\0132\035.com.amazaar.Protobuff.NamePb\022" +
+      "7\n\007contact\030\003 \001(\0132&.com.amazaar.Protobuff" +
+      ".ContactDetailPb\"V\n\027CustomerSearchReques" +
+      "tPb\022;\n\tprivilege\030\001 \001(\0162(.com.amazaar.Pro" +
+      "tobuff.PrivilegeTypeEnum\"\201\001\n\030CustomerSea" +
+      "rchResponsePb\0221\n\007summary\030\001 \001(\0132 .com.ama" +
+      "zaar.Protobuff.SummaryPb\0222\n\007results\030\002 \003(" +
+      "\0132!.com.amazaar.Protobuff.CustomerPb*A\n\021" +
+      "PrivilegeTypeEnum\022\025\n\021UNKNOWN_PREVILAGE\020\000" +
+      "\022\n\n\006NORMAL\020\001\022\t\n\005ADMIN\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

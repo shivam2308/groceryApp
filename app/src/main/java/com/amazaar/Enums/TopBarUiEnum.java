@@ -2,5 +2,7 @@ package com.amazaar.Enums;
 
 public enum TopBarUiEnum {
     HOME,
-    MENU
+    MENU,
+    CART,
+    PROFILE,
 }

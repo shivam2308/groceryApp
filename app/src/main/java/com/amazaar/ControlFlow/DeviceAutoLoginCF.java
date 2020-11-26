@@ -61,6 +61,9 @@ public class DeviceAutoLoginCF extends AControlFlow<DeviceAutoLoginCF.States, Vo
             if (Strings.notEmpty(m_login.getDbInfo().getId())) {
                 return States.GET_SESSION;
             } else {
+                Intent i = new Intent(m_context, BaseActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                m_context.startActivity(i);
                 return States.DONE;
             }
         }
@@ -85,6 +88,7 @@ public class DeviceAutoLoginCF extends AControlFlow<DeviceAutoLoginCF.States, Vo
             if(customerPb!=null) {
                 m_customerSession.saveObject(customerPb);
                 Intent i = new Intent(m_context, HomeActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 m_context.startActivity(i);
                 return States.DONE;
             }else{

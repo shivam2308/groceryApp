@@ -14,21 +14,322 @@ public final class ImagePbOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code com.amazaar.Protobuff.ImageTypeEnum}
+   */
+  public enum ImageTypeEnum
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_IMAGE_TYPE = 0;</code>
+     */
+    UNKNOWN_IMAGE_TYPE(0),
+    /**
+     * <code>PROFILE_IMAGE = 1;</code>
+     */
+    PROFILE_IMAGE(1),
+    /**
+     * <code>ITEM_IMAGE = 2;</code>
+     */
+    ITEM_IMAGE(2),
+    /**
+     * <code>BANNER_IMAGE = 3;</code>
+     */
+    BANNER_IMAGE(3),
+    /**
+     * <code>BADGE_IMAGE = 4;</code>
+     */
+    BADGE_IMAGE(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>UNKNOWN_IMAGE_TYPE = 0;</code>
+     */
+    public static final int UNKNOWN_IMAGE_TYPE_VALUE = 0;
+    /**
+     * <code>PROFILE_IMAGE = 1;</code>
+     */
+    public static final int PROFILE_IMAGE_VALUE = 1;
+    /**
+     * <code>ITEM_IMAGE = 2;</code>
+     */
+    public static final int ITEM_IMAGE_VALUE = 2;
+    /**
+     * <code>BANNER_IMAGE = 3;</code>
+     */
+    public static final int BANNER_IMAGE_VALUE = 3;
+    /**
+     * <code>BADGE_IMAGE = 4;</code>
+     */
+    public static final int BADGE_IMAGE_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ImageTypeEnum valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ImageTypeEnum forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_IMAGE_TYPE;
+        case 1: return PROFILE_IMAGE;
+        case 2: return ITEM_IMAGE;
+        case 3: return BANNER_IMAGE;
+        case 4: return BADGE_IMAGE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ImageTypeEnum>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ImageTypeEnum> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ImageTypeEnum>() {
+            public ImageTypeEnum findValueByNumber(int number) {
+              return ImageTypeEnum.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.amazaar.Protobuff.ImagePbOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final ImageTypeEnum[] VALUES = values();
+
+    public static ImageTypeEnum valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ImageTypeEnum(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.amazaar.Protobuff.ImageTypeEnum)
+  }
+
+  /**
+   * Protobuf enum {@code com.amazaar.Protobuff.ImageExtensionTypeEnum}
+   */
+  public enum ImageExtensionTypeEnum
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_EXTENSION_TYPE = 0;</code>
+     */
+    UNKNOWN_EXTENSION_TYPE(0),
+    /**
+     * <code>JPEG_TYPE = 1;</code>
+     */
+    JPEG_TYPE(1),
+    /**
+     * <code>PNG_TYPE = 2;</code>
+     */
+    PNG_TYPE(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>UNKNOWN_EXTENSION_TYPE = 0;</code>
+     */
+    public static final int UNKNOWN_EXTENSION_TYPE_VALUE = 0;
+    /**
+     * <code>JPEG_TYPE = 1;</code>
+     */
+    public static final int JPEG_TYPE_VALUE = 1;
+    /**
+     * <code>PNG_TYPE = 2;</code>
+     */
+    public static final int PNG_TYPE_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ImageExtensionTypeEnum valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ImageExtensionTypeEnum forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_EXTENSION_TYPE;
+        case 1: return JPEG_TYPE;
+        case 2: return PNG_TYPE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ImageExtensionTypeEnum>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ImageExtensionTypeEnum> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ImageExtensionTypeEnum>() {
+            public ImageExtensionTypeEnum findValueByNumber(int number) {
+              return ImageExtensionTypeEnum.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.amazaar.Protobuff.ImagePbOuterClass.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final ImageExtensionTypeEnum[] VALUES = values();
+
+    public static ImageExtensionTypeEnum valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ImageExtensionTypeEnum(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.amazaar.Protobuff.ImageExtensionTypeEnum)
+  }
+
   public interface ImagePbOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.ImagePb)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string url = 1;</code>
+     * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+     * @return Whether the dbInfo field is set.
+     */
+    boolean hasDbInfo();
+    /**
+     * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+     * @return The dbInfo.
+     */
+    com.amazaar.Protobuff.EntityPbOuterClass.EntityPb getDbInfo();
+    /**
+     * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+     */
+    com.amazaar.Protobuff.EntityPbOuterClass.EntityPbOrBuilder getDbInfoOrBuilder();
+
+    /**
+     * <code>string id = 2;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 2;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string url = 3;</code>
      * @return The url.
      */
     java.lang.String getUrl();
     /**
-     * <code>string url = 1;</code>
+     * <code>string url = 3;</code>
      * @return The bytes for url.
      */
     com.google.protobuf.ByteString
         getUrlBytes();
+
+    /**
+     * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 4;</code>
+     * @return The enum numeric value on the wire for imageType.
+     */
+    int getImageTypeValue();
+    /**
+     * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 4;</code>
+     * @return The imageType.
+     */
+    com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum getImageType();
+
+    /**
+     * <code>.com.amazaar.Protobuff.ImageExtensionTypeEnum extension = 5;</code>
+     * @return The enum numeric value on the wire for extension.
+     */
+    int getExtensionValue();
+    /**
+     * <code>.com.amazaar.Protobuff.ImageExtensionTypeEnum extension = 5;</code>
+     * @return The extension.
+     */
+    com.amazaar.Protobuff.ImagePbOuterClass.ImageExtensionTypeEnum getExtension();
   }
   /**
    * Protobuf type {@code com.amazaar.Protobuff.ImagePb}
@@ -43,7 +344,10 @@ public final class ImagePbOuterClass {
       super(builder);
     }
     private ImagePb() {
+      id_ = "";
       url_ = "";
+      imageType_ = 0;
+      extension_ = 0;
     }
 
     @java.lang.Override
@@ -77,9 +381,40 @@ public final class ImagePbOuterClass {
               done = true;
               break;
             case 10: {
+              com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.Builder subBuilder = null;
+              if (dbInfo_ != null) {
+                subBuilder = dbInfo_.toBuilder();
+              }
+              dbInfo_ = input.readMessage(com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dbInfo_);
+                dbInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
               url_ = s;
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              imageType_ = rawValue;
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+
+              extension_ = rawValue;
               break;
             }
             default: {
@@ -114,10 +449,74 @@ public final class ImagePbOuterClass {
               com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.class, com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder.class);
     }
 
-    public static final int URL_FIELD_NUMBER = 1;
+    public static final int DBINFO_FIELD_NUMBER = 1;
+    private com.amazaar.Protobuff.EntityPbOuterClass.EntityPb dbInfo_;
+    /**
+     * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+     * @return Whether the dbInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasDbInfo() {
+      return dbInfo_ != null;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+     * @return The dbInfo.
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.EntityPbOuterClass.EntityPb getDbInfo() {
+      return dbInfo_ == null ? com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.getDefaultInstance() : dbInfo_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.EntityPbOuterClass.EntityPbOrBuilder getDbInfoOrBuilder() {
+      return getDbInfo();
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 2;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 2;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URL_FIELD_NUMBER = 3;
     private volatile java.lang.Object url_;
     /**
-     * <code>string url = 1;</code>
+     * <code>string url = 3;</code>
      * @return The url.
      */
     @java.lang.Override
@@ -134,7 +533,7 @@ public final class ImagePbOuterClass {
       }
     }
     /**
-     * <code>string url = 1;</code>
+     * <code>string url = 3;</code>
      * @return The bytes for url.
      */
     @java.lang.Override
@@ -152,6 +551,44 @@ public final class ImagePbOuterClass {
       }
     }
 
+    public static final int IMAGETYPE_FIELD_NUMBER = 4;
+    private int imageType_;
+    /**
+     * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 4;</code>
+     * @return The enum numeric value on the wire for imageType.
+     */
+    @java.lang.Override public int getImageTypeValue() {
+      return imageType_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 4;</code>
+     * @return The imageType.
+     */
+    @java.lang.Override public com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum getImageType() {
+      @SuppressWarnings("deprecation")
+      com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum result = com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum.valueOf(imageType_);
+      return result == null ? com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum.UNRECOGNIZED : result;
+    }
+
+    public static final int EXTENSION_FIELD_NUMBER = 5;
+    private int extension_;
+    /**
+     * <code>.com.amazaar.Protobuff.ImageExtensionTypeEnum extension = 5;</code>
+     * @return The enum numeric value on the wire for extension.
+     */
+    @java.lang.Override public int getExtensionValue() {
+      return extension_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.ImageExtensionTypeEnum extension = 5;</code>
+     * @return The extension.
+     */
+    @java.lang.Override public com.amazaar.Protobuff.ImagePbOuterClass.ImageExtensionTypeEnum getExtension() {
+      @SuppressWarnings("deprecation")
+      com.amazaar.Protobuff.ImagePbOuterClass.ImageExtensionTypeEnum result = com.amazaar.Protobuff.ImagePbOuterClass.ImageExtensionTypeEnum.valueOf(extension_);
+      return result == null ? com.amazaar.Protobuff.ImagePbOuterClass.ImageExtensionTypeEnum.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -166,8 +603,20 @@ public final class ImagePbOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (dbInfo_ != null) {
+        output.writeMessage(1, getDbInfo());
+      }
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
       if (!getUrlBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, url_);
+      }
+      if (imageType_ != com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum.UNKNOWN_IMAGE_TYPE.getNumber()) {
+        output.writeEnum(4, imageType_);
+      }
+      if (extension_ != com.amazaar.Protobuff.ImagePbOuterClass.ImageExtensionTypeEnum.UNKNOWN_EXTENSION_TYPE.getNumber()) {
+        output.writeEnum(5, extension_);
       }
       unknownFields.writeTo(output);
     }
@@ -178,8 +627,23 @@ public final class ImagePbOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (dbInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDbInfo());
+      }
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
       if (!getUrlBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, url_);
+      }
+      if (imageType_ != com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum.UNKNOWN_IMAGE_TYPE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, imageType_);
+      }
+      if (extension_ != com.amazaar.Protobuff.ImagePbOuterClass.ImageExtensionTypeEnum.UNKNOWN_EXTENSION_TYPE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, extension_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -196,8 +660,17 @@ public final class ImagePbOuterClass {
       }
       com.amazaar.Protobuff.ImagePbOuterClass.ImagePb other = (com.amazaar.Protobuff.ImagePbOuterClass.ImagePb) obj;
 
+      if (hasDbInfo() != other.hasDbInfo()) return false;
+      if (hasDbInfo()) {
+        if (!getDbInfo()
+            .equals(other.getDbInfo())) return false;
+      }
+      if (!getId()
+          .equals(other.getId())) return false;
       if (!getUrl()
           .equals(other.getUrl())) return false;
+      if (imageType_ != other.imageType_) return false;
+      if (extension_ != other.extension_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -209,8 +682,18 @@ public final class ImagePbOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDbInfo()) {
+        hash = (37 * hash) + DBINFO_FIELD_NUMBER;
+        hash = (53 * hash) + getDbInfo().hashCode();
+      }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + URL_FIELD_NUMBER;
       hash = (53 * hash) + getUrl().hashCode();
+      hash = (37 * hash) + IMAGETYPE_FIELD_NUMBER;
+      hash = (53 * hash) + imageType_;
+      hash = (37 * hash) + EXTENSION_FIELD_NUMBER;
+      hash = (53 * hash) + extension_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -344,7 +827,19 @@ public final class ImagePbOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (dbInfoBuilder_ == null) {
+          dbInfo_ = null;
+        } else {
+          dbInfo_ = null;
+          dbInfoBuilder_ = null;
+        }
+        id_ = "";
+
         url_ = "";
+
+        imageType_ = 0;
+
+        extension_ = 0;
 
         return this;
       }
@@ -372,7 +867,15 @@ public final class ImagePbOuterClass {
       @java.lang.Override
       public com.amazaar.Protobuff.ImagePbOuterClass.ImagePb buildPartial() {
         com.amazaar.Protobuff.ImagePbOuterClass.ImagePb result = new com.amazaar.Protobuff.ImagePbOuterClass.ImagePb(this);
+        if (dbInfoBuilder_ == null) {
+          result.dbInfo_ = dbInfo_;
+        } else {
+          result.dbInfo_ = dbInfoBuilder_.build();
+        }
+        result.id_ = id_;
         result.url_ = url_;
+        result.imageType_ = imageType_;
+        result.extension_ = extension_;
         onBuilt();
         return result;
       }
@@ -421,9 +924,22 @@ public final class ImagePbOuterClass {
 
       public Builder mergeFrom(com.amazaar.Protobuff.ImagePbOuterClass.ImagePb other) {
         if (other == com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.getDefaultInstance()) return this;
+        if (other.hasDbInfo()) {
+          mergeDbInfo(other.getDbInfo());
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
         if (!other.getUrl().isEmpty()) {
           url_ = other.url_;
           onChanged();
+        }
+        if (other.imageType_ != 0) {
+          setImageTypeValue(other.getImageTypeValue());
+        }
+        if (other.extension_ != 0) {
+          setExtensionValue(other.getExtensionValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -454,9 +970,204 @@ public final class ImagePbOuterClass {
         return this;
       }
 
+      private com.amazaar.Protobuff.EntityPbOuterClass.EntityPb dbInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.amazaar.Protobuff.EntityPbOuterClass.EntityPb, com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.Builder, com.amazaar.Protobuff.EntityPbOuterClass.EntityPbOrBuilder> dbInfoBuilder_;
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       * @return Whether the dbInfo field is set.
+       */
+      public boolean hasDbInfo() {
+        return dbInfoBuilder_ != null || dbInfo_ != null;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       * @return The dbInfo.
+       */
+      public com.amazaar.Protobuff.EntityPbOuterClass.EntityPb getDbInfo() {
+        if (dbInfoBuilder_ == null) {
+          return dbInfo_ == null ? com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.getDefaultInstance() : dbInfo_;
+        } else {
+          return dbInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       */
+      public Builder setDbInfo(com.amazaar.Protobuff.EntityPbOuterClass.EntityPb value) {
+        if (dbInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dbInfo_ = value;
+          onChanged();
+        } else {
+          dbInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       */
+      public Builder setDbInfo(
+          com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.Builder builderForValue) {
+        if (dbInfoBuilder_ == null) {
+          dbInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          dbInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       */
+      public Builder mergeDbInfo(com.amazaar.Protobuff.EntityPbOuterClass.EntityPb value) {
+        if (dbInfoBuilder_ == null) {
+          if (dbInfo_ != null) {
+            dbInfo_ =
+              com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.newBuilder(dbInfo_).mergeFrom(value).buildPartial();
+          } else {
+            dbInfo_ = value;
+          }
+          onChanged();
+        } else {
+          dbInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       */
+      public Builder clearDbInfo() {
+        if (dbInfoBuilder_ == null) {
+          dbInfo_ = null;
+          onChanged();
+        } else {
+          dbInfo_ = null;
+          dbInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       */
+      public com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.Builder getDbInfoBuilder() {
+        
+        onChanged();
+        return getDbInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       */
+      public com.amazaar.Protobuff.EntityPbOuterClass.EntityPbOrBuilder getDbInfoOrBuilder() {
+        if (dbInfoBuilder_ != null) {
+          return dbInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return dbInfo_ == null ?
+              com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.getDefaultInstance() : dbInfo_;
+        }
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.amazaar.Protobuff.EntityPbOuterClass.EntityPb, com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.Builder, com.amazaar.Protobuff.EntityPbOuterClass.EntityPbOrBuilder> 
+          getDbInfoFieldBuilder() {
+        if (dbInfoBuilder_ == null) {
+          dbInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.amazaar.Protobuff.EntityPbOuterClass.EntityPb, com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.Builder, com.amazaar.Protobuff.EntityPbOuterClass.EntityPbOrBuilder>(
+                  getDbInfo(),
+                  getParentForChildren(),
+                  isClean());
+          dbInfo_ = null;
+        }
+        return dbInfoBuilder_;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 2;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 2;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 2;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object url_ = "";
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 3;</code>
        * @return The url.
        */
       public java.lang.String getUrl() {
@@ -472,7 +1183,7 @@ public final class ImagePbOuterClass {
         }
       }
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 3;</code>
        * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
@@ -489,7 +1200,7 @@ public final class ImagePbOuterClass {
         }
       }
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 3;</code>
        * @param value The url to set.
        * @return This builder for chaining.
        */
@@ -504,7 +1215,7 @@ public final class ImagePbOuterClass {
         return this;
       }
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
@@ -514,7 +1225,7 @@ public final class ImagePbOuterClass {
         return this;
       }
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 3;</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
        */
@@ -526,6 +1237,114 @@ public final class ImagePbOuterClass {
   checkByteStringIsUtf8(value);
         
         url_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int imageType_ = 0;
+      /**
+       * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 4;</code>
+       * @return The enum numeric value on the wire for imageType.
+       */
+      @java.lang.Override public int getImageTypeValue() {
+        return imageType_;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 4;</code>
+       * @param value The enum numeric value on the wire for imageType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImageTypeValue(int value) {
+        
+        imageType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 4;</code>
+       * @return The imageType.
+       */
+      @java.lang.Override
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum getImageType() {
+        @SuppressWarnings("deprecation")
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum result = com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum.valueOf(imageType_);
+        return result == null ? com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 4;</code>
+       * @param value The imageType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImageType(com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        imageType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearImageType() {
+        
+        imageType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int extension_ = 0;
+      /**
+       * <code>.com.amazaar.Protobuff.ImageExtensionTypeEnum extension = 5;</code>
+       * @return The enum numeric value on the wire for extension.
+       */
+      @java.lang.Override public int getExtensionValue() {
+        return extension_;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ImageExtensionTypeEnum extension = 5;</code>
+       * @param value The enum numeric value on the wire for extension to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtensionValue(int value) {
+        
+        extension_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ImageExtensionTypeEnum extension = 5;</code>
+       * @return The extension.
+       */
+      @java.lang.Override
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageExtensionTypeEnum getExtension() {
+        @SuppressWarnings("deprecation")
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageExtensionTypeEnum result = com.amazaar.Protobuff.ImagePbOuterClass.ImageExtensionTypeEnum.valueOf(extension_);
+        return result == null ? com.amazaar.Protobuff.ImagePbOuterClass.ImageExtensionTypeEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ImageExtensionTypeEnum extension = 5;</code>
+       * @param value The extension to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtension(com.amazaar.Protobuff.ImagePbOuterClass.ImageExtensionTypeEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        extension_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ImageExtensionTypeEnum extension = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExtension() {
+        
+        extension_ = 0;
         onChanged();
         return this;
       }
@@ -582,11 +1401,2158 @@ public final class ImagePbOuterClass {
 
   }
 
+  public interface ImageRefPbOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.ImageRefPb)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string imageId = 2;</code>
+     * @return The imageId.
+     */
+    java.lang.String getImageId();
+    /**
+     * <code>string imageId = 2;</code>
+     * @return The bytes for imageId.
+     */
+    com.google.protobuf.ByteString
+        getImageIdBytes();
+  }
+  /**
+   * Protobuf type {@code com.amazaar.Protobuff.ImageRefPb}
+   */
+  public static final class ImageRefPb extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.amazaar.Protobuff.ImageRefPb)
+      ImageRefPbOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ImageRefPb.newBuilder() to construct.
+    private ImageRefPb(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ImageRefPb() {
+      id_ = "";
+      imageId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ImageRefPb();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ImageRefPb(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              imageId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageRefPb_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageRefPb_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.class, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IMAGEID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object imageId_;
+    /**
+     * <code>string imageId = 2;</code>
+     * @return The imageId.
+     */
+    @java.lang.Override
+    public java.lang.String getImageId() {
+      java.lang.Object ref = imageId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        imageId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string imageId = 2;</code>
+     * @return The bytes for imageId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getImageIdBytes() {
+      java.lang.Object ref = imageId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        imageId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!getImageIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, imageId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!getImageIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, imageId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb)) {
+        return super.equals(obj);
+      }
+      com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb other = (com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getImageId()
+          .equals(other.getImageId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + IMAGEID_FIELD_NUMBER;
+      hash = (53 * hash) + getImageId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.amazaar.Protobuff.ImageRefPb}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.amazaar.Protobuff.ImageRefPb)
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageRefPb_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageRefPb_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.class, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder.class);
+      }
+
+      // Construct using com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        imageId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageRefPb_descriptor;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb getDefaultInstanceForType() {
+        return com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb build() {
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb buildPartial() {
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb result = new com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb(this);
+        result.id_ = id_;
+        result.imageId_ = imageId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb) {
+          return mergeFrom((com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb other) {
+        if (other == com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getImageId().isEmpty()) {
+          imageId_ = other.imageId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object imageId_ = "";
+      /**
+       * <code>string imageId = 2;</code>
+       * @return The imageId.
+       */
+      public java.lang.String getImageId() {
+        java.lang.Object ref = imageId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          imageId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string imageId = 2;</code>
+       * @return The bytes for imageId.
+       */
+      public com.google.protobuf.ByteString
+          getImageIdBytes() {
+        java.lang.Object ref = imageId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          imageId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string imageId = 2;</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImageId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        imageId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string imageId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearImageId() {
+        
+        imageId_ = getDefaultInstance().getImageId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string imageId = 2;</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImageIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        imageId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.amazaar.Protobuff.ImageRefPb)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.amazaar.Protobuff.ImageRefPb)
+    private static final com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb();
+    }
+
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ImageRefPb>
+        PARSER = new com.google.protobuf.AbstractParser<ImageRefPb>() {
+      @java.lang.Override
+      public ImageRefPb parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ImageRefPb(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ImageRefPb> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ImageRefPb> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ImageSearchRequestPbOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.ImageSearchRequestPb)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code com.amazaar.Protobuff.ImageSearchRequestPb}
+   */
+  public static final class ImageSearchRequestPb extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.amazaar.Protobuff.ImageSearchRequestPb)
+      ImageSearchRequestPbOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ImageSearchRequestPb.newBuilder() to construct.
+    private ImageSearchRequestPb(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ImageSearchRequestPb() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ImageSearchRequestPb();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ImageSearchRequestPb(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageSearchRequestPb_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageSearchRequestPb_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb.class, com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb)) {
+        return super.equals(obj);
+      }
+      com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb other = (com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.amazaar.Protobuff.ImageSearchRequestPb}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.amazaar.Protobuff.ImageSearchRequestPb)
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPbOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageSearchRequestPb_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageSearchRequestPb_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb.class, com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb.Builder.class);
+      }
+
+      // Construct using com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageSearchRequestPb_descriptor;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb getDefaultInstanceForType() {
+        return com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb build() {
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb buildPartial() {
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb result = new com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb) {
+          return mergeFrom((com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb other) {
+        if (other == com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.amazaar.Protobuff.ImageSearchRequestPb)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.amazaar.Protobuff.ImageSearchRequestPb)
+    private static final com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb();
+    }
+
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ImageSearchRequestPb>
+        PARSER = new com.google.protobuf.AbstractParser<ImageSearchRequestPb>() {
+      @java.lang.Override
+      public ImageSearchRequestPb parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ImageSearchRequestPb(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ImageSearchRequestPb> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ImageSearchRequestPb> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ImageSearchResponsePbOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.ImageSearchResponsePb)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+     * @return Whether the summary field is set.
+     */
+    boolean hasSummary();
+    /**
+     * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+     * @return The summary.
+     */
+    com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb getSummary();
+    /**
+     * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+     */
+    com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPbOrBuilder getSummaryOrBuilder();
+
+    /**
+     * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+     */
+    java.util.List<com.amazaar.Protobuff.ImagePbOuterClass.ImagePb> 
+        getResultsList();
+    /**
+     * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+     */
+    com.amazaar.Protobuff.ImagePbOuterClass.ImagePb getResults(int index);
+    /**
+     * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+     */
+    int getResultsCount();
+    /**
+     * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+     */
+    java.util.List<? extends com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder> 
+        getResultsOrBuilderList();
+    /**
+     * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+     */
+    com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder getResultsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code com.amazaar.Protobuff.ImageSearchResponsePb}
+   */
+  public static final class ImageSearchResponsePb extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.amazaar.Protobuff.ImageSearchResponsePb)
+      ImageSearchResponsePbOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ImageSearchResponsePb.newBuilder() to construct.
+    private ImageSearchResponsePb(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ImageSearchResponsePb() {
+      results_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ImageSearchResponsePb();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ImageSearchResponsePb(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.Builder subBuilder = null;
+              if (summary_ != null) {
+                subBuilder = summary_.toBuilder();
+              }
+              summary_ = input.readMessage(com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(summary_);
+                summary_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                results_ = new java.util.ArrayList<com.amazaar.Protobuff.ImagePbOuterClass.ImagePb>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              results_.add(
+                  input.readMessage(com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          results_ = java.util.Collections.unmodifiableList(results_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageSearchResponsePb_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageSearchResponsePb_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb.class, com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb.Builder.class);
+    }
+
+    public static final int SUMMARY_FIELD_NUMBER = 1;
+    private com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb summary_;
+    /**
+     * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+     * @return Whether the summary field is set.
+     */
+    @java.lang.Override
+    public boolean hasSummary() {
+      return summary_ != null;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+     * @return The summary.
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb getSummary() {
+      return summary_ == null ? com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.getDefaultInstance() : summary_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPbOrBuilder getSummaryOrBuilder() {
+      return getSummary();
+    }
+
+    public static final int RESULTS_FIELD_NUMBER = 2;
+    private java.util.List<com.amazaar.Protobuff.ImagePbOuterClass.ImagePb> results_;
+    /**
+     * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.amazaar.Protobuff.ImagePbOuterClass.ImagePb> getResultsList() {
+      return results_;
+    }
+    /**
+     * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder> 
+        getResultsOrBuilderList() {
+      return results_;
+    }
+    /**
+     * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+     */
+    @java.lang.Override
+    public int getResultsCount() {
+      return results_.size();
+    }
+    /**
+     * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.ImagePbOuterClass.ImagePb getResults(int index) {
+      return results_.get(index);
+    }
+    /**
+     * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder getResultsOrBuilder(
+        int index) {
+      return results_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (summary_ != null) {
+        output.writeMessage(1, getSummary());
+      }
+      for (int i = 0; i < results_.size(); i++) {
+        output.writeMessage(2, results_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (summary_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSummary());
+      }
+      for (int i = 0; i < results_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, results_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb)) {
+        return super.equals(obj);
+      }
+      com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb other = (com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb) obj;
+
+      if (hasSummary() != other.hasSummary()) return false;
+      if (hasSummary()) {
+        if (!getSummary()
+            .equals(other.getSummary())) return false;
+      }
+      if (!getResultsList()
+          .equals(other.getResultsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSummary()) {
+        hash = (37 * hash) + SUMMARY_FIELD_NUMBER;
+        hash = (53 * hash) + getSummary().hashCode();
+      }
+      if (getResultsCount() > 0) {
+        hash = (37 * hash) + RESULTS_FIELD_NUMBER;
+        hash = (53 * hash) + getResultsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.amazaar.Protobuff.ImageSearchResponsePb}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.amazaar.Protobuff.ImageSearchResponsePb)
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePbOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageSearchResponsePb_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageSearchResponsePb_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb.class, com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb.Builder.class);
+      }
+
+      // Construct using com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getResultsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (summaryBuilder_ == null) {
+          summary_ = null;
+        } else {
+          summary_ = null;
+          summaryBuilder_ = null;
+        }
+        if (resultsBuilder_ == null) {
+          results_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          resultsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.amazaar.Protobuff.ImagePbOuterClass.internal_static_com_amazaar_Protobuff_ImageSearchResponsePb_descriptor;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb getDefaultInstanceForType() {
+        return com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb build() {
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb buildPartial() {
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb result = new com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb(this);
+        int from_bitField0_ = bitField0_;
+        if (summaryBuilder_ == null) {
+          result.summary_ = summary_;
+        } else {
+          result.summary_ = summaryBuilder_.build();
+        }
+        if (resultsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            results_ = java.util.Collections.unmodifiableList(results_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.results_ = results_;
+        } else {
+          result.results_ = resultsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb) {
+          return mergeFrom((com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb other) {
+        if (other == com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb.getDefaultInstance()) return this;
+        if (other.hasSummary()) {
+          mergeSummary(other.getSummary());
+        }
+        if (resultsBuilder_ == null) {
+          if (!other.results_.isEmpty()) {
+            if (results_.isEmpty()) {
+              results_ = other.results_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureResultsIsMutable();
+              results_.addAll(other.results_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.results_.isEmpty()) {
+            if (resultsBuilder_.isEmpty()) {
+              resultsBuilder_.dispose();
+              resultsBuilder_ = null;
+              results_ = other.results_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              resultsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getResultsFieldBuilder() : null;
+            } else {
+              resultsBuilder_.addAllMessages(other.results_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb summary_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb, com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.Builder, com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPbOrBuilder> summaryBuilder_;
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       * @return Whether the summary field is set.
+       */
+      public boolean hasSummary() {
+        return summaryBuilder_ != null || summary_ != null;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       * @return The summary.
+       */
+      public com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb getSummary() {
+        if (summaryBuilder_ == null) {
+          return summary_ == null ? com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.getDefaultInstance() : summary_;
+        } else {
+          return summaryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       */
+      public Builder setSummary(com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb value) {
+        if (summaryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          summary_ = value;
+          onChanged();
+        } else {
+          summaryBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       */
+      public Builder setSummary(
+          com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.Builder builderForValue) {
+        if (summaryBuilder_ == null) {
+          summary_ = builderForValue.build();
+          onChanged();
+        } else {
+          summaryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       */
+      public Builder mergeSummary(com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb value) {
+        if (summaryBuilder_ == null) {
+          if (summary_ != null) {
+            summary_ =
+              com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.newBuilder(summary_).mergeFrom(value).buildPartial();
+          } else {
+            summary_ = value;
+          }
+          onChanged();
+        } else {
+          summaryBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       */
+      public Builder clearSummary() {
+        if (summaryBuilder_ == null) {
+          summary_ = null;
+          onChanged();
+        } else {
+          summary_ = null;
+          summaryBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       */
+      public com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.Builder getSummaryBuilder() {
+        
+        onChanged();
+        return getSummaryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       */
+      public com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPbOrBuilder getSummaryOrBuilder() {
+        if (summaryBuilder_ != null) {
+          return summaryBuilder_.getMessageOrBuilder();
+        } else {
+          return summary_ == null ?
+              com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.getDefaultInstance() : summary_;
+        }
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb, com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.Builder, com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPbOrBuilder> 
+          getSummaryFieldBuilder() {
+        if (summaryBuilder_ == null) {
+          summaryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb, com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.Builder, com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPbOrBuilder>(
+                  getSummary(),
+                  getParentForChildren(),
+                  isClean());
+          summary_ = null;
+        }
+        return summaryBuilder_;
+      }
+
+      private java.util.List<com.amazaar.Protobuff.ImagePbOuterClass.ImagePb> results_ =
+        java.util.Collections.emptyList();
+      private void ensureResultsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          results_ = new java.util.ArrayList<com.amazaar.Protobuff.ImagePbOuterClass.ImagePb>(results_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.amazaar.Protobuff.ImagePbOuterClass.ImagePb, com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder, com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder> resultsBuilder_;
+
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public java.util.List<com.amazaar.Protobuff.ImagePbOuterClass.ImagePb> getResultsList() {
+        if (resultsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(results_);
+        } else {
+          return resultsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public int getResultsCount() {
+        if (resultsBuilder_ == null) {
+          return results_.size();
+        } else {
+          return resultsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImagePb getResults(int index) {
+        if (resultsBuilder_ == null) {
+          return results_.get(index);
+        } else {
+          return resultsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public Builder setResults(
+          int index, com.amazaar.Protobuff.ImagePbOuterClass.ImagePb value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.set(index, value);
+          onChanged();
+        } else {
+          resultsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public Builder setResults(
+          int index, com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public Builder addResults(com.amazaar.Protobuff.ImagePbOuterClass.ImagePb value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.add(value);
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public Builder addResults(
+          int index, com.amazaar.Protobuff.ImagePbOuterClass.ImagePb value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.add(index, value);
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public Builder addResults(
+          com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.add(builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public Builder addResults(
+          int index, com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public Builder addAllResults(
+          java.lang.Iterable<? extends com.amazaar.Protobuff.ImagePbOuterClass.ImagePb> values) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, results_);
+          onChanged();
+        } else {
+          resultsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public Builder clearResults() {
+        if (resultsBuilder_ == null) {
+          results_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          resultsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public Builder removeResults(int index) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.remove(index);
+          onChanged();
+        } else {
+          resultsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder getResultsBuilder(
+          int index) {
+        return getResultsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder getResultsOrBuilder(
+          int index) {
+        if (resultsBuilder_ == null) {
+          return results_.get(index);  } else {
+          return resultsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public java.util.List<? extends com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder> 
+           getResultsOrBuilderList() {
+        if (resultsBuilder_ != null) {
+          return resultsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(results_);
+        }
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder addResultsBuilder() {
+        return getResultsFieldBuilder().addBuilder(
+            com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder addResultsBuilder(
+          int index) {
+        return getResultsFieldBuilder().addBuilder(
+            index, com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.ImagePb results = 2;</code>
+       */
+      public java.util.List<com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder> 
+           getResultsBuilderList() {
+        return getResultsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.amazaar.Protobuff.ImagePbOuterClass.ImagePb, com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder, com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder> 
+          getResultsFieldBuilder() {
+        if (resultsBuilder_ == null) {
+          resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.amazaar.Protobuff.ImagePbOuterClass.ImagePb, com.amazaar.Protobuff.ImagePbOuterClass.ImagePb.Builder, com.amazaar.Protobuff.ImagePbOuterClass.ImagePbOrBuilder>(
+                  results_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          results_ = null;
+        }
+        return resultsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.amazaar.Protobuff.ImageSearchResponsePb)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.amazaar.Protobuff.ImageSearchResponsePb)
+    private static final com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb();
+    }
+
+    public static com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ImageSearchResponsePb>
+        PARSER = new com.google.protobuf.AbstractParser<ImageSearchResponsePb>() {
+      @java.lang.Override
+      public ImageSearchResponsePb parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ImageSearchResponsePb(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ImageSearchResponsePb> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ImageSearchResponsePb> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchResponsePb getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_amazaar_Protobuff_ImagePb_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_amazaar_Protobuff_ImagePb_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_amazaar_Protobuff_ImageRefPb_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_amazaar_Protobuff_ImageRefPb_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_amazaar_Protobuff_ImageSearchRequestPb_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_amazaar_Protobuff_ImageSearchRequestPb_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_amazaar_Protobuff_ImageSearchResponsePb_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_amazaar_Protobuff_ImageSearchResponsePb_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -596,19 +3562,56 @@ public final class ImagePbOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rimagePb.proto\022\025com.amazaar.Protobuff\"\026" +
-      "\n\007ImagePb\022\013\n\003url\030\001 \001(\tb\006proto3"
+      "\n\rimagePb.proto\022\025com.amazaar.Protobuff\032\016" +
+      "entityPb.proto\032\017summaryPb.proto\"\316\001\n\007Imag" +
+      "ePb\022/\n\006dbInfo\030\001 \001(\0132\037.com.amazaar.Protob" +
+      "uff.EntityPb\022\n\n\002id\030\002 \001(\t\022\013\n\003url\030\003 \001(\t\0227\n" +
+      "\timageType\030\004 \001(\0162$.com.amazaar.Protobuff" +
+      ".ImageTypeEnum\022@\n\textension\030\005 \001(\0162-.com." +
+      "amazaar.Protobuff.ImageExtensionTypeEnum" +
+      "\")\n\nImageRefPb\022\n\n\002id\030\001 \001(\t\022\017\n\007imageId\030\002 " +
+      "\001(\t\"\026\n\024ImageSearchRequestPb\"{\n\025ImageSear" +
+      "chResponsePb\0221\n\007summary\030\001 \001(\0132 .com.amaz" +
+      "aar.Protobuff.SummaryPb\022/\n\007results\030\002 \003(\013" +
+      "2\036.com.amazaar.Protobuff.ImagePb*m\n\rImag" +
+      "eTypeEnum\022\026\n\022UNKNOWN_IMAGE_TYPE\020\000\022\021\n\rPRO" +
+      "FILE_IMAGE\020\001\022\016\n\nITEM_IMAGE\020\002\022\020\n\014BANNER_I" +
+      "MAGE\020\003\022\017\n\013BADGE_IMAGE\020\004*Q\n\026ImageExtensio" +
+      "nTypeEnum\022\032\n\026UNKNOWN_EXTENSION_TYPE\020\000\022\r\n" +
+      "\tJPEG_TYPE\020\001\022\014\n\010PNG_TYPE\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.amazaar.Protobuff.EntityPbOuterClass.getDescriptor(),
+          com.amazaar.Protobuff.SummaryPbOuterClass.getDescriptor(),
         });
     internal_static_com_amazaar_Protobuff_ImagePb_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_com_amazaar_Protobuff_ImagePb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_ImagePb_descriptor,
-        new java.lang.String[] { "Url", });
+        new java.lang.String[] { "DbInfo", "Id", "Url", "ImageType", "Extension", });
+    internal_static_com_amazaar_Protobuff_ImageRefPb_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_com_amazaar_Protobuff_ImageRefPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_amazaar_Protobuff_ImageRefPb_descriptor,
+        new java.lang.String[] { "Id", "ImageId", });
+    internal_static_com_amazaar_Protobuff_ImageSearchRequestPb_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_amazaar_Protobuff_ImageSearchRequestPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_amazaar_Protobuff_ImageSearchRequestPb_descriptor,
+        new java.lang.String[] { });
+    internal_static_com_amazaar_Protobuff_ImageSearchResponsePb_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_amazaar_Protobuff_ImageSearchResponsePb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_amazaar_Protobuff_ImageSearchResponsePb_descriptor,
+        new java.lang.String[] { "Summary", "Results", });
+    com.amazaar.Protobuff.EntityPbOuterClass.getDescriptor();
+    com.amazaar.Protobuff.SummaryPbOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -1,6 +1,5 @@
 package com.amazaar.Widget.MenuWIdget;
 
-import android.app.FragmentManager;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
@@ -11,15 +10,19 @@ import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 
+import com.amazaar.CommonCode.DefaultImageUrl;
+import com.amazaar.ControlFlow.GetImageFromUrl;
+import com.amazaar.Fragments.MyAccountFragment;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.Module.AmazaarApplication;
+import com.amazaar.Protobuff.CustomerPbOuterClass;
 import com.amazaar.R;
+import com.amazaar.SessionManager.CustomerSession;
 import com.amazaar.Utility.Utils;
 import com.google.inject.Injector;
 
 import javax.inject.Inject;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 import roboguice.RoboGuice;
 
 public class MenuWidget extends LinearLayout implements IView<MenuView>, View.OnClickListener {
@@ -37,9 +40,13 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
     private RelativeLayout rlSetting;
     private RelativeLayout rlHelp;
     private RelativeLayout rlLogout;
-    private CardView cvLoginRegister;
+    private CardView m_admin;
     private CardView cvProfile;
-    private CircleImageView ivProfile;
+    private ImageView ivProfile;
+    @Inject
+    private CustomerSession m_customerSession;
+    @Inject
+    private GetImageFromUrl m_imageUrl;
 
 
     public MenuWidget(Context context, AttributeSet attrs) {
@@ -54,9 +61,9 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
         tvLogin = (TextView) findViewById(R.id.fragment_menu_tvLogin);
         tvRegister = (TextView) findViewById(R.id.fragment_menu_tvSignup);
         rlProfile = (RelativeLayout) findViewById(R.id.fragment_menu_rlProfile);
-        cvLoginRegister = (CardView) findViewById(R.id.fragment_menu_cvLoginRegister);
+        m_admin = (CardView) findViewById(R.id.adminCard);
         cvProfile = (CardView) findViewById(R.id.fragment_menu_cvProfile);
-        ivProfile = (CircleImageView) findViewById(R.id.fragment_menu_ivProfile);
+        ivProfile = (ImageView) findViewById(R.id.fragment_menu_ivProfile);
         tvName = (TextView) findViewById(R.id.fragment_menu_tvName);
         tvCity = (TextView) findViewById(R.id.fragment_menu_tvCity);
         rlWhishList = (RelativeLayout) findViewById(R.id.fragment_menu_rlWishlist);
@@ -86,7 +93,18 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
     }
 
     private void initWidget() {
-
+        if (m_customerSession.getSession() != null) {
+            tvLogin.setVisibility(GONE);
+            cvProfile.setVisibility(VISIBLE);
+            m_imageUrl.setImageFromUrl(getContext(), m_customerSession.getSession().getProfileImage(), ivProfile, DefaultImageUrl.ImageShowTypeEnum.MALE_PROFILE);
+            tvName.setText(com.amazaar.CommonCode.Strings.titleCase(m_customerSession.getSession().getName()));
+            tvCity.setText(com.amazaar.CommonCode.Strings.toTitileCaseFormatter(m_customerSession.getSession().getAddress().getCity().name()));
+            if (m_customerSession.getSession().getPrivilege() == CustomerPbOuterClass.PrivilegeTypeEnum.ADMIN) {
+                m_admin.setVisibility(VISIBLE);
+            } else {
+                m_admin.setVisibility(GONE);
+            }
+        }
     }
 
     private void injectMembers() {
@@ -120,13 +138,13 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
             DialogFragmentChoosPincode dialogFragmentChoosPincode = new DialogFragmentChoosPincode();
             dialogFragmentChoosPincode.show(getFragmentManager(), getString(R.string.choospincode));
 
-        }
+        }*/
         else if (v == cvProfile) {
 
             MyAccountFragment profileFragmentNew = new MyAccountFragment();
-            Utils.addNextFragment(getActivity(), profileFragmentNew, MenuFragment.this, false);
+            Utils.addNextFragment(profileFragmentNew, getView().getMainFragment(), false);
         }
-        else if(v==rlLogout)
+       /* else if(v==rlLogout)
         {
             GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), false);
             checkLogin();
@@ -154,12 +172,10 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
         }*/
 
 
-
-
     }
 
     public void initToolbar() {
-       // ((HomeActivity) getActivity()).setUpToolbar(getString(R.string.nav_menu_home), false, false, false,false);
+        // ((HomeActivity) getActivity()).setUpToolbar(getString(R.string.nav_menu_home), false, false, false,false);
     }
 
 

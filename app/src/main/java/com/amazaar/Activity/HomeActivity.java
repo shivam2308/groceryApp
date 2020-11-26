@@ -2,14 +2,17 @@ package com.amazaar.Activity;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.amazaar.Enums.TopBarUiEnum;
 import com.amazaar.Fragments.HomeCategoryFragment;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
+import com.amazaar.Widget.ImageDownloadWidget.ImageDownloadWidget;
 import com.amazaar.Widget.TopBarWidget.TopBarWidget;
 
 public class HomeActivity extends AppCompatActivity {
@@ -62,7 +65,6 @@ public class HomeActivity extends AppCompatActivity {
         mainFragment = new HomeCategoryFragment();
         m_topBar.getView().setMainFragment(mainFragment);
         openFragment(mainFragment);
-
     }
 
     public void setToolbar(TopBarUiEnum enumm) {
@@ -74,5 +76,10 @@ public class HomeActivity extends AppCompatActivity {
         transaction.replace(R.id.flcontainer, mFragment, mFragment.getClass().getSimpleName());
         transaction.commit();
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

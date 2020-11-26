@@ -20,6 +20,26 @@ public class AToast {
                 .show();
     }
 
+    public static void uploadToast() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Uploaded")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.SUCCESS)
+                .setDuration(Duration.LONG)
+                .show();
+    }
+
+    public static void failedToast() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Failed")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.DANGER)
+                .setDuration(Duration.LONG)
+                .show();
+    }
+
     public static void customToast() {
         Cue.init()
                 .with(AmazaarApplication.getContext())

@@ -159,7 +159,7 @@
                 app:font_name="NunitoBold.ttf" />
 
 
-            <androidx.recyclerview.widget.RecyclerView
+            <com.amazaar.CustomeComponent.CustomTextView
                 android:id="@+id/fragment_myaccount_rvAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -169,7 +169,7 @@
                 android:visibility="visible">
 
 
-            </androidx.recyclerview.widget.RecyclerView>
+            </com.amazaar.CustomeComponent.CustomTextView>
 
 
             <androidx.cardview.widget.CardView

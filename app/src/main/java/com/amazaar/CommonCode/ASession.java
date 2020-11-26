@@ -1,5 +1,6 @@
 package com.amazaar.CommonCode;
 
+import com.amazaar.Interfaces.ISession;
 import com.amazaar.Session.FastSave;
 import com.google.protobuf.GeneratedMessageV3;
 
@@ -7,7 +8,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-public class ASession<T extends GeneratedMessageV3> extends FastSave {
+public class ASession<T extends GeneratedMessageV3> extends FastSave implements ISession<T> {
 
     private String m_key = "";
     Class<T> m_classType;
@@ -112,6 +113,11 @@ public class ASession<T extends GeneratedMessageV3> extends FastSave {
 
     public void setListener(SessionListener listener) {
         this.listener = listener;
+    }
+
+    @Override
+    public T getSession() {
+        return getObject();
     }
 
     public interface SessionListener {

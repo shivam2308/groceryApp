@@ -14,7 +14,9 @@ public class HttpCaller extends HttpReqHandler {
 
     public HttpCaller(RequestMethodEnum method, RequestContentTypeEnum contentType, String url, JsonObject content) {
         super(method, contentType, url, content);
-        Log.d("Payload",content.toString());
+        if (content != null) {
+            Log.d("Payload", content.toString());
+        }
     }
 
 

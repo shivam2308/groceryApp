@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
+import com.amazaar.Fragments.CartListFragment;
 import com.amazaar.Fragments.MenuFragment;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
@@ -79,9 +79,22 @@ public class TopBarWidget extends LinearLayout implements IView<TopBarView>, Vie
                         setUpToolbar(getContext().getString(R.string.nav_menu_home), true, true, true, true);
                         break;
                     case MENU:
-                        setUpToolbar(getContext().getString(R.string.nav_menu_home), false, false, false,false);
+                        setUpToolbar(getContext().getString(R.string.nav_menu_home), false, false, false, false);
+                        break;
+                    case CART:
+                    case PROFILE:
+                        setUpToolbar(getContext().getString(R.string.my_cart_4), false, false, false, false);
                         break;
                 }
+            }
+        });
+
+        ivCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                CartListFragment mFragment = new CartListFragment();
+                Utils.addNextFragment(mFragment, getView().getMainFragment(), true);
             }
         });
     }
@@ -107,10 +120,8 @@ public class TopBarWidget extends LinearLayout implements IView<TopBarView>, Vie
                 AmazaarApplication.getFragmentManager().popBackStack();
 
             } else {
-
                 MenuFragment menuFragment = new MenuFragment();
                 Utils.addNextFragmentFadeAnim(menuFragment, getView().getMainFragment());
-                setUpToolbar(getContext().getString(R.string.nav_menu_home), false, false, false, false);
             }
 
 
