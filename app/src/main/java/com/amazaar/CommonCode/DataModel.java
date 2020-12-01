@@ -1,26 +1,36 @@
 package com.amazaar.CommonCode;
 
 import com.amazaar.Interfaces.IDefaultBuilderPbProvider;
-import com.amazaar.Interfaces.IDefaultPbProvider;
+import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.Message;
 
 import javax.inject.Inject;
 
-public class DataModel<P, DP extends IDefaultBuilderPbProvider<P>> {
-    private P m_pb;
+public class DataModel<P extends GeneratedMessageV3, DP extends IDefaultBuilderPbProvider<P>> {
+    private Message.Builder m_pb;
     private ChangeListener listener;
+    private P m_dPb;
 
     @Inject
     public DataModel(DP dPb) {
-        m_pb = dPb.getDefaultPb();
+        m_pb = dPb.getDefaultBuilderPb();
+        m_dPb= dPb.getDefaultPb();
     }
 
     public P getData() {
-        if (listener != null) listener.onChange();
+        return (P) m_pb.build();
+    }
+
+    public P getDefaultData() {
+        return m_dPb;
+    }
+
+    public Message.Builder getBuilderData() {
         return m_pb;
     }
 
     public void setVar(P pb) {
-        this.m_pb = pb;
+        this.m_pb = (Message.Builder) pb.toBuilder();
         if (listener != null) listener.onChange();
     }
 

@@ -1327,11 +1327,576 @@ public final class TimePbOuterClass {
 
   }
 
+  public interface TimeQueryRangePbOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.TimeQueryRangePb)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 startMilliseconds = 1;</code>
+     * @return The startMilliseconds.
+     */
+    long getStartMilliseconds();
+
+    /**
+     * <code>int64 endMilliseconds = 2;</code>
+     * @return The endMilliseconds.
+     */
+    long getEndMilliseconds();
+  }
+  /**
+   * Protobuf type {@code com.amazaar.Protobuff.TimeQueryRangePb}
+   */
+  public static final class TimeQueryRangePb extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.amazaar.Protobuff.TimeQueryRangePb)
+      TimeQueryRangePbOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TimeQueryRangePb.newBuilder() to construct.
+    private TimeQueryRangePb(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TimeQueryRangePb() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TimeQueryRangePb();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TimeQueryRangePb(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              startMilliseconds_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              endMilliseconds_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.amazaar.Protobuff.TimePbOuterClass.internal_static_com_amazaar_Protobuff_TimeQueryRangePb_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.amazaar.Protobuff.TimePbOuterClass.internal_static_com_amazaar_Protobuff_TimeQueryRangePb_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.class, com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.Builder.class);
+    }
+
+    public static final int STARTMILLISECONDS_FIELD_NUMBER = 1;
+    private long startMilliseconds_;
+    /**
+     * <code>int64 startMilliseconds = 1;</code>
+     * @return The startMilliseconds.
+     */
+    @java.lang.Override
+    public long getStartMilliseconds() {
+      return startMilliseconds_;
+    }
+
+    public static final int ENDMILLISECONDS_FIELD_NUMBER = 2;
+    private long endMilliseconds_;
+    /**
+     * <code>int64 endMilliseconds = 2;</code>
+     * @return The endMilliseconds.
+     */
+    @java.lang.Override
+    public long getEndMilliseconds() {
+      return endMilliseconds_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (startMilliseconds_ != 0L) {
+        output.writeInt64(1, startMilliseconds_);
+      }
+      if (endMilliseconds_ != 0L) {
+        output.writeInt64(2, endMilliseconds_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (startMilliseconds_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, startMilliseconds_);
+      }
+      if (endMilliseconds_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, endMilliseconds_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb)) {
+        return super.equals(obj);
+      }
+      com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb other = (com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb) obj;
+
+      if (getStartMilliseconds()
+          != other.getStartMilliseconds()) return false;
+      if (getEndMilliseconds()
+          != other.getEndMilliseconds()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STARTMILLISECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartMilliseconds());
+      hash = (37 * hash) + ENDMILLISECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEndMilliseconds());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.amazaar.Protobuff.TimeQueryRangePb}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.amazaar.Protobuff.TimeQueryRangePb)
+        com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePbOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.amazaar.Protobuff.TimePbOuterClass.internal_static_com_amazaar_Protobuff_TimeQueryRangePb_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.amazaar.Protobuff.TimePbOuterClass.internal_static_com_amazaar_Protobuff_TimeQueryRangePb_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.class, com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.Builder.class);
+      }
+
+      // Construct using com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        startMilliseconds_ = 0L;
+
+        endMilliseconds_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.amazaar.Protobuff.TimePbOuterClass.internal_static_com_amazaar_Protobuff_TimeQueryRangePb_descriptor;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb getDefaultInstanceForType() {
+        return com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb build() {
+        com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb buildPartial() {
+        com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb result = new com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb(this);
+        result.startMilliseconds_ = startMilliseconds_;
+        result.endMilliseconds_ = endMilliseconds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb) {
+          return mergeFrom((com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb other) {
+        if (other == com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.getDefaultInstance()) return this;
+        if (other.getStartMilliseconds() != 0L) {
+          setStartMilliseconds(other.getStartMilliseconds());
+        }
+        if (other.getEndMilliseconds() != 0L) {
+          setEndMilliseconds(other.getEndMilliseconds());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long startMilliseconds_ ;
+      /**
+       * <code>int64 startMilliseconds = 1;</code>
+       * @return The startMilliseconds.
+       */
+      @java.lang.Override
+      public long getStartMilliseconds() {
+        return startMilliseconds_;
+      }
+      /**
+       * <code>int64 startMilliseconds = 1;</code>
+       * @param value The startMilliseconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartMilliseconds(long value) {
+        
+        startMilliseconds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 startMilliseconds = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartMilliseconds() {
+        
+        startMilliseconds_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long endMilliseconds_ ;
+      /**
+       * <code>int64 endMilliseconds = 2;</code>
+       * @return The endMilliseconds.
+       */
+      @java.lang.Override
+      public long getEndMilliseconds() {
+        return endMilliseconds_;
+      }
+      /**
+       * <code>int64 endMilliseconds = 2;</code>
+       * @param value The endMilliseconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndMilliseconds(long value) {
+        
+        endMilliseconds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 endMilliseconds = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndMilliseconds() {
+        
+        endMilliseconds_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.amazaar.Protobuff.TimeQueryRangePb)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.amazaar.Protobuff.TimeQueryRangePb)
+    private static final com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb();
+    }
+
+    public static com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TimeQueryRangePb>
+        PARSER = new com.google.protobuf.AbstractParser<TimeQueryRangePb>() {
+      @java.lang.Override
+      public TimeQueryRangePb parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TimeQueryRangePb(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TimeQueryRangePb> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TimeQueryRangePb> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_amazaar_Protobuff_TimePb_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_amazaar_Protobuff_TimePb_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_amazaar_Protobuff_TimeQueryRangePb_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_amazaar_Protobuff_TimeQueryRangePb_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1345,9 +1910,11 @@ public final class TimePbOuterClass {
       "\n\006TimePb\022\014\n\004date\030\001 \001(\t\022\r\n\005month\030\002 \001(\t\022\014\n" +
       "\004year\030\003 \001(\t\022\024\n\014milliseconds\030\004 \001(\003\022\025\n\rfor" +
       "mattedDate\030\005 \001(\t\0225\n\010timezone\030\006 \001(\0162#.com" +
-      ".amazaar.Protobuff.TimeZoneEnum*7\n\014TimeZ" +
-      "oneEnum\022\025\n\021UNKNOWN_TIME_ZONE\020\000\022\007\n\003IST\020\001\022" +
-      "\007\n\003UTC\020\002b\006proto3"
+      ".amazaar.Protobuff.TimeZoneEnum\"F\n\020TimeQ" +
+      "ueryRangePb\022\031\n\021startMilliseconds\030\001 \001(\003\022\027" +
+      "\n\017endMilliseconds\030\002 \001(\003*7\n\014TimeZoneEnum\022" +
+      "\025\n\021UNKNOWN_TIME_ZONE\020\000\022\007\n\003IST\020\001\022\007\n\003UTC\020\002" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1359,6 +1926,12 @@ public final class TimePbOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_TimePb_descriptor,
         new java.lang.String[] { "Date", "Month", "Year", "Milliseconds", "FormattedDate", "Timezone", });
+    internal_static_com_amazaar_Protobuff_TimeQueryRangePb_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_com_amazaar_Protobuff_TimeQueryRangePb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_amazaar_Protobuff_TimeQueryRangePb_descriptor,
+        new java.lang.String[] { "StartMilliseconds", "EndMilliseconds", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

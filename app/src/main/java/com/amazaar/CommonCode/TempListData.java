@@ -1,6 +1,7 @@
 package com.amazaar.CommonCode;
 
 import com.amazaar.ListModels.ProductListModel;
+import com.amazaar.Protobuff.ItemPbOuterClass;
 import com.amazaar.R;
 
 import java.util.ArrayList;
@@ -13,23 +14,27 @@ public class TempListData {
         ProductListModel productListModel = new ProductListModel();
 
         productListModel.setProductImage(R.drawable.category_fruits_vegetables);
+        productListModel.setItemType(ItemPbOuterClass.ItemTypeEnum.FRUITS);
         productListModelArrayList.add(productListModel);
 
 
         productListModel = new ProductListModel();
         productListModel.setProductImage(R.drawable.category_frozen_veg);
+        productListModel.setItemType(ItemPbOuterClass.ItemTypeEnum.VEGETABLES);
         productListModelArrayList.add(productListModel);
 
 
         productListModel = new ProductListModel();
         productListModel.setProductImage(R.drawable.category_beverages);
+        productListModel.setItemType(ItemPbOuterClass.ItemTypeEnum.KIRANA);
         productListModelArrayList.add(productListModel);
 
         productListModel = new ProductListModel();
         productListModel.setProductImage(R.drawable.category_branded_food);
+        productListModel.setItemType(ItemPbOuterClass.ItemTypeEnum.DAIRY);
         productListModelArrayList.add(productListModel);
 
-        productListModel = new ProductListModel();
+        /*productListModel = new ProductListModel();
         productListModel.setProductImage(R.drawable.category_beauty_personal_care);
         productListModelArrayList.add(productListModel);
 
@@ -63,7 +68,7 @@ public class TempListData {
 
         productListModel = new ProductListModel();
         productListModel.setProductImage(R.drawable.category_frozen_veg);
-        productListModelArrayList.add(productListModel);
+        productListModelArrayList.add(productListModel);*/
 
 
         return productListModelArrayList;

@@ -85,6 +85,11 @@ public class TopBarWidget extends LinearLayout implements IView<TopBarView>, Vie
                     case PROFILE:
                         setUpToolbar(getContext().getString(R.string.my_cart_4), false, false, false, false);
                         break;
+                    case WISH_LIST:
+                        setUpToolbar(getContext().getString(R.string.my_wishlist), false, true, false,true);
+                        break;
+                    case PRODUCT_DETAILS:
+                        setUpToolbar(getContext().getString(R.string.fruits_vegetables), false,true,false,true);
                 }
             }
         });

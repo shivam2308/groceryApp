@@ -17,5 +17,10 @@ message TimePb {
     TimeZoneEnum timezone =6;
 }
 
+message TimeQueryRangePb{
+    int64 startMilliseconds =1;
+    int64 endMilliseconds =2;
+}
+
 
 

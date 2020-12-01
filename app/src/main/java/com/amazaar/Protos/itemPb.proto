@@ -43,7 +43,9 @@ message ItemPb {
     TimePb time = 9;
 }
 message ItemSearchRequestPb {
-    
+    ItemTypeEnum itemType = 1;
+    AvailabilityStatusEnum availabilityStatus = 2;
+    TimeQueryRangePb timeQuery = 3;
 }
 message ItemSearchResponsePb {
     SummaryPb summary = 1;

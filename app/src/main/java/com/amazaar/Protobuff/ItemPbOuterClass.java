@@ -2177,6 +2177,43 @@ public final class ItemPbOuterClass {
   public interface ItemSearchRequestPbOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.ItemSearchRequestPb)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+     * @return The enum numeric value on the wire for itemType.
+     */
+    int getItemTypeValue();
+    /**
+     * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+     * @return The itemType.
+     */
+    com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum getItemType();
+
+    /**
+     * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+     * @return The enum numeric value on the wire for availabilityStatus.
+     */
+    int getAvailabilityStatusValue();
+    /**
+     * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+     * @return The availabilityStatus.
+     */
+    com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum getAvailabilityStatus();
+
+    /**
+     * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+     * @return Whether the timeQuery field is set.
+     */
+    boolean hasTimeQuery();
+    /**
+     * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+     * @return The timeQuery.
+     */
+    com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb getTimeQuery();
+    /**
+     * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+     */
+    com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePbOrBuilder getTimeQueryOrBuilder();
   }
   /**
    * Protobuf type {@code com.amazaar.Protobuff.ItemSearchRequestPb}
@@ -2191,6 +2228,8 @@ public final class ItemPbOuterClass {
       super(builder);
     }
     private ItemSearchRequestPb() {
+      itemType_ = 0;
+      availabilityStatus_ = 0;
     }
 
     @java.lang.Override
@@ -2223,6 +2262,31 @@ public final class ItemPbOuterClass {
             case 0:
               done = true;
               break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              itemType_ = rawValue;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              availabilityStatus_ = rawValue;
+              break;
+            }
+            case 26: {
+              com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.Builder subBuilder = null;
+              if (timeQuery_ != null) {
+                subBuilder = timeQuery_.toBuilder();
+              }
+              timeQuery_ = input.readMessage(com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(timeQuery_);
+                timeQuery_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2255,6 +2319,70 @@ public final class ItemPbOuterClass {
               com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb.class, com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb.Builder.class);
     }
 
+    public static final int ITEMTYPE_FIELD_NUMBER = 1;
+    private int itemType_;
+    /**
+     * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+     * @return The enum numeric value on the wire for itemType.
+     */
+    @java.lang.Override public int getItemTypeValue() {
+      return itemType_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+     * @return The itemType.
+     */
+    @java.lang.Override public com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum getItemType() {
+      @SuppressWarnings("deprecation")
+      com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum result = com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum.valueOf(itemType_);
+      return result == null ? com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum.UNRECOGNIZED : result;
+    }
+
+    public static final int AVAILABILITYSTATUS_FIELD_NUMBER = 2;
+    private int availabilityStatus_;
+    /**
+     * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+     * @return The enum numeric value on the wire for availabilityStatus.
+     */
+    @java.lang.Override public int getAvailabilityStatusValue() {
+      return availabilityStatus_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+     * @return The availabilityStatus.
+     */
+    @java.lang.Override public com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum getAvailabilityStatus() {
+      @SuppressWarnings("deprecation")
+      com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum result = com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.valueOf(availabilityStatus_);
+      return result == null ? com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.UNRECOGNIZED : result;
+    }
+
+    public static final int TIMEQUERY_FIELD_NUMBER = 3;
+    private com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb timeQuery_;
+    /**
+     * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+     * @return Whether the timeQuery field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeQuery() {
+      return timeQuery_ != null;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+     * @return The timeQuery.
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb getTimeQuery() {
+      return timeQuery_ == null ? com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.getDefaultInstance() : timeQuery_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePbOrBuilder getTimeQueryOrBuilder() {
+      return getTimeQuery();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2269,6 +2397,15 @@ public final class ItemPbOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (itemType_ != com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum.UNKNOWN_ITEM_TYPE.getNumber()) {
+        output.writeEnum(1, itemType_);
+      }
+      if (availabilityStatus_ != com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.UNKNOWN_AVAILABILITY_STATUS.getNumber()) {
+        output.writeEnum(2, availabilityStatus_);
+      }
+      if (timeQuery_ != null) {
+        output.writeMessage(3, getTimeQuery());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2278,6 +2415,18 @@ public final class ItemPbOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (itemType_ != com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum.UNKNOWN_ITEM_TYPE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, itemType_);
+      }
+      if (availabilityStatus_ != com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.UNKNOWN_AVAILABILITY_STATUS.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, availabilityStatus_);
+      }
+      if (timeQuery_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getTimeQuery());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2293,6 +2442,13 @@ public final class ItemPbOuterClass {
       }
       com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb other = (com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb) obj;
 
+      if (itemType_ != other.itemType_) return false;
+      if (availabilityStatus_ != other.availabilityStatus_) return false;
+      if (hasTimeQuery() != other.hasTimeQuery()) return false;
+      if (hasTimeQuery()) {
+        if (!getTimeQuery()
+            .equals(other.getTimeQuery())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2304,6 +2460,14 @@ public final class ItemPbOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ITEMTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + itemType_;
+      hash = (37 * hash) + AVAILABILITYSTATUS_FIELD_NUMBER;
+      hash = (53 * hash) + availabilityStatus_;
+      if (hasTimeQuery()) {
+        hash = (37 * hash) + TIMEQUERY_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeQuery().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2437,6 +2601,16 @@ public final class ItemPbOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        itemType_ = 0;
+
+        availabilityStatus_ = 0;
+
+        if (timeQueryBuilder_ == null) {
+          timeQuery_ = null;
+        } else {
+          timeQuery_ = null;
+          timeQueryBuilder_ = null;
+        }
         return this;
       }
 
@@ -2463,6 +2637,13 @@ public final class ItemPbOuterClass {
       @java.lang.Override
       public com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb buildPartial() {
         com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb result = new com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb(this);
+        result.itemType_ = itemType_;
+        result.availabilityStatus_ = availabilityStatus_;
+        if (timeQueryBuilder_ == null) {
+          result.timeQuery_ = timeQuery_;
+        } else {
+          result.timeQuery_ = timeQueryBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -2511,6 +2692,15 @@ public final class ItemPbOuterClass {
 
       public Builder mergeFrom(com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb other) {
         if (other == com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb.getDefaultInstance()) return this;
+        if (other.itemType_ != 0) {
+          setItemTypeValue(other.getItemTypeValue());
+        }
+        if (other.availabilityStatus_ != 0) {
+          setAvailabilityStatusValue(other.getAvailabilityStatusValue());
+        }
+        if (other.hasTimeQuery()) {
+          mergeTimeQuery(other.getTimeQuery());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2538,6 +2728,233 @@ public final class ItemPbOuterClass {
           }
         }
         return this;
+      }
+
+      private int itemType_ = 0;
+      /**
+       * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+       * @return The enum numeric value on the wire for itemType.
+       */
+      @java.lang.Override public int getItemTypeValue() {
+        return itemType_;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+       * @param value The enum numeric value on the wire for itemType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemTypeValue(int value) {
+        
+        itemType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+       * @return The itemType.
+       */
+      @java.lang.Override
+      public com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum getItemType() {
+        @SuppressWarnings("deprecation")
+        com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum result = com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum.valueOf(itemType_);
+        return result == null ? com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+       * @param value The itemType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemType(com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        itemType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearItemType() {
+        
+        itemType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int availabilityStatus_ = 0;
+      /**
+       * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+       * @return The enum numeric value on the wire for availabilityStatus.
+       */
+      @java.lang.Override public int getAvailabilityStatusValue() {
+        return availabilityStatus_;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+       * @param value The enum numeric value on the wire for availabilityStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvailabilityStatusValue(int value) {
+        
+        availabilityStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+       * @return The availabilityStatus.
+       */
+      @java.lang.Override
+      public com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum getAvailabilityStatus() {
+        @SuppressWarnings("deprecation")
+        com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum result = com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.valueOf(availabilityStatus_);
+        return result == null ? com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+       * @param value The availabilityStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvailabilityStatus(com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        availabilityStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAvailabilityStatus() {
+        
+        availabilityStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb timeQuery_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb, com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.Builder, com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePbOrBuilder> timeQueryBuilder_;
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       * @return Whether the timeQuery field is set.
+       */
+      public boolean hasTimeQuery() {
+        return timeQueryBuilder_ != null || timeQuery_ != null;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       * @return The timeQuery.
+       */
+      public com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb getTimeQuery() {
+        if (timeQueryBuilder_ == null) {
+          return timeQuery_ == null ? com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.getDefaultInstance() : timeQuery_;
+        } else {
+          return timeQueryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       */
+      public Builder setTimeQuery(com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb value) {
+        if (timeQueryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timeQuery_ = value;
+          onChanged();
+        } else {
+          timeQueryBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       */
+      public Builder setTimeQuery(
+          com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.Builder builderForValue) {
+        if (timeQueryBuilder_ == null) {
+          timeQuery_ = builderForValue.build();
+          onChanged();
+        } else {
+          timeQueryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       */
+      public Builder mergeTimeQuery(com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb value) {
+        if (timeQueryBuilder_ == null) {
+          if (timeQuery_ != null) {
+            timeQuery_ =
+              com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.newBuilder(timeQuery_).mergeFrom(value).buildPartial();
+          } else {
+            timeQuery_ = value;
+          }
+          onChanged();
+        } else {
+          timeQueryBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       */
+      public Builder clearTimeQuery() {
+        if (timeQueryBuilder_ == null) {
+          timeQuery_ = null;
+          onChanged();
+        } else {
+          timeQuery_ = null;
+          timeQueryBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       */
+      public com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.Builder getTimeQueryBuilder() {
+        
+        onChanged();
+        return getTimeQueryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       */
+      public com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePbOrBuilder getTimeQueryOrBuilder() {
+        if (timeQueryBuilder_ != null) {
+          return timeQueryBuilder_.getMessageOrBuilder();
+        } else {
+          return timeQuery_ == null ?
+              com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.getDefaultInstance() : timeQuery_;
+        }
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb, com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.Builder, com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePbOrBuilder> 
+          getTimeQueryFieldBuilder() {
+        if (timeQueryBuilder_ == null) {
+          timeQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb, com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.Builder, com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePbOrBuilder>(
+                  getTimeQuery(),
+                  getParentForChildren(),
+                  isClean());
+          timeQuery_ = null;
+        }
+        return timeQueryBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3625,18 +4042,23 @@ public final class ItemPbOuterClass {
       "zaar.Protobuff.AvailabilityStatusEnum\022A\n" +
       "\014quantityType\030\010 \001(\0162+.com.amazaar.Protob" +
       "uff.ItemQuantityTypeEnum\022+\n\004time\030\t \001(\0132\035" +
-      ".com.amazaar.Protobuff.TimePb\"\025\n\023ItemSea" +
-      "rchRequestPb\"y\n\024ItemSearchResponsePb\0221\n\007" +
-      "summary\030\001 \001(\0132 .com.amazaar.Protobuff.Su" +
-      "mmaryPb\022.\n\007results\030\002 \003(\0132\035.com.amazaar.P" +
-      "rotobuff.ItemPb*X\n\014ItemTypeEnum\022\025\n\021UNKNO" +
-      "WN_ITEM_TYPE\020\000\022\016\n\nVEGETABLES\020\001\022\n\n\006FRUITS" +
-      "\020\002\022\n\n\006KIRANA\020\003\022\t\n\005DAIRY\020\004*g\n\024ItemQuantit" +
-      "yTypeEnum\022\036\n\032UNKNOWN_ITEM_QUANTITY_TYPE\020" +
-      "\000\022\016\n\nKILO_GRAMS\020\001\022\t\n\005GRAMS\020\002\022\t\n\005PIECE\020\003\022" +
-      "\t\n\005LITRE\020\004*[\n\026AvailabilityStatusEnum\022\037\n\033" +
-      "UNKNOWN_AVAILABILITY_STATUS\020\000\022\r\n\tAVAILAB" +
-      "LE\020\001\022\021\n\rNOT_AVAILABLE\020\002b\006proto3"
+      ".com.amazaar.Protobuff.TimePb\"\323\001\n\023ItemSe" +
+      "archRequestPb\0225\n\010itemType\030\001 \001(\0162#.com.am" +
+      "azaar.Protobuff.ItemTypeEnum\022I\n\022availabi" +
+      "lityStatus\030\002 \001(\0162-.com.amazaar.Protobuff" +
+      ".AvailabilityStatusEnum\022:\n\ttimeQuery\030\003 \001" +
+      "(\0132\'.com.amazaar.Protobuff.TimeQueryRang" +
+      "ePb\"y\n\024ItemSearchResponsePb\0221\n\007summary\030\001" +
+      " \001(\0132 .com.amazaar.Protobuff.SummaryPb\022." +
+      "\n\007results\030\002 \003(\0132\035.com.amazaar.Protobuff." +
+      "ItemPb*X\n\014ItemTypeEnum\022\025\n\021UNKNOWN_ITEM_T" +
+      "YPE\020\000\022\016\n\nVEGETABLES\020\001\022\n\n\006FRUITS\020\002\022\n\n\006KIR" +
+      "ANA\020\003\022\t\n\005DAIRY\020\004*g\n\024ItemQuantityTypeEnum" +
+      "\022\036\n\032UNKNOWN_ITEM_QUANTITY_TYPE\020\000\022\016\n\nKILO" +
+      "_GRAMS\020\001\022\t\n\005GRAMS\020\002\022\t\n\005PIECE\020\003\022\t\n\005LITRE\020" +
+      "\004*[\n\026AvailabilityStatusEnum\022\037\n\033UNKNOWN_A" +
+      "VAILABILITY_STATUS\020\000\022\r\n\tAVAILABLE\020\001\022\021\n\rN" +
+      "OT_AVAILABLE\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3658,7 +4080,7 @@ public final class ItemPbOuterClass {
     internal_static_com_amazaar_Protobuff_ItemSearchRequestPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_ItemSearchRequestPb_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "ItemType", "AvailabilityStatus", "TimeQuery", });
     internal_static_com_amazaar_Protobuff_ItemSearchResponsePb_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_amazaar_Protobuff_ItemSearchResponsePb_fieldAccessorTable = new
