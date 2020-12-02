@@ -5,4 +5,8 @@ public enum TopBarUiEnum {
     MENU,
     CART,
     PROFILE,
+    CHECK_OUT,
+    PAYMENT,
+    SETTING,
+    HELP
 }

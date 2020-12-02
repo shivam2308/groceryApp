@@ -124,12 +124,13 @@ public class Utils {
 
     /**
      * @param mActivity
+     * @param context
      * @param targetedFragment
      * @param shooterFragment
      * @purpose for call targeted fragment from current fragment
      */
 
-    public static void addNextFragment(Fragment targetedFragment, Fragment shooterFragment, boolean isDownToUp) {
+    public static void addNextFragment(Context context, Fragment targetedFragment, Fragment shooterFragment, boolean isDownToUp) {
         final FragmentTransaction transaction = AmazaarApplication.getFragmentManager().beginTransaction();
 
 

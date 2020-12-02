@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.amazaar.Fragments.CartListFragment;
+import com.amazaar.Fragments.CheckOutFragment;
 import com.amazaar.Fragments.MenuFragment;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
@@ -39,12 +41,13 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
     private ImageView ivClose;
     private ImageView ivHome;
     private TextView tvCartCount;
+    private  TextView m_chkbtn;
+    private CheckOutFragment checkOutFragment;
 
     /*private LinearLayoutManager mLayoutManager;
     private CartListAdapter productListAdapter;
     private List<CartlistModel> productListModelArrayList;*/
     private MenuItem item;
-
 
     public CartWidget(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -70,12 +73,15 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
         ivClose = (ImageView) findViewById(R.id.fragment_cartlist_ivClose);
         ivHome = (ImageView) findViewById(R.id.fragment_cartlist_ivHome);
         llSelectPin = (LinearLayout) findViewById(R.id.fragment_cartlist_llSelectPin);
+        m_chkbtn = (TextView) findViewById(R.id.checkout_btn);
+
        // mLayoutManager = new LinearLayoutManager(getActivity());
        // rvProductList.setLayoutManager(mLayoutManager);
         rlCheckOut.setOnClickListener(this);
         ivClose.setOnClickListener(this);
         ivHome.setOnClickListener(this);
         llSelectPin.setOnClickListener(this);
+        m_chkbtn.setOnClickListener(this);
     }
 
     private void initWidget() {
@@ -94,11 +100,12 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
 
     @Override
     public void onClick(View v) {
-        Utils.hideKeyboard(getContext());
-        /*if (v == rlCheckOut) {
-            CheckOutFragmnet cartFragment = new CheckOutFragmnet();
-            Utils.addNextFragment(getActivity(), cartFragment, CartListFragment.this, true);
-        } else if (v == llSelectPin) {
+        //Utils.hideKeyboard(getContext());
+        if (v == m_chkbtn) {
+            CheckOutFragment checkOutFragment = new CheckOutFragment();
+            Utils.addNextFragment(getContext(), checkOutFragment, getView().getMainFragment(), true);
+        }
+        /*else if (v == llSelectPin) {
 
             DialogFragmentChoosPincode dialogFragmentChoosPincode = new DialogFragmentChoosPincode();
             dialogFragmentChoosPincode.show(getFragmentManager(), getString(R.string.choospincode));

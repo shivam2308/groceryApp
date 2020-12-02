@@ -8,8 +8,11 @@ import android.view.ViewGroup;
 import com.amazaar.Activity.HomeActivity;
 import com.amazaar.Enums.TopBarUiEnum;
 import com.amazaar.R;
+import com.amazaar.Widget.CartWidget.CartWidget;
 
 public class CartListFragment extends BaseFragment {
+    private CartWidget m_cart_widget;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -23,6 +26,8 @@ public class CartListFragment extends BaseFragment {
 
     @Override
     public void initComponents(View rootView) {
+        m_cart_widget = rootView.findViewById(R.id.cart_widget);
+        m_cart_widget.getView().setMainFragment(this);
         initToolbar();
     }
 

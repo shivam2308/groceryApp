@@ -85,6 +85,18 @@ public class TopBarWidget extends LinearLayout implements IView<TopBarView>, Vie
                     case PROFILE:
                         setUpToolbar(getContext().getString(R.string.my_cart_4), false, false, false, false);
                         break;
+                    case CHECK_OUT:
+                        setUpToolbar("CheckOut", false, true, false,false);
+                        break;
+                    case PAYMENT:
+                        setUpToolbar("Payment", false, true, false,false);
+                        break;
+                    case SETTING:
+                        setUpToolbar("Setting", false, true, false,false);
+                        break;
+                    case HELP:
+                        setUpToolbar("Help", false, true, false,false);
+                        break;
                 }
             }
         });
@@ -94,7 +106,7 @@ public class TopBarWidget extends LinearLayout implements IView<TopBarView>, Vie
             public void onClick(View v) {
 
                 CartListFragment mFragment = new CartListFragment();
-                Utils.addNextFragment(mFragment, getView().getMainFragment(), true);
+                Utils.addNextFragment(getContext(), mFragment, getView().getMainFragment(), true);
             }
         });
     }
