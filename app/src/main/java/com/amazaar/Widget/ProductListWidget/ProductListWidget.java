@@ -94,7 +94,7 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
                 Bundle bundle = new Bundle();
                 bundle.putParcelable(getContext().getString(R.string.bdl_model), viewModel);
                 fragmentProductDetails.setArguments(bundle);
-                Utils.addNextFragment(fragmentProductDetails, getView().getMainFragment(), false);
+                Utils.addNextFragment(getContext(),fragmentProductDetails, getView().getMainFragment(), false);
             }
         });
 

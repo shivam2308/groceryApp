@@ -87,7 +87,7 @@ public class HomeCategoryWidget extends LinearLayout implements IView<HomeCatego
 
                 ProductListFragment fragmentProductDetails = new ProductListFragment();
                 fragmentProductDetails.setItemType(viewModel.getItemType());
-                Utils.addNextFragment(fragmentProductDetails, getView().getMainFragment(), false);
+                Utils.addNextFragment(getContext(),fragmentProductDetails, getView().getMainFragment(), false);
             }
         });
 

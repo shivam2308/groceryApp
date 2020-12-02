@@ -7,4 +7,8 @@ public enum TopBarUiEnum {
     PROFILE,
     WISH_LIST,
     PRODUCT_DETAILS,
+    CHECK_OUT,
+    PAYMENT,
+    SETTING,
+    HELP,
 }

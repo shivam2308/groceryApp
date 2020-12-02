@@ -12,7 +12,9 @@ import androidx.cardview.widget.CardView;
 
 import com.amazaar.CommonCode.DefaultImageUrl;
 import com.amazaar.ControlFlow.GetImageFromUrl;
+import com.amazaar.Fragments.HelpFragment;
 import com.amazaar.Fragments.MyAccountFragment;
+import com.amazaar.Fragments.SettingFragment;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.Protobuff.CustomerPbOuterClass;
@@ -142,34 +144,34 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
         else if (v == cvProfile) {
 
             MyAccountFragment profileFragmentNew = new MyAccountFragment();
-            Utils.addNextFragment(profileFragmentNew, getView().getMainFragment(), false);
+            Utils.addNextFragment(getContext(), profileFragmentNew, getView().getMainFragment(), false);
         }
-       /* else if(v==rlLogout)
-        {
-            GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), false);
-            checkLogin();
-        }
+//        else if(v==rlLogout)
+//        {
+//            GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), false);
+//            checkLogin();
+//        }
         else if(v==rlHelp)
         {
             HelpFragment helpFragment = new HelpFragment();
-            Utils.addNextFragment(getActivity(), helpFragment, MenuFragment.this, false);
+            Utils.addNextFragment(getContext(), helpFragment, getView().getMainFragment(), true);
         }
         else if(v==rlSetting)
         {
             SettingFragment settingFragment = new SettingFragment();
-            Utils.addNextFragment(getActivity(), settingFragment, MenuFragment.this, false);
+            Utils.addNextFragment(getContext(), settingFragment, getView().getMainFragment(), true);
         }
-        else if(v==rlOrderHistory)
-        {
-            OrderListFragment orderListFragment = new OrderListFragment();
-            Utils.addNextFragment(getActivity(), orderListFragment, MenuFragment.this, false);
-        }
-        else if(v==rlWhishList)
-        {
-            ProductListFragment fragmentProductDetails = new ProductListFragment();
-            fragmentProductDetails.setTargetFragment(this,99);
-            Utils.addNextFragment(getActivity(), fragmentProductDetails, MenuFragment.this, false);
-        }*/
+//        else if(v==rlOrderHistory)
+//        {
+//            OrderListFragment orderListFragment = new OrderListFragment();
+//            Utils.addNextFragment(getActivity(), orderListFragment, MenuFragment.this, false);
+//        }
+//        else if(v==rlWhishList)
+//        {
+//            ProductListFragment fragmentProductDetails = new ProductListFragment();
+//            fragmentProductDetails.setTargetFragment(this,99);
+//            Utils.addNextFragment(getActivity(), fragmentProductDetails, MenuFragment.this, false);
+//        }
 
 
     }
