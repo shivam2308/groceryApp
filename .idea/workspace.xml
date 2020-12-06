@@ -14,46 +14,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92ef67b3-1dbb-4992-b1e4-202a114f4752" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Adapters/OrderListAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/OrderListFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ListModels/OrderListModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListWidget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/dialog/DialogFragmentAboutUs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/dialog/DialogFragmentFeedback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/dialog/DialogFragmentPrivacy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/dialog/DialogFragmentTerms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_aboutus.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_feedback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_privacy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_terms.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_order_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/order_list_layout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/row_order_history_list.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Activity/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Activity/BaseActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/TempListData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/TempListData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Enums/TopBarUiEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Enums/TopBarUiEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/HelpFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/HelpFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ListModels/ProductListModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ListModels/ProductListModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/HelpWidget/HelpWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/HelpWidget/HelpWidget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuWidget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/SettingWidget/SettingWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/SettingWidget/SettingWidget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Activity/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Activity/SplashActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ServerConfig/ServerUrlManeger.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ServerConfig/ServerUrlManeger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,31 +327,31 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="460" y="119" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1607208403361" />
-    <state width="1317" height="500" key="GridCell.Tab.0.bottom" timestamp="1607238551573">
+    <state width="1317" height="500" key="GridCell.Tab.0.bottom" timestamp="1607262533120">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="500" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607238551573" />
+    <state width="1317" height="500" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607262533120" />
     <state width="1323" height="282" key="GridCell.Tab.0.bottom/0.0.1366.736/1366.0.1360.738@0.0.1366.736" timestamp="1605450597900" />
     <state width="1317" height="163" key="GridCell.Tab.0.bottom/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606299710724" />
     <state width="1323" height="321" key="GridCell.Tab.0.bottom/0.0.1366.736@0.0.1366.736" timestamp="1603605957944" />
-    <state width="1317" height="500" key="GridCell.Tab.0.center" timestamp="1607238551573">
+    <state width="1317" height="500" key="GridCell.Tab.0.center" timestamp="1607262533120">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="500" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1607238551573" />
+    <state width="1317" height="500" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1607262533120" />
     <state width="1323" height="282" key="GridCell.Tab.0.center/0.0.1366.736/1366.0.1360.738@0.0.1366.736" timestamp="1605450597900" />
     <state width="1317" height="163" key="GridCell.Tab.0.center/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606299710724" />
     <state width="1323" height="321" key="GridCell.Tab.0.center/0.0.1366.736@0.0.1366.736" timestamp="1603605957944" />
-    <state width="1317" height="500" key="GridCell.Tab.0.left" timestamp="1607238551572">
+    <state width="1317" height="500" key="GridCell.Tab.0.left" timestamp="1607262533120">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="500" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1607238551572" />
+    <state width="1317" height="500" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1607262533120" />
     <state width="1323" height="282" key="GridCell.Tab.0.left/0.0.1366.736/1366.0.1360.738@0.0.1366.736" timestamp="1605450597900" />
     <state width="1317" height="163" key="GridCell.Tab.0.left/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606299710724" />
     <state width="1323" height="321" key="GridCell.Tab.0.left/0.0.1366.736@0.0.1366.736" timestamp="1603605957944" />
-    <state width="1317" height="500" key="GridCell.Tab.0.right" timestamp="1607238551573">
+    <state width="1317" height="500" key="GridCell.Tab.0.right" timestamp="1607262533120">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="500" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1607238551573" />
+    <state width="1317" height="500" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1607262533120" />
     <state width="1323" height="282" key="GridCell.Tab.0.right/0.0.1366.736/1366.0.1360.738@0.0.1366.736" timestamp="1605450597900" />
     <state width="1317" height="163" key="GridCell.Tab.0.right/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606299710724" />
     <state width="1323" height="321" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1603605957944" />
