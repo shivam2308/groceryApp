@@ -1,5 +1,6 @@
 package com.amazaar.Widget.SettingWidget;
 
+import android.app.FragmentManager;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
@@ -11,11 +12,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.R;
 import com.amazaar.Widget.SettingWidget.SettingView;
+import com.amazaar.dialog.DialogFragmentPrivacy;
 import com.google.inject.Injector;
+import com.amazaar.dialog.DialogFragmentTerms;
 
 import javax.inject.Inject;
 
 import roboguice.RoboGuice;
+
+import static com.amazaar.Module.AmazaarApplication.getFragmentManager;
 
 public class SettingWidget extends LinearLayout implements IView<SettingView>, View.OnClickListener {
 
@@ -64,6 +69,16 @@ public class SettingWidget extends LinearLayout implements IView<SettingView>, V
     }
 
     public void onClick(View v) {
+        //super.onClick(v);
 
+        if (v == rlTerms) {
+            DialogFragmentTerms dialogFragmentTerms = new DialogFragmentTerms();
+            dialogFragmentTerms.show(getFragmentManager(), getContext().getString(R.string.lbl_TermsOfUse));
+        }
+        else if (v == rlPrivacyPolicy) {
+            DialogFragmentPrivacy dialogFragmentPrivacy = new DialogFragmentPrivacy();
+            dialogFragmentPrivacy.show(getFragmentManager(), getContext().getString(R.string.lbl_PrivacyPolicy));
+        }
     }
+
 }

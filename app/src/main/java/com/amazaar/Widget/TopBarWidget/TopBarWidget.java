@@ -92,10 +92,13 @@ public class TopBarWidget extends LinearLayout implements IView<TopBarView>, Vie
                         setUpToolbar("Payment", false, true, false,false);
                         break;
                     case SETTING:
-                        setUpToolbar("Setting", false, true, false,false);
+                        setUpToolbar("Settings", false, true, false,false);
                         break;
                     case HELP:
                         setUpToolbar("Help", false, true, false,false);
+                        break;
+                    case ORDER_LIST:
+                        setUpToolbar("Order List", false, true, false,false);
                         break;
                 }
             }

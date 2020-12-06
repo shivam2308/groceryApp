@@ -13,7 +13,9 @@ import androidx.cardview.widget.CardView;
 import com.amazaar.CommonCode.DefaultImageUrl;
 import com.amazaar.ControlFlow.GetImageFromUrl;
 import com.amazaar.Fragments.HelpFragment;
+import com.amazaar.Fragments.MenuFragment;
 import com.amazaar.Fragments.MyAccountFragment;
+import com.amazaar.Fragments.OrderListFragment;
 import com.amazaar.Fragments.SettingFragment;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.Module.AmazaarApplication;
@@ -161,11 +163,11 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
             SettingFragment settingFragment = new SettingFragment();
             Utils.addNextFragment(getContext(), settingFragment, getView().getMainFragment(), true);
         }
-//        else if(v==rlOrderHistory)
-//        {
-//            OrderListFragment orderListFragment = new OrderListFragment();
-//            Utils.addNextFragment(getActivity(), orderListFragment, MenuFragment.this, false);
-//        }
+        else if(v==rlOrderHistory)
+        {
+            OrderListFragment orderListFragment = new OrderListFragment();
+            Utils.addNextFragment(getContext(), orderListFragment, getView().getMainFragment(), true);
+        }
 //        else if(v==rlWhishList)
 //        {
 //            ProductListFragment fragmentProductDetails = new ProductListFragment();

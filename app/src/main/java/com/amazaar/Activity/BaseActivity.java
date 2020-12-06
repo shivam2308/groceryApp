@@ -39,6 +39,7 @@ public class BaseActivity extends AppCompatActivity {
             @Override
             public void onChange() {
                 if (m_otpOtpVerificationWidget.getView().getPhoneIsVerified().getVar()) {
+
                     m_profileSubmitWidget.setVisibility(View.GONE);
                     m_profileSubmitWidget.setVisibility(View.VISIBLE);
                 }

@@ -31,7 +31,7 @@ public class HelpFragment extends BaseFragment {
     }
 
     public void initToolbar() {
-        ((HomeActivity) getActivity()).setToolbar(TopBarUiEnum.CHECK_OUT);
+        ((HomeActivity) getActivity()).setToolbar(TopBarUiEnum.HELP);
 
     }
 

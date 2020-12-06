@@ -200,6 +200,7 @@
     <string name="hello_world">Hello Square World!</string>
     <string name="enter_your_pincode">Enter your Pincode</string>
     <string name="admin">Admin</string>
+    <string name="enter_your_feedback">Enter Your Feedback</string>
 
 
 </resources>

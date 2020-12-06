@@ -8,5 +8,6 @@ public enum TopBarUiEnum {
     CHECK_OUT,
     PAYMENT,
     SETTING,
-    HELP
+    HELP,
+    ORDER_LIST
 }
