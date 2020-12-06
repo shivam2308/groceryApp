@@ -17,6 +17,7 @@ import com.amazaar.CustomeComponent.CustomTextView;
 import com.amazaar.Fragments.ProductListFragment;
 import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.R;
+import com.amazaar.Widget.ProductListWidget.ProductListWidget;
 
 import java.util.List;
 
@@ -29,14 +30,16 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     private OnItemClickListener onItemClickListener;
     private Context mContext;
     private ProductListFragment productListFragment;
+    private ProductListWidget productListWidget;
     @Inject
     public GetImageFromUrl m_getImageFromUrl;
 
 
-    public ProductListAdapter(final Context context, final List<ProductListModel> items, final ProductListFragment fragment) {
+    public ProductListAdapter(final Context context, final List<ProductListModel> items, final ProductListFragment fragment,final  ProductListWidget productListWidget) {
         this.productModelList = items;
         this.mContext = context;
         this.productListFragment = fragment;
+        this.productListWidget = productListWidget;
         m_getImageFromUrl= new GetImageFromUrl();
     }
 
@@ -170,7 +173,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 @Override
                 public void onClick(View v) {
 
-                    //productListFragment.addToCart(true, position);
+                    productListWidget.addToCart(true, position);
                 }
             });
 
@@ -183,7 +186,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 @Override
                 public void onClick(View v) {
 
-                   // productListFragment.addToCart(false, position);
+                    productListWidget.addToCart(false, position);
                 }
             });
 
@@ -196,7 +199,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 @Override
                 public void onClick(View v) {
 
-                   // productListFragment.addToCart(true, position);
+                    productListWidget.addToCart(true, position);
                 }
             });
 

@@ -10,16 +10,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.amazaar.Enums.TopBarUiEnum;
 import com.amazaar.Fragments.HomeCategoryFragment;
+import com.amazaar.Fragments.PaymentFragment;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
-import com.amazaar.Widget.ImageDownloadWidget.ImageDownloadWidget;
 import com.amazaar.Widget.TopBarWidget.TopBarWidget;
+
+import javax.inject.Inject;
 
 public class HomeActivity extends AppCompatActivity {
 
     private TopBarWidget m_topBar;
     private Fragment mFragment = null;
     private HomeCategoryFragment mainFragment;
+    @Inject
+    private PaymentFragment paymentFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +67,7 @@ public class HomeActivity extends AppCompatActivity {
     private void initView() {
         setToolbar(TopBarUiEnum.HOME);
         mainFragment = new HomeCategoryFragment();
+        paymentFragment= new PaymentFragment();
         m_topBar.getView().setMainFragment(mainFragment);
         openFragment(mainFragment);
     }
@@ -81,5 +86,6 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        paymentFragment.onActivityResult(requestCode, resultCode, data);
     }
 }

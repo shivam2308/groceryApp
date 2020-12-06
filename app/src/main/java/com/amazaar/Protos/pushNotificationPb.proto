@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+import "entityPb.proto";
+import "summaryPb.proto";
+import "customerPb.proto";
+import "timePb.proto";
+
+message PushNotificationPb {
+    EntityPb dbInfo = 1;
+    CustomerPbRef customerRef = 2;
+    string token = 3;
+    TimePb time = 4;
+}
+
+message PushNotificationPbRef {
+    string id = 1;
+}
+
+message SendPushNotificationPb {
+    string registrationId = 1;
+    repeated string registrationIds = 2;
+    SendNotificationTypeEnum sendType = 3;
+    string customerRefId = 4;
+    string subject = 5;
+    string body = 6;
+    string imageUrl = 7;
+}
+
+enum SendNotificationTypeEnum {
+    UNKNOWN_TYPE = 0;
+    SINGLE = 1;
+    MULTIPLE = 2;
+}
+
+message PushNotificationSearchRequestPb {
+        string customerRef = 1;
+}
+message PushNotificationSearchResponsePb {
+    SummaryPb summary = 1;
+    repeated PushNotificationPb results = 2;
+}
+
+

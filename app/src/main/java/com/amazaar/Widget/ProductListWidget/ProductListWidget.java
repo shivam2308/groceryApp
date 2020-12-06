@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.amazaar.Adapters.ProductListAdapter;
 import com.amazaar.Fragments.ProductDetailsFragment;
+import com.amazaar.Handlers.CartItemHandler;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
@@ -44,6 +45,9 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
     private MenuItem item;
     private FragmentActivity myContext;
     private RelativeLayout rlFilter;
+
+    @Inject
+    private CartItemHandler m_cartHandler;
 
 
     public ProductListWidget(Context context, AttributeSet attrs) {
@@ -85,7 +89,7 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
             }
         });
 
-        productListAdapter = new ProductListAdapter(getContext(), productListModelArrayList, getView().getMainFragment());
+        productListAdapter = new ProductListAdapter(getContext(), productListModelArrayList, getView().getMainFragment(),this);
         rvProductList.setAdapter(productListAdapter);
         productListAdapter.setOnItemClickListener(new ProductListAdapter.OnItemClickListener() {
             @Override
@@ -112,6 +116,30 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
 
     @Override
     public void onClick(View v) {
+
+    }
+
+    public void addToCart(boolean addTocart, int position) {
+        if (addTocart) {
+            int totalKg = productListModelArrayList.get(position).getTotalKg();
+            totalKg = totalKg + 1;
+            productListModelArrayList.get(position).setTotalKg(totalKg);
+            m_cartHandler.handle(productListModelArrayList.get(position),position);
+        } else {
+            int totalKg = productListModelArrayList.get(position).getTotalKg();
+
+            if (totalKg < 1) {
+                productListModelArrayList.get(position).setTotalKg(0);
+                m_cartHandler.deleteItemFromCart(position);
+            } else {
+                totalKg = totalKg - 1;
+                productListModelArrayList.get(position).setTotalKg(totalKg);
+                m_cartHandler.handle(productListModelArrayList.get(position),position);
+            }
+
+        }
+
+        productListAdapter.notifyDataSetChanged();
 
     }
 

@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+import "entityPb.proto";
+import "summaryPb.proto";
+import "itemPb.proto";
+import "customerPb.proto";
+import "deliveryManPb.proto";
+import "timePb.proto";
+
+
+
+enum DeliveryStatusEnum {
+    UNKNOWN_DELIVERY_STATUS = 0;
+    DELIVERED = 1;
+    PENDING = 2;
+    CLOSED = 3;
+}
+
+
+message BuyPb {
+    EntityPb dbInfo = 1;
+    string orderId = 2;
+    CustomerPbRef customerRef = 3;
+    ItemPbRef itemRef = 4;
+    DeliveryManRefPb deliveryManRef = 5;
+    int32 quantity = 6;
+    float price = 7;
+    DeliveryStatusEnum deliveryStatus = 8;
+    TimePb time = 9;
+}
+
+message BuyPbRef {
+    string id = 1;
+    string orderId =2;
+    float price = 3;
+}
+
+message BuySearchRequestPb {
+
+}
+message BuySearchResponsePb {
+    SummaryPb summary = 1;
+    repeated BuyPb results = 2;
+}
+
+message createBuyRequestPb{
+    string customerId =1;
+    repeated string itemIdAndQuantity=2;
+}
+
+
+
+
+
+

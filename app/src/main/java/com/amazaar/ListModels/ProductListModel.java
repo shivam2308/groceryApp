@@ -36,7 +36,7 @@ public class ProductListModel implements Parcelable, IListModel<ItemPbOuterClass
 
     public ProductListModel(Parcel in) {
         productImage = in.readInt();
-
+        kG = in.readString();
     }
 
     @Inject
@@ -63,6 +63,7 @@ public class ProductListModel implements Parcelable, IListModel<ItemPbOuterClass
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(productImage);
+        dest.writeString(kG);
     }
 
 

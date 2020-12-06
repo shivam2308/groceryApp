@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+import "itemPb.proto";
+
+message CartPb {
+    ItemPb item = 1;
+    int32 quantity = 2;
+}
+
+message CartListPb {
+    repeated CartPb cartItem = 1;
+}
+
+
+
+

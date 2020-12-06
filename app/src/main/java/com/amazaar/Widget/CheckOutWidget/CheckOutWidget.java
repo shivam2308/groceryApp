@@ -5,14 +5,18 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.amazaar.Adapters.AddressListAdapter;
 import com.amazaar.Adapters.HomeProductListAdapter;
+import com.amazaar.Adapters.OrderSummaryListAdapter;
 import com.amazaar.Fragments.PaymentFragment;
 import com.amazaar.Interfaces.IView;
+import com.amazaar.ListModels.OrderListModelNew;
 import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.R;
 import com.amazaar.Utility.Utils;
@@ -33,13 +37,13 @@ public class CheckOutWidget extends LinearLayout implements IView<CheckOutView>,
 
     //Declaration
     private RelativeLayout rlConfirmOreder;
+    private TextView m_total;
     private RecyclerView rvAddressList;
     private RecyclerView rvOrderList;
     private LinearLayoutManager mLayoutManager;
-//    private AddressListAdapter addressListAdapterNew;
-//    private OrderSummaryListAdapter orderListAdapter;
-//    private List<AddressListModelNew> addressListModelNewList;
-//    private List<OrderListModelNew> orderListModelNewList;
+    private AddressListAdapter addressListAdapterNew;
+    private OrderSummaryListAdapter orderListAdapter;
+
 
     public CheckOutWidget(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -51,6 +55,7 @@ public class CheckOutWidget extends LinearLayout implements IView<CheckOutView>,
         mLayoutManager = new LinearLayoutManager(getContext());
         rlConfirmOreder=findViewById(R.id.fragment_checkout_btnConfirmOrder);
         rvAddressList = findViewById(R.id.fragment_checkout_rvAddressList);
+        m_total = findViewById(R.id.fragment_order_list_tvTotalKg);
         rvAddressList.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         rvOrderList = findViewById(R.id.fragment_checkout_rvOrderList);
         rvOrderList.setLayoutManager(mLayoutManager);
@@ -71,7 +76,11 @@ public class CheckOutWidget extends LinearLayout implements IView<CheckOutView>,
 
 
     private void initWidget() {
-
+        addressListAdapterNew = new AddressListAdapter(getView().getAddressListModel(), getContext());
+        rvAddressList.setAdapter(addressListAdapterNew);
+        orderListAdapter = new OrderSummaryListAdapter(getView().getOrderListModel(), getContext());
+        rvOrderList.setAdapter(orderListAdapter);
+        m_total.setText(getView().getTotalPrice());
     }
 
     private void injectMembers() {
@@ -79,9 +88,6 @@ public class CheckOutWidget extends LinearLayout implements IView<CheckOutView>,
         injector.injectMembers(this);
     }
 
-    private void setAddress() {
-
-    }
 
 
 

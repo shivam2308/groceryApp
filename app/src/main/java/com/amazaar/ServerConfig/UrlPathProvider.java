@@ -28,7 +28,7 @@ public class UrlPathProvider {
             case ITEM:
                 return "item";
             case PUSH_NOTIFICATION:
-                return "pushNotificationMain";
+                return "pushNotification";
             default:
                 throw new IllegalStateException("Unexpected value: " + data);
         }

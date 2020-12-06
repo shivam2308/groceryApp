@@ -111,6 +111,7 @@
                 android:padding="@dimen/_8sdp"
                 android:text="@string/payment_offer"
                 android:textColor="@color/row_addresslistnew_tvColor"
+                android:visibility="gone"
                 android:textSize="@dimen/_12sdp"
                 app:font_name="NunitoSemiBold.ttf" />
 
@@ -138,15 +139,17 @@
 
 
             <RadioGroup
+                android:id="@+id/payment_mode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
 
 
                 <RadioButton
+                    android:id="@+id/upi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/wallet_upi"
+                    android:text="@string/upi"
                     android:textAlignment="textStart"
                     android:layoutDirection="rtl"
                     android:textColor="@color/color_black"
@@ -171,11 +174,13 @@
                     android:textColor="@color/color_black"
                     android:textSize="@dimen/_12sdp"
                     app:font_name="NunitoRegular.ttf"
+                    android:visibility="gone"
                     tools:ignore="MissingPrefix"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:padding="@dimen/_15sdp"/>
                 <View
                     android:layout_width="match_parent"
+                    android:visibility="gone"
                     android:layout_height="@dimen/_1sdp"
                     android:background="@color/row_product_cart_line_color">
                 </View>
@@ -187,6 +192,7 @@
                     android:textAlignment="textStart"
                     android:layoutDirection="rtl"
                     android:textColor="@color/color_black"
+                    android:visibility="gone"
                     android:textSize="@dimen/_12sdp"
                     app:font_name="NunitoRegular.ttf"
                     tools:ignore="MissingPrefix"
@@ -194,11 +200,13 @@
                     android:padding="@dimen/_15sdp"/>
                 <View
                     android:layout_width="match_parent"
+                    android:visibility="gone"
                     android:layout_height="@dimen/_1sdp"
                     android:background="@color/row_product_cart_line_color">
                 </View>
 
                 <RadioButton
+                    android:id="@+id/cash_on_delivery"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/cash_on_delivery"

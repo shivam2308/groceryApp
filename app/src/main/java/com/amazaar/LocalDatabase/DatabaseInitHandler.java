@@ -19,6 +19,7 @@ public class DatabaseInitHandler {
     private DaoSession daoSession;
     private LoginEntityDao loginEntityDao;
     private ItemEntityDao itemEntityDao;
+    private CartEntityDao cartEntityDao;
     private Cursor cursor;
     private Database db;
 
@@ -45,6 +46,14 @@ public class DatabaseInitHandler {
 
     public void setLoginEntityDao(LoginEntityDao loginEntityDao) {
         this.loginEntityDao = loginEntityDao;
+    }
+
+    public CartEntityDao getCartEntityDao() {
+        return cartEntityDao;
+    }
+
+    public void setCartEntityDao(CartEntityDao cartEntityDao) {
+        this.cartEntityDao = cartEntityDao;
     }
 
     public ItemEntityDao getItemEntityDao() {
@@ -83,5 +92,6 @@ public class DatabaseInitHandler {
         daoSession = daoMaster.newSession();
         loginEntityDao = daoSession.getLoginEntityDao();
         itemEntityDao = daoSession.getItemEntityDao();
+        cartEntityDao = daoSession.getCartEntityDao();
     }
 }
