@@ -13,18 +13,6 @@ import javax.inject.Inject;
 
 public class ProductListModel implements Parcelable, IListModel<ItemPbOuterClass.ItemPb> {
 
-    public static final Creator<ProductListModel> CREATOR = new Creator<ProductListModel>() {
-        @Override
-        public ProductListModel createFromParcel(Parcel in) {
-            return new ProductListModel(in);
-        }
-
-        @Override
-        public ProductListModel[] newArray(int size) {
-            return new ProductListModel[size];
-        }
-    };
-
     public DataModel<ItemPbOuterClass.ItemPb, ItemPbDefultProvider> m_onitemChange;
     private ItemPbOuterClass.ItemTypeEnum m_itemTypeEnum ;
     private String productName;
@@ -51,6 +39,18 @@ public class ProductListModel implements Parcelable, IListModel<ItemPbOuterClass
         });
     }
 
+    public static final Creator<ProductListModel> CREATOR = new Creator<ProductListModel>() {
+        @Override
+        public ProductListModel createFromParcel(Parcel in) {
+            return new ProductListModel(in);
+        }
+
+        @Override
+        public ProductListModel[] newArray(int size) {
+            return new ProductListModel[size];
+        }
+    };
+
     public static Creator<ProductListModel> getCREATOR() {
         return CREATOR;
     }
@@ -62,6 +62,8 @@ public class ProductListModel implements Parcelable, IListModel<ItemPbOuterClass
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(productName);
+        dest.writeString(productPrice);
         dest.writeInt(productImage);
         dest.writeString(kG);
     }
@@ -81,6 +83,7 @@ public class ProductListModel implements Parcelable, IListModel<ItemPbOuterClass
 
     public void setItemType(ItemPbOuterClass.ItemTypeEnum itemTypeEnum) {
         m_itemTypeEnum = itemTypeEnum;
+
     }
 
     public int getTotalKg() {
@@ -90,7 +93,6 @@ public class ProductListModel implements Parcelable, IListModel<ItemPbOuterClass
     public void setTotalKg(int totalKg) {
         this.totalKg = totalKg;
     }
-
 
     public String getkG() {
         return kG;
@@ -104,7 +106,6 @@ public class ProductListModel implements Parcelable, IListModel<ItemPbOuterClass
     public int getProductImage() {
         return productImage;
     }
-
     public void setProductImage(int productImage) {
         this.productImage = productImage;
     }
@@ -113,11 +114,16 @@ public class ProductListModel implements Parcelable, IListModel<ItemPbOuterClass
         return productName;
     }
 
+    public void setProductName(String productName) { this.productName = productName; }
+
 
     public String getProductPrice() {
         return productPrice;
     }
 
+    public void setProductPrice(String productPrice) {
+        this.productPrice = productPrice;
+    }
 
     @Override
     public ItemPbOuterClass.ItemPb getPbModel() {

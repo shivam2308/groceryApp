@@ -6,16 +6,17 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import com.amazaar.Interfaces.IView;
 import com.amazaar.R;
-import com.amazaar.Widget.HelpWidget.HelpView;
+import com.amazaar.Dialog.DialogFragmentAboutUs;
+import com.amazaar.Dialog.DialogFragmentFeedback;
 import com.google.inject.Injector;
 
 import javax.inject.Inject;
 
 import roboguice.RoboGuice;
+
+import static com.amazaar.Module.AmazaarApplication.getFragmentManager;
 
 public class HelpWidget extends LinearLayout implements IView<HelpView>, View.OnClickListener {
     @Inject
@@ -24,6 +25,8 @@ public class HelpWidget extends LinearLayout implements IView<HelpView>, View.On
     private RelativeLayout rlEmailUs;
     private RelativeLayout rlAboutUs;
     private RelativeLayout rlSendFeedback;
+    //private Fragment DialogFragmentFeedback;
+    //private Object DialogFragmentFeedback;
 
     public HelpWidget(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -66,5 +69,15 @@ public class HelpWidget extends LinearLayout implements IView<HelpView>, View.On
     @Override
     public void onClick(View v) {
 
+        if (v == rlAboutUs) {
+            DialogFragmentAboutUs dialogFragmentAboutUs = new DialogFragmentAboutUs();
+            dialogFragmentAboutUs.show(getFragmentManager(), getContext().getString(R.string.lbl_aboutus));
+        } else if (v == rlEmailUs) {
+
+        } else if (v == rlSendFeedback) {
+
+            DialogFragmentFeedback dialogFragmentFeedback = new DialogFragmentFeedback();
+            dialogFragmentFeedback.show(getFragmentManager(), getContext().getString(R.string.lbl_feedback));
+        }
     }
 }

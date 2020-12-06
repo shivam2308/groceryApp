@@ -11,4 +11,5 @@ public enum TopBarUiEnum {
     PAYMENT,
     SETTING,
     HELP,
+    ORDER_LIST,
 }

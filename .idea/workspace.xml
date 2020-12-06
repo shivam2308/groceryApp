@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="891ab302-ba96-4bba-9d8e-1d68cce072b1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Adapters/OrderListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/OrderListFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ListModels/OrderListModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListWidget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/dialog/DialogFragmentAboutUs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/dialog/DialogFragmentFeedback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/dialog/DialogFragmentPrivacy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/dialog/DialogFragmentTerms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_aboutus.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_feedback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_privacy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_terms.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_order_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/order_list_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/row_order_history_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____app_libs_commom_0_0_1_SNAPSHOT_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_ktx_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_experimental_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_browser_browser_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_ktx_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_2_0_4_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_2_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_3_2_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_ktx_1_3_2_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_databinding_viewbinding_4_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_dynamicanimation_dynamicanimation_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_exifinterface_exifinterface_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_2_5_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_ktx_1_2_5_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_ktx_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_ktx_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_ktx_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_savedstate_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_multidex_multidex_2_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_1_0_alpha3_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_1_0_alpha3_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_1_0_alpha3_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_1_0_alpha3_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager2_viewpager2_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_wear_wear_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_borjabravo_readmoretextview_2_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_budiyev_android_image_loader_2_5_6_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_daimajia_androidanimations_library_1_1_3_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_daimajia_easing_library_1_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_eftimoff_android_viewpager_transformers_1_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fxn769_cue_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ViksaaSkool_AwesomeSplash_v1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_arcadefire_nice_spinner_1_4_4_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_jorgecastilloprz_fillableloaders_1_02_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_mehrdadsafari_ZadakNotification_0_0_2_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ozodrukh_CircularReveal_1_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_stephenc_jcip_jcip_annotations_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ybq_Android_SpinKit_1_4_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_datatransport_transport_api_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_datatransport_transport_backend_cct_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_datatransport_transport_runtime_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_17_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_17_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_cloud_messaging_16_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_identity_17_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_17_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_17_6_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_17_6_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_17_6_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_impl_17_6_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_17_6_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_api_17_6_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_17_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_17_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_wallet_18_1_2_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_2_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_dagger_dagger_2_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_errorprone_error_prone_annotations_2_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_17_6_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_19_4_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_19_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_19_3_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_components_16_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_datatransport_17_0_3_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_encoders_json_16_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_20_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_17_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_16_3_3_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_16_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_18_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_20_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_storage_19_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_26_0_android.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_j2objc_j2objc_annotations_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_protobuf_protobuf_java_3_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_protobuf_protobuf_java_util_3_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_nimbusds_nimbus_jose_jwt_9_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_nineoldandroids_library_2_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_stripe_stripe_3ds2_android_4_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_stripe_stripe_android_16_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_yarolegovich_discrete_scrollview_1_5_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__me_relex_circleindicator_1_2_2_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_bouncycastle_bcprov_jdk15to18_1_67.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_checkerframework_checker_compat_qual_2_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_florescu_android_rangeseekbar_rangeseekbar_library_0_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_greenrobot_greendao_3_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_greenrobot_greendao_api_3_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_android_extensions_runtime_1_4_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_4_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_4_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_4_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_android_1_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_jvm_1_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_roboguice_roboguice_4_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Amazaar.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Amazaar.app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Activity/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Activity/BaseActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/TempListData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/TempListData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Enums/TopBarUiEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Enums/TopBarUiEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/HelpFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/HelpFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ListModels/ProductListModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ListModels/ProductListModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/HelpWidget/HelpWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/HelpWidget/HelpWidget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuWidget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/SettingWidget/SettingWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/SettingWidget/SettingWidget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Amazaar" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Amazaar" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Amazaar" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="android" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Amazaar" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Amazaar" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="resourceFile" />
+        <option value="layoutResourceFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iiu1O3GCMTwML4a892ebhIOqLw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Device" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-10-18T01:57:44.360Z" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/CartWidget/CartWidget.java_SELECTED" value="CartWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/HomeCategoryWidget/HomeCategoryWidget.java_SELECTED" value="HomeCategoryWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ImageDownloadWidget/ImageDownloadWidget.java_SELECTED" value="ImageDownloadWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuWidget.java_SELECTED" value="MenuWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/MyAccountWidget/MyAccountWidget.java_SELECTED" value="MyAccountWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/OtpVerificationWidget/OTPVerificationWidget.java_SELECTED" value="OTPVerificationWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ProfileSubmitWidget/ProfileSubmitWidget.java_SELECTED" value="ProfileSubmitWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java_SELECTED" value="TopBarWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/UploadImageWIdget/UploadWidget.java_SELECTED" value="UploadWidget" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../EmailExample" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/CartWidget/CartWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/HomeCategoryWidget/HomeCategoryWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ImageDownloadWidget/ImageDownloadWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/MyAccountWidget/MyAccountWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/OtpVerificationWidget/OTPVerificationWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ProfileSubmitWidget/ProfileSubmitWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/UploadImageWIdget/UploadWidget.java_selected" value="Custom views" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.splitter.proportion" value="0.20795107" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.amazaar.Widget.CartWidget" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.amazaar.Widget.OrderListWidget" />
+    </key>
+    <key name="android.template.-508339722">
+      <recent name="com.amazaar.Activity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ShivamProject\groceryApp\app\src\main\res\values" />
+      <recent name="D:\ShivamProject\groceryApp\app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ShivamProject\groceryApp\app\src\main\res\layout" />
+      <recent name="D:\ShivamProject\groceryApp\app\src\main\res" />
+      <recent name="D:\ShivamProject\groceryApp\app\src\main\java\com\amazaar" />
+      <recent name="D:\ShivamProject\groceryApp\app\src\main\java\com\amazaar\Protos" />
+      <recent name="D:\ShivamProject\groceryApp\app\src\main\res\values" />
+    </key>
+    <key name="android.template.1892955332">
+      <recent name="com.amazaar.Activity" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.amazaar.Fragments" />
+      <recent name="com.amazaar.DatabaseEnitityHelper" />
+      <recent name="com.amazaar.Interfaces" />
+      <recent name="com.amazaar.Utility" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="groceryApp [htmlDependencyReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="htmlDependencyReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="groceryApp [signingReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="signingReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.groceryApp [htmlDependencyReport]" />
+        <item itemvalue="Gradle.groceryApp [signingReport]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92ef67b3-1dbb-4992-b1e4-202a114f4752" name="Default Changelist" comment="" />
+      <created>1602402518063</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602402518063</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/codecanyon-zcZUSEBD-grocery-store-template/AllData/GroceryStoreSourceCode" />
+      <path value="$PROJECT_DIR$/groceryServer" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="486" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1607229449141">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="486" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1360.728@0.0.1360.728" timestamp="1607229449141" />
+    <state x="1852" y="76" key="#com.intellij.ide.util.MemberChooser/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606209888592" />
+    <state x="488" y="76" key="#com.intellij.ide.util.MemberChooser/0.0.1366.736@0.0.1366.736" timestamp="1603606421625" />
+    <state x="343" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1607249796376">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="343" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1360.728@0.0.1360.728" timestamp="1607249796376" />
+    <state x="345" y="293" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.736@0.0.1366.736" timestamp="1603517374082" />
+    <state x="410" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606726708856">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="410" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1360.728@0.0.1360.728" timestamp="1606726708856" />
+    <state x="262" y="121" width="840" height="486" key="AndroidCreateResourceFileDialog" timestamp="1607227618246">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="262" y="121" key="AndroidCreateResourceFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1607227618246" />
+    <state x="1628" y="123" key="AndroidCreateResourceFileDialog/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606208827947" />
+    <state x="263" y="123" width="840" height="486" key="AndroidCreateResourceFileDialog/0.0.1366.736@0.0.1366.736" timestamp="1603594797999" />
+    <state x="533" y="196" key="AndroidCreateXmlResourceDialog" timestamp="1607237300376">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="533" y="196" key="AndroidCreateXmlResourceDialog/0.0.1360.728@0.0.1360.728" timestamp="1607237300376" />
+    <state x="1899" y="199" key="AndroidCreateXmlResourceDialog/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1605532413092" />
+    <state x="535" y="198" key="AndroidCreateXmlResourceDialog/0.0.1366.736@0.0.1366.736" timestamp="1602995711374" />
+    <state x="1800" y="115" key="AndroidProcessChooserDialog" timestamp="1605440176382">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state x="1800" y="115" key="AndroidProcessChooserDialog/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1605440176382" />
+    <state x="460" y="119" key="FileChooserDialogImpl" timestamp="1607208403361">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="460" y="119" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1607208403361" />
+    <state width="1317" height="500" key="GridCell.Tab.0.bottom" timestamp="1607238551573">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="500" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607238551573" />
+    <state width="1323" height="282" key="GridCell.Tab.0.bottom/0.0.1366.736/1366.0.1360.738@0.0.1366.736" timestamp="1605450597900" />
+    <state width="1317" height="163" key="GridCell.Tab.0.bottom/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606299710724" />
+    <state width="1323" height="321" key="GridCell.Tab.0.bottom/0.0.1366.736@0.0.1366.736" timestamp="1603605957944" />
+    <state width="1317" height="500" key="GridCell.Tab.0.center" timestamp="1607238551573">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="500" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1607238551573" />
+    <state width="1323" height="282" key="GridCell.Tab.0.center/0.0.1366.736/1366.0.1360.738@0.0.1366.736" timestamp="1605450597900" />
+    <state width="1317" height="163" key="GridCell.Tab.0.center/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606299710724" />
+    <state width="1323" height="321" key="GridCell.Tab.0.center/0.0.1366.736@0.0.1366.736" timestamp="1603605957944" />
+    <state width="1317" height="500" key="GridCell.Tab.0.left" timestamp="1607238551572">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="500" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1607238551572" />
+    <state width="1323" height="282" key="GridCell.Tab.0.left/0.0.1366.736/1366.0.1360.738@0.0.1366.736" timestamp="1605450597900" />
+    <state width="1317" height="163" key="GridCell.Tab.0.left/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606299710724" />
+    <state width="1323" height="321" key="GridCell.Tab.0.left/0.0.1366.736@0.0.1366.736" timestamp="1603605957944" />
+    <state width="1317" height="500" key="GridCell.Tab.0.right" timestamp="1607238551573">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="500" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1607238551573" />
+    <state width="1323" height="282" key="GridCell.Tab.0.right/0.0.1366.736/1366.0.1360.738@0.0.1366.736" timestamp="1605450597900" />
+    <state width="1317" height="163" key="GridCell.Tab.0.right/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606299710724" />
+    <state width="1323" height="321" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1603605957944" />
+    <state width="1317" height="337" key="GridCell.Tab.1.bottom" timestamp="1607176106706">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="337" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607176106706" />
+    <state width="392" height="334" key="GridCell.Tab.1.bottom/0.0.1366.736/1366.0.1360.738@0.0.1366.736" timestamp="1605450597884" />
+    <state width="1317" height="206" key="GridCell.Tab.1.bottom/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606298961262" />
+    <state width="1323" height="173" key="GridCell.Tab.1.bottom/0.0.1366.736@0.0.1366.736" timestamp="1603598406484" />
+    <state width="1317" height="337" key="GridCell.Tab.1.center" timestamp="1607176106705">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="337" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1607176106705" />
+    <state width="392" height="334" key="GridCell.Tab.1.center/0.0.1366.736/1366.0.1360.738@0.0.1366.736" timestamp="1605450597883" />
+    <state width="1317" height="206" key="GridCell.Tab.1.center/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606298961261" />
+    <state width="1323" height="173" key="GridCell.Tab.1.center/0.0.1366.736@0.0.1366.736" timestamp="1603598406484" />
+    <state width="1317" height="337" key="GridCell.Tab.1.left" timestamp="1607176106705">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="337" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1607176106705" />
+    <state width="392" height="334" key="GridCell.Tab.1.left/0.0.1366.736/1366.0.1360.738@0.0.1366.736" timestamp="1605450597883" />
+    <state width="1317" height="206" key="GridCell.Tab.1.left/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606298961261" />
+    <state width="1323" height="173" key="GridCell.Tab.1.left/0.0.1366.736@0.0.1366.736" timestamp="1603598406483" />
+    <state width="1317" height="337" key="GridCell.Tab.1.right" timestamp="1607176106706">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="337" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1607176106706" />
+    <state width="392" height="334" key="GridCell.Tab.1.right/0.0.1366.736/1366.0.1360.738@0.0.1366.736" timestamp="1605450597884" />
+    <state width="1317" height="206" key="GridCell.Tab.1.right/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606298961261" />
+    <state width="1323" height="173" key="GridCell.Tab.1.right/0.0.1366.736@0.0.1366.736" timestamp="1603598406484" />
+    <state x="362" y="10" key="SettingsEditor" timestamp="1606730399083">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="362" y="10" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1606730399083" />
+    <state x="368" y="10" key="SettingsEditor/0.0.1366.736@0.0.1366.736" timestamp="1602988469522" />
+    <state width="688" height="377" key="XDebugger.FullValuePopup" timestamp="1604710752149">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state width="688" height="377" key="XDebugger.FullValuePopup/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1604710752149" />
+    <state x="1458" y="92" width="1176" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605064648912">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state x="1458" y="92" width="1176" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1605064648912" />
+    <state x="386" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1606727852655">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="386" y="0" key="refactoring.ChangeSignatureDialog/0.0.1360.728@0.0.1360.728" timestamp="1606727852655" />
+    <state x="338" y="162" width="670" height="670" key="run.anything.popup" timestamp="1607175669434">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="338" y="162" width="670" height="670" key="run.anything.popup/0.0.1360.728@0.0.1360.728" timestamp="1607175669434" />
+    <state x="1704" y="164" width="670" height="679" key="run.anything.popup/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1606296823173" />
+    <state x="339" y="164" width="672" height="677" key="run.anything.popup/0.0.1366.736@0.0.1366.736" timestamp="1603114809962" />
+    <state x="1710" y="57" width="672" height="680" key="search.everywhere.popup" timestamp="1607233822609">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state x="344" y="56" width="670" height="671" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1606639407132" />
+    <state x="1710" y="57" width="672" height="680" key="search.everywhere.popup/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1607233822609" />
+    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup/0.0.1366.736@0.0.1366.736" timestamp="1603037952938" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OtpVerificationWidget/OTPVerificationWidget.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/BaseClientService/ACreateService.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.budiyev.android/image-loader/2.5.6/3d2a92995f023dad6d0411434dc0feb387cbcc0b/image-loader-2.5.6-sources.jar!/com/budiyev/android/imageloader/ImageLoader.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.budiyev.android/image-loader/2.5.6/3d2a92995f023dad6d0411434dc0feb387cbcc0b/image-loader-2.5.6-sources.jar!/com/budiyev/android/imageloader/ImageRequest.java</url>
+          <line>336</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.budiyev.android/image-loader/2.5.6/3d2a92995f023dad6d0411434dc0feb387cbcc0b/image-loader-2.5.6-sources.jar!/com/budiyev/android/imageloader/ImageRequest.java</url>
+          <line>435</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.budiyev.android/image-loader/2.5.6/3d2a92995f023dad6d0411434dc0feb387cbcc0b/image-loader-2.5.6-sources.jar!/com/budiyev/android/imageloader/ImageRequest.java</url>
+          <line>305</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.budiyev.android/image-loader/2.5.6/3d2a92995f023dad6d0411434dc0feb387cbcc0b/image-loader-2.5.6-sources.jar!/com/budiyev/android/imageloader/LoadImageAction.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/Services/FirebaseCloudMessagingService.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/CartWidget/CartWidget.java</url>
+          <line>140</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListWidget.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="com.google.firebase.messaging.RemoteMessage" fieldName="data" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>
