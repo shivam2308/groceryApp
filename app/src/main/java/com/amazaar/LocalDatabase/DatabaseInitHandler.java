@@ -13,11 +13,13 @@ import javax.inject.Inject;
  */
 public class DatabaseInitHandler {
 
+    private static final String LOGIN_DATABASE_NAME = "amazaar-db";
     @Inject
     public DaoMaster daoMaster;
     private DaoSession daoSession;
     private LoginEntityDao loginEntityDao;
-    private static final String LOGIN_DATABASE_NAME = "amazaar-db";
+    private ItemEntityDao itemEntityDao;
+    private CartEntityDao cartEntityDao;
     private Cursor cursor;
     private Database db;
 
@@ -46,6 +48,22 @@ public class DatabaseInitHandler {
         this.loginEntityDao = loginEntityDao;
     }
 
+    public CartEntityDao getCartEntityDao() {
+        return cartEntityDao;
+    }
+
+    public void setCartEntityDao(CartEntityDao cartEntityDao) {
+        this.cartEntityDao = cartEntityDao;
+    }
+
+    public ItemEntityDao getItemEntityDao() {
+        return itemEntityDao;
+    }
+
+    public void setItemEntityDao(ItemEntityDao itemEntityDao) {
+        this.itemEntityDao = itemEntityDao;
+    }
+
     public Cursor getCursor() {
         return cursor;
     }
@@ -64,13 +82,16 @@ public class DatabaseInitHandler {
 
     /**
      * Initialize the database.
+     *
      * @param context
      */
-    public void initDataBase(Context context){
+    public void initDataBase(Context context) {
         DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(context, LOGIN_DATABASE_NAME, null);
         db = helper.getWritableDb();
         daoMaster = new DaoMaster(db);
         daoSession = daoMaster.newSession();
         loginEntityDao = daoSession.getLoginEntityDao();
+        itemEntityDao = daoSession.getItemEntityDao();
+        cartEntityDao = daoSession.getCartEntityDao();
     }
 }

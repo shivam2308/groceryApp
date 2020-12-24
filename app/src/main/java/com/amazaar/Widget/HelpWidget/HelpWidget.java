@@ -1,20 +1,15 @@
 package com.amazaar.Widget.HelpWidget;
 
-import android.app.Fragment;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import com.amazaar.Interfaces.IView;
 import com.amazaar.R;
-import com.amazaar.Utility.Utils;
-import com.amazaar.Widget.HelpWidget.HelpView;
-import com.amazaar.dialog.DialogFragmentAboutUs;
-import com.amazaar.dialog.DialogFragmentFeedback;
+import com.amazaar.Dialog.DialogFragmentAboutUs;
+import com.amazaar.Dialog.DialogFragmentFeedback;
 import com.google.inject.Injector;
 
 import javax.inject.Inject;

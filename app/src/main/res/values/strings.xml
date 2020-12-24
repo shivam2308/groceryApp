@@ -55,9 +55,10 @@
     <string name="pincode">Pincode*</string>
     <string name="delivery">Delivery</string>
     <string name="sub_total">Total : </string>
-    <string name="dolar">$</string>
+    <string name="dolar">₹</string>
     <string name="kg">Kg</string>
     <string name="enter_your_email">enter your email</string>
+    <string name="enter_your_upi">Enter your Upi Id</string>
     <string name="enter_your_phone">enter your phone</string>
     <string name="enter_your_secure_password">enter your secure password</string>
     <string name="enter_your_street">Enter your Street</string>
@@ -142,6 +143,7 @@
     <string name="payment_offer"><![CDATA[GET EXTRA 5% OFF* with MONEY bank Simply Save Credit card. T&C.]]></string>
     <string name="payment_method">Payment Method</string>
     <string name="wallet_upi">Wallet / UPI</string>
+    <string name="upi">UPI</string>
     <string name="net_banking">Net Banking</string>
     <string name="credit_debit_atm_card">Credit / Debit / ATM Card</string>
     <string name="cash_on_delivery">Cash on Delivery</string>
@@ -201,6 +203,10 @@
     <string name="enter_your_pincode">Enter your Pincode</string>
     <string name="admin">Admin</string>
     <string name="enter_your_feedback">Enter Your Feedback</string>
+    <string name="Edit" />
+    <string name="edit">Edit</string>
+    <string name="Address">Address</string>
+    <string name="enter_your_address">enter your address</string>
 
 
 </resources>

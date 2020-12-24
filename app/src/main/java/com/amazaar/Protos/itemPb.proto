@@ -31,6 +31,11 @@ enum AvailabilityStatusEnum {
     NOT_AVAILABLE = 2;
 }
 
+message ItemPbRef {
+    string id = 1;
+    NamePb itemName =2;
+    float price = 3;
+}
 message ItemPb {
     EntityPb dbInfo = 1;
     NamePb itemName = 2;
@@ -43,7 +48,9 @@ message ItemPb {
     TimePb time = 9;
 }
 message ItemSearchRequestPb {
-    
+    ItemTypeEnum itemType = 1;
+    AvailabilityStatusEnum availabilityStatus = 2;
+    TimeQueryRangePb timeQuery = 3;
 }
 message ItemSearchResponsePb {
     SummaryPb summary = 1;

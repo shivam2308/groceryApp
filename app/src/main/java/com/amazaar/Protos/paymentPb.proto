@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+import "customerPb.proto";
+import "timePb.proto";
+import "entityPb.proto";
+
+message PaymentPb {
+    EntityPb dbInfo = 1;
+    string txnId = 2;
+    string responseCode =3;
+    PaymentStatusEnum status =4 ;
+    string txnRef = 5;
+    CustomerPbRef customerRef = 6;
+    TimePb time = 7;
+
+}
+enum PaymentStatusEnum{
+    UNKNOWN_PAYMENT_STATUS=0;
+    SUCCESS=1;
+    FAILED=2;
+    WAITING=3;
+}
+
+enum PaymentModeEnum {
+    UNKNOWN_MODE = 0;
+    GOOGLE_PAY = 1;
+    CASH_ON_DELIVERY = 2;
+}
+
+
+

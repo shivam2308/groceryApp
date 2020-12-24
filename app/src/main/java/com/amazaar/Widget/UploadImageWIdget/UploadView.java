@@ -32,11 +32,11 @@ public class UploadView {
     private FirebaseStorage storage;
     private StorageReference storageReference;
     private Uri m_filePath;
-    private DataModel<ImagePbOuterClass.ImagePb.Builder, ImagePbDefaultProvider> m_imageModel;
+    private DataModel<ImagePbOuterClass.ImagePb, ImagePbDefaultProvider> m_imageModel;
 
 
     @Inject
-    public UploadView(DataModel<ImagePbOuterClass.ImagePb.Builder, ImagePbDefaultProvider> imageModel) {
+    public UploadView(DataModel<ImagePbOuterClass.ImagePb, ImagePbDefaultProvider> imageModel) {
         m_imageModel=imageModel;
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
@@ -54,7 +54,7 @@ public class UploadView {
         m_filePath = filePath;
     }
 
-    public DataModel<ImagePbOuterClass.ImagePb.Builder, ImagePbDefaultProvider> getImageModel(){
+    public DataModel<ImagePbOuterClass.ImagePb, ImagePbDefaultProvider> getImageModel(){
         return m_imageModel;
     }
 

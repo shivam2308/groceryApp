@@ -1,20 +1,16 @@
 package com.amazaar.Widget.SettingWidget;
 
-import android.app.FragmentManager;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import com.amazaar.Interfaces.IView;
 import com.amazaar.R;
-import com.amazaar.Widget.SettingWidget.SettingView;
-import com.amazaar.dialog.DialogFragmentPrivacy;
+import com.amazaar.Dialog.DialogFragmentPrivacy;
 import com.google.inject.Injector;
-import com.amazaar.dialog.DialogFragmentTerms;
+import com.amazaar.Dialog.DialogFragmentTerms;
 
 import javax.inject.Inject;
 

@@ -14,6 +14,10 @@ protoc requestPb.proto --java_out=..\..\..\
 protoc summaryPb.proto --java_out=..\..\..\
 protoc timePb.proto --java_out=..\..\..\
 protoc registrationPb.proto --java_out=..\..\..\
+protoc pushNotificationPb.proto --java_out=..\..\..\
+protoc cartPb.proto --java_out=..\..\..\
+protoc buyPb.proto --java_out=..\..\..\
+protoc paymentPb.proto --java_out=..\..\..\
 cd ..
 cd ..
 cd ..

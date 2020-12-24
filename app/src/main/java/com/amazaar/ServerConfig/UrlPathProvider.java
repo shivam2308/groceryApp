@@ -9,6 +9,7 @@ public class UrlPathProvider {
         LOGIN,
         IMAGE,
         PUSH_NOTIFICATION,
+        ITEM,
     }
 
     public static String getPath(UrlPathEnum data) {
@@ -24,8 +25,10 @@ public class UrlPathProvider {
                 return "login";
             case IMAGE:
                 return "image";
+            case ITEM:
+                return "item";
             case PUSH_NOTIFICATION:
-                return "pushNotificationMain";
+                return "pushNotification";
             default:
                 throw new IllegalStateException("Unexpected value: " + data);
         }

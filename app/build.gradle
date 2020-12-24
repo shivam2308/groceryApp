@@ -95,4 +95,8 @@ dependencies {
 
     implementation 'com.budiyev.android:image-loader:2.5.6'
     implementation 'com.github.mehrdadsafari:ZadakNotification:0.0.2'
+
+    //google pay wallet..
+    implementation "com.google.android.gms:play-services-wallet:18.1.2"
+    implementation 'com.stripe:stripe-android:16.1.0'
 }

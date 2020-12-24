@@ -85,6 +85,12 @@ public class TopBarWidget extends LinearLayout implements IView<TopBarView>, Vie
                     case PROFILE:
                         setUpToolbar(getContext().getString(R.string.my_cart_4), false, false, false, false);
                         break;
+                    case WISH_LIST:
+                        setUpToolbar(getContext().getString(R.string.my_wishlist), false, true, false,true);
+                        break;
+                    case PRODUCT_DETAILS:
+                        setUpToolbar(getContext().getString(R.string.fruits_vegetables), false,true,false,true);
+                        break;
                     case CHECK_OUT:
                         setUpToolbar("CheckOut", false, true, false,false);
                         break;
@@ -99,6 +105,9 @@ public class TopBarWidget extends LinearLayout implements IView<TopBarView>, Vie
                         break;
                     case ORDER_LIST:
                         setUpToolbar("Order List", false, true, false,false);
+                        break;
+                    case PROFILE_EDIT:
+                        setUpToolbar("Profile Edit", false, true, false,false);
                         break;
                 }
             }

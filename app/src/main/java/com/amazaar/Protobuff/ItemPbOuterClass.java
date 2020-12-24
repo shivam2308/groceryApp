@@ -401,6 +401,849 @@ public final class ItemPbOuterClass {
     // @@protoc_insertion_point(enum_scope:com.amazaar.Protobuff.AvailabilityStatusEnum)
   }
 
+  public interface ItemPbRefOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.ItemPbRef)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+     * @return Whether the itemName field is set.
+     */
+    boolean hasItemName();
+    /**
+     * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+     * @return The itemName.
+     */
+    com.amazaar.Protobuff.NamePbOuterClass.NamePb getItemName();
+    /**
+     * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+     */
+    com.amazaar.Protobuff.NamePbOuterClass.NamePbOrBuilder getItemNameOrBuilder();
+
+    /**
+     * <code>float price = 3;</code>
+     * @return The price.
+     */
+    float getPrice();
+  }
+  /**
+   * Protobuf type {@code com.amazaar.Protobuff.ItemPbRef}
+   */
+  public static final class ItemPbRef extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.amazaar.Protobuff.ItemPbRef)
+      ItemPbRefOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ItemPbRef.newBuilder() to construct.
+    private ItemPbRef(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ItemPbRef() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ItemPbRef();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ItemPbRef(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              com.amazaar.Protobuff.NamePbOuterClass.NamePb.Builder subBuilder = null;
+              if (itemName_ != null) {
+                subBuilder = itemName_.toBuilder();
+              }
+              itemName_ = input.readMessage(com.amazaar.Protobuff.NamePbOuterClass.NamePb.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(itemName_);
+                itemName_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 29: {
+
+              price_ = input.readFloat();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.amazaar.Protobuff.ItemPbOuterClass.internal_static_com_amazaar_Protobuff_ItemPbRef_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.amazaar.Protobuff.ItemPbOuterClass.internal_static_com_amazaar_Protobuff_ItemPbRef_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef.class, com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ITEMNAME_FIELD_NUMBER = 2;
+    private com.amazaar.Protobuff.NamePbOuterClass.NamePb itemName_;
+    /**
+     * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+     * @return Whether the itemName field is set.
+     */
+    @java.lang.Override
+    public boolean hasItemName() {
+      return itemName_ != null;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+     * @return The itemName.
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.NamePbOuterClass.NamePb getItemName() {
+      return itemName_ == null ? com.amazaar.Protobuff.NamePbOuterClass.NamePb.getDefaultInstance() : itemName_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.NamePbOuterClass.NamePbOrBuilder getItemNameOrBuilder() {
+      return getItemName();
+    }
+
+    public static final int PRICE_FIELD_NUMBER = 3;
+    private float price_;
+    /**
+     * <code>float price = 3;</code>
+     * @return The price.
+     */
+    @java.lang.Override
+    public float getPrice() {
+      return price_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (itemName_ != null) {
+        output.writeMessage(2, getItemName());
+      }
+      if (price_ != 0F) {
+        output.writeFloat(3, price_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (itemName_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getItemName());
+      }
+      if (price_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(3, price_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef)) {
+        return super.equals(obj);
+      }
+      com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef other = (com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasItemName() != other.hasItemName()) return false;
+      if (hasItemName()) {
+        if (!getItemName()
+            .equals(other.getItemName())) return false;
+      }
+      if (java.lang.Float.floatToIntBits(getPrice())
+          != java.lang.Float.floatToIntBits(
+              other.getPrice())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      if (hasItemName()) {
+        hash = (37 * hash) + ITEMNAME_FIELD_NUMBER;
+        hash = (53 * hash) + getItemName().hashCode();
+      }
+      hash = (37 * hash) + PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getPrice());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.amazaar.Protobuff.ItemPbRef}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.amazaar.Protobuff.ItemPbRef)
+        com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRefOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.amazaar.Protobuff.ItemPbOuterClass.internal_static_com_amazaar_Protobuff_ItemPbRef_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.amazaar.Protobuff.ItemPbOuterClass.internal_static_com_amazaar_Protobuff_ItemPbRef_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef.class, com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef.Builder.class);
+      }
+
+      // Construct using com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        if (itemNameBuilder_ == null) {
+          itemName_ = null;
+        } else {
+          itemName_ = null;
+          itemNameBuilder_ = null;
+        }
+        price_ = 0F;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.amazaar.Protobuff.ItemPbOuterClass.internal_static_com_amazaar_Protobuff_ItemPbRef_descriptor;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef getDefaultInstanceForType() {
+        return com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef build() {
+        com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef buildPartial() {
+        com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef result = new com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef(this);
+        result.id_ = id_;
+        if (itemNameBuilder_ == null) {
+          result.itemName_ = itemName_;
+        } else {
+          result.itemName_ = itemNameBuilder_.build();
+        }
+        result.price_ = price_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef) {
+          return mergeFrom((com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef other) {
+        if (other == com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.hasItemName()) {
+          mergeItemName(other.getItemName());
+        }
+        if (other.getPrice() != 0F) {
+          setPrice(other.getPrice());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.amazaar.Protobuff.NamePbOuterClass.NamePb itemName_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.amazaar.Protobuff.NamePbOuterClass.NamePb, com.amazaar.Protobuff.NamePbOuterClass.NamePb.Builder, com.amazaar.Protobuff.NamePbOuterClass.NamePbOrBuilder> itemNameBuilder_;
+      /**
+       * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+       * @return Whether the itemName field is set.
+       */
+      public boolean hasItemName() {
+        return itemNameBuilder_ != null || itemName_ != null;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+       * @return The itemName.
+       */
+      public com.amazaar.Protobuff.NamePbOuterClass.NamePb getItemName() {
+        if (itemNameBuilder_ == null) {
+          return itemName_ == null ? com.amazaar.Protobuff.NamePbOuterClass.NamePb.getDefaultInstance() : itemName_;
+        } else {
+          return itemNameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+       */
+      public Builder setItemName(com.amazaar.Protobuff.NamePbOuterClass.NamePb value) {
+        if (itemNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          itemName_ = value;
+          onChanged();
+        } else {
+          itemNameBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+       */
+      public Builder setItemName(
+          com.amazaar.Protobuff.NamePbOuterClass.NamePb.Builder builderForValue) {
+        if (itemNameBuilder_ == null) {
+          itemName_ = builderForValue.build();
+          onChanged();
+        } else {
+          itemNameBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+       */
+      public Builder mergeItemName(com.amazaar.Protobuff.NamePbOuterClass.NamePb value) {
+        if (itemNameBuilder_ == null) {
+          if (itemName_ != null) {
+            itemName_ =
+              com.amazaar.Protobuff.NamePbOuterClass.NamePb.newBuilder(itemName_).mergeFrom(value).buildPartial();
+          } else {
+            itemName_ = value;
+          }
+          onChanged();
+        } else {
+          itemNameBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+       */
+      public Builder clearItemName() {
+        if (itemNameBuilder_ == null) {
+          itemName_ = null;
+          onChanged();
+        } else {
+          itemName_ = null;
+          itemNameBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+       */
+      public com.amazaar.Protobuff.NamePbOuterClass.NamePb.Builder getItemNameBuilder() {
+        
+        onChanged();
+        return getItemNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+       */
+      public com.amazaar.Protobuff.NamePbOuterClass.NamePbOrBuilder getItemNameOrBuilder() {
+        if (itemNameBuilder_ != null) {
+          return itemNameBuilder_.getMessageOrBuilder();
+        } else {
+          return itemName_ == null ?
+              com.amazaar.Protobuff.NamePbOuterClass.NamePb.getDefaultInstance() : itemName_;
+        }
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.NamePb itemName = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.amazaar.Protobuff.NamePbOuterClass.NamePb, com.amazaar.Protobuff.NamePbOuterClass.NamePb.Builder, com.amazaar.Protobuff.NamePbOuterClass.NamePbOrBuilder> 
+          getItemNameFieldBuilder() {
+        if (itemNameBuilder_ == null) {
+          itemNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.amazaar.Protobuff.NamePbOuterClass.NamePb, com.amazaar.Protobuff.NamePbOuterClass.NamePb.Builder, com.amazaar.Protobuff.NamePbOuterClass.NamePbOrBuilder>(
+                  getItemName(),
+                  getParentForChildren(),
+                  isClean());
+          itemName_ = null;
+        }
+        return itemNameBuilder_;
+      }
+
+      private float price_ ;
+      /**
+       * <code>float price = 3;</code>
+       * @return The price.
+       */
+      @java.lang.Override
+      public float getPrice() {
+        return price_;
+      }
+      /**
+       * <code>float price = 3;</code>
+       * @param value The price to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrice(float value) {
+        
+        price_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float price = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrice() {
+        
+        price_ = 0F;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.amazaar.Protobuff.ItemPbRef)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.amazaar.Protobuff.ItemPbRef)
+    private static final com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef();
+    }
+
+    public static com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ItemPbRef>
+        PARSER = new com.google.protobuf.AbstractParser<ItemPbRef>() {
+      @java.lang.Override
+      public ItemPbRef parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ItemPbRef(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ItemPbRef> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ItemPbRef> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.amazaar.Protobuff.ItemPbOuterClass.ItemPbRef getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ItemPbOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.ItemPb)
       com.google.protobuf.MessageOrBuilder {
@@ -2177,6 +3020,43 @@ public final class ItemPbOuterClass {
   public interface ItemSearchRequestPbOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.ItemSearchRequestPb)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+     * @return The enum numeric value on the wire for itemType.
+     */
+    int getItemTypeValue();
+    /**
+     * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+     * @return The itemType.
+     */
+    com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum getItemType();
+
+    /**
+     * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+     * @return The enum numeric value on the wire for availabilityStatus.
+     */
+    int getAvailabilityStatusValue();
+    /**
+     * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+     * @return The availabilityStatus.
+     */
+    com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum getAvailabilityStatus();
+
+    /**
+     * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+     * @return Whether the timeQuery field is set.
+     */
+    boolean hasTimeQuery();
+    /**
+     * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+     * @return The timeQuery.
+     */
+    com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb getTimeQuery();
+    /**
+     * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+     */
+    com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePbOrBuilder getTimeQueryOrBuilder();
   }
   /**
    * Protobuf type {@code com.amazaar.Protobuff.ItemSearchRequestPb}
@@ -2191,6 +3071,8 @@ public final class ItemPbOuterClass {
       super(builder);
     }
     private ItemSearchRequestPb() {
+      itemType_ = 0;
+      availabilityStatus_ = 0;
     }
 
     @java.lang.Override
@@ -2223,6 +3105,31 @@ public final class ItemPbOuterClass {
             case 0:
               done = true;
               break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              itemType_ = rawValue;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              availabilityStatus_ = rawValue;
+              break;
+            }
+            case 26: {
+              com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.Builder subBuilder = null;
+              if (timeQuery_ != null) {
+                subBuilder = timeQuery_.toBuilder();
+              }
+              timeQuery_ = input.readMessage(com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(timeQuery_);
+                timeQuery_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2255,6 +3162,70 @@ public final class ItemPbOuterClass {
               com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb.class, com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb.Builder.class);
     }
 
+    public static final int ITEMTYPE_FIELD_NUMBER = 1;
+    private int itemType_;
+    /**
+     * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+     * @return The enum numeric value on the wire for itemType.
+     */
+    @java.lang.Override public int getItemTypeValue() {
+      return itemType_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+     * @return The itemType.
+     */
+    @java.lang.Override public com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum getItemType() {
+      @SuppressWarnings("deprecation")
+      com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum result = com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum.valueOf(itemType_);
+      return result == null ? com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum.UNRECOGNIZED : result;
+    }
+
+    public static final int AVAILABILITYSTATUS_FIELD_NUMBER = 2;
+    private int availabilityStatus_;
+    /**
+     * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+     * @return The enum numeric value on the wire for availabilityStatus.
+     */
+    @java.lang.Override public int getAvailabilityStatusValue() {
+      return availabilityStatus_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+     * @return The availabilityStatus.
+     */
+    @java.lang.Override public com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum getAvailabilityStatus() {
+      @SuppressWarnings("deprecation")
+      com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum result = com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.valueOf(availabilityStatus_);
+      return result == null ? com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.UNRECOGNIZED : result;
+    }
+
+    public static final int TIMEQUERY_FIELD_NUMBER = 3;
+    private com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb timeQuery_;
+    /**
+     * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+     * @return Whether the timeQuery field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeQuery() {
+      return timeQuery_ != null;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+     * @return The timeQuery.
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb getTimeQuery() {
+      return timeQuery_ == null ? com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.getDefaultInstance() : timeQuery_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePbOrBuilder getTimeQueryOrBuilder() {
+      return getTimeQuery();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2269,6 +3240,15 @@ public final class ItemPbOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (itemType_ != com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum.UNKNOWN_ITEM_TYPE.getNumber()) {
+        output.writeEnum(1, itemType_);
+      }
+      if (availabilityStatus_ != com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.UNKNOWN_AVAILABILITY_STATUS.getNumber()) {
+        output.writeEnum(2, availabilityStatus_);
+      }
+      if (timeQuery_ != null) {
+        output.writeMessage(3, getTimeQuery());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2278,6 +3258,18 @@ public final class ItemPbOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (itemType_ != com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum.UNKNOWN_ITEM_TYPE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, itemType_);
+      }
+      if (availabilityStatus_ != com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.UNKNOWN_AVAILABILITY_STATUS.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, availabilityStatus_);
+      }
+      if (timeQuery_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getTimeQuery());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2293,6 +3285,13 @@ public final class ItemPbOuterClass {
       }
       com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb other = (com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb) obj;
 
+      if (itemType_ != other.itemType_) return false;
+      if (availabilityStatus_ != other.availabilityStatus_) return false;
+      if (hasTimeQuery() != other.hasTimeQuery()) return false;
+      if (hasTimeQuery()) {
+        if (!getTimeQuery()
+            .equals(other.getTimeQuery())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2304,6 +3303,14 @@ public final class ItemPbOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ITEMTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + itemType_;
+      hash = (37 * hash) + AVAILABILITYSTATUS_FIELD_NUMBER;
+      hash = (53 * hash) + availabilityStatus_;
+      if (hasTimeQuery()) {
+        hash = (37 * hash) + TIMEQUERY_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeQuery().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2437,6 +3444,16 @@ public final class ItemPbOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        itemType_ = 0;
+
+        availabilityStatus_ = 0;
+
+        if (timeQueryBuilder_ == null) {
+          timeQuery_ = null;
+        } else {
+          timeQuery_ = null;
+          timeQueryBuilder_ = null;
+        }
         return this;
       }
 
@@ -2463,6 +3480,13 @@ public final class ItemPbOuterClass {
       @java.lang.Override
       public com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb buildPartial() {
         com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb result = new com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb(this);
+        result.itemType_ = itemType_;
+        result.availabilityStatus_ = availabilityStatus_;
+        if (timeQueryBuilder_ == null) {
+          result.timeQuery_ = timeQuery_;
+        } else {
+          result.timeQuery_ = timeQueryBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -2511,6 +3535,15 @@ public final class ItemPbOuterClass {
 
       public Builder mergeFrom(com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb other) {
         if (other == com.amazaar.Protobuff.ItemPbOuterClass.ItemSearchRequestPb.getDefaultInstance()) return this;
+        if (other.itemType_ != 0) {
+          setItemTypeValue(other.getItemTypeValue());
+        }
+        if (other.availabilityStatus_ != 0) {
+          setAvailabilityStatusValue(other.getAvailabilityStatusValue());
+        }
+        if (other.hasTimeQuery()) {
+          mergeTimeQuery(other.getTimeQuery());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2538,6 +3571,233 @@ public final class ItemPbOuterClass {
           }
         }
         return this;
+      }
+
+      private int itemType_ = 0;
+      /**
+       * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+       * @return The enum numeric value on the wire for itemType.
+       */
+      @java.lang.Override public int getItemTypeValue() {
+        return itemType_;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+       * @param value The enum numeric value on the wire for itemType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemTypeValue(int value) {
+        
+        itemType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+       * @return The itemType.
+       */
+      @java.lang.Override
+      public com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum getItemType() {
+        @SuppressWarnings("deprecation")
+        com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum result = com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum.valueOf(itemType_);
+        return result == null ? com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+       * @param value The itemType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemType(com.amazaar.Protobuff.ItemPbOuterClass.ItemTypeEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        itemType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ItemTypeEnum itemType = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearItemType() {
+        
+        itemType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int availabilityStatus_ = 0;
+      /**
+       * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+       * @return The enum numeric value on the wire for availabilityStatus.
+       */
+      @java.lang.Override public int getAvailabilityStatusValue() {
+        return availabilityStatus_;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+       * @param value The enum numeric value on the wire for availabilityStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvailabilityStatusValue(int value) {
+        
+        availabilityStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+       * @return The availabilityStatus.
+       */
+      @java.lang.Override
+      public com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum getAvailabilityStatus() {
+        @SuppressWarnings("deprecation")
+        com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum result = com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.valueOf(availabilityStatus_);
+        return result == null ? com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+       * @param value The availabilityStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvailabilityStatus(com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        availabilityStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.AvailabilityStatusEnum availabilityStatus = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAvailabilityStatus() {
+        
+        availabilityStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb timeQuery_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb, com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.Builder, com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePbOrBuilder> timeQueryBuilder_;
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       * @return Whether the timeQuery field is set.
+       */
+      public boolean hasTimeQuery() {
+        return timeQueryBuilder_ != null || timeQuery_ != null;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       * @return The timeQuery.
+       */
+      public com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb getTimeQuery() {
+        if (timeQueryBuilder_ == null) {
+          return timeQuery_ == null ? com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.getDefaultInstance() : timeQuery_;
+        } else {
+          return timeQueryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       */
+      public Builder setTimeQuery(com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb value) {
+        if (timeQueryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timeQuery_ = value;
+          onChanged();
+        } else {
+          timeQueryBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       */
+      public Builder setTimeQuery(
+          com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.Builder builderForValue) {
+        if (timeQueryBuilder_ == null) {
+          timeQuery_ = builderForValue.build();
+          onChanged();
+        } else {
+          timeQueryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       */
+      public Builder mergeTimeQuery(com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb value) {
+        if (timeQueryBuilder_ == null) {
+          if (timeQuery_ != null) {
+            timeQuery_ =
+              com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.newBuilder(timeQuery_).mergeFrom(value).buildPartial();
+          } else {
+            timeQuery_ = value;
+          }
+          onChanged();
+        } else {
+          timeQueryBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       */
+      public Builder clearTimeQuery() {
+        if (timeQueryBuilder_ == null) {
+          timeQuery_ = null;
+          onChanged();
+        } else {
+          timeQuery_ = null;
+          timeQueryBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       */
+      public com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.Builder getTimeQueryBuilder() {
+        
+        onChanged();
+        return getTimeQueryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       */
+      public com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePbOrBuilder getTimeQueryOrBuilder() {
+        if (timeQueryBuilder_ != null) {
+          return timeQueryBuilder_.getMessageOrBuilder();
+        } else {
+          return timeQuery_ == null ?
+              com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.getDefaultInstance() : timeQuery_;
+        }
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.TimeQueryRangePb timeQuery = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb, com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.Builder, com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePbOrBuilder> 
+          getTimeQueryFieldBuilder() {
+        if (timeQueryBuilder_ == null) {
+          timeQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb, com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePb.Builder, com.amazaar.Protobuff.TimePbOuterClass.TimeQueryRangePbOrBuilder>(
+                  getTimeQuery(),
+                  getParentForChildren(),
+                  isClean());
+          timeQuery_ = null;
+        }
+        return timeQueryBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3589,6 +4849,11 @@ public final class ItemPbOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_amazaar_Protobuff_ItemPbRef_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_amazaar_Protobuff_ItemPbRef_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_amazaar_Protobuff_ItemPb_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3614,19 +4879,26 @@ public final class ItemPbOuterClass {
     java.lang.String[] descriptorData = {
       "\n\014itemPb.proto\022\025com.amazaar.Protobuff\032\016e" +
       "ntityPb.proto\032\014namePb.proto\032\rimagePb.pro" +
-      "to\032\017summaryPb.proto\032\014timePb.proto\"\261\003\n\006It" +
-      "emPb\022/\n\006dbInfo\030\001 \001(\0132\037.com.amazaar.Proto" +
-      "buff.EntityPb\022/\n\010itemName\030\002 \001(\0132\035.com.am" +
-      "azaar.Protobuff.NamePb\0222\n\007itemUrl\030\003 \001(\0132" +
-      "!.com.amazaar.Protobuff.ImageRefPb\022\020\n\010qu" +
-      "antity\030\004 \001(\t\022\r\n\005price\030\005 \001(\002\0225\n\010itemType\030" +
-      "\006 \001(\0162#.com.amazaar.Protobuff.ItemTypeEn" +
-      "um\022I\n\022availabilityStatus\030\007 \001(\0162-.com.ama" +
-      "zaar.Protobuff.AvailabilityStatusEnum\022A\n" +
-      "\014quantityType\030\010 \001(\0162+.com.amazaar.Protob" +
-      "uff.ItemQuantityTypeEnum\022+\n\004time\030\t \001(\0132\035" +
-      ".com.amazaar.Protobuff.TimePb\"\025\n\023ItemSea" +
-      "rchRequestPb\"y\n\024ItemSearchResponsePb\0221\n\007" +
+      "to\032\017summaryPb.proto\032\014timePb.proto\"W\n\tIte" +
+      "mPbRef\022\n\n\002id\030\001 \001(\t\022/\n\010itemName\030\002 \001(\0132\035.c" +
+      "om.amazaar.Protobuff.NamePb\022\r\n\005price\030\003 \001" +
+      "(\002\"\261\003\n\006ItemPb\022/\n\006dbInfo\030\001 \001(\0132\037.com.amaz" +
+      "aar.Protobuff.EntityPb\022/\n\010itemName\030\002 \001(\013" +
+      "2\035.com.amazaar.Protobuff.NamePb\0222\n\007itemU" +
+      "rl\030\003 \001(\0132!.com.amazaar.Protobuff.ImageRe" +
+      "fPb\022\020\n\010quantity\030\004 \001(\t\022\r\n\005price\030\005 \001(\002\0225\n\010" +
+      "itemType\030\006 \001(\0162#.com.amazaar.Protobuff.I" +
+      "temTypeEnum\022I\n\022availabilityStatus\030\007 \001(\0162" +
+      "-.com.amazaar.Protobuff.AvailabilityStat" +
+      "usEnum\022A\n\014quantityType\030\010 \001(\0162+.com.amaza" +
+      "ar.Protobuff.ItemQuantityTypeEnum\022+\n\004tim" +
+      "e\030\t \001(\0132\035.com.amazaar.Protobuff.TimePb\"\323" +
+      "\001\n\023ItemSearchRequestPb\0225\n\010itemType\030\001 \001(\016" +
+      "2#.com.amazaar.Protobuff.ItemTypeEnum\022I\n" +
+      "\022availabilityStatus\030\002 \001(\0162-.com.amazaar." +
+      "Protobuff.AvailabilityStatusEnum\022:\n\ttime" +
+      "Query\030\003 \001(\0132\'.com.amazaar.Protobuff.Time" +
+      "QueryRangePb\"y\n\024ItemSearchResponsePb\0221\n\007" +
       "summary\030\001 \001(\0132 .com.amazaar.Protobuff.Su" +
       "mmaryPb\022.\n\007results\030\002 \003(\0132\035.com.amazaar.P" +
       "rotobuff.ItemPb*X\n\014ItemTypeEnum\022\025\n\021UNKNO" +
@@ -3647,20 +4919,26 @@ public final class ItemPbOuterClass {
           com.amazaar.Protobuff.SummaryPbOuterClass.getDescriptor(),
           com.amazaar.Protobuff.TimePbOuterClass.getDescriptor(),
         });
-    internal_static_com_amazaar_Protobuff_ItemPb_descriptor =
+    internal_static_com_amazaar_Protobuff_ItemPbRef_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_com_amazaar_Protobuff_ItemPbRef_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_amazaar_Protobuff_ItemPbRef_descriptor,
+        new java.lang.String[] { "Id", "ItemName", "Price", });
+    internal_static_com_amazaar_Protobuff_ItemPb_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_com_amazaar_Protobuff_ItemPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_ItemPb_descriptor,
         new java.lang.String[] { "DbInfo", "ItemName", "ItemUrl", "Quantity", "Price", "ItemType", "AvailabilityStatus", "QuantityType", "Time", });
     internal_static_com_amazaar_Protobuff_ItemSearchRequestPb_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_com_amazaar_Protobuff_ItemSearchRequestPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_ItemSearchRequestPb_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "ItemType", "AvailabilityStatus", "TimeQuery", });
     internal_static_com_amazaar_Protobuff_ItemSearchResponsePb_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_com_amazaar_Protobuff_ItemSearchResponsePb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_ItemSearchResponsePb_descriptor,

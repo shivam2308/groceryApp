@@ -189,57 +189,57 @@
                     android:orientation="vertical">
 
 
-                    <RelativeLayout
-                        android:id="@+id/fragment_myaccount_rlChangePsw"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_5sdp">
+<!--                    <RelativeLayout-->
+<!--                        android:id="@+id/fragment_myaccount_rlChangePsw"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_margin="@dimen/_5sdp">-->
 
 
-                        <ImageView
-                            android:id="@+id/fragment_myaccount_ivChangePsw"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"
-                            android:padding="@dimen/_5sdp"
-                            android:src="@drawable/ic_change_psw" />
+<!--                        <ImageView-->
+<!--                            android:id="@+id/fragment_myaccount_ivChangePsw"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentStart="true"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:padding="@dimen/_5sdp"-->
+<!--                            android:src="@drawable/ic_change_psw" />-->
 
-                        <com.amazaar.CustomeComponent.CustomTextView
-                            style="@style/ganaral_greystyle"
-                            android:layout_toEndOf="@+id/fragment_myaccount_ivChangePsw"
-                            android:padding="@dimen/_5sdp"
-                            android:text="@string/change_password"
-                            app:font_name="NunitoSemiBold.ttf" />
-
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/fragment_myaccount_rlCleanHistory"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_5sdp">
+<!--                        <com.amazaar.CustomeComponent.CustomTextView-->
+<!--                            style="@style/ganaral_greystyle"-->
+<!--                            android:layout_toEndOf="@+id/fragment_myaccount_ivChangePsw"-->
+<!--                            android:padding="@dimen/_5sdp"-->
+<!--                            android:text="@string/change_password"-->
+<!--                            app:font_name="NunitoSemiBold.ttf" />-->
 
 
-                        <ImageView
-                            android:id="@+id/fragment_myaccount_ivClearHistory"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"
-                            android:padding="@dimen/_5sdp"
-                            android:src="@drawable/ic_order_history" />
+<!--                    </RelativeLayout>-->
 
-                        <com.amazaar.CustomeComponent.CustomTextView
-                            style="@style/ganaral_greystyle"
-                            android:layout_toEndOf="@+id/fragment_myaccount_ivClearHistory"
-                            android:padding="@dimen/_5sdp"
-                            android:text="@string/clear_history"
-                            app:font_name="NunitoSemiBold.ttf" />
+<!--                    <RelativeLayout-->
+<!--                        android:id="@+id/fragment_myaccount_rlCleanHistory"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_margin="@dimen/_5sdp">-->
 
 
-                    </RelativeLayout>
+<!--                        <ImageView-->
+<!--                            android:id="@+id/fragment_myaccount_ivClearHistory"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentStart="true"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:padding="@dimen/_5sdp"-->
+<!--                            android:src="@drawable/ic_order_history" />-->
+
+<!--                        <com.amazaar.CustomeComponent.CustomTextView-->
+<!--                            style="@style/ganaral_greystyle"-->
+<!--                            android:layout_toEndOf="@+id/fragment_myaccount_ivClearHistory"-->
+<!--                            android:padding="@dimen/_5sdp"-->
+<!--                            android:text="@string/clear_history"-->
+<!--                            app:font_name="NunitoSemiBold.ttf" />-->
+
+
+<!--                    </RelativeLayout>-->
 
                     <RelativeLayout
                         android:id="@+id/fragment_myaccount_rlDeActive"

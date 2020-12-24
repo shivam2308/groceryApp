@@ -15,17 +15,19 @@ public class CustomerRegistration {
     private RegistrationClientService m_reqService;
     private LoginEntityDaoHelper m_loLoginEntityDaoHelper;
     private CustomerSession m_customerSession;
+    private RegisterPushNorification m_registerPushnotification;
 
     @Inject
-    public CustomerRegistration(RegistrationClientService reqService, LoginEntityDaoHelper loLoginEntityDaoHelper, CustomerSession customerSession) {
+    public CustomerRegistration(RegistrationClientService reqService, LoginEntityDaoHelper loLoginEntityDaoHelper, CustomerSession customerSession, RegisterPushNorification registerPushnotification) {
         m_reqService = reqService;
         m_loLoginEntityDaoHelper = loLoginEntityDaoHelper;
         m_customerSession = customerSession;
+        m_registerPushnotification = registerPushnotification;
     }
 
 
     public IFuture<RegistrationPbOuterClass.RegistrationPb, Exception> startRegistration(Context context, RegistrationPbOuterClass.RegistrationPb request) {
-        CustomerRegistrationCF cf = new CustomerRegistrationCF(context, request, m_reqService, m_loLoginEntityDaoHelper, m_customerSession);
+        CustomerRegistrationCF cf = new CustomerRegistrationCF(context, request, m_reqService, m_loLoginEntityDaoHelper, m_customerSession, m_registerPushnotification);
         cf.addLogObjects(cf);
         cf.startAsyncCall();
         return cf.getFutureResult();

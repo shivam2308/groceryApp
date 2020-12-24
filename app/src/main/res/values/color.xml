@@ -54,6 +54,7 @@
 
     <!-- login / sign in font color -->
     <color name="rippelColor">#0099CC</color>
+    <color name="rippelColoragain">#c1bd2d</color>
 
     <color name="colorBlack">#000000</color>
     <color name="colorGray">#BDBDBD</color>

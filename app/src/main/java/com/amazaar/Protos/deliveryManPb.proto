@@ -19,6 +19,11 @@ message DeliveryManPb {
     TimePb time = 6;
 }
 
+message DeliveryManRefPb{
+    string id = 1;
+    NamePb name = 2;
+}
+
 message DeliveryManSearchRequestPb {
     
 }
