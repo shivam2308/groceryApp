@@ -32,6 +32,9 @@ public class CheckOutFragment extends BaseFragment {
     }
 
     public void initToolbar() {
+        if(((HomeActivity) getActivity())==null){
+            return;
+        }
         ((HomeActivity) getActivity()).setToolbar(TopBarUiEnum.CHECK_OUT);
 
     }
@@ -39,7 +42,6 @@ public class CheckOutFragment extends BaseFragment {
     @Override
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
-
         if(!hidden)
         {
             initToolbar();

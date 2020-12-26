@@ -6,18 +6,36 @@ import android.net.Uri;
 import android.util.Log;
 
 import com.amazaar.Fragments.PaymentFragment;
+import com.amazaar.Protobuff.PaymentPbOuterClass;
 
 import javax.inject.Inject;
 
 public class PaymentView {
     @Inject
     private PaymentFragment m_mainFragment;
-
+    private PaymentPbOuterClass.PaymentModeEnum m_mode;
+    private float m_amount;
     private Activity m_activity;
 
     @Inject
     public PaymentView() {
 
+    }
+
+    public PaymentPbOuterClass.PaymentModeEnum getMode() {
+        return m_mode;
+    }
+
+    public void setMode(PaymentPbOuterClass.PaymentModeEnum mode) {
+        m_mode = mode;
+    }
+
+    public float getAmount() {
+        return m_amount;
+    }
+
+    public void setAmount(float amount) {
+        m_amount = amount;
     }
 
     public PaymentFragment getMainFragment() {
@@ -32,15 +50,16 @@ public class PaymentView {
         m_activity = activity;
     }
 
-    public void payUsingUpi() {
+    public void payUsingUpi(float amount) {
         Log.e("main ", "Paying");
         Uri uri = Uri.parse("upi://pay").buildUpon()
-                .appendQueryParameter("pa", "shubhamtiwaricr07@okaxis")
-                .appendQueryParameter("pn", "Shubham Tiwari")
+                .appendQueryParameter("pa", "9305500417@okbizaxis")
+                .appendQueryParameter("pn", "Amazaar")
                 .appendQueryParameter("mc", "")
                 //.appendQueryParameter("tid", "02125412")
                 .appendQueryParameter("tr", "25584584")
-                .appendQueryParameter("tn", "orderId #1234567890")
+                .appendQueryParameter("tn", "Amazaar Apka Apna Bazaar")
+                //.appendQueryParameter("am", String.valueOf(amount))
                 .appendQueryParameter("am", "1")
                 .appendQueryParameter("cu", "INR")
                 .build();

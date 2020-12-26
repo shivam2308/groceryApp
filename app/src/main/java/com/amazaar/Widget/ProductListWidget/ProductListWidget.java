@@ -94,11 +94,11 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
         productListAdapter.setOnItemClickListener(new ProductListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, ProductListModel viewModel) {
-                ProductDetailsFragment fragmentProductDetails = new ProductDetailsFragment();
+                /*ProductDetailsFragment fragmentProductDetails = new ProductDetailsFragment();
                 Bundle bundle = new Bundle();
                 bundle.putParcelable(getContext().getString(R.string.bdl_model), viewModel);
                 fragmentProductDetails.setArguments(bundle);
-                Utils.addNextFragment(getContext(),fragmentProductDetails, getView().getMainFragment(), false);
+                Utils.addNextFragment(getContext(),fragmentProductDetails, getView().getMainFragment(), false);*/
             }
         });
 

@@ -5,8 +5,9 @@ package com.amazaar.Protobuff;
 import "itemPb.proto";
 
 message CartPb {
-    ItemPb item = 1;
-    int32 quantity = 2;
+    int64 itemKey  =1;
+    ItemPb item = 2;
+    int32 quantity = 3;
 }
 
 message CartListPb {

@@ -23,6 +23,11 @@ public class DatabaseInitHandler {
     private Cursor cursor;
     private Database db;
 
+    @Inject
+    public DatabaseInitHandler(){
+
+    }
+
 
     public DaoMaster getDaoMaster() {
         return daoMaster;

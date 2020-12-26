@@ -99,4 +99,7 @@ dependencies {
     //google pay wallet..
     implementation "com.google.android.gms:play-services-wallet:18.1.2"
     implementation 'com.stripe:stripe-android:16.1.0'
+
+    //step progress bar
+    implementation 'com.kofigyan.stateprogressbar:stateprogressbar:1.0.0'
 }

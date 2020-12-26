@@ -9,7 +9,7 @@
 
     <application
         android:name=".Module.AmazaarApplication"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/amazaar_icon1"
         android:label="@string/app_name_new"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"

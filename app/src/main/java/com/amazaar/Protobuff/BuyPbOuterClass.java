@@ -140,6 +140,123 @@ public final class BuyPbOuterClass {
     // @@protoc_insertion_point(enum_scope:com.amazaar.Protobuff.DeliveryStatusEnum)
   }
 
+  /**
+   * Protobuf enum {@code com.amazaar.Protobuff.IsOrderedPlacedEnum}
+   */
+  public enum IsOrderedPlacedEnum
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_ORDER = 0;</code>
+     */
+    UNKNOWN_ORDER(0),
+    /**
+     * <code>ORDER_FAILED = 1;</code>
+     */
+    ORDER_FAILED(1),
+    /**
+     * <code>ORDER_SUCCESS = 2;</code>
+     */
+    ORDER_SUCCESS(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>UNKNOWN_ORDER = 0;</code>
+     */
+    public static final int UNKNOWN_ORDER_VALUE = 0;
+    /**
+     * <code>ORDER_FAILED = 1;</code>
+     */
+    public static final int ORDER_FAILED_VALUE = 1;
+    /**
+     * <code>ORDER_SUCCESS = 2;</code>
+     */
+    public static final int ORDER_SUCCESS_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static IsOrderedPlacedEnum valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static IsOrderedPlacedEnum forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_ORDER;
+        case 1: return ORDER_FAILED;
+        case 2: return ORDER_SUCCESS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<IsOrderedPlacedEnum>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        IsOrderedPlacedEnum> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<IsOrderedPlacedEnum>() {
+            public IsOrderedPlacedEnum findValueByNumber(int number) {
+              return IsOrderedPlacedEnum.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.amazaar.Protobuff.BuyPbOuterClass.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final IsOrderedPlacedEnum[] VALUES = values();
+
+    public static IsOrderedPlacedEnum valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private IsOrderedPlacedEnum(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.amazaar.Protobuff.IsOrderedPlacedEnum)
+  }
+
   public interface BuyPbOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.BuyPb)
       com.google.protobuf.MessageOrBuilder {
@@ -4176,8 +4293,8 @@ public final class BuyPbOuterClass {
 
   }
 
-  public interface createBuyRequestPbOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.createBuyRequestPb)
+  public interface CreateBuyRequestPbOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.CreateBuyRequestPb)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4216,29 +4333,54 @@ public final class BuyPbOuterClass {
      */
     com.google.protobuf.ByteString
         getItemIdAndQuantityBytes(int index);
+
+    /**
+     * <code>string paymentRefId = 3;</code>
+     * @return The paymentRefId.
+     */
+    java.lang.String getPaymentRefId();
+    /**
+     * <code>string paymentRefId = 3;</code>
+     * @return The bytes for paymentRefId.
+     */
+    com.google.protobuf.ByteString
+        getPaymentRefIdBytes();
+
+    /**
+     * <code>.com.amazaar.Protobuff.IsOrderedPlacedEnum isOrderPlaced = 4;</code>
+     * @return The enum numeric value on the wire for isOrderPlaced.
+     */
+    int getIsOrderPlacedValue();
+    /**
+     * <code>.com.amazaar.Protobuff.IsOrderedPlacedEnum isOrderPlaced = 4;</code>
+     * @return The isOrderPlaced.
+     */
+    com.amazaar.Protobuff.BuyPbOuterClass.IsOrderedPlacedEnum getIsOrderPlaced();
   }
   /**
-   * Protobuf type {@code com.amazaar.Protobuff.createBuyRequestPb}
+   * Protobuf type {@code com.amazaar.Protobuff.CreateBuyRequestPb}
    */
-  public static final class createBuyRequestPb extends
+  public static final class CreateBuyRequestPb extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.amazaar.Protobuff.createBuyRequestPb)
-      createBuyRequestPbOrBuilder {
+      // @@protoc_insertion_point(message_implements:com.amazaar.Protobuff.CreateBuyRequestPb)
+      CreateBuyRequestPbOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use createBuyRequestPb.newBuilder() to construct.
-    private createBuyRequestPb(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CreateBuyRequestPb.newBuilder() to construct.
+    private CreateBuyRequestPb(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private createBuyRequestPb() {
+    private CreateBuyRequestPb() {
       customerId_ = "";
       itemIdAndQuantity_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      paymentRefId_ = "";
+      isOrderPlaced_ = 0;
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new createBuyRequestPb();
+      return new CreateBuyRequestPb();
     }
 
     @java.lang.Override
@@ -4246,7 +4388,7 @@ public final class BuyPbOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private createBuyRequestPb(
+    private CreateBuyRequestPb(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4280,6 +4422,18 @@ public final class BuyPbOuterClass {
               itemIdAndQuantity_.add(s);
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              paymentRefId_ = s;
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              isOrderPlaced_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4304,15 +4458,15 @@ public final class BuyPbOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.amazaar.Protobuff.BuyPbOuterClass.internal_static_com_amazaar_Protobuff_createBuyRequestPb_descriptor;
+      return com.amazaar.Protobuff.BuyPbOuterClass.internal_static_com_amazaar_Protobuff_CreateBuyRequestPb_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.amazaar.Protobuff.BuyPbOuterClass.internal_static_com_amazaar_Protobuff_createBuyRequestPb_fieldAccessorTable
+      return com.amazaar.Protobuff.BuyPbOuterClass.internal_static_com_amazaar_Protobuff_CreateBuyRequestPb_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb.class, com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb.Builder.class);
+              com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb.class, com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb.Builder.class);
     }
 
     public static final int CUSTOMERID_FIELD_NUMBER = 1;
@@ -4388,6 +4542,63 @@ public final class BuyPbOuterClass {
       return itemIdAndQuantity_.getByteString(index);
     }
 
+    public static final int PAYMENTREFID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object paymentRefId_;
+    /**
+     * <code>string paymentRefId = 3;</code>
+     * @return The paymentRefId.
+     */
+    @java.lang.Override
+    public java.lang.String getPaymentRefId() {
+      java.lang.Object ref = paymentRefId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        paymentRefId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string paymentRefId = 3;</code>
+     * @return The bytes for paymentRefId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPaymentRefIdBytes() {
+      java.lang.Object ref = paymentRefId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        paymentRefId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISORDERPLACED_FIELD_NUMBER = 4;
+    private int isOrderPlaced_;
+    /**
+     * <code>.com.amazaar.Protobuff.IsOrderedPlacedEnum isOrderPlaced = 4;</code>
+     * @return The enum numeric value on the wire for isOrderPlaced.
+     */
+    @java.lang.Override public int getIsOrderPlacedValue() {
+      return isOrderPlaced_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.IsOrderedPlacedEnum isOrderPlaced = 4;</code>
+     * @return The isOrderPlaced.
+     */
+    @java.lang.Override public com.amazaar.Protobuff.BuyPbOuterClass.IsOrderedPlacedEnum getIsOrderPlaced() {
+      @SuppressWarnings("deprecation")
+      com.amazaar.Protobuff.BuyPbOuterClass.IsOrderedPlacedEnum result = com.amazaar.Protobuff.BuyPbOuterClass.IsOrderedPlacedEnum.valueOf(isOrderPlaced_);
+      return result == null ? com.amazaar.Protobuff.BuyPbOuterClass.IsOrderedPlacedEnum.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4407,6 +4618,12 @@ public final class BuyPbOuterClass {
       }
       for (int i = 0; i < itemIdAndQuantity_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, itemIdAndQuantity_.getRaw(i));
+      }
+      if (!getPaymentRefIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, paymentRefId_);
+      }
+      if (isOrderPlaced_ != com.amazaar.Protobuff.BuyPbOuterClass.IsOrderedPlacedEnum.UNKNOWN_ORDER.getNumber()) {
+        output.writeEnum(4, isOrderPlaced_);
       }
       unknownFields.writeTo(output);
     }
@@ -4428,6 +4645,13 @@ public final class BuyPbOuterClass {
         size += dataSize;
         size += 1 * getItemIdAndQuantityList().size();
       }
+      if (!getPaymentRefIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, paymentRefId_);
+      }
+      if (isOrderPlaced_ != com.amazaar.Protobuff.BuyPbOuterClass.IsOrderedPlacedEnum.UNKNOWN_ORDER.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, isOrderPlaced_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4438,15 +4662,18 @@ public final class BuyPbOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb)) {
+      if (!(obj instanceof com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb)) {
         return super.equals(obj);
       }
-      com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb other = (com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb) obj;
+      com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb other = (com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb) obj;
 
       if (!getCustomerId()
           .equals(other.getCustomerId())) return false;
       if (!getItemIdAndQuantityList()
           .equals(other.getItemIdAndQuantityList())) return false;
+      if (!getPaymentRefId()
+          .equals(other.getPaymentRefId())) return false;
+      if (isOrderPlaced_ != other.isOrderPlaced_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4464,74 +4691,78 @@ public final class BuyPbOuterClass {
         hash = (37 * hash) + ITEMIDANDQUANTITY_FIELD_NUMBER;
         hash = (53 * hash) + getItemIdAndQuantityList().hashCode();
       }
+      hash = (37 * hash) + PAYMENTREFID_FIELD_NUMBER;
+      hash = (53 * hash) + getPaymentRefId().hashCode();
+      hash = (37 * hash) + ISORDERPLACED_FIELD_NUMBER;
+      hash = (53 * hash) + isOrderPlaced_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb parseFrom(
+    public static com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb parseFrom(
+    public static com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb parseFrom(
+    public static com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb parseFrom(
+    public static com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb parseFrom(byte[] data)
+    public static com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb parseFrom(
+    public static com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb parseFrom(java.io.InputStream input)
+    public static com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb parseFrom(
+    public static com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb parseDelimitedFrom(java.io.InputStream input)
+    public static com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb parseDelimitedFrom(
+    public static com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb parseFrom(
+    public static com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb parseFrom(
+    public static com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4544,7 +4775,7 @@ public final class BuyPbOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb prototype) {
+    public static Builder newBuilder(com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -4560,26 +4791,26 @@ public final class BuyPbOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code com.amazaar.Protobuff.createBuyRequestPb}
+     * Protobuf type {@code com.amazaar.Protobuff.CreateBuyRequestPb}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.amazaar.Protobuff.createBuyRequestPb)
-        com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPbOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.amazaar.Protobuff.CreateBuyRequestPb)
+        com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPbOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.amazaar.Protobuff.BuyPbOuterClass.internal_static_com_amazaar_Protobuff_createBuyRequestPb_descriptor;
+        return com.amazaar.Protobuff.BuyPbOuterClass.internal_static_com_amazaar_Protobuff_CreateBuyRequestPb_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.amazaar.Protobuff.BuyPbOuterClass.internal_static_com_amazaar_Protobuff_createBuyRequestPb_fieldAccessorTable
+        return com.amazaar.Protobuff.BuyPbOuterClass.internal_static_com_amazaar_Protobuff_CreateBuyRequestPb_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb.class, com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb.Builder.class);
+                com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb.class, com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb.Builder.class);
       }
 
-      // Construct using com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb.newBuilder()
+      // Construct using com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4601,23 +4832,27 @@ public final class BuyPbOuterClass {
 
         itemIdAndQuantity_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        paymentRefId_ = "";
+
+        isOrderPlaced_ = 0;
+
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.amazaar.Protobuff.BuyPbOuterClass.internal_static_com_amazaar_Protobuff_createBuyRequestPb_descriptor;
+        return com.amazaar.Protobuff.BuyPbOuterClass.internal_static_com_amazaar_Protobuff_CreateBuyRequestPb_descriptor;
       }
 
       @java.lang.Override
-      public com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb getDefaultInstanceForType() {
-        return com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb.getDefaultInstance();
+      public com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb getDefaultInstanceForType() {
+        return com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb build() {
-        com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb result = buildPartial();
+      public com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb build() {
+        com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4625,8 +4860,8 @@ public final class BuyPbOuterClass {
       }
 
       @java.lang.Override
-      public com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb buildPartial() {
-        com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb result = new com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb(this);
+      public com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb buildPartial() {
+        com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb result = new com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb(this);
         int from_bitField0_ = bitField0_;
         result.customerId_ = customerId_;
         if (((bitField0_ & 0x00000001) != 0)) {
@@ -4634,6 +4869,8 @@ public final class BuyPbOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.itemIdAndQuantity_ = itemIdAndQuantity_;
+        result.paymentRefId_ = paymentRefId_;
+        result.isOrderPlaced_ = isOrderPlaced_;
         onBuilt();
         return result;
       }
@@ -4672,16 +4909,16 @@ public final class BuyPbOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb) {
-          return mergeFrom((com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb)other);
+        if (other instanceof com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb) {
+          return mergeFrom((com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb other) {
-        if (other == com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb other) {
+        if (other == com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb.getDefaultInstance()) return this;
         if (!other.getCustomerId().isEmpty()) {
           customerId_ = other.customerId_;
           onChanged();
@@ -4695,6 +4932,13 @@ public final class BuyPbOuterClass {
             itemIdAndQuantity_.addAll(other.itemIdAndQuantity_);
           }
           onChanged();
+        }
+        if (!other.getPaymentRefId().isEmpty()) {
+          paymentRefId_ = other.paymentRefId_;
+          onChanged();
+        }
+        if (other.isOrderPlaced_ != 0) {
+          setIsOrderPlacedValue(other.getIsOrderPlacedValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4711,11 +4955,11 @@ public final class BuyPbOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb parsedMessage = null;
+        com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb) e.getUnfinishedMessage();
+          parsedMessage = (com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4911,6 +5155,136 @@ public final class BuyPbOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object paymentRefId_ = "";
+      /**
+       * <code>string paymentRefId = 3;</code>
+       * @return The paymentRefId.
+       */
+      public java.lang.String getPaymentRefId() {
+        java.lang.Object ref = paymentRefId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          paymentRefId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string paymentRefId = 3;</code>
+       * @return The bytes for paymentRefId.
+       */
+      public com.google.protobuf.ByteString
+          getPaymentRefIdBytes() {
+        java.lang.Object ref = paymentRefId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          paymentRefId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string paymentRefId = 3;</code>
+       * @param value The paymentRefId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPaymentRefId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        paymentRefId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string paymentRefId = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPaymentRefId() {
+        
+        paymentRefId_ = getDefaultInstance().getPaymentRefId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string paymentRefId = 3;</code>
+       * @param value The bytes for paymentRefId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPaymentRefIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        paymentRefId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int isOrderPlaced_ = 0;
+      /**
+       * <code>.com.amazaar.Protobuff.IsOrderedPlacedEnum isOrderPlaced = 4;</code>
+       * @return The enum numeric value on the wire for isOrderPlaced.
+       */
+      @java.lang.Override public int getIsOrderPlacedValue() {
+        return isOrderPlaced_;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.IsOrderedPlacedEnum isOrderPlaced = 4;</code>
+       * @param value The enum numeric value on the wire for isOrderPlaced to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsOrderPlacedValue(int value) {
+        
+        isOrderPlaced_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.IsOrderedPlacedEnum isOrderPlaced = 4;</code>
+       * @return The isOrderPlaced.
+       */
+      @java.lang.Override
+      public com.amazaar.Protobuff.BuyPbOuterClass.IsOrderedPlacedEnum getIsOrderPlaced() {
+        @SuppressWarnings("deprecation")
+        com.amazaar.Protobuff.BuyPbOuterClass.IsOrderedPlacedEnum result = com.amazaar.Protobuff.BuyPbOuterClass.IsOrderedPlacedEnum.valueOf(isOrderPlaced_);
+        return result == null ? com.amazaar.Protobuff.BuyPbOuterClass.IsOrderedPlacedEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.IsOrderedPlacedEnum isOrderPlaced = 4;</code>
+       * @param value The isOrderPlaced to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsOrderPlaced(com.amazaar.Protobuff.BuyPbOuterClass.IsOrderedPlacedEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        isOrderPlaced_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.IsOrderedPlacedEnum isOrderPlaced = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsOrderPlaced() {
+        
+        isOrderPlaced_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4924,41 +5298,41 @@ public final class BuyPbOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.amazaar.Protobuff.createBuyRequestPb)
+      // @@protoc_insertion_point(builder_scope:com.amazaar.Protobuff.CreateBuyRequestPb)
     }
 
-    // @@protoc_insertion_point(class_scope:com.amazaar.Protobuff.createBuyRequestPb)
-    private static final com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.amazaar.Protobuff.CreateBuyRequestPb)
+    private static final com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb();
+      DEFAULT_INSTANCE = new com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb();
     }
 
-    public static com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb getDefaultInstance() {
+    public static com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<createBuyRequestPb>
-        PARSER = new com.google.protobuf.AbstractParser<createBuyRequestPb>() {
+    private static final com.google.protobuf.Parser<CreateBuyRequestPb>
+        PARSER = new com.google.protobuf.AbstractParser<CreateBuyRequestPb>() {
       @java.lang.Override
-      public createBuyRequestPb parsePartialFrom(
+      public CreateBuyRequestPb parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new createBuyRequestPb(input, extensionRegistry);
+        return new CreateBuyRequestPb(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<createBuyRequestPb> parser() {
+    public static com.google.protobuf.Parser<CreateBuyRequestPb> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<createBuyRequestPb> getParserForType() {
+    public com.google.protobuf.Parser<CreateBuyRequestPb> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.amazaar.Protobuff.BuyPbOuterClass.createBuyRequestPb getDefaultInstanceForType() {
+    public com.amazaar.Protobuff.BuyPbOuterClass.CreateBuyRequestPb getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4985,10 +5359,10 @@ public final class BuyPbOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_amazaar_Protobuff_BuySearchResponsePb_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_amazaar_Protobuff_createBuyRequestPb_descriptor;
+    internal_static_com_amazaar_Protobuff_CreateBuyRequestPb_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_amazaar_Protobuff_createBuyRequestPb_fieldAccessorTable;
+      internal_static_com_amazaar_Protobuff_CreateBuyRequestPb_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5016,11 +5390,15 @@ public final class BuyPbOuterClass {
       "hRequestPb\"w\n\023BuySearchResponsePb\0221\n\007sum" +
       "mary\030\001 \001(\0132 .com.amazaar.Protobuff.Summa" +
       "ryPb\022-\n\007results\030\002 \003(\0132\034.com.amazaar.Prot" +
-      "obuff.BuyPb\"C\n\022createBuyRequestPb\022\022\n\ncus" +
-      "tomerId\030\001 \001(\t\022\031\n\021itemIdAndQuantity\030\002 \003(\t" +
-      "*Y\n\022DeliveryStatusEnum\022\033\n\027UNKNOWN_DELIVE" +
-      "RY_STATUS\020\000\022\r\n\tDELIVERED\020\001\022\013\n\007PENDING\020\002\022" +
-      "\n\n\006CLOSED\020\003b\006proto3"
+      "obuff.BuyPb\"\234\001\n\022CreateBuyRequestPb\022\022\n\ncu" +
+      "stomerId\030\001 \001(\t\022\031\n\021itemIdAndQuantity\030\002 \003(" +
+      "\t\022\024\n\014paymentRefId\030\003 \001(\t\022A\n\risOrderPlaced" +
+      "\030\004 \001(\0162*.com.amazaar.Protobuff.IsOrdered" +
+      "PlacedEnum*Y\n\022DeliveryStatusEnum\022\033\n\027UNKN" +
+      "OWN_DELIVERY_STATUS\020\000\022\r\n\tDELIVERED\020\001\022\013\n\007" +
+      "PENDING\020\002\022\n\n\006CLOSED\020\003*M\n\023IsOrderedPlaced" +
+      "Enum\022\021\n\rUNKNOWN_ORDER\020\000\022\020\n\014ORDER_FAILED\020" +
+      "\001\022\021\n\rORDER_SUCCESS\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5056,12 +5434,12 @@ public final class BuyPbOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_BuySearchResponsePb_descriptor,
         new java.lang.String[] { "Summary", "Results", });
-    internal_static_com_amazaar_Protobuff_createBuyRequestPb_descriptor =
+    internal_static_com_amazaar_Protobuff_CreateBuyRequestPb_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_com_amazaar_Protobuff_createBuyRequestPb_fieldAccessorTable = new
+    internal_static_com_amazaar_Protobuff_CreateBuyRequestPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_amazaar_Protobuff_createBuyRequestPb_descriptor,
-        new java.lang.String[] { "CustomerId", "ItemIdAndQuantity", });
+        internal_static_com_amazaar_Protobuff_CreateBuyRequestPb_descriptor,
+        new java.lang.String[] { "CustomerId", "ItemIdAndQuantity", "PaymentRefId", "IsOrderPlaced", });
     com.amazaar.Protobuff.EntityPbOuterClass.getDescriptor();
     com.amazaar.Protobuff.SummaryPbOuterClass.getDescriptor();
     com.amazaar.Protobuff.ItemPbOuterClass.getDescriptor();

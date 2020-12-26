@@ -1,29 +1,23 @@
 package com.amazaar.Widget.CheckOutWidget;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amazaar.Adapters.AddressListAdapter;
-import com.amazaar.Adapters.HomeProductListAdapter;
 import com.amazaar.Adapters.OrderSummaryListAdapter;
 import com.amazaar.Fragments.PaymentFragment;
 import com.amazaar.Interfaces.IView;
-import com.amazaar.ListModels.OrderListModelNew;
-import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.R;
 import com.amazaar.Utility.Utils;
 import com.google.inject.Injector;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.inject.Inject;
 
@@ -107,6 +101,10 @@ public class CheckOutWidget extends LinearLayout implements IView<CheckOutView>,
     private void openFragment()
     {
         PaymentFragment paymentFragment =new PaymentFragment();
+        Bundle bundle=new Bundle();
+        bundle.putString("totalAmount", getView().getTotalPrice());
+        //set Fragmentclass Arguments
+        paymentFragment.setArguments(bundle);
         Utils.addNextFragment(getContext(), paymentFragment, getView().getMainFragment(), true);
     }
 }

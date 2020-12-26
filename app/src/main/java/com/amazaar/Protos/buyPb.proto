@@ -18,6 +18,13 @@ enum DeliveryStatusEnum {
     CLOSED = 3;
 }
 
+enum IsOrderedPlacedEnum {
+    UNKNOWN_ORDER=0;
+    ORDER_FAILED=1;
+    ORDER_SUCCESS=2;
+
+}
+
 
 message BuyPb {
     EntityPb dbInfo = 1;
@@ -45,11 +52,12 @@ message BuySearchResponsePb {
     repeated BuyPb results = 2;
 }
 
-message createBuyRequestPb{
+message CreateBuyRequestPb{
     string customerId =1;
     repeated string itemIdAndQuantity=2;
+    string paymentRefId = 3;
+    IsOrderedPlacedEnum isOrderPlaced =4;
 }
-
 
 
 
