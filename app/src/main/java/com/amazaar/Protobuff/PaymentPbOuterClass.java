@@ -2057,6 +2057,12 @@ public final class PaymentPbOuterClass {
      * @return The mode.
      */
     com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum getMode();
+
+    /**
+     * <code>float amount = 4;</code>
+     * @return The amount.
+     */
+    float getAmount();
   }
   /**
    * Protobuf type {@code com.amazaar.Protobuff.PaymentPbRef}
@@ -2122,6 +2128,11 @@ public final class PaymentPbOuterClass {
               int rawValue = input.readEnum();
 
               mode_ = rawValue;
+              break;
+            }
+            case 37: {
+
+              amount_ = input.readFloat();
               break;
             }
             default: {
@@ -2232,6 +2243,17 @@ public final class PaymentPbOuterClass {
       return result == null ? com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.UNRECOGNIZED : result;
     }
 
+    public static final int AMOUNT_FIELD_NUMBER = 4;
+    private float amount_;
+    /**
+     * <code>float amount = 4;</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public float getAmount() {
+      return amount_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2255,6 +2277,9 @@ public final class PaymentPbOuterClass {
       if (mode_ != com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.UNKNOWN_MODE.getNumber()) {
         output.writeEnum(3, mode_);
       }
+      if (amount_ != 0F) {
+        output.writeFloat(4, amount_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2275,6 +2300,10 @@ public final class PaymentPbOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, mode_);
       }
+      if (amount_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(4, amount_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2294,6 +2323,9 @@ public final class PaymentPbOuterClass {
           .equals(other.getId())) return false;
       if (status_ != other.status_) return false;
       if (mode_ != other.mode_) return false;
+      if (java.lang.Float.floatToIntBits(getAmount())
+          != java.lang.Float.floatToIntBits(
+              other.getAmount())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2311,6 +2343,9 @@ public final class PaymentPbOuterClass {
       hash = (53 * hash) + status_;
       hash = (37 * hash) + MODE_FIELD_NUMBER;
       hash = (53 * hash) + mode_;
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getAmount());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2450,6 +2485,8 @@ public final class PaymentPbOuterClass {
 
         mode_ = 0;
 
+        amount_ = 0F;
+
         return this;
       }
 
@@ -2479,6 +2516,7 @@ public final class PaymentPbOuterClass {
         result.id_ = id_;
         result.status_ = status_;
         result.mode_ = mode_;
+        result.amount_ = amount_;
         onBuilt();
         return result;
       }
@@ -2536,6 +2574,9 @@ public final class PaymentPbOuterClass {
         }
         if (other.mode_ != 0) {
           setModeValue(other.getModeValue());
+        }
+        if (other.getAmount() != 0F) {
+          setAmount(other.getAmount());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2746,6 +2787,37 @@ public final class PaymentPbOuterClass {
       public Builder clearMode() {
         
         mode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float amount_ ;
+      /**
+       * <code>float amount = 4;</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public float getAmount() {
+        return amount_;
+      }
+      /**
+       * <code>float amount = 4;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(float value) {
+        
+        amount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float amount = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        
+        amount_ = 0F;
         onChanged();
         return this;
       }
@@ -4620,22 +4692,22 @@ public final class PaymentPbOuterClass {
       "buff.CustomerPbRef\0224\n\004mode\030\007 \001(\0162&.com.a" +
       "mazaar.Protobuff.PaymentModeEnum\022\016\n\006amou" +
       "nt\030\010 \001(\002\022+\n\004time\030\t \001(\0132\035.com.amazaar.Pro" +
-      "tobuff.TimePb\"\212\001\n\014PaymentPbRef\022\n\n\002id\030\001 \001" +
+      "tobuff.TimePb\"\232\001\n\014PaymentPbRef\022\n\n\002id\030\001 \001" +
       "(\t\0228\n\006status\030\002 \001(\0162(.com.amazaar.Protobu" +
       "ff.PaymentStatusEnum\0224\n\004mode\030\003 \001(\0162&.com" +
-      ".amazaar.Protobuff.PaymentModeEnum\"\235\001\n\026P" +
-      "aymentSearchRequestPb\022\023\n\013customerRef\030\001 \001" +
-      "(\t\0228\n\006status\030\002 \001(\0162(.com.amazaar.Protobu" +
-      "ff.PaymentStatusEnum\0224\n\004mode\030\003 \001(\0162&.com" +
-      ".amazaar.Protobuff.PaymentModeEnum\"\177\n\027Pa" +
-      "ymentSearchResponsePb\0221\n\007summary\030\001 \001(\0132 " +
-      ".com.amazaar.Protobuff.SummaryPb\0221\n\007resu" +
-      "lts\030\002 \003(\0132 .com.amazaar.Protobuff.Paymen" +
-      "tPb*X\n\021PaymentStatusEnum\022\032\n\026UNKNOWN_PAYM" +
-      "ENT_STATUS\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\022\r" +
-      "\n\tSUBMITTED\020\003*I\n\017PaymentModeEnum\022\020\n\014UNKN" +
-      "OWN_MODE\020\000\022\016\n\nGOOGLE_PAY\020\001\022\024\n\020CASH_ON_DE" +
-      "LIVERY\020\002b\006proto3"
+      ".amazaar.Protobuff.PaymentModeEnum\022\016\n\006am" +
+      "ount\030\004 \001(\002\"\235\001\n\026PaymentSearchRequestPb\022\023\n" +
+      "\013customerRef\030\001 \001(\t\0228\n\006status\030\002 \001(\0162(.com" +
+      ".amazaar.Protobuff.PaymentStatusEnum\0224\n\004" +
+      "mode\030\003 \001(\0162&.com.amazaar.Protobuff.Payme" +
+      "ntModeEnum\"\177\n\027PaymentSearchResponsePb\0221\n" +
+      "\007summary\030\001 \001(\0132 .com.amazaar.Protobuff.S" +
+      "ummaryPb\0221\n\007results\030\002 \003(\0132 .com.amazaar." +
+      "Protobuff.PaymentPb*X\n\021PaymentStatusEnum" +
+      "\022\032\n\026UNKNOWN_PAYMENT_STATUS\020\000\022\013\n\007SUCCESS\020" +
+      "\001\022\013\n\007FAILURE\020\002\022\r\n\tSUBMITTED\020\003*I\n\017Payment" +
+      "ModeEnum\022\020\n\014UNKNOWN_MODE\020\000\022\016\n\nGOOGLE_PAY" +
+      "\020\001\022\024\n\020CASH_ON_DELIVERY\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4656,7 +4728,7 @@ public final class PaymentPbOuterClass {
     internal_static_com_amazaar_Protobuff_PaymentPbRef_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_PaymentPbRef_descriptor,
-        new java.lang.String[] { "Id", "Status", "Mode", });
+        new java.lang.String[] { "Id", "Status", "Mode", "Amount", });
     internal_static_com_amazaar_Protobuff_PaymentSearchRequestPb_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_amazaar_Protobuff_PaymentSearchRequestPb_fieldAccessorTable = new

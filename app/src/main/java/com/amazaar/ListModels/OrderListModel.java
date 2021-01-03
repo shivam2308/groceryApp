@@ -1,13 +1,39 @@
 package com.amazaar.ListModels;
 
+import com.amazaar.CommonCode.DataModel;
+import com.amazaar.DefaultProviders.OrderedListDefaultPbProvider;
+import com.amazaar.Protobuff.BuyPbOuterClass;
+import com.amazaar.Protobuff.OrderedListPbOuterClass;
+
+import javax.inject.Inject;
+
 public class OrderListModel {
     private String orderId;
     private String price;
     private String orderDate;
     private String deliveryDate;
     private String proName;
-    private String status;
+    private BuyPbOuterClass.DeliveryStatusEnum status;
+    public DataModel<OrderedListPbOuterClass.OrderedListPb, OrderedListDefaultPbProvider> m_onOrderChange;
 
+
+    @Inject
+    public OrderListModel(){
+        m_onOrderChange = new DataModel<>(new OrderedListDefaultPbProvider());
+        m_onOrderChange.setListener(new DataModel.ChangeListener() {
+            @Override
+            public void onChange() {
+                setOrderId(m_onOrderChange.getData().getParentOrderId());
+                setPrice(String.valueOf(m_onOrderChange.getData().getPaymentRef().getAmount()));
+                setStatus(m_onOrderChange.getData().getDeliveryStatus());
+                setOrderDate(m_onOrderChange.getData().getTime().getFormattedDate());
+            }
+        });
+    }
+
+    public DataModel<OrderedListPbOuterClass.OrderedListPb, OrderedListDefaultPbProvider> getonOrderChange() {
+        return m_onOrderChange;
+    }
 
 
     public String getOrderDate() {
@@ -53,11 +79,11 @@ public class OrderListModel {
         this.proName = proName;
     }
 
-    public String getStatus() {
+    public BuyPbOuterClass.DeliveryStatusEnum getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(BuyPbOuterClass.DeliveryStatusEnum status) {
         this.status = status;
     }
 }

@@ -11,9 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.amazaar.Adapters.OrderListAdapter;
 import com.amazaar.CommonCode.TempListData;
+import com.amazaar.Fragments.OrderSummaryFragment;
+import com.amazaar.Fragments.ProductListFragment;
 import com.amazaar.Interfaces.IView;
-import com.amazaar.R;
 import com.amazaar.ListModels.OrderListModel;
+import com.amazaar.R;
+import com.amazaar.Utility.Utils;
 import com.google.inject.Injector;
 
 import java.util.List;
@@ -46,7 +49,6 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
         rvProductList.setLayoutManager(mLayoutManager);
 
 
-
         inflateLayout();
         if (!isInEditMode()) {
             injectMembers();
@@ -55,10 +57,8 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
     }
 
     private void getListData() {
-
-        TempListData tempListData = new TempListData();
-        orderListModelList = (List<OrderListModel>) tempListData.getOrderList();
-        orderListAdapter = new OrderListAdapter(orderListModelList, getContext(), getView().getMainFragment());
+        orderListModelList = getView().getOrderlistResp();
+        orderListAdapter = new OrderListAdapter(orderListModelList, getContext());
         rvProductList.setAdapter(orderListAdapter);
     }
 
@@ -77,7 +77,15 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
     }
 
     private void initWidget() {
-
+        getListData();
+        orderListAdapter.setOnItemClickListener(new OrderListAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, OrderListModel viewModel) {
+                OrderSummaryFragment fragmentProductDetails = new OrderSummaryFragment();
+                fragmentProductDetails.setModel(viewModel);
+                Utils.addNextFragment(getContext(),fragmentProductDetails, getView().getMainFragment(), false);
+            }
+        });
     }
 
     private void injectMembers() {
@@ -86,11 +94,11 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
     }
 
 
-
     @Override
     public OrderListView getView() {
         return m_view;
     }
+
     @Override
     public void onClick(View v) {
 

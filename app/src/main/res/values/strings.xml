@@ -203,6 +203,10 @@
     <string name="enter_your_pincode">Enter your Pincode</string>
     <string name="admin">Admin</string>
     <string name="enter_your_feedback">Enter Your Feedback</string>
+    <string name="Edit" />
+    <string name="edit">Edit</string>
+    <string name="Address">Address</string>
+    <string name="enter_your_address">enter your address</string>
 
 
 </resources>

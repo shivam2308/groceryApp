@@ -106,6 +106,9 @@ public class TopBarWidget extends LinearLayout implements IView<TopBarView>, Vie
                     case ORDER_LIST:
                         setUpToolbar("Order List", false, true, false,false);
                         break;
+                    case PROFILE_EDIT:
+                        setUpToolbar("Profile Edit", false, true, false,false);
+                        break;
                 }
             }
         });

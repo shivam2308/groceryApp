@@ -5,8 +5,6 @@ import com.amazaar.ClientServices.PaymentClientService;
 import com.amazaar.CommonCode.CommonHelper;
 import com.amazaar.Convertors.RefConvertorHelper;
 import com.amazaar.DatabaseEnitityHelper.CartEntityDaoHelper;
-import com.amazaar.Dialog.PaymentProgressDailogFragment;
-import com.amazaar.Protobuff.PaymentPbOuterClass;
 import com.amazaar.SessionManager.CustomerSession;
 import com.google.inject.Injector;
 

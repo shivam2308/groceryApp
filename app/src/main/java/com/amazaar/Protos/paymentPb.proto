@@ -24,6 +24,7 @@ message PaymentPbRef{
     string id =1;
     PaymentStatusEnum status =2 ;
     PaymentModeEnum mode = 3;
+    float amount = 4;
 }
 
 enum PaymentStatusEnum{

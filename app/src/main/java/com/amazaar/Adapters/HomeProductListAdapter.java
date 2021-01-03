@@ -13,7 +13,6 @@ import com.amazaar.CommonCode.DefaultImageUrl;
 import com.amazaar.ControlFlow.GetImageFromUrl;
 import com.amazaar.Fragments.HomeCategoryFragment;
 import com.amazaar.ListModels.ProductListModel;
-import com.amazaar.Protobuff.ImagePbOuterClass;
 import com.amazaar.R;
 
 import java.util.List;

@@ -6,6 +6,7 @@ import "entityPb.proto";
 import "summaryPb.proto";
 import "itemPb.proto";
 import "customerPb.proto";
+import "paymentPb.proto";
 import "deliveryManPb.proto";
 import "timePb.proto";
 
@@ -16,6 +17,7 @@ enum DeliveryStatusEnum {
     DELIVERED = 1;
     PENDING = 2;
     CLOSED = 3;
+    OUT_FOR_DELIVERY=4;
 }
 
 enum IsOrderedPlacedEnum {
@@ -24,7 +26,6 @@ enum IsOrderedPlacedEnum {
     ORDER_SUCCESS=2;
 
 }
-
 
 message BuyPb {
     EntityPb dbInfo = 1;
@@ -36,6 +37,8 @@ message BuyPb {
     float price = 7;
     DeliveryStatusEnum deliveryStatus = 8;
     TimePb time = 9;
+    PaymentPbRef paymentRef = 10;
+    string parentOrderId = 11;
 }
 
 message BuyPbRef {
@@ -45,7 +48,8 @@ message BuyPbRef {
 }
 
 message BuySearchRequestPb {
-
+    string parentOrderId = 1;
+    string customerId = 2;
 }
 message BuySearchResponsePb {
     SummaryPb summary = 1;

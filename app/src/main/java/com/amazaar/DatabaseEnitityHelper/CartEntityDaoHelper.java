@@ -10,7 +10,6 @@ import com.amazaar.LocalDatabase.DatabaseInitHandler;
 import com.amazaar.LocalDatabase.Enity.CartEntity;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.Protobuff.CartPbOuterClass;
-import com.amazaar.Protobuff.ItemPbOuterClass;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 

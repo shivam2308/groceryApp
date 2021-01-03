@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amazaar.Adapters.AddressListAdapter;
-import com.amazaar.Adapters.OrderSummaryListAdapter;
+import com.amazaar.Adapters.OrderSummaryMiniListAdapter;
 import com.amazaar.Fragments.PaymentFragment;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.R;
@@ -36,7 +36,7 @@ public class CheckOutWidget extends LinearLayout implements IView<CheckOutView>,
     private RecyclerView rvOrderList;
     private LinearLayoutManager mLayoutManager;
     private AddressListAdapter addressListAdapterNew;
-    private OrderSummaryListAdapter orderListAdapter;
+    private OrderSummaryMiniListAdapter orderListAdapter;
 
 
     public CheckOutWidget(Context context, AttributeSet attrs) {
@@ -72,7 +72,7 @@ public class CheckOutWidget extends LinearLayout implements IView<CheckOutView>,
     private void initWidget() {
         addressListAdapterNew = new AddressListAdapter(getView().getAddressListModel(), getContext());
         rvAddressList.setAdapter(addressListAdapterNew);
-        orderListAdapter = new OrderSummaryListAdapter(getView().getOrderListModel(), getContext());
+        orderListAdapter = new OrderSummaryMiniListAdapter(getView().getOrderListModel(), getContext());
         rvOrderList.setAdapter(orderListAdapter);
         m_total.setText(getView().getTotalPrice());
     }

@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.amazaar.CommonCode.DefaultImageUrl;
 import com.amazaar.ControlFlow.GetImageFromUrl;
+import com.amazaar.Fragments.ProfileEditFragment;
 import com.amazaar.Fragments.UploadImageFragment;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.R;
@@ -31,8 +32,8 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
     private TextView tvChangePsw;
     private ImageView ivProfile;
     private ImageView tvEdit;
-    private RelativeLayout rlChangePsw;
-    private RelativeLayout rlHistory;
+//    private RelativeLayout rlChangePsw;
+//    private RelativeLayout rlHistory;
     private RelativeLayout rlDeActive;
     private TextView m_address;
     @Inject
@@ -55,8 +56,8 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
         m_address = (TextView) findViewById(R.id.fragment_myaccount_rvAddress);
         ivProfile = (ImageView) findViewById(R.id.fragment_myaccount_ivProfile);
         tvEdit = (ImageView) findViewById(R.id.fragment_myaccount_tvEdit);
-        rlChangePsw = (RelativeLayout) findViewById(R.id.fragment_myaccount_rlChangePsw);
-        rlHistory = (RelativeLayout) findViewById(R.id.fragment_myaccount_rlCleanHistory);
+        //rlChangePsw = (RelativeLayout) findViewById(R.id.fragment_myaccount_rlChangePsw);
+        //rlHistory = (RelativeLayout) findViewById(R.id.fragment_myaccount_rlCleanHistory);
         rlDeActive = (RelativeLayout) findViewById(R.id.fragment_myaccount_rlDeActive);
         inflateLayout();
         if (!isInEditMode()) {
@@ -68,8 +69,8 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
     private void inflateLayout() {
         inflate(getContext(), R.layout.my_account_layout, this);
         tvEdit.setOnClickListener(this);
-        rlChangePsw.setOnClickListener(this);
-        rlHistory.setOnClickListener(this);
+//        rlChangePsw.setOnClickListener(this);
+//        rlHistory.setOnClickListener(this);
         rlDeActive.setOnClickListener(this);
     }
 
@@ -104,9 +105,9 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
 
     @Override
     public void onClick(View v) {
-        if (v == tvChangePsw) {
-
-        }
+//        if (v == tvChangePsw) {
+//
+//        }
        /* if(v==rlChangePsw)
         {
             DialogFragmentChangePsw dialogFragmentChangePsw = new DialogFragmentChangePsw();
@@ -121,12 +122,12 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
         {
             DialogFragmentClearHistory dialogFragmentClearHistory = new DialogFragmentClearHistory();
             dialogFragmentClearHistory.show(getFragmentManager(), getString(R.string.lbl_clearhistory));
-        }
-        else if(v==tvEdit)
-        {
-            DialogFragmentProfile dialogFragmentProfile = new DialogFragmentProfile();
-            dialogFragmentProfile.show(getFragmentManager(), getString(R.string.lbl_choosprofile));
         }*/
+        if(v==tvEdit)
+        {
+            ProfileEditFragment ProfileEditFragment = new ProfileEditFragment();
+            Utils.addNextFragment(getContext(), ProfileEditFragment, getView().getMainFragment(), true);
+        }
 
     }
 

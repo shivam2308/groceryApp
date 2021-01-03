@@ -111,8 +111,7 @@ public class SplashActivity extends AwesomeSplash {
     @Override
     public void animationsFinished() {
         m_deviceLogin.doLogin(getApplicationContext());
-        /*Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-        startActivity(i);*/
+        
     }
 
     private void injectMembers() {

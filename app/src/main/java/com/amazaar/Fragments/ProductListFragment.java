@@ -12,7 +12,6 @@ import com.amazaar.Activity.HomeActivity;
 import com.amazaar.Enums.TopBarUiEnum;
 import com.amazaar.Protobuff.ItemPbOuterClass;
 import com.amazaar.R;
-import com.amazaar.Utility.Utils;
 import com.amazaar.Widget.ProductListWidget.ProductListWidget;
 
 import javax.inject.Inject;

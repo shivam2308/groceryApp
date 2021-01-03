@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazaar.Comman.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/row_checkout_bg_color"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="696dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/perosnNamelayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Name :"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:id="@+id/personname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="OrderID :"
+                    android:textColor="#9E000000"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/emaillayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Email :"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:id="@+id/personEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="OrderID :"
+                    android:textColor="#9E000000"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/perosnphonenumberlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Phone Number :"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:id="@+id/personphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="OrderID :"
+                    android:textColor="#9E000000"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="OrderID :"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:id="@+id/orderId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="OrderID :"
+                    android:textColor="#9E000000"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Order Date :"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:id="@+id/orderdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Order Date :"
+                    android:textColor="#9E000000"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/deliverydate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Order Deliver Date :"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:id="@+id/orderdeliverdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="#9E000000"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Status :"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:id="@+id/orderstatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="#9E000000"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Payment :"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:id="@+id/orderPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="#9E000000"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Payment Mode :"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:id="@+id/orderPaymentmode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="#9E000000"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+
+
+
+            </LinearLayout>
+
+            <com.amazaar.CustomeComponent.CustomTextView
+                android:id="@+id/items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Items : "
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="#9E000000"
+                android:textSize="@dimen/_14sdp"
+                app:font_name="NunitoBold.ttf" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="4"
+                >
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    style="@style/order_lable_style"
+                    android:id="@+id/row_orderlist_new_tvOrederid1"
+                    android:text="Order Id"
+                    android:layout_weight="1"
+                    app:font_name="NunitoSemiBold.ttf"/>
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    style="@style/order_lable_style"
+                    android:id="@+id/row_orderlist_new_tvOrederName1"
+                    android:text="Order Name"
+                    android:layout_weight="1"
+                    app:font_name="NunitoSemiBold.ttf"/>
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    style="@style/order_lable_style"
+                    android:id="@+id/row_orderlist_new_tvQuntity1"
+                    android:text="Quntity"
+                    android:layout_weight="1"
+                    app:font_name="NunitoSemiBold.ttf"/>
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:id="@+id/row_orderlist_new_tvPrice1"
+                    style="@style/order_lable_style"
+                    android:text="Price"
+                    android:layout_weight="1"
+                    app:font_name="NunitoRegular.ttf" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/orderlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Total:"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:id="@+id/ordertotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="OrderID :"
+                    android:textColor="#9E000000"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_name="NunitoBold.ttf" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</com.amazaar.Comman.SlidingLinearLayout>
