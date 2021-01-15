@@ -28,13 +28,13 @@ public final class PaymentPbOuterClass {
      */
     SUCCESS(1),
     /**
-     * <code>FAILED = 2;</code>
+     * <code>FAILURE = 2;</code>
      */
-    FAILED(2),
+    FAILURE(2),
     /**
-     * <code>WAITING = 3;</code>
+     * <code>SUBMITTED = 3;</code>
      */
-    WAITING(3),
+    SUBMITTED(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -47,13 +47,13 @@ public final class PaymentPbOuterClass {
      */
     public static final int SUCCESS_VALUE = 1;
     /**
-     * <code>FAILED = 2;</code>
+     * <code>FAILURE = 2;</code>
      */
-    public static final int FAILED_VALUE = 2;
+    public static final int FAILURE_VALUE = 2;
     /**
-     * <code>WAITING = 3;</code>
+     * <code>SUBMITTED = 3;</code>
      */
-    public static final int WAITING_VALUE = 3;
+    public static final int SUBMITTED_VALUE = 3;
 
 
     public final int getNumber() {
@@ -82,8 +82,8 @@ public final class PaymentPbOuterClass {
       switch (value) {
         case 0: return UNKNOWN_PAYMENT_STATUS;
         case 1: return SUCCESS;
-        case 2: return FAILED;
-        case 3: return WAITING;
+        case 2: return FAILURE;
+        case 3: return SUBMITTED;
         default: return null;
       }
     }
@@ -262,79 +262,111 @@ public final class PaymentPbOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string txnId = 1;</code>
+     * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+     * @return Whether the dbInfo field is set.
+     */
+    boolean hasDbInfo();
+    /**
+     * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+     * @return The dbInfo.
+     */
+    com.amazaar.Protobuff.EntityPbOuterClass.EntityPb getDbInfo();
+    /**
+     * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+     */
+    com.amazaar.Protobuff.EntityPbOuterClass.EntityPbOrBuilder getDbInfoOrBuilder();
+
+    /**
+     * <code>string txnId = 2;</code>
      * @return The txnId.
      */
     java.lang.String getTxnId();
     /**
-     * <code>string txnId = 1;</code>
+     * <code>string txnId = 2;</code>
      * @return The bytes for txnId.
      */
     com.google.protobuf.ByteString
         getTxnIdBytes();
 
     /**
-     * <code>string responseCode = 2;</code>
+     * <code>string responseCode = 3;</code>
      * @return The responseCode.
      */
     java.lang.String getResponseCode();
     /**
-     * <code>string responseCode = 2;</code>
+     * <code>string responseCode = 3;</code>
      * @return The bytes for responseCode.
      */
     com.google.protobuf.ByteString
         getResponseCodeBytes();
 
     /**
-     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 3;</code>
+     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 4;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
-     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 3;</code>
+     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 4;</code>
      * @return The status.
      */
     com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum getStatus();
 
     /**
-     * <code>string txnRef = 4;</code>
+     * <code>string txnRef = 5;</code>
      * @return The txnRef.
      */
     java.lang.String getTxnRef();
     /**
-     * <code>string txnRef = 4;</code>
+     * <code>string txnRef = 5;</code>
      * @return The bytes for txnRef.
      */
     com.google.protobuf.ByteString
         getTxnRefBytes();
 
     /**
-     * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+     * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
      * @return Whether the customerRef field is set.
      */
     boolean hasCustomerRef();
     /**
-     * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+     * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
      * @return The customerRef.
      */
     com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRef getCustomerRef();
     /**
-     * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+     * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
      */
     com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRefOrBuilder getCustomerRefOrBuilder();
 
     /**
-     * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+     * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 7;</code>
+     * @return The enum numeric value on the wire for mode.
+     */
+    int getModeValue();
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 7;</code>
+     * @return The mode.
+     */
+    com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum getMode();
+
+    /**
+     * <code>float amount = 8;</code>
+     * @return The amount.
+     */
+    float getAmount();
+
+    /**
+     * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
      * @return Whether the time field is set.
      */
     boolean hasTime();
     /**
-     * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+     * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
      * @return The time.
      */
     com.amazaar.Protobuff.TimePbOuterClass.TimePb getTime();
     /**
-     * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+     * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
      */
     com.amazaar.Protobuff.TimePbOuterClass.TimePbOrBuilder getTimeOrBuilder();
   }
@@ -355,6 +387,7 @@ public final class PaymentPbOuterClass {
       responseCode_ = "";
       status_ = 0;
       txnRef_ = "";
+      mode_ = 0;
     }
 
     @java.lang.Override
@@ -388,30 +421,43 @@ public final class PaymentPbOuterClass {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.Builder subBuilder = null;
+              if (dbInfo_ != null) {
+                subBuilder = dbInfo_.toBuilder();
+              }
+              dbInfo_ = input.readMessage(com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dbInfo_);
+                dbInfo_ = subBuilder.buildPartial();
+              }
 
-              txnId_ = s;
               break;
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
+              txnId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
               responseCode_ = s;
               break;
             }
-            case 24: {
+            case 32: {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
               break;
             }
-            case 34: {
+            case 42: {
               java.lang.String s = input.readStringRequireUtf8();
 
               txnRef_ = s;
               break;
             }
-            case 42: {
+            case 50: {
               com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRef.Builder subBuilder = null;
               if (customerRef_ != null) {
                 subBuilder = customerRef_.toBuilder();
@@ -424,7 +470,18 @@ public final class PaymentPbOuterClass {
 
               break;
             }
-            case 50: {
+            case 56: {
+              int rawValue = input.readEnum();
+
+              mode_ = rawValue;
+              break;
+            }
+            case 69: {
+
+              amount_ = input.readFloat();
+              break;
+            }
+            case 74: {
               com.amazaar.Protobuff.TimePbOuterClass.TimePb.Builder subBuilder = null;
               if (time_ != null) {
                 subBuilder = time_.toBuilder();
@@ -469,10 +526,36 @@ public final class PaymentPbOuterClass {
               com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.class, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.Builder.class);
     }
 
-    public static final int TXNID_FIELD_NUMBER = 1;
+    public static final int DBINFO_FIELD_NUMBER = 1;
+    private com.amazaar.Protobuff.EntityPbOuterClass.EntityPb dbInfo_;
+    /**
+     * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+     * @return Whether the dbInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasDbInfo() {
+      return dbInfo_ != null;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+     * @return The dbInfo.
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.EntityPbOuterClass.EntityPb getDbInfo() {
+      return dbInfo_ == null ? com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.getDefaultInstance() : dbInfo_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.EntityPbOuterClass.EntityPbOrBuilder getDbInfoOrBuilder() {
+      return getDbInfo();
+    }
+
+    public static final int TXNID_FIELD_NUMBER = 2;
     private volatile java.lang.Object txnId_;
     /**
-     * <code>string txnId = 1;</code>
+     * <code>string txnId = 2;</code>
      * @return The txnId.
      */
     @java.lang.Override
@@ -489,7 +572,7 @@ public final class PaymentPbOuterClass {
       }
     }
     /**
-     * <code>string txnId = 1;</code>
+     * <code>string txnId = 2;</code>
      * @return The bytes for txnId.
      */
     @java.lang.Override
@@ -507,10 +590,10 @@ public final class PaymentPbOuterClass {
       }
     }
 
-    public static final int RESPONSECODE_FIELD_NUMBER = 2;
+    public static final int RESPONSECODE_FIELD_NUMBER = 3;
     private volatile java.lang.Object responseCode_;
     /**
-     * <code>string responseCode = 2;</code>
+     * <code>string responseCode = 3;</code>
      * @return The responseCode.
      */
     @java.lang.Override
@@ -527,7 +610,7 @@ public final class PaymentPbOuterClass {
       }
     }
     /**
-     * <code>string responseCode = 2;</code>
+     * <code>string responseCode = 3;</code>
      * @return The bytes for responseCode.
      */
     @java.lang.Override
@@ -545,17 +628,17 @@ public final class PaymentPbOuterClass {
       }
     }
 
-    public static final int STATUS_FIELD_NUMBER = 3;
+    public static final int STATUS_FIELD_NUMBER = 4;
     private int status_;
     /**
-     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 3;</code>
+     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 4;</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 3;</code>
+     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 4;</code>
      * @return The status.
      */
     @java.lang.Override public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum getStatus() {
@@ -564,10 +647,10 @@ public final class PaymentPbOuterClass {
       return result == null ? com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.UNRECOGNIZED : result;
     }
 
-    public static final int TXNREF_FIELD_NUMBER = 4;
+    public static final int TXNREF_FIELD_NUMBER = 5;
     private volatile java.lang.Object txnRef_;
     /**
-     * <code>string txnRef = 4;</code>
+     * <code>string txnRef = 5;</code>
      * @return The txnRef.
      */
     @java.lang.Override
@@ -584,7 +667,7 @@ public final class PaymentPbOuterClass {
       }
     }
     /**
-     * <code>string txnRef = 4;</code>
+     * <code>string txnRef = 5;</code>
      * @return The bytes for txnRef.
      */
     @java.lang.Override
@@ -602,10 +685,10 @@ public final class PaymentPbOuterClass {
       }
     }
 
-    public static final int CUSTOMERREF_FIELD_NUMBER = 5;
+    public static final int CUSTOMERREF_FIELD_NUMBER = 6;
     private com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRef customerRef_;
     /**
-     * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+     * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
      * @return Whether the customerRef field is set.
      */
     @java.lang.Override
@@ -613,7 +696,7 @@ public final class PaymentPbOuterClass {
       return customerRef_ != null;
     }
     /**
-     * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+     * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
      * @return The customerRef.
      */
     @java.lang.Override
@@ -621,17 +704,47 @@ public final class PaymentPbOuterClass {
       return customerRef_ == null ? com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRef.getDefaultInstance() : customerRef_;
     }
     /**
-     * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+     * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
      */
     @java.lang.Override
     public com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRefOrBuilder getCustomerRefOrBuilder() {
       return getCustomerRef();
     }
 
-    public static final int TIME_FIELD_NUMBER = 6;
+    public static final int MODE_FIELD_NUMBER = 7;
+    private int mode_;
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 7;</code>
+     * @return The enum numeric value on the wire for mode.
+     */
+    @java.lang.Override public int getModeValue() {
+      return mode_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 7;</code>
+     * @return The mode.
+     */
+    @java.lang.Override public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum getMode() {
+      @SuppressWarnings("deprecation")
+      com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum result = com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.valueOf(mode_);
+      return result == null ? com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.UNRECOGNIZED : result;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 8;
+    private float amount_;
+    /**
+     * <code>float amount = 8;</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public float getAmount() {
+      return amount_;
+    }
+
+    public static final int TIME_FIELD_NUMBER = 9;
     private com.amazaar.Protobuff.TimePbOuterClass.TimePb time_;
     /**
-     * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+     * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
      * @return Whether the time field is set.
      */
     @java.lang.Override
@@ -639,7 +752,7 @@ public final class PaymentPbOuterClass {
       return time_ != null;
     }
     /**
-     * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+     * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
      * @return The time.
      */
     @java.lang.Override
@@ -647,7 +760,7 @@ public final class PaymentPbOuterClass {
       return time_ == null ? com.amazaar.Protobuff.TimePbOuterClass.TimePb.getDefaultInstance() : time_;
     }
     /**
-     * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+     * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
      */
     @java.lang.Override
     public com.amazaar.Protobuff.TimePbOuterClass.TimePbOrBuilder getTimeOrBuilder() {
@@ -668,23 +781,32 @@ public final class PaymentPbOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (dbInfo_ != null) {
+        output.writeMessage(1, getDbInfo());
+      }
       if (!getTxnIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, txnId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, txnId_);
       }
       if (!getResponseCodeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, responseCode_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, responseCode_);
       }
       if (status_ != com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.UNKNOWN_PAYMENT_STATUS.getNumber()) {
-        output.writeEnum(3, status_);
+        output.writeEnum(4, status_);
       }
       if (!getTxnRefBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, txnRef_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, txnRef_);
       }
       if (customerRef_ != null) {
-        output.writeMessage(5, getCustomerRef());
+        output.writeMessage(6, getCustomerRef());
+      }
+      if (mode_ != com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.UNKNOWN_MODE.getNumber()) {
+        output.writeEnum(7, mode_);
+      }
+      if (amount_ != 0F) {
+        output.writeFloat(8, amount_);
       }
       if (time_ != null) {
-        output.writeMessage(6, getTime());
+        output.writeMessage(9, getTime());
       }
       unknownFields.writeTo(output);
     }
@@ -695,26 +817,38 @@ public final class PaymentPbOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (dbInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDbInfo());
+      }
       if (!getTxnIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, txnId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, txnId_);
       }
       if (!getResponseCodeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, responseCode_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, responseCode_);
       }
       if (status_ != com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.UNKNOWN_PAYMENT_STATUS.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, status_);
+          .computeEnumSize(4, status_);
       }
       if (!getTxnRefBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, txnRef_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, txnRef_);
       }
       if (customerRef_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getCustomerRef());
+          .computeMessageSize(6, getCustomerRef());
+      }
+      if (mode_ != com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.UNKNOWN_MODE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, mode_);
+      }
+      if (amount_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(8, amount_);
       }
       if (time_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getTime());
+          .computeMessageSize(9, getTime());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -731,6 +865,11 @@ public final class PaymentPbOuterClass {
       }
       com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb other = (com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb) obj;
 
+      if (hasDbInfo() != other.hasDbInfo()) return false;
+      if (hasDbInfo()) {
+        if (!getDbInfo()
+            .equals(other.getDbInfo())) return false;
+      }
       if (!getTxnId()
           .equals(other.getTxnId())) return false;
       if (!getResponseCode()
@@ -743,6 +882,10 @@ public final class PaymentPbOuterClass {
         if (!getCustomerRef()
             .equals(other.getCustomerRef())) return false;
       }
+      if (mode_ != other.mode_) return false;
+      if (java.lang.Float.floatToIntBits(getAmount())
+          != java.lang.Float.floatToIntBits(
+              other.getAmount())) return false;
       if (hasTime() != other.hasTime()) return false;
       if (hasTime()) {
         if (!getTime()
@@ -759,6 +902,10 @@ public final class PaymentPbOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDbInfo()) {
+        hash = (37 * hash) + DBINFO_FIELD_NUMBER;
+        hash = (53 * hash) + getDbInfo().hashCode();
+      }
       hash = (37 * hash) + TXNID_FIELD_NUMBER;
       hash = (53 * hash) + getTxnId().hashCode();
       hash = (37 * hash) + RESPONSECODE_FIELD_NUMBER;
@@ -771,6 +918,11 @@ public final class PaymentPbOuterClass {
         hash = (37 * hash) + CUSTOMERREF_FIELD_NUMBER;
         hash = (53 * hash) + getCustomerRef().hashCode();
       }
+      hash = (37 * hash) + MODE_FIELD_NUMBER;
+      hash = (53 * hash) + mode_;
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getAmount());
       if (hasTime()) {
         hash = (37 * hash) + TIME_FIELD_NUMBER;
         hash = (53 * hash) + getTime().hashCode();
@@ -908,6 +1060,12 @@ public final class PaymentPbOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (dbInfoBuilder_ == null) {
+          dbInfo_ = null;
+        } else {
+          dbInfo_ = null;
+          dbInfoBuilder_ = null;
+        }
         txnId_ = "";
 
         responseCode_ = "";
@@ -922,6 +1080,10 @@ public final class PaymentPbOuterClass {
           customerRef_ = null;
           customerRefBuilder_ = null;
         }
+        mode_ = 0;
+
+        amount_ = 0F;
+
         if (timeBuilder_ == null) {
           time_ = null;
         } else {
@@ -954,6 +1116,11 @@ public final class PaymentPbOuterClass {
       @java.lang.Override
       public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb buildPartial() {
         com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb result = new com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb(this);
+        if (dbInfoBuilder_ == null) {
+          result.dbInfo_ = dbInfo_;
+        } else {
+          result.dbInfo_ = dbInfoBuilder_.build();
+        }
         result.txnId_ = txnId_;
         result.responseCode_ = responseCode_;
         result.status_ = status_;
@@ -963,6 +1130,8 @@ public final class PaymentPbOuterClass {
         } else {
           result.customerRef_ = customerRefBuilder_.build();
         }
+        result.mode_ = mode_;
+        result.amount_ = amount_;
         if (timeBuilder_ == null) {
           result.time_ = time_;
         } else {
@@ -1016,6 +1185,9 @@ public final class PaymentPbOuterClass {
 
       public Builder mergeFrom(com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb other) {
         if (other == com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.getDefaultInstance()) return this;
+        if (other.hasDbInfo()) {
+          mergeDbInfo(other.getDbInfo());
+        }
         if (!other.getTxnId().isEmpty()) {
           txnId_ = other.txnId_;
           onChanged();
@@ -1033,6 +1205,12 @@ public final class PaymentPbOuterClass {
         }
         if (other.hasCustomerRef()) {
           mergeCustomerRef(other.getCustomerRef());
+        }
+        if (other.mode_ != 0) {
+          setModeValue(other.getModeValue());
+        }
+        if (other.getAmount() != 0F) {
+          setAmount(other.getAmount());
         }
         if (other.hasTime()) {
           mergeTime(other.getTime());
@@ -1066,9 +1244,128 @@ public final class PaymentPbOuterClass {
         return this;
       }
 
+      private com.amazaar.Protobuff.EntityPbOuterClass.EntityPb dbInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.amazaar.Protobuff.EntityPbOuterClass.EntityPb, com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.Builder, com.amazaar.Protobuff.EntityPbOuterClass.EntityPbOrBuilder> dbInfoBuilder_;
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       * @return Whether the dbInfo field is set.
+       */
+      public boolean hasDbInfo() {
+        return dbInfoBuilder_ != null || dbInfo_ != null;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       * @return The dbInfo.
+       */
+      public com.amazaar.Protobuff.EntityPbOuterClass.EntityPb getDbInfo() {
+        if (dbInfoBuilder_ == null) {
+          return dbInfo_ == null ? com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.getDefaultInstance() : dbInfo_;
+        } else {
+          return dbInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       */
+      public Builder setDbInfo(com.amazaar.Protobuff.EntityPbOuterClass.EntityPb value) {
+        if (dbInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dbInfo_ = value;
+          onChanged();
+        } else {
+          dbInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       */
+      public Builder setDbInfo(
+          com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.Builder builderForValue) {
+        if (dbInfoBuilder_ == null) {
+          dbInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          dbInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       */
+      public Builder mergeDbInfo(com.amazaar.Protobuff.EntityPbOuterClass.EntityPb value) {
+        if (dbInfoBuilder_ == null) {
+          if (dbInfo_ != null) {
+            dbInfo_ =
+              com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.newBuilder(dbInfo_).mergeFrom(value).buildPartial();
+          } else {
+            dbInfo_ = value;
+          }
+          onChanged();
+        } else {
+          dbInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       */
+      public Builder clearDbInfo() {
+        if (dbInfoBuilder_ == null) {
+          dbInfo_ = null;
+          onChanged();
+        } else {
+          dbInfo_ = null;
+          dbInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       */
+      public com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.Builder getDbInfoBuilder() {
+        
+        onChanged();
+        return getDbInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       */
+      public com.amazaar.Protobuff.EntityPbOuterClass.EntityPbOrBuilder getDbInfoOrBuilder() {
+        if (dbInfoBuilder_ != null) {
+          return dbInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return dbInfo_ == null ?
+              com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.getDefaultInstance() : dbInfo_;
+        }
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.EntityPb dbInfo = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.amazaar.Protobuff.EntityPbOuterClass.EntityPb, com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.Builder, com.amazaar.Protobuff.EntityPbOuterClass.EntityPbOrBuilder> 
+          getDbInfoFieldBuilder() {
+        if (dbInfoBuilder_ == null) {
+          dbInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.amazaar.Protobuff.EntityPbOuterClass.EntityPb, com.amazaar.Protobuff.EntityPbOuterClass.EntityPb.Builder, com.amazaar.Protobuff.EntityPbOuterClass.EntityPbOrBuilder>(
+                  getDbInfo(),
+                  getParentForChildren(),
+                  isClean());
+          dbInfo_ = null;
+        }
+        return dbInfoBuilder_;
+      }
+
       private java.lang.Object txnId_ = "";
       /**
-       * <code>string txnId = 1;</code>
+       * <code>string txnId = 2;</code>
        * @return The txnId.
        */
       public java.lang.String getTxnId() {
@@ -1084,7 +1381,7 @@ public final class PaymentPbOuterClass {
         }
       }
       /**
-       * <code>string txnId = 1;</code>
+       * <code>string txnId = 2;</code>
        * @return The bytes for txnId.
        */
       public com.google.protobuf.ByteString
@@ -1101,7 +1398,7 @@ public final class PaymentPbOuterClass {
         }
       }
       /**
-       * <code>string txnId = 1;</code>
+       * <code>string txnId = 2;</code>
        * @param value The txnId to set.
        * @return This builder for chaining.
        */
@@ -1116,7 +1413,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>string txnId = 1;</code>
+       * <code>string txnId = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearTxnId() {
@@ -1126,7 +1423,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>string txnId = 1;</code>
+       * <code>string txnId = 2;</code>
        * @param value The bytes for txnId to set.
        * @return This builder for chaining.
        */
@@ -1144,7 +1441,7 @@ public final class PaymentPbOuterClass {
 
       private java.lang.Object responseCode_ = "";
       /**
-       * <code>string responseCode = 2;</code>
+       * <code>string responseCode = 3;</code>
        * @return The responseCode.
        */
       public java.lang.String getResponseCode() {
@@ -1160,7 +1457,7 @@ public final class PaymentPbOuterClass {
         }
       }
       /**
-       * <code>string responseCode = 2;</code>
+       * <code>string responseCode = 3;</code>
        * @return The bytes for responseCode.
        */
       public com.google.protobuf.ByteString
@@ -1177,7 +1474,7 @@ public final class PaymentPbOuterClass {
         }
       }
       /**
-       * <code>string responseCode = 2;</code>
+       * <code>string responseCode = 3;</code>
        * @param value The responseCode to set.
        * @return This builder for chaining.
        */
@@ -1192,7 +1489,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>string responseCode = 2;</code>
+       * <code>string responseCode = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearResponseCode() {
@@ -1202,7 +1499,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>string responseCode = 2;</code>
+       * <code>string responseCode = 3;</code>
        * @param value The bytes for responseCode to set.
        * @return This builder for chaining.
        */
@@ -1220,14 +1517,14 @@ public final class PaymentPbOuterClass {
 
       private int status_ = 0;
       /**
-       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 3;</code>
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 4;</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
-       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 3;</code>
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 4;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
@@ -1238,7 +1535,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 3;</code>
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 4;</code>
        * @return The status.
        */
       @java.lang.Override
@@ -1248,7 +1545,7 @@ public final class PaymentPbOuterClass {
         return result == null ? com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.UNRECOGNIZED : result;
       }
       /**
-       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 3;</code>
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 4;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -1262,7 +1559,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 3;</code>
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -1274,7 +1571,7 @@ public final class PaymentPbOuterClass {
 
       private java.lang.Object txnRef_ = "";
       /**
-       * <code>string txnRef = 4;</code>
+       * <code>string txnRef = 5;</code>
        * @return The txnRef.
        */
       public java.lang.String getTxnRef() {
@@ -1290,7 +1587,7 @@ public final class PaymentPbOuterClass {
         }
       }
       /**
-       * <code>string txnRef = 4;</code>
+       * <code>string txnRef = 5;</code>
        * @return The bytes for txnRef.
        */
       public com.google.protobuf.ByteString
@@ -1307,7 +1604,7 @@ public final class PaymentPbOuterClass {
         }
       }
       /**
-       * <code>string txnRef = 4;</code>
+       * <code>string txnRef = 5;</code>
        * @param value The txnRef to set.
        * @return This builder for chaining.
        */
@@ -1322,7 +1619,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>string txnRef = 4;</code>
+       * <code>string txnRef = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearTxnRef() {
@@ -1332,7 +1629,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>string txnRef = 4;</code>
+       * <code>string txnRef = 5;</code>
        * @param value The bytes for txnRef to set.
        * @return This builder for chaining.
        */
@@ -1352,14 +1649,14 @@ public final class PaymentPbOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRef, com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRef.Builder, com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRefOrBuilder> customerRefBuilder_;
       /**
-       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
        * @return Whether the customerRef field is set.
        */
       public boolean hasCustomerRef() {
         return customerRefBuilder_ != null || customerRef_ != null;
       }
       /**
-       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
        * @return The customerRef.
        */
       public com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRef getCustomerRef() {
@@ -1370,7 +1667,7 @@ public final class PaymentPbOuterClass {
         }
       }
       /**
-       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
        */
       public Builder setCustomerRef(com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRef value) {
         if (customerRefBuilder_ == null) {
@@ -1386,7 +1683,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
        */
       public Builder setCustomerRef(
           com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRef.Builder builderForValue) {
@@ -1400,7 +1697,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
        */
       public Builder mergeCustomerRef(com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRef value) {
         if (customerRefBuilder_ == null) {
@@ -1418,7 +1715,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
        */
       public Builder clearCustomerRef() {
         if (customerRefBuilder_ == null) {
@@ -1432,7 +1729,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
        */
       public com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRef.Builder getCustomerRefBuilder() {
         
@@ -1440,7 +1737,7 @@ public final class PaymentPbOuterClass {
         return getCustomerRefFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
        */
       public com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRefOrBuilder getCustomerRefOrBuilder() {
         if (customerRefBuilder_ != null) {
@@ -1451,7 +1748,7 @@ public final class PaymentPbOuterClass {
         }
       }
       /**
-       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 5;</code>
+       * <code>.com.amazaar.Protobuff.CustomerPbRef customerRef = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRef, com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRef.Builder, com.amazaar.Protobuff.CustomerPbOuterClass.CustomerPbRefOrBuilder> 
@@ -1467,18 +1764,103 @@ public final class PaymentPbOuterClass {
         return customerRefBuilder_;
       }
 
+      private int mode_ = 0;
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 7;</code>
+       * @return The enum numeric value on the wire for mode.
+       */
+      @java.lang.Override public int getModeValue() {
+        return mode_;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 7;</code>
+       * @param value The enum numeric value on the wire for mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModeValue(int value) {
+        
+        mode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 7;</code>
+       * @return The mode.
+       */
+      @java.lang.Override
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum getMode() {
+        @SuppressWarnings("deprecation")
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum result = com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.valueOf(mode_);
+        return result == null ? com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 7;</code>
+       * @param value The mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMode(com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        mode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMode() {
+        
+        mode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float amount_ ;
+      /**
+       * <code>float amount = 8;</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public float getAmount() {
+        return amount_;
+      }
+      /**
+       * <code>float amount = 8;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(float value) {
+        
+        amount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float amount = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        
+        amount_ = 0F;
+        onChanged();
+        return this;
+      }
+
       private com.amazaar.Protobuff.TimePbOuterClass.TimePb time_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.amazaar.Protobuff.TimePbOuterClass.TimePb, com.amazaar.Protobuff.TimePbOuterClass.TimePb.Builder, com.amazaar.Protobuff.TimePbOuterClass.TimePbOrBuilder> timeBuilder_;
       /**
-       * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+       * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
        * @return Whether the time field is set.
        */
       public boolean hasTime() {
         return timeBuilder_ != null || time_ != null;
       }
       /**
-       * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+       * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
        * @return The time.
        */
       public com.amazaar.Protobuff.TimePbOuterClass.TimePb getTime() {
@@ -1489,7 +1871,7 @@ public final class PaymentPbOuterClass {
         }
       }
       /**
-       * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+       * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
        */
       public Builder setTime(com.amazaar.Protobuff.TimePbOuterClass.TimePb value) {
         if (timeBuilder_ == null) {
@@ -1505,7 +1887,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+       * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
        */
       public Builder setTime(
           com.amazaar.Protobuff.TimePbOuterClass.TimePb.Builder builderForValue) {
@@ -1519,7 +1901,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+       * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
        */
       public Builder mergeTime(com.amazaar.Protobuff.TimePbOuterClass.TimePb value) {
         if (timeBuilder_ == null) {
@@ -1537,7 +1919,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+       * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
        */
       public Builder clearTime() {
         if (timeBuilder_ == null) {
@@ -1551,7 +1933,7 @@ public final class PaymentPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+       * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
        */
       public com.amazaar.Protobuff.TimePbOuterClass.TimePb.Builder getTimeBuilder() {
         
@@ -1559,7 +1941,7 @@ public final class PaymentPbOuterClass {
         return getTimeFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+       * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
        */
       public com.amazaar.Protobuff.TimePbOuterClass.TimePbOrBuilder getTimeOrBuilder() {
         if (timeBuilder_ != null) {
@@ -1570,7 +1952,7 @@ public final class PaymentPbOuterClass {
         }
       }
       /**
-       * <code>.com.amazaar.Protobuff.TimePb time = 6;</code>
+       * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.amazaar.Protobuff.TimePbOuterClass.TimePb, com.amazaar.Protobuff.TimePbOuterClass.TimePb.Builder, com.amazaar.Protobuff.TimePbOuterClass.TimePbOrBuilder> 
@@ -1638,11 +2020,2658 @@ public final class PaymentPbOuterClass {
 
   }
 
+  public interface PaymentPbRefOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.PaymentPbRef)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+     * @return The status.
+     */
+    com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum getStatus();
+
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+     * @return The enum numeric value on the wire for mode.
+     */
+    int getModeValue();
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+     * @return The mode.
+     */
+    com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum getMode();
+
+    /**
+     * <code>float amount = 4;</code>
+     * @return The amount.
+     */
+    float getAmount();
+  }
+  /**
+   * Protobuf type {@code com.amazaar.Protobuff.PaymentPbRef}
+   */
+  public static final class PaymentPbRef extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.amazaar.Protobuff.PaymentPbRef)
+      PaymentPbRefOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PaymentPbRef.newBuilder() to construct.
+    private PaymentPbRef(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PaymentPbRef() {
+      id_ = "";
+      status_ = 0;
+      mode_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PaymentPbRef();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PaymentPbRef(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              mode_ = rawValue;
+              break;
+            }
+            case 37: {
+
+              amount_ = input.readFloat();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentPbRef_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentPbRef_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef.class, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_;
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum getStatus() {
+      @SuppressWarnings("deprecation")
+      com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum result = com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.valueOf(status_);
+      return result == null ? com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.UNRECOGNIZED : result;
+    }
+
+    public static final int MODE_FIELD_NUMBER = 3;
+    private int mode_;
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+     * @return The enum numeric value on the wire for mode.
+     */
+    @java.lang.Override public int getModeValue() {
+      return mode_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+     * @return The mode.
+     */
+    @java.lang.Override public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum getMode() {
+      @SuppressWarnings("deprecation")
+      com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum result = com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.valueOf(mode_);
+      return result == null ? com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.UNRECOGNIZED : result;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 4;
+    private float amount_;
+    /**
+     * <code>float amount = 4;</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public float getAmount() {
+      return amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (status_ != com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.UNKNOWN_PAYMENT_STATUS.getNumber()) {
+        output.writeEnum(2, status_);
+      }
+      if (mode_ != com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.UNKNOWN_MODE.getNumber()) {
+        output.writeEnum(3, mode_);
+      }
+      if (amount_ != 0F) {
+        output.writeFloat(4, amount_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (status_ != com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.UNKNOWN_PAYMENT_STATUS.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, status_);
+      }
+      if (mode_ != com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.UNKNOWN_MODE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, mode_);
+      }
+      if (amount_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(4, amount_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef)) {
+        return super.equals(obj);
+      }
+      com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef other = (com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (status_ != other.status_) return false;
+      if (mode_ != other.mode_) return false;
+      if (java.lang.Float.floatToIntBits(getAmount())
+          != java.lang.Float.floatToIntBits(
+              other.getAmount())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (37 * hash) + MODE_FIELD_NUMBER;
+      hash = (53 * hash) + mode_;
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getAmount());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.amazaar.Protobuff.PaymentPbRef}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.amazaar.Protobuff.PaymentPbRef)
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRefOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentPbRef_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentPbRef_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef.class, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef.Builder.class);
+      }
+
+      // Construct using com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        status_ = 0;
+
+        mode_ = 0;
+
+        amount_ = 0F;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentPbRef_descriptor;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef getDefaultInstanceForType() {
+        return com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef build() {
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef buildPartial() {
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef result = new com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef(this);
+        result.id_ = id_;
+        result.status_ = status_;
+        result.mode_ = mode_;
+        result.amount_ = amount_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef) {
+          return mergeFrom((com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef other) {
+        if (other == com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.mode_ != 0) {
+          setModeValue(other.getModeValue());
+        }
+        if (other.getAmount() != 0F) {
+          setAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum getStatus() {
+        @SuppressWarnings("deprecation")
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum result = com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.valueOf(status_);
+        return result == null ? com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int mode_ = 0;
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+       * @return The enum numeric value on the wire for mode.
+       */
+      @java.lang.Override public int getModeValue() {
+        return mode_;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+       * @param value The enum numeric value on the wire for mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModeValue(int value) {
+        
+        mode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+       * @return The mode.
+       */
+      @java.lang.Override
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum getMode() {
+        @SuppressWarnings("deprecation")
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum result = com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.valueOf(mode_);
+        return result == null ? com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+       * @param value The mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMode(com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        mode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMode() {
+        
+        mode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float amount_ ;
+      /**
+       * <code>float amount = 4;</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public float getAmount() {
+        return amount_;
+      }
+      /**
+       * <code>float amount = 4;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(float value) {
+        
+        amount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float amount = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        
+        amount_ = 0F;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.amazaar.Protobuff.PaymentPbRef)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.amazaar.Protobuff.PaymentPbRef)
+    private static final com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef();
+    }
+
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PaymentPbRef>
+        PARSER = new com.google.protobuf.AbstractParser<PaymentPbRef>() {
+      @java.lang.Override
+      public PaymentPbRef parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PaymentPbRef(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PaymentPbRef> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PaymentPbRef> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbRef getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PaymentSearchRequestPbOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.PaymentSearchRequestPb)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string customerRef = 1;</code>
+     * @return The customerRef.
+     */
+    java.lang.String getCustomerRef();
+    /**
+     * <code>string customerRef = 1;</code>
+     * @return The bytes for customerRef.
+     */
+    com.google.protobuf.ByteString
+        getCustomerRefBytes();
+
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+     * @return The status.
+     */
+    com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum getStatus();
+
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+     * @return The enum numeric value on the wire for mode.
+     */
+    int getModeValue();
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+     * @return The mode.
+     */
+    com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum getMode();
+  }
+  /**
+   * Protobuf type {@code com.amazaar.Protobuff.PaymentSearchRequestPb}
+   */
+  public static final class PaymentSearchRequestPb extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.amazaar.Protobuff.PaymentSearchRequestPb)
+      PaymentSearchRequestPbOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PaymentSearchRequestPb.newBuilder() to construct.
+    private PaymentSearchRequestPb(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PaymentSearchRequestPb() {
+      customerRef_ = "";
+      status_ = 0;
+      mode_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PaymentSearchRequestPb();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PaymentSearchRequestPb(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              customerRef_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              mode_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentSearchRequestPb_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentSearchRequestPb_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb.class, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb.Builder.class);
+    }
+
+    public static final int CUSTOMERREF_FIELD_NUMBER = 1;
+    private volatile java.lang.Object customerRef_;
+    /**
+     * <code>string customerRef = 1;</code>
+     * @return The customerRef.
+     */
+    @java.lang.Override
+    public java.lang.String getCustomerRef() {
+      java.lang.Object ref = customerRef_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        customerRef_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string customerRef = 1;</code>
+     * @return The bytes for customerRef.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCustomerRefBytes() {
+      java.lang.Object ref = customerRef_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        customerRef_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_;
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum getStatus() {
+      @SuppressWarnings("deprecation")
+      com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum result = com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.valueOf(status_);
+      return result == null ? com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.UNRECOGNIZED : result;
+    }
+
+    public static final int MODE_FIELD_NUMBER = 3;
+    private int mode_;
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+     * @return The enum numeric value on the wire for mode.
+     */
+    @java.lang.Override public int getModeValue() {
+      return mode_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+     * @return The mode.
+     */
+    @java.lang.Override public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum getMode() {
+      @SuppressWarnings("deprecation")
+      com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum result = com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.valueOf(mode_);
+      return result == null ? com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getCustomerRefBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, customerRef_);
+      }
+      if (status_ != com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.UNKNOWN_PAYMENT_STATUS.getNumber()) {
+        output.writeEnum(2, status_);
+      }
+      if (mode_ != com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.UNKNOWN_MODE.getNumber()) {
+        output.writeEnum(3, mode_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getCustomerRefBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, customerRef_);
+      }
+      if (status_ != com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.UNKNOWN_PAYMENT_STATUS.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, status_);
+      }
+      if (mode_ != com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.UNKNOWN_MODE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, mode_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb)) {
+        return super.equals(obj);
+      }
+      com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb other = (com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb) obj;
+
+      if (!getCustomerRef()
+          .equals(other.getCustomerRef())) return false;
+      if (status_ != other.status_) return false;
+      if (mode_ != other.mode_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CUSTOMERREF_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerRef().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (37 * hash) + MODE_FIELD_NUMBER;
+      hash = (53 * hash) + mode_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.amazaar.Protobuff.PaymentSearchRequestPb}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.amazaar.Protobuff.PaymentSearchRequestPb)
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPbOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentSearchRequestPb_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentSearchRequestPb_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb.class, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb.Builder.class);
+      }
+
+      // Construct using com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        customerRef_ = "";
+
+        status_ = 0;
+
+        mode_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentSearchRequestPb_descriptor;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb getDefaultInstanceForType() {
+        return com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb build() {
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb buildPartial() {
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb result = new com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb(this);
+        result.customerRef_ = customerRef_;
+        result.status_ = status_;
+        result.mode_ = mode_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb) {
+          return mergeFrom((com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb other) {
+        if (other == com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb.getDefaultInstance()) return this;
+        if (!other.getCustomerRef().isEmpty()) {
+          customerRef_ = other.customerRef_;
+          onChanged();
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.mode_ != 0) {
+          setModeValue(other.getModeValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object customerRef_ = "";
+      /**
+       * <code>string customerRef = 1;</code>
+       * @return The customerRef.
+       */
+      public java.lang.String getCustomerRef() {
+        java.lang.Object ref = customerRef_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          customerRef_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string customerRef = 1;</code>
+       * @return The bytes for customerRef.
+       */
+      public com.google.protobuf.ByteString
+          getCustomerRefBytes() {
+        java.lang.Object ref = customerRef_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          customerRef_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string customerRef = 1;</code>
+       * @param value The customerRef to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerRef(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        customerRef_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string customerRef = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomerRef() {
+        
+        customerRef_ = getDefaultInstance().getCustomerRef();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string customerRef = 1;</code>
+       * @param value The bytes for customerRef to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerRefBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        customerRef_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum getStatus() {
+        @SuppressWarnings("deprecation")
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum result = com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.valueOf(status_);
+        return result == null ? com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.amazaar.Protobuff.PaymentPbOuterClass.PaymentStatusEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentStatusEnum status = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int mode_ = 0;
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+       * @return The enum numeric value on the wire for mode.
+       */
+      @java.lang.Override public int getModeValue() {
+        return mode_;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+       * @param value The enum numeric value on the wire for mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModeValue(int value) {
+        
+        mode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+       * @return The mode.
+       */
+      @java.lang.Override
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum getMode() {
+        @SuppressWarnings("deprecation")
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum result = com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.valueOf(mode_);
+        return result == null ? com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+       * @param value The mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMode(com.amazaar.Protobuff.PaymentPbOuterClass.PaymentModeEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        mode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.PaymentModeEnum mode = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMode() {
+        
+        mode_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.amazaar.Protobuff.PaymentSearchRequestPb)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.amazaar.Protobuff.PaymentSearchRequestPb)
+    private static final com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb();
+    }
+
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PaymentSearchRequestPb>
+        PARSER = new com.google.protobuf.AbstractParser<PaymentSearchRequestPb>() {
+      @java.lang.Override
+      public PaymentSearchRequestPb parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PaymentSearchRequestPb(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PaymentSearchRequestPb> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PaymentSearchRequestPb> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchRequestPb getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PaymentSearchResponsePbOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.PaymentSearchResponsePb)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+     * @return Whether the summary field is set.
+     */
+    boolean hasSummary();
+    /**
+     * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+     * @return The summary.
+     */
+    com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb getSummary();
+    /**
+     * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+     */
+    com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPbOrBuilder getSummaryOrBuilder();
+
+    /**
+     * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+     */
+    java.util.List<com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb> 
+        getResultsList();
+    /**
+     * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+     */
+    com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb getResults(int index);
+    /**
+     * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+     */
+    int getResultsCount();
+    /**
+     * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+     */
+    java.util.List<? extends com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbOrBuilder> 
+        getResultsOrBuilderList();
+    /**
+     * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+     */
+    com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbOrBuilder getResultsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code com.amazaar.Protobuff.PaymentSearchResponsePb}
+   */
+  public static final class PaymentSearchResponsePb extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.amazaar.Protobuff.PaymentSearchResponsePb)
+      PaymentSearchResponsePbOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PaymentSearchResponsePb.newBuilder() to construct.
+    private PaymentSearchResponsePb(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PaymentSearchResponsePb() {
+      results_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PaymentSearchResponsePb();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PaymentSearchResponsePb(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.Builder subBuilder = null;
+              if (summary_ != null) {
+                subBuilder = summary_.toBuilder();
+              }
+              summary_ = input.readMessage(com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(summary_);
+                summary_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                results_ = new java.util.ArrayList<com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              results_.add(
+                  input.readMessage(com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          results_ = java.util.Collections.unmodifiableList(results_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentSearchResponsePb_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentSearchResponsePb_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb.class, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb.Builder.class);
+    }
+
+    public static final int SUMMARY_FIELD_NUMBER = 1;
+    private com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb summary_;
+    /**
+     * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+     * @return Whether the summary field is set.
+     */
+    @java.lang.Override
+    public boolean hasSummary() {
+      return summary_ != null;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+     * @return The summary.
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb getSummary() {
+      return summary_ == null ? com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.getDefaultInstance() : summary_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPbOrBuilder getSummaryOrBuilder() {
+      return getSummary();
+    }
+
+    public static final int RESULTS_FIELD_NUMBER = 2;
+    private java.util.List<com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb> results_;
+    /**
+     * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb> getResultsList() {
+      return results_;
+    }
+    /**
+     * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbOrBuilder> 
+        getResultsOrBuilderList() {
+      return results_;
+    }
+    /**
+     * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+     */
+    @java.lang.Override
+    public int getResultsCount() {
+      return results_.size();
+    }
+    /**
+     * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb getResults(int index) {
+      return results_.get(index);
+    }
+    /**
+     * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+     */
+    @java.lang.Override
+    public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbOrBuilder getResultsOrBuilder(
+        int index) {
+      return results_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (summary_ != null) {
+        output.writeMessage(1, getSummary());
+      }
+      for (int i = 0; i < results_.size(); i++) {
+        output.writeMessage(2, results_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (summary_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSummary());
+      }
+      for (int i = 0; i < results_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, results_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb)) {
+        return super.equals(obj);
+      }
+      com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb other = (com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb) obj;
+
+      if (hasSummary() != other.hasSummary()) return false;
+      if (hasSummary()) {
+        if (!getSummary()
+            .equals(other.getSummary())) return false;
+      }
+      if (!getResultsList()
+          .equals(other.getResultsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSummary()) {
+        hash = (37 * hash) + SUMMARY_FIELD_NUMBER;
+        hash = (53 * hash) + getSummary().hashCode();
+      }
+      if (getResultsCount() > 0) {
+        hash = (37 * hash) + RESULTS_FIELD_NUMBER;
+        hash = (53 * hash) + getResultsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.amazaar.Protobuff.PaymentSearchResponsePb}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.amazaar.Protobuff.PaymentSearchResponsePb)
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePbOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentSearchResponsePb_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentSearchResponsePb_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb.class, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb.Builder.class);
+      }
+
+      // Construct using com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getResultsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (summaryBuilder_ == null) {
+          summary_ = null;
+        } else {
+          summary_ = null;
+          summaryBuilder_ = null;
+        }
+        if (resultsBuilder_ == null) {
+          results_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          resultsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.amazaar.Protobuff.PaymentPbOuterClass.internal_static_com_amazaar_Protobuff_PaymentSearchResponsePb_descriptor;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb getDefaultInstanceForType() {
+        return com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb build() {
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb buildPartial() {
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb result = new com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb(this);
+        int from_bitField0_ = bitField0_;
+        if (summaryBuilder_ == null) {
+          result.summary_ = summary_;
+        } else {
+          result.summary_ = summaryBuilder_.build();
+        }
+        if (resultsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            results_ = java.util.Collections.unmodifiableList(results_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.results_ = results_;
+        } else {
+          result.results_ = resultsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb) {
+          return mergeFrom((com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb other) {
+        if (other == com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb.getDefaultInstance()) return this;
+        if (other.hasSummary()) {
+          mergeSummary(other.getSummary());
+        }
+        if (resultsBuilder_ == null) {
+          if (!other.results_.isEmpty()) {
+            if (results_.isEmpty()) {
+              results_ = other.results_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureResultsIsMutable();
+              results_.addAll(other.results_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.results_.isEmpty()) {
+            if (resultsBuilder_.isEmpty()) {
+              resultsBuilder_.dispose();
+              resultsBuilder_ = null;
+              results_ = other.results_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              resultsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getResultsFieldBuilder() : null;
+            } else {
+              resultsBuilder_.addAllMessages(other.results_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb summary_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb, com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.Builder, com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPbOrBuilder> summaryBuilder_;
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       * @return Whether the summary field is set.
+       */
+      public boolean hasSummary() {
+        return summaryBuilder_ != null || summary_ != null;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       * @return The summary.
+       */
+      public com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb getSummary() {
+        if (summaryBuilder_ == null) {
+          return summary_ == null ? com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.getDefaultInstance() : summary_;
+        } else {
+          return summaryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       */
+      public Builder setSummary(com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb value) {
+        if (summaryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          summary_ = value;
+          onChanged();
+        } else {
+          summaryBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       */
+      public Builder setSummary(
+          com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.Builder builderForValue) {
+        if (summaryBuilder_ == null) {
+          summary_ = builderForValue.build();
+          onChanged();
+        } else {
+          summaryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       */
+      public Builder mergeSummary(com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb value) {
+        if (summaryBuilder_ == null) {
+          if (summary_ != null) {
+            summary_ =
+              com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.newBuilder(summary_).mergeFrom(value).buildPartial();
+          } else {
+            summary_ = value;
+          }
+          onChanged();
+        } else {
+          summaryBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       */
+      public Builder clearSummary() {
+        if (summaryBuilder_ == null) {
+          summary_ = null;
+          onChanged();
+        } else {
+          summary_ = null;
+          summaryBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       */
+      public com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.Builder getSummaryBuilder() {
+        
+        onChanged();
+        return getSummaryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       */
+      public com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPbOrBuilder getSummaryOrBuilder() {
+        if (summaryBuilder_ != null) {
+          return summaryBuilder_.getMessageOrBuilder();
+        } else {
+          return summary_ == null ?
+              com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.getDefaultInstance() : summary_;
+        }
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.SummaryPb summary = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb, com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.Builder, com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPbOrBuilder> 
+          getSummaryFieldBuilder() {
+        if (summaryBuilder_ == null) {
+          summaryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb, com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPb.Builder, com.amazaar.Protobuff.SummaryPbOuterClass.SummaryPbOrBuilder>(
+                  getSummary(),
+                  getParentForChildren(),
+                  isClean());
+          summary_ = null;
+        }
+        return summaryBuilder_;
+      }
+
+      private java.util.List<com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb> results_ =
+        java.util.Collections.emptyList();
+      private void ensureResultsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          results_ = new java.util.ArrayList<com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb>(results_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.Builder, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbOrBuilder> resultsBuilder_;
+
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public java.util.List<com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb> getResultsList() {
+        if (resultsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(results_);
+        } else {
+          return resultsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public int getResultsCount() {
+        if (resultsBuilder_ == null) {
+          return results_.size();
+        } else {
+          return resultsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb getResults(int index) {
+        if (resultsBuilder_ == null) {
+          return results_.get(index);
+        } else {
+          return resultsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public Builder setResults(
+          int index, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.set(index, value);
+          onChanged();
+        } else {
+          resultsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public Builder setResults(
+          int index, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public Builder addResults(com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.add(value);
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public Builder addResults(
+          int index, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.add(index, value);
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public Builder addResults(
+          com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.add(builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public Builder addResults(
+          int index, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public Builder addAllResults(
+          java.lang.Iterable<? extends com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb> values) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, results_);
+          onChanged();
+        } else {
+          resultsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public Builder clearResults() {
+        if (resultsBuilder_ == null) {
+          results_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          resultsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public Builder removeResults(int index) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.remove(index);
+          onChanged();
+        } else {
+          resultsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.Builder getResultsBuilder(
+          int index) {
+        return getResultsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbOrBuilder getResultsOrBuilder(
+          int index) {
+        if (resultsBuilder_ == null) {
+          return results_.get(index);  } else {
+          return resultsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public java.util.List<? extends com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbOrBuilder> 
+           getResultsOrBuilderList() {
+        if (resultsBuilder_ != null) {
+          return resultsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(results_);
+        }
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.Builder addResultsBuilder() {
+        return getResultsFieldBuilder().addBuilder(
+            com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.Builder addResultsBuilder(
+          int index) {
+        return getResultsFieldBuilder().addBuilder(
+            index, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.amazaar.Protobuff.PaymentPb results = 2;</code>
+       */
+      public java.util.List<com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.Builder> 
+           getResultsBuilderList() {
+        return getResultsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.Builder, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbOrBuilder> 
+          getResultsFieldBuilder() {
+        if (resultsBuilder_ == null) {
+          resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPb.Builder, com.amazaar.Protobuff.PaymentPbOuterClass.PaymentPbOrBuilder>(
+                  results_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          results_ = null;
+        }
+        return resultsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.amazaar.Protobuff.PaymentSearchResponsePb)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.amazaar.Protobuff.PaymentSearchResponsePb)
+    private static final com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb();
+    }
+
+    public static com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PaymentSearchResponsePb>
+        PARSER = new com.google.protobuf.AbstractParser<PaymentSearchResponsePb>() {
+      @java.lang.Override
+      public PaymentSearchResponsePb parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PaymentSearchResponsePb(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PaymentSearchResponsePb> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PaymentSearchResponsePb> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.amazaar.Protobuff.PaymentPbOuterClass.PaymentSearchResponsePb getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_amazaar_Protobuff_PaymentPb_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_amazaar_Protobuff_PaymentPb_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_amazaar_Protobuff_PaymentPbRef_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_amazaar_Protobuff_PaymentPbRef_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_amazaar_Protobuff_PaymentSearchRequestPb_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_amazaar_Protobuff_PaymentSearchRequestPb_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_amazaar_Protobuff_PaymentSearchResponsePb_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_amazaar_Protobuff_PaymentSearchResponsePb_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1653,32 +4682,69 @@ public final class PaymentPbOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\017paymentPb.proto\022\025com.amazaar.Protobuff" +
-      "\032\020customerPb.proto\032\014timePb.proto\"\342\001\n\tPay" +
-      "mentPb\022\r\n\005txnId\030\001 \001(\t\022\024\n\014responseCode\030\002 " +
-      "\001(\t\0228\n\006status\030\003 \001(\0162(.com.amazaar.Protob" +
-      "uff.PaymentStatusEnum\022\016\n\006txnRef\030\004 \001(\t\0229\n" +
-      "\013customerRef\030\005 \001(\0132$.com.amazaar.Protobu" +
-      "ff.CustomerPbRef\022+\n\004time\030\006 \001(\0132\035.com.ama" +
-      "zaar.Protobuff.TimePb*U\n\021PaymentStatusEn" +
-      "um\022\032\n\026UNKNOWN_PAYMENT_STATUS\020\000\022\013\n\007SUCCES" +
-      "S\020\001\022\n\n\006FAILED\020\002\022\013\n\007WAITING\020\003*I\n\017PaymentM" +
-      "odeEnum\022\020\n\014UNKNOWN_MODE\020\000\022\016\n\nGOOGLE_PAY\020" +
-      "\001\022\024\n\020CASH_ON_DELIVERY\020\002b\006proto3"
+      "\032\020customerPb.proto\032\014timePb.proto\032\016entity" +
+      "Pb.proto\032\017summaryPb.proto\"\331\002\n\tPaymentPb\022" +
+      "/\n\006dbInfo\030\001 \001(\0132\037.com.amazaar.Protobuff." +
+      "EntityPb\022\r\n\005txnId\030\002 \001(\t\022\024\n\014responseCode\030" +
+      "\003 \001(\t\0228\n\006status\030\004 \001(\0162(.com.amazaar.Prot" +
+      "obuff.PaymentStatusEnum\022\016\n\006txnRef\030\005 \001(\t\022" +
+      "9\n\013customerRef\030\006 \001(\0132$.com.amazaar.Proto" +
+      "buff.CustomerPbRef\0224\n\004mode\030\007 \001(\0162&.com.a" +
+      "mazaar.Protobuff.PaymentModeEnum\022\016\n\006amou" +
+      "nt\030\010 \001(\002\022+\n\004time\030\t \001(\0132\035.com.amazaar.Pro" +
+      "tobuff.TimePb\"\232\001\n\014PaymentPbRef\022\n\n\002id\030\001 \001" +
+      "(\t\0228\n\006status\030\002 \001(\0162(.com.amazaar.Protobu" +
+      "ff.PaymentStatusEnum\0224\n\004mode\030\003 \001(\0162&.com" +
+      ".amazaar.Protobuff.PaymentModeEnum\022\016\n\006am" +
+      "ount\030\004 \001(\002\"\235\001\n\026PaymentSearchRequestPb\022\023\n" +
+      "\013customerRef\030\001 \001(\t\0228\n\006status\030\002 \001(\0162(.com" +
+      ".amazaar.Protobuff.PaymentStatusEnum\0224\n\004" +
+      "mode\030\003 \001(\0162&.com.amazaar.Protobuff.Payme" +
+      "ntModeEnum\"\177\n\027PaymentSearchResponsePb\0221\n" +
+      "\007summary\030\001 \001(\0132 .com.amazaar.Protobuff.S" +
+      "ummaryPb\0221\n\007results\030\002 \003(\0132 .com.amazaar." +
+      "Protobuff.PaymentPb*X\n\021PaymentStatusEnum" +
+      "\022\032\n\026UNKNOWN_PAYMENT_STATUS\020\000\022\013\n\007SUCCESS\020" +
+      "\001\022\013\n\007FAILURE\020\002\022\r\n\tSUBMITTED\020\003*I\n\017Payment" +
+      "ModeEnum\022\020\n\014UNKNOWN_MODE\020\000\022\016\n\nGOOGLE_PAY" +
+      "\020\001\022\024\n\020CASH_ON_DELIVERY\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.amazaar.Protobuff.CustomerPbOuterClass.getDescriptor(),
           com.amazaar.Protobuff.TimePbOuterClass.getDescriptor(),
+          com.amazaar.Protobuff.EntityPbOuterClass.getDescriptor(),
+          com.amazaar.Protobuff.SummaryPbOuterClass.getDescriptor(),
         });
     internal_static_com_amazaar_Protobuff_PaymentPb_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_com_amazaar_Protobuff_PaymentPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_PaymentPb_descriptor,
-        new java.lang.String[] { "TxnId", "ResponseCode", "Status", "TxnRef", "CustomerRef", "Time", });
+        new java.lang.String[] { "DbInfo", "TxnId", "ResponseCode", "Status", "TxnRef", "CustomerRef", "Mode", "Amount", "Time", });
+    internal_static_com_amazaar_Protobuff_PaymentPbRef_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_com_amazaar_Protobuff_PaymentPbRef_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_amazaar_Protobuff_PaymentPbRef_descriptor,
+        new java.lang.String[] { "Id", "Status", "Mode", "Amount", });
+    internal_static_com_amazaar_Protobuff_PaymentSearchRequestPb_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_amazaar_Protobuff_PaymentSearchRequestPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_amazaar_Protobuff_PaymentSearchRequestPb_descriptor,
+        new java.lang.String[] { "CustomerRef", "Status", "Mode", });
+    internal_static_com_amazaar_Protobuff_PaymentSearchResponsePb_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_amazaar_Protobuff_PaymentSearchResponsePb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_amazaar_Protobuff_PaymentSearchResponsePb_descriptor,
+        new java.lang.String[] { "Summary", "Results", });
     com.amazaar.Protobuff.CustomerPbOuterClass.getDescriptor();
     com.amazaar.Protobuff.TimePbOuterClass.getDescriptor();
+    com.amazaar.Protobuff.EntityPbOuterClass.getDescriptor();
+    com.amazaar.Protobuff.SummaryPbOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

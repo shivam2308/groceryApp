@@ -289,6 +289,7 @@
                             android:id="@+id/fragment_signup_tvSignup"
                             style="@style/ganaral_logintext_btn_style"
                             android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="0dp"
                             android:padding="@dimen/_3sdp"
                             android:text="@string/sign_up"
                             app:font_name="NunitoExtraBold.ttf" />

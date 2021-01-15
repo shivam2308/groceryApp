@@ -60,8 +60,10 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
+            android:visibility="gone"
             android:padding="@dimen/_5sdp"
-            android:src="@drawable/ic_cart" />
+            android:src="@drawable/ic_cart"
+            android:contentDescription="TODO" />
 
 
     </RelativeLayout>

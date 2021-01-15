@@ -10,7 +10,6 @@ import com.amazaar.LocalDatabase.DatabaseInitHandler;
 import com.amazaar.LocalDatabase.Enity.CartEntity;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.Protobuff.CartPbOuterClass;
-import com.amazaar.Protobuff.ItemPbOuterClass;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
@@ -75,7 +74,11 @@ public class CartEntityDaoHelper extends AEnityToPbConvertor<CartEntity, CartPbO
         List<CartEntity> list = getDeoEntity().loadAll();
         for (CartEntity item : list) {
             try {
-                cartList.addCartItem(toPB(item));
+                CartPbOuterClass.CartPb.Builder builder= CartPbOuterClass.CartPb.newBuilder();
+                builder.setItemKey(item.getmId());
+                builder.setItem(toPB(item).getItem());
+                builder.setQuantity(toPB(item).getQuantity());
+                cartList.addCartItem(builder.build());
             } catch (IOException e) {
                 e.printStackTrace();
             }

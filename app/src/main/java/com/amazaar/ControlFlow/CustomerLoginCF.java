@@ -9,7 +9,6 @@ import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.Protobuff.LoginPbOuterClass;
 import com.amazaar.Widget.ProfileSubmitWidget.ProfileSubmitWidget;
 import com.prod.basic.common.async.AControlFlow;
-import com.prod.basic.common.async.DoneLatch;
 
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;

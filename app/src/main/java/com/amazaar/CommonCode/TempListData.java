@@ -367,7 +367,7 @@ public class TempListData {
         List<OrderListModel> orderListModelList = new ArrayList<>();
 
 
-        OrderListModel OrderListModelNew = new OrderListModel();
+       /* OrderListModel OrderListModelNew = new OrderListModel();
         OrderListModelNew.setOrderId("#1122GG33");
         OrderListModelNew.setPrice("$10 ");
         OrderListModelNew.setOrderDate("26-12-2017");
@@ -417,7 +417,7 @@ public class TempListData {
         OrderListModelNew.setOrderDate("08-08-2017");
         OrderListModelNew.setDeliveryDate("10-08-2017");
         OrderListModelNew.setStatus("cancel");
-        orderListModelList.add(OrderListModelNew);
+        orderListModelList.add(OrderListModelNew);*/
 
 
         return orderListModelList;

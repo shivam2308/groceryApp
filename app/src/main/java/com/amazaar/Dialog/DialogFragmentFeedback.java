@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.amazaar.CommonCode.AToast;
 import com.amazaar.CommonCode.Strings;
 import com.amazaar.R;
 import com.amazaar.SessionManager.CustomerSession;
@@ -21,14 +22,13 @@ import javax.inject.Inject;
 
 public class DialogFragmentFeedback extends DialogFragment implements View.OnClickListener {
 
+    @Inject
+    public CustomerSession customerSession;
     private TextView tvCancel;
     private TextView tvSend;
     private EditText etFeedback;
     private RadioButton feedbackbtn;
     private RadioButton complaintbtn;
-    @Inject
-    public CustomerSession customerSession;
-
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -58,6 +58,7 @@ public class DialogFragmentFeedback extends DialogFragment implements View.OnCli
         complaintbtn = (RadioButton) v.findViewById(R.id.complaintbtn);
         tvCancel.setOnClickListener(this);
         tvSend.setOnClickListener(this);
+        customerSession = new CustomerSession();
     }
 
 
@@ -76,29 +77,35 @@ public class DialogFragmentFeedback extends DialogFragment implements View.OnCli
 
         if (v == tvCancel) {
             dismiss();
-        }
-        else if (v == tvSend) {
-
-            if (etFeedback.getText().toString().isEmpty()) {
-                dismiss();
+        } else if (v == tvSend) {
+             if (etFeedback.getText().toString().isEmpty()) {
+                AToast.notSendEmptyMessage();
             } else {
                 String emailbody = etFeedback.getText().toString();
-                Intent intent=new Intent(Intent.ACTION_SEND);
-                if(feedbackbtn.isChecked()){
-                    String[] recipients={"amazaar.feedback@gmail.com"};
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                if (feedbackbtn.isChecked()) {
+                    String[] recipients = {"amazaar.feedback@gmail.com"};
                     intent.putExtra(Intent.EXTRA_EMAIL, recipients);
-                    intent.putExtra(Intent.EXTRA_SUBJECT,"Feedback Mail" + Strings.titleCase(customerSession.getSession().getName()));
-                }
-                else if(complaintbtn.isChecked()){
-                    String[] recipients={"amazaar.complaint@gmail.com"};
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback Mail from - " + Strings.titleCase(customerSession.getSession().getName()));
+                    intent.putExtra(Intent.EXTRA_TEXT, emailbody);
+                    intent.setType("text/html");
+                    intent.setPackage("com.google.android.gm");
+                    intent.setType("message/rfc822");
+                    startActivity(intent);
+                    dismiss();
+                } else if (complaintbtn.isChecked()) {
+                    String[] recipients = {"amazaar.complaint@gmail.com"};
                     intent.putExtra(Intent.EXTRA_EMAIL, recipients);
-                    intent.putExtra(Intent.EXTRA_SUBJECT,"Complaint Mail"+ Strings.titleCase(customerSession.getSession().getName()));
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "Complaint Mail from - " + Strings.titleCase(customerSession.getSession().getName()));
+                    intent.putExtra(Intent.EXTRA_TEXT, emailbody);
+                    intent.setType("text/html");
+                    intent.setPackage("com.google.android.gm");
+                    intent.setType("message/rfc822");
+                    startActivity(intent);
+                    dismiss();
+                }else{
+                    AToast.pleaseSelect();
                 }
-                intent.putExtra(Intent.EXTRA_TEXT, emailbody);
-                intent.setType("text/html");
-                intent.setPackage("com.google.android.gm");
-                intent.setType("message/rfc822");
-                startActivity(intent);
             }
         }
 

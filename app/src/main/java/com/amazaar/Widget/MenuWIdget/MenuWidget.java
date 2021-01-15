@@ -13,7 +13,6 @@ import androidx.cardview.widget.CardView;
 import com.amazaar.CommonCode.DefaultImageUrl;
 import com.amazaar.ControlFlow.GetImageFromUrl;
 import com.amazaar.Fragments.HelpFragment;
-import com.amazaar.Fragments.MenuFragment;
 import com.amazaar.Fragments.MyAccountFragment;
 import com.amazaar.Fragments.OrderListFragment;
 import com.amazaar.Fragments.SettingFragment;

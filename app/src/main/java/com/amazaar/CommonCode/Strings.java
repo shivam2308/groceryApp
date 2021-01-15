@@ -1,14 +1,10 @@
 package com.amazaar.CommonCode;
 
 
-import android.content.Context;
-import android.widget.ImageView;
-
 import com.amazaar.EnumFormatter.StateEnumFormatter;
 import com.amazaar.Protobuff.AddressPbOuterClass;
 import com.amazaar.Protobuff.ContactDetailPbOuterClass;
 import com.amazaar.Protobuff.NamePbOuterClass;
-import com.budiyev.android.imageloader.ImageLoader;
 
 import java.util.stream.Stream;
 
@@ -83,6 +79,10 @@ public class Strings {
 
     private static String trim(String toString) {
         return toString.trim();
+    }
+
+    public static String getJoinString(String prefix, String postfix, String charector) {
+        return prefix + charector + postfix;
     }
 
 }

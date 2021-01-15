@@ -19,22 +19,28 @@ public final class CartPbOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+     * <code>int64 itemKey = 1;</code>
+     * @return The itemKey.
+     */
+    long getItemKey();
+
+    /**
+     * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
      * @return Whether the item field is set.
      */
     boolean hasItem();
     /**
-     * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+     * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
      * @return The item.
      */
     com.amazaar.Protobuff.ItemPbOuterClass.ItemPb getItem();
     /**
-     * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+     * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
      */
     com.amazaar.Protobuff.ItemPbOuterClass.ItemPbOrBuilder getItemOrBuilder();
 
     /**
-     * <code>int32 quantity = 2;</code>
+     * <code>int32 quantity = 3;</code>
      * @return The quantity.
      */
     int getQuantity();
@@ -84,7 +90,12 @@ public final class CartPbOuterClass {
             case 0:
               done = true;
               break;
-            case 10: {
+            case 8: {
+
+              itemKey_ = input.readInt64();
+              break;
+            }
+            case 18: {
               com.amazaar.Protobuff.ItemPbOuterClass.ItemPb.Builder subBuilder = null;
               if (item_ != null) {
                 subBuilder = item_.toBuilder();
@@ -97,7 +108,7 @@ public final class CartPbOuterClass {
 
               break;
             }
-            case 16: {
+            case 24: {
 
               quantity_ = input.readInt32();
               break;
@@ -134,10 +145,21 @@ public final class CartPbOuterClass {
               com.amazaar.Protobuff.CartPbOuterClass.CartPb.class, com.amazaar.Protobuff.CartPbOuterClass.CartPb.Builder.class);
     }
 
-    public static final int ITEM_FIELD_NUMBER = 1;
+    public static final int ITEMKEY_FIELD_NUMBER = 1;
+    private long itemKey_;
+    /**
+     * <code>int64 itemKey = 1;</code>
+     * @return The itemKey.
+     */
+    @java.lang.Override
+    public long getItemKey() {
+      return itemKey_;
+    }
+
+    public static final int ITEM_FIELD_NUMBER = 2;
     private com.amazaar.Protobuff.ItemPbOuterClass.ItemPb item_;
     /**
-     * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+     * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
      * @return Whether the item field is set.
      */
     @java.lang.Override
@@ -145,7 +167,7 @@ public final class CartPbOuterClass {
       return item_ != null;
     }
     /**
-     * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+     * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
      * @return The item.
      */
     @java.lang.Override
@@ -153,17 +175,17 @@ public final class CartPbOuterClass {
       return item_ == null ? com.amazaar.Protobuff.ItemPbOuterClass.ItemPb.getDefaultInstance() : item_;
     }
     /**
-     * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+     * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
      */
     @java.lang.Override
     public com.amazaar.Protobuff.ItemPbOuterClass.ItemPbOrBuilder getItemOrBuilder() {
       return getItem();
     }
 
-    public static final int QUANTITY_FIELD_NUMBER = 2;
+    public static final int QUANTITY_FIELD_NUMBER = 3;
     private int quantity_;
     /**
-     * <code>int32 quantity = 2;</code>
+     * <code>int32 quantity = 3;</code>
      * @return The quantity.
      */
     @java.lang.Override
@@ -185,11 +207,14 @@ public final class CartPbOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (itemKey_ != 0L) {
+        output.writeInt64(1, itemKey_);
+      }
       if (item_ != null) {
-        output.writeMessage(1, getItem());
+        output.writeMessage(2, getItem());
       }
       if (quantity_ != 0) {
-        output.writeInt32(2, quantity_);
+        output.writeInt32(3, quantity_);
       }
       unknownFields.writeTo(output);
     }
@@ -200,13 +225,17 @@ public final class CartPbOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (itemKey_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, itemKey_);
+      }
       if (item_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getItem());
+          .computeMessageSize(2, getItem());
       }
       if (quantity_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, quantity_);
+          .computeInt32Size(3, quantity_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -223,6 +252,8 @@ public final class CartPbOuterClass {
       }
       com.amazaar.Protobuff.CartPbOuterClass.CartPb other = (com.amazaar.Protobuff.CartPbOuterClass.CartPb) obj;
 
+      if (getItemKey()
+          != other.getItemKey()) return false;
       if (hasItem() != other.hasItem()) return false;
       if (hasItem()) {
         if (!getItem()
@@ -241,6 +272,9 @@ public final class CartPbOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ITEMKEY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getItemKey());
       if (hasItem()) {
         hash = (37 * hash) + ITEM_FIELD_NUMBER;
         hash = (53 * hash) + getItem().hashCode();
@@ -380,6 +414,8 @@ public final class CartPbOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        itemKey_ = 0L;
+
         if (itemBuilder_ == null) {
           item_ = null;
         } else {
@@ -414,6 +450,7 @@ public final class CartPbOuterClass {
       @java.lang.Override
       public com.amazaar.Protobuff.CartPbOuterClass.CartPb buildPartial() {
         com.amazaar.Protobuff.CartPbOuterClass.CartPb result = new com.amazaar.Protobuff.CartPbOuterClass.CartPb(this);
+        result.itemKey_ = itemKey_;
         if (itemBuilder_ == null) {
           result.item_ = item_;
         } else {
@@ -468,6 +505,9 @@ public final class CartPbOuterClass {
 
       public Builder mergeFrom(com.amazaar.Protobuff.CartPbOuterClass.CartPb other) {
         if (other == com.amazaar.Protobuff.CartPbOuterClass.CartPb.getDefaultInstance()) return this;
+        if (other.getItemKey() != 0L) {
+          setItemKey(other.getItemKey());
+        }
         if (other.hasItem()) {
           mergeItem(other.getItem());
         }
@@ -503,18 +543,49 @@ public final class CartPbOuterClass {
         return this;
       }
 
+      private long itemKey_ ;
+      /**
+       * <code>int64 itemKey = 1;</code>
+       * @return The itemKey.
+       */
+      @java.lang.Override
+      public long getItemKey() {
+        return itemKey_;
+      }
+      /**
+       * <code>int64 itemKey = 1;</code>
+       * @param value The itemKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemKey(long value) {
+        
+        itemKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 itemKey = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearItemKey() {
+        
+        itemKey_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private com.amazaar.Protobuff.ItemPbOuterClass.ItemPb item_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.amazaar.Protobuff.ItemPbOuterClass.ItemPb, com.amazaar.Protobuff.ItemPbOuterClass.ItemPb.Builder, com.amazaar.Protobuff.ItemPbOuterClass.ItemPbOrBuilder> itemBuilder_;
       /**
-       * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+       * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
        * @return Whether the item field is set.
        */
       public boolean hasItem() {
         return itemBuilder_ != null || item_ != null;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+       * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
        * @return The item.
        */
       public com.amazaar.Protobuff.ItemPbOuterClass.ItemPb getItem() {
@@ -525,7 +596,7 @@ public final class CartPbOuterClass {
         }
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+       * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
        */
       public Builder setItem(com.amazaar.Protobuff.ItemPbOuterClass.ItemPb value) {
         if (itemBuilder_ == null) {
@@ -541,7 +612,7 @@ public final class CartPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+       * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
        */
       public Builder setItem(
           com.amazaar.Protobuff.ItemPbOuterClass.ItemPb.Builder builderForValue) {
@@ -555,7 +626,7 @@ public final class CartPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+       * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
        */
       public Builder mergeItem(com.amazaar.Protobuff.ItemPbOuterClass.ItemPb value) {
         if (itemBuilder_ == null) {
@@ -573,7 +644,7 @@ public final class CartPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+       * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
        */
       public Builder clearItem() {
         if (itemBuilder_ == null) {
@@ -587,7 +658,7 @@ public final class CartPbOuterClass {
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+       * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
        */
       public com.amazaar.Protobuff.ItemPbOuterClass.ItemPb.Builder getItemBuilder() {
         
@@ -595,7 +666,7 @@ public final class CartPbOuterClass {
         return getItemFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+       * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
        */
       public com.amazaar.Protobuff.ItemPbOuterClass.ItemPbOrBuilder getItemOrBuilder() {
         if (itemBuilder_ != null) {
@@ -606,7 +677,7 @@ public final class CartPbOuterClass {
         }
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemPb item = 1;</code>
+       * <code>.com.amazaar.Protobuff.ItemPb item = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.amazaar.Protobuff.ItemPbOuterClass.ItemPb, com.amazaar.Protobuff.ItemPbOuterClass.ItemPb.Builder, com.amazaar.Protobuff.ItemPbOuterClass.ItemPbOrBuilder> 
@@ -624,7 +695,7 @@ public final class CartPbOuterClass {
 
       private int quantity_ ;
       /**
-       * <code>int32 quantity = 2;</code>
+       * <code>int32 quantity = 3;</code>
        * @return The quantity.
        */
       @java.lang.Override
@@ -632,7 +703,7 @@ public final class CartPbOuterClass {
         return quantity_;
       }
       /**
-       * <code>int32 quantity = 2;</code>
+       * <code>int32 quantity = 3;</code>
        * @param value The quantity to set.
        * @return This builder for chaining.
        */
@@ -643,7 +714,7 @@ public final class CartPbOuterClass {
         return this;
       }
       /**
-       * <code>int32 quantity = 2;</code>
+       * <code>int32 quantity = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearQuantity() {
@@ -1518,10 +1589,11 @@ public final class CartPbOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\014cartPb.proto\022\025com.amazaar.Protobuff\032\014i" +
-      "temPb.proto\"G\n\006CartPb\022+\n\004item\030\001 \001(\0132\035.co" +
-      "m.amazaar.Protobuff.ItemPb\022\020\n\010quantity\030\002" +
-      " \001(\005\"=\n\nCartListPb\022/\n\010cartItem\030\001 \003(\0132\035.c" +
-      "om.amazaar.Protobuff.CartPbb\006proto3"
+      "temPb.proto\"X\n\006CartPb\022\017\n\007itemKey\030\001 \001(\003\022+" +
+      "\n\004item\030\002 \001(\0132\035.com.amazaar.Protobuff.Ite" +
+      "mPb\022\020\n\010quantity\030\003 \001(\005\"=\n\nCartListPb\022/\n\010c" +
+      "artItem\030\001 \003(\0132\035.com.amazaar.Protobuff.Ca" +
+      "rtPbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1533,7 +1605,7 @@ public final class CartPbOuterClass {
     internal_static_com_amazaar_Protobuff_CartPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_CartPb_descriptor,
-        new java.lang.String[] { "Item", "Quantity", });
+        new java.lang.String[] { "ItemKey", "Item", "Quantity", });
     internal_static_com_amazaar_Protobuff_CartListPb_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_amazaar_Protobuff_CartListPb_fieldAccessorTable = new

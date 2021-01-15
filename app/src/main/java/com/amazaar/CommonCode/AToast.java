@@ -1,6 +1,7 @@
 package com.amazaar.CommonCode;
 
 import android.graphics.Color;
+import android.util.Log;
 import android.view.Gravity;
 
 import com.amazaar.Module.AmazaarApplication;
@@ -55,6 +56,47 @@ public class AToast {
                 //.setFontFace("fonts/custom_font.ttf")
                 .setPadding(30)
                 .setTextSize(20)
+                .show();
+    }
+
+    public static void pleaseSelect() {
+        Log.e("Toast", "hai");
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Please Select Feedback Or Complaint")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.WARNING)
+                .setDuration(Duration.LONG)
+                .show();
+    }
+
+    public static void notSendEmptyMessage() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Please Enter Some Message !!!")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.INFO)
+                .setDuration(Duration.LONG)
+                .show();
+    }
+
+    public static void userCancelPayment() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Payment Cancelled")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.INFO)
+                .setDuration(Duration.LONG)
+                .show();
+    }
+
+    public static void userPaymentFailed() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Payment Failed")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.INFO)
+                .setDuration(Duration.LONG)
                 .show();
     }
 }

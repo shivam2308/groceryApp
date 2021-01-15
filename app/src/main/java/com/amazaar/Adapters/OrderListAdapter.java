@@ -1,41 +1,43 @@
 package com.amazaar.Adapters;
 
 import android.content.Context;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-
-import com.amazaar.CustomeComponent.CustomTextView;
-import com.amazaar.R;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.amazaar.Fragments.OrderListFragment;
+import com.amazaar.CustomeComponent.CustomTextView;
 import com.amazaar.ListModels.OrderListModel;
+import com.amazaar.ListModels.ProductListModel;
+import com.amazaar.Protobuff.BuyPbOuterClass;
+import com.amazaar.R;
 
 import java.util.List;
 
-public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements View.OnClickListener {
 
     private List<OrderListModel> orderListModels;
     private Context mContext;
-    private OrderListFragment orderListFragment;
-
+    private OnItemClickListener onItemClickListener;
 
 
     /**
      * setup Constructure
      */
 
-    public OrderListAdapter(final List<OrderListModel> addressListModelNew, final Context mContext, final OrderListFragment checkOutFragmnet) {
+    public OrderListAdapter(final List<OrderListModel> addressListModelNew, final Context mContext) {
         this.orderListModels = addressListModelNew;
         this.mContext = mContext;
-        this.orderListFragment = checkOutFragmnet;
     }
-
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -59,6 +61,22 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     @Override
     public int getItemCount() {
         return orderListModels.size();
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (onItemClickListener != null) {
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    onItemClickListener.onItemClick(v, (OrderListModel) v.getTag());
+                }
+            }, 200);
+        }
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, OrderListModel viewModel);
     }
 
 
@@ -92,40 +110,54 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
         }
 
-        public void bindData(final OrderListModel item, final int position) {
+            public void bindData(final OrderListModel item, final int position) {
+                itemView.setTag(item);
+                tvOrderDate.setText("" + item.getOrderDate());
+                tvOrderId.setText("" + item.getOrderId());
 
-            tvOrderDate.setText("" + item.getOrderDate());
-            tvOrderId.setText("" + item.getOrderId());
+                if (item.getStatus() == BuyPbOuterClass.DeliveryStatusEnum.PENDING) {
+                    rlCancelOrder.setVisibility(View.VISIBLE);
+                    rlReportOrder.setVisibility(View.GONE);
+                    tvDeliveryLable.setText(mContext.getString(R.string.to_deliver_on));
+                    tvDeliveryDate.setText(item.getDeliveryDate());
+                    tvDeliveryDate.setVisibility(View.VISIBLE);
+                    tvCancelLable.setVisibility(View.GONE);
+                    ivStatus.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_order_pending));
+                    cvMain.setCardBackgroundColor(mContext.getResources().getColor(R.color.order_pendig_bgcolro));
+                } else if (item.getStatus() == BuyPbOuterClass.DeliveryStatusEnum.DELIVERED) {
+                    rlCancelOrder.setVisibility(View.GONE);
+                    rlReportOrder.setVisibility(View.VISIBLE);
+                    tvCancelLable.setVisibility(View.GONE);
+                    tvDeliveryLable.setText(mContext.getString(R.string.delivery_date));
+                    tvDeliveryDate.setText(item.getDeliveryDate());
+                    ivStatus.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_order_delivred));
+                    cvMain.setCardBackgroundColor(mContext.getResources().getColor(R.color.order_delivery_bgcolro));
+                } else if (item.getStatus() == BuyPbOuterClass.DeliveryStatusEnum.CLOSED) {
+                    rlCancelOrder.setVisibility(View.GONE);
+                    rlReportOrder.setVisibility(View.VISIBLE);
+                    tvCancelLable.setVisibility(View.VISIBLE);
+                    tvDeliveryDate.setVisibility(View.GONE);
+                    tvDeliveryLable.setText(mContext.getString(R.string.delivery));
+                    ivStatus.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_order_cancel));
+                    cvMain.setCardBackgroundColor(mContext.getResources().getColor(R.color.order_cancel_bgcolro));
+                }
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(final View v) {
 
-            if (item.getStatus().equalsIgnoreCase(mContext.getString(R.string.lbl_pending))) {
-                rlCancelOrder.setVisibility(View.VISIBLE);
-                rlReportOrder.setVisibility(View.GONE);
-                tvDeliveryLable.setText(mContext.getString(R.string.to_deliver_on));
-                tvDeliveryDate.setText(item.getDeliveryDate());
-                tvDeliveryDate.setVisibility(View.VISIBLE);
-                tvCancelLable.setVisibility(View.GONE);
-                ivStatus.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_order_pending));
-                cvMain.setCardBackgroundColor(mContext.getResources().getColor(R.color.order_pendig_bgcolro));
-            } else if (item.getStatus().equalsIgnoreCase(mContext.getString(R.string.lbl_delivery))) {
-                rlCancelOrder.setVisibility(View.GONE);
-                rlReportOrder.setVisibility(View.VISIBLE);
-                tvCancelLable.setVisibility(View.GONE);
-                tvDeliveryLable.setText(mContext.getString(R.string.delivery_date));
-                tvDeliveryDate.setText(item.getDeliveryDate());
-                ivStatus.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_order_delivred));
-                cvMain.setCardBackgroundColor(mContext.getResources().getColor(R.color.order_delivery_bgcolro));
-            } else if (item.getStatus().equalsIgnoreCase(mContext.getString(R.string.lbl_cancel))) {
-                rlCancelOrder.setVisibility(View.GONE);
-                rlReportOrder.setVisibility(View.VISIBLE);
-                tvCancelLable.setVisibility(View.VISIBLE);
-                tvDeliveryDate.setVisibility(View.GONE);
-                tvDeliveryLable.setText(mContext.getString(R.string.delivery));
-                ivStatus.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_order_cancel));
-                cvMain.setCardBackgroundColor(mContext.getResources().getColor(R.color.order_cancel_bgcolro));
+                        // Give some time to the ripple to finish the effect
+                        if (onItemClickListener != null) {
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    onItemClickListener.onItemClick(v, item);
+                                }
+                            }, 200);
+                        }
+                    }
+                });
+
             }
-
-
-        }
     }
 
 }

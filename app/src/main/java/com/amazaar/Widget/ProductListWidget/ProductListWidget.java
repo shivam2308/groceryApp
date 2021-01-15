@@ -1,7 +1,6 @@
 package com.amazaar.Widget.ProductListWidget;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,16 +13,12 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amazaar.Adapters.ProductListAdapter;
-import com.amazaar.Fragments.ProductDetailsFragment;
 import com.amazaar.Handlers.CartItemHandler;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
-import com.amazaar.Protobuff.ItemPbOuterClass;
 import com.amazaar.R;
-import com.amazaar.Utility.Utils;
 import com.google.inject.Injector;
-import com.prod.basic.common.collect.Lists;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,11 +89,11 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
         productListAdapter.setOnItemClickListener(new ProductListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, ProductListModel viewModel) {
-                ProductDetailsFragment fragmentProductDetails = new ProductDetailsFragment();
+                /*ProductDetailsFragment fragmentProductDetails = new ProductDetailsFragment();
                 Bundle bundle = new Bundle();
                 bundle.putParcelable(getContext().getString(R.string.bdl_model), viewModel);
                 fragmentProductDetails.setArguments(bundle);
-                Utils.addNextFragment(getContext(),fragmentProductDetails, getView().getMainFragment(), false);
+                Utils.addNextFragment(getContext(),fragmentProductDetails, getView().getMainFragment(), false);*/
             }
         });
 

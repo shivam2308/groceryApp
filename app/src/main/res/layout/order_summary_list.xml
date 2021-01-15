@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_3sdp"
+        android:background="@color/row_product_cart_line_color"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="4"
+        >
+
+        <com.amazaar.CustomeComponent.CustomTextView
+            style="@style/order_lable_style"
+            android:id="@+id/row_orderlist_new_tvOrederid"
+            android:layout_weight="1"
+            app:font_name="NunitoSemiBold.ttf"/>
+
+        <com.amazaar.CustomeComponent.CustomTextView
+            style="@style/order_lable_style"
+            android:id="@+id/row_orderlist_new_tvOrederName"
+            android:layout_weight="1"
+            app:font_name="NunitoSemiBold.ttf"/>
+
+        <com.amazaar.CustomeComponent.CustomTextView
+            style="@style/order_lable_style"
+            android:id="@+id/row_orderlist_new_tvQuntity"
+            android:layout_weight="1"
+            app:font_name="NunitoSemiBold.ttf"/>
+
+        <com.amazaar.CustomeComponent.CustomTextView
+            android:id="@+id/row_orderlist_new_tvPrice"
+            style="@style/order_lable_style"
+            android:layout_weight="1"
+            app:font_name="NunitoRegular.ttf" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -10,6 +10,10 @@ public class UrlPathProvider {
         IMAGE,
         PUSH_NOTIFICATION,
         ITEM,
+        BUY,
+        PAYMENT,
+        CREATE_BUY,
+        ORDERED_LIST,
     }
 
     public static String getPath(UrlPathEnum data) {
@@ -29,6 +33,14 @@ public class UrlPathProvider {
                 return "item";
             case PUSH_NOTIFICATION:
                 return "pushNotification";
+            case BUY:
+                return "buy";
+            case PAYMENT:
+                return "payment";
+            case CREATE_BUY:
+                return "createBuy";
+            case ORDERED_LIST:
+                return "orderList";
             default:
                 throw new IllegalStateException("Unexpected value: " + data);
         }

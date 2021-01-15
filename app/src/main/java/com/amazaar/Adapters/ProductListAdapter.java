@@ -87,7 +87,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    onItemClickListener.onItemClick(v, (ProductListModel) v.getTag());
+                   // onItemClickListener.onItemClick(v, (ProductListModel) v.getTag());
                 }
             }, 200);
         }
@@ -156,7 +156,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                onItemClickListener.onItemClick(v, item);
+                                //onItemClickListener.onItemClick(v, item);
                             }
                         }, 200);
                     }
