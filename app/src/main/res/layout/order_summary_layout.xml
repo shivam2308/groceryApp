@@ -343,6 +343,18 @@
                     app:font_name="NunitoBold.ttf" />
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.amazaar.CustomeComponent.CustomButton
+                    android:id="@+id/qr_code_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

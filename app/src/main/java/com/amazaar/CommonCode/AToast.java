@@ -99,4 +99,24 @@ public class AToast {
                 .setDuration(Duration.LONG)
                 .show();
     }
+
+    public static void orderDeliverdFailed() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Somting Went Wormg Please try Again Later!!")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.DANGER)
+                .setDuration(Duration.LONG)
+                .show();
+    }
+
+    public static void orderDeliveredSuccess() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Order Deliverd Success")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.PRIMARY)
+                .setDuration(Duration.LONG)
+                .show();
+    }
 }

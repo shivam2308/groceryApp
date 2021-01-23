@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+import "timePb.proto";
+import "buyPb.proto";
+
+
+
+message ConfirmOrderDeliveryPb {
+    string customerId = 1;
+    string parentOrderId = 2;
+    repeated BuyPb orderList = 3;
+    TimePb time = 4;
+    IsOrderedPlacedEnum status = 5;
+    repeated string data =6;
+}
+
+
+

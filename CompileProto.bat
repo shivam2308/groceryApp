@@ -19,6 +19,8 @@ protoc cartPb.proto --java_out=..\..\..\
 protoc buyPb.proto --java_out=..\..\..\
 protoc paymentPb.proto --java_out=..\..\..\
 protoc orderedListPb.proto --java_out=..\..\..\
+protoc confirmOrderDeliveryPb.proto --java_out=..\..\..\
+
 cd ..
 cd ..
 cd ..

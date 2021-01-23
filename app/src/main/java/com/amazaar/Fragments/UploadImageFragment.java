@@ -7,12 +7,15 @@ import android.view.ViewGroup;
 
 import com.amazaar.Activity.HomeActivity;
 import com.amazaar.Enums.TopBarUiEnum;
+import com.amazaar.Protobuff.ImagePbOuterClass;
 import com.amazaar.R;
 import com.amazaar.Widget.UploadImageWIdget.UploadWidget;
 
-public class UploadImageFragment  extends BaseFragment{
+public class UploadImageFragment extends BaseFragment {
 
     private UploadWidget m_uploadWidget;
+    private ImagePbOuterClass.ImageTypeEnum m_ImageType;
+    private String m_imageId;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -28,9 +31,19 @@ public class UploadImageFragment  extends BaseFragment{
         ((HomeActivity) getActivity()).setToolbar(TopBarUiEnum.PROFILE);
     }
 
+    public void setImageType(ImagePbOuterClass.ImageTypeEnum imageType) {
+        m_ImageType = imageType;
+    }
+
+    public void setImageId(String imageId) {
+        m_imageId = imageId;
+    }
+
     @Override
     public void initComponents(View rootView) {
         m_uploadWidget = (UploadWidget) rootView.findViewById(R.id.uploadImageWidget);
+        m_uploadWidget.setImageId(m_imageId);
+        m_uploadWidget.setImageType(m_ImageType);
     }
 
     @Override

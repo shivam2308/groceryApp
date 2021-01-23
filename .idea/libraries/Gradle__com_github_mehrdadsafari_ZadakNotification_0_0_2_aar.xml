@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.mehrdadsafari:ZadakNotification:0.0.2@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aaed913e232bb378f3e11043fab63d41/jetified-ZadakNotification-0.0.2/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aaed913e232bb378f3e11043fab63d41/jetified-ZadakNotification-0.0.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aaed913e232bb378f3e11043fab63d41/jetified-ZadakNotification-0.0.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/09d67d4e46f013edebc58cc23fb350a3/jetified-ZadakNotification-0.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/09d67d4e46f013edebc58cc23fb350a3/jetified-ZadakNotification-0.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/09d67d4e46f013edebc58cc23fb350a3/jetified-ZadakNotification-0.0.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -3,6 +3,7 @@ package com.amazaar.Widget.OrderSummaryWidget;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,11 +15,13 @@ import com.amazaar.CustomeComponent.CustomTextView;
 import com.amazaar.EnumFormatter.DeliveryStatusEnumFormatter;
 import com.amazaar.EnumFormatter.PaymentModeEnumFormatter;
 import com.amazaar.EnumFormatter.PaymentStatusEnumFormatter;
+import com.amazaar.Fragments.GenreateQRCodeFragment;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
 import com.amazaar.Protobuff.BuyPbOuterClass;
 import com.amazaar.Protobuff.CustomerPbOuterClass;
 import com.amazaar.R;
+import com.amazaar.Utility.Utils;
 import com.google.inject.Injector;
 
 import javax.inject.Inject;
@@ -52,6 +55,7 @@ public class OrderSummaryWidget extends LinearLayout implements IView<OrderSumma
     private RecyclerView rvOrderList;
     private LinearLayoutManager mLayoutManager;
     private OrderSummaryListAdapter orderListAdapter;
+    private Button m_qr_codebtn;
 
     public OrderSummaryWidget(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -75,6 +79,7 @@ public class OrderSummaryWidget extends LinearLayout implements IView<OrderSumma
         m_payment = (CustomTextView) findViewById(R.id.orderPayment);
         m_payment_mode = (CustomTextView) findViewById(R.id.orderPaymentmode);
         m_orderTotal = (CustomTextView) findViewById(R.id.ordertotal);
+        m_qr_codebtn = (Button) findViewById(R.id.qr_code_btn);
         mLayoutManager = new LinearLayoutManager(getContext());
         rvOrderList.setLayoutManager(mLayoutManager);
         inflateLayout();
@@ -125,6 +130,15 @@ public class OrderSummaryWidget extends LinearLayout implements IView<OrderSumma
                     m_phone.setVisibility(GONE);
                     m_email.setVisibility(GONE);
                 }
+            }
+        });
+
+        m_qr_codebtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GenreateQRCodeFragment genreateQRCodeFragment = new GenreateQRCodeFragment();
+                genreateQRCodeFragment.setListModel(getView().getOrderSummaryListModel());
+                Utils.addNextFragment(getContext(), genreateQRCodeFragment, getView().getMainFragment(), false);
             }
         });
     }

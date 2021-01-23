@@ -74,8 +74,8 @@ public class PaymentWidget extends LinearLayout implements IView<PaymentView>, V
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    //getView().payUsingUpi(getView().getAmount());
-                    m_payAndOrderItem.createBuyItem("txnId=AXI4a3428ee58654a938811812c72c0df45&responseCode=00&Status=SUCCESS&txnRef=922118921612");
+                    getView().payUsingUpi(getView().getAmount());
+                   // m_payAndOrderItem.createBuyItem("txnId=AXI4a3428ee58654a938811812c72c0df45&responseCode=00&Status=SUCCESS&txnRef=922118921612");
                 }
                 // m_payAndOrderItem.createBuyItem();
                 return false;

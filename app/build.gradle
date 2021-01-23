@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.amazaar"
-        minSdkVersion 25
+        minSdkVersion 26
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -102,4 +102,10 @@ dependencies {
 
     //step progress bar
     implementation 'com.kofigyan.stateprogressbar:stateprogressbar:1.0.0'
+
+    //QrCodeGenreator
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.4'
+    implementation 'com.google.zxing:core:3.3.2'
+    //QR code Reader
+    implementation 'com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.3'
 }
