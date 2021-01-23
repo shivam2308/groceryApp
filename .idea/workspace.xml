@@ -6,124 +6,12 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dd406ec-0eba-4e9d-b687-41eb1db8ea9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_kofigyan_stateprogressbar_stateprogressbar_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Adapters/OrderSummaryMiniListAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ClientServices/BuyClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ClientServices/CreateBuyClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ClientServices/OrderedListClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ClientServices/PaymentClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/PayAndOrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/PayAndOrderItemCF.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/UpdateCustomer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/UpdateCustomerCF.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Convertors/RefConvertorHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/DefaultProviders/BuyPbDefaultProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/DefaultProviders/OrderedListDefaultPbProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Dialog/PaymentProgressDailogFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/EnumFormatter/DeliveryStatusEnumFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/EnumFormatter/PaymentModeEnumFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/EnumFormatter/PaymentStatusEnumFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ListModels/OrderSummaryListModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/OrderedListPbOuterClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protos/orderedListPb.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderSummaryWidget/OrderSummaryView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderSummaryWidget/OrderSummaryWidget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/order_summary_fragment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/order_summary_layout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/order_summary_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/payment_dailog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/amazaar_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/amazaar_icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/amazaar_icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/amazaar_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/amazaar_icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/amazaar_icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/amazaar_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/amazaar_icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/amazaar_icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/amazaar_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/amazaar_icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/amazaar_icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/amazaar_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/amazaar_icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/amazaar_icon2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileContent/fileContent.lock" afterDir="false" />
+    <list default="true" id="cc103dfd-47be-4f12-83d2-1faed28a197d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_borjabravo_readmoretextview_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_borjabravo_readmoretextview_2_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_eftimoff_android_viewpager_transformers_1_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_eftimoff_android_viewpager_transformers_1_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ViksaaSkool_AwesomeSplash_v1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ViksaaSkool_AwesomeSplash_v1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_arcadefire_nice_spinner_1_4_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_arcadefire_nice_spinner_1_4_4_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_jorgecastilloprz_fillableloaders_1_02_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_jorgecastilloprz_fillableloaders_1_02_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_mehrdadsafari_ZadakNotification_0_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_mehrdadsafari_ZadakNotification_0_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_2_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__me_relex_circleindicator_1_2_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__me_relex_circleindicator_1_2_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_florescu_android_rangeseekbar_rangeseekbar_library_0_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_florescu_android_rangeseekbar_rangeseekbar_library_0_3_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CompileProto.bat" beforeDir="false" afterPath="$PROJECT_DIR$/CompileProto.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Adapters/HomeProductListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Adapters/HomeProductListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Adapters/OrderListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Adapters/OrderListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Adapters/OrderSummaryListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Adapters/OrderSummaryListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Adapters/ProductListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Adapters/ProductListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/AToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/AToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/CommonHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/CommonHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/Strings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/Strings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/TempListData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/TempListData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/CustomerLoginCF.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/CustomerLoginCF.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/ProfileEdit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/ProfileEditCF.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/DatabaseEnitityHelper/CartEntityDaoHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/DatabaseEnitityHelper/CartEntityDaoHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Dialog/DialogFragmentFeedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Dialog/DialogFragmentFeedback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/ProfileEditFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/ProfileEditFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ListModels/OrderListModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ListModels/OrderListModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/LocalDatabase/DatabaseInitHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/LocalDatabase/DatabaseInitHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/BuyPbOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/BuyPbOuterClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/CartPbOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/CartPbOuterClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/PaymentPbOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/PaymentPbOuterClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protos/buyPb.proto" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protos/buyPb.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protos/cartPb.proto" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protos/cartPb.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protos/paymentPb.proto" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protos/paymentPb.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ServerConfig/ServerUrlManeger.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ServerConfig/ServerUrlManeger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ServerConfig/UrlPathProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ServerConfig/UrlPathProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/CheckOutWidget/CheckOutWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/CheckOutWidget/CheckOutWidget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuWidget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListWidget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/PaymentWidget/PaymentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/PaymentWidget/PaymentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/PaymentWidget/PaymentWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/PaymentWidget/PaymentWidget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/ProductListWidget/ProductListWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/ProductListWidget/ProductListWidget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/ProfileEditWidget/ProfileEditView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/ProfileEditWidget/ProfileEditView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/ProfileEditWidget/ProfileEditWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/ProfileEditWidget/ProfileEditWidget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_edit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/profile_edit_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/profile_edit_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/profile_submit_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/profile_submit_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/top_bar_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/top_bar_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-ldpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-ldpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +19,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="b5148298" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -158,10 +46,10 @@
   <component name="ProjectId" id="1mebcfdAvkoQ07VmNz8wS33bVuF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../AllData/GroceryStoreSourceCode" />
@@ -187,6 +75,7 @@
       <option name="DEPLOY_AS_INSTANT" value="false" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -222,11 +111,16 @@
       </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -237,7 +131,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6dd406ec-0eba-4e9d-b687-41eb1db8ea9b" name="Default Changelist" comment="" />
+      <changelist id="cc103dfd-47be-4f12-83d2-1faed28a197d" name="Default Changelist" comment="" />
       <created>1609857089000</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
