@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.datatransport:transport-runtime:2.2.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/513af2d81cb12d386383dd14717874ca/jetified-transport-runtime-2.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/75d73a2d11ed1bc605f38a84971b32a7/jetified-transport-runtime-2.2.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/513af2d81cb12d386383dd14717874ca/jetified-transport-runtime-2.2.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/513af2d81cb12d386383dd14717874ca/jetified-transport-runtime-2.2.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/513af2d81cb12d386383dd14717874ca/jetified-transport-runtime-2.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>

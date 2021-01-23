@@ -1,7 +1,7 @@
 package com.amazaar.Widget.OrderSummaryWidget;
 
 import com.amazaar.ClientServices.OrderedListClientService;
-import com.amazaar.Fragments.OrderSummaryFragment;
+//import com.amazaar.Fragments.OrderSummaryFragment;
 import com.amazaar.ListModels.OrderListModel;
 import com.amazaar.ListModels.OrderSummaryListModel;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
@@ -20,7 +20,7 @@ public class OrderSummaryView {
     public OrderedListClientService m_orderListClientService;
     public VariableValueChange<OrderListModel> m_orderParentId;
     public CustomerSession m_cutomerSession;
-    private OrderSummaryFragment m_mainFragment;
+    //private OrderSummaryFragment m_mainFragment;
     private List<OrderSummaryListModel> m_orderSummary = new ArrayList<>();
 
     @Inject
@@ -65,13 +65,13 @@ public class OrderSummaryView {
         return m_orderParentId;
     }
 
-    public OrderSummaryFragment getMainFragment() {
-        return m_mainFragment;
-    }
-
-    public void setMainFragment(OrderSummaryFragment fragment) {
-        m_mainFragment = fragment;
-    }
+//    public OrderSummaryFragment getMainFragment() {
+//        return m_mainFragment;
+//    }
+//
+//    public void setMainFragment(OrderSummaryFragment fragment) {
+//        m_mainFragment = fragment;
+//    }
 
     public List<OrderSummaryListModel> getOrderSummaryListModel() {
         return m_orderSummary;

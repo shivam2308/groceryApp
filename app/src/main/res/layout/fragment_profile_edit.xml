@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.amazaar.Comman.SlidingLinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.amazaar.Widget.ProfileEditWidget.ProfileEditWidget
-        android:id="@+id/profile_edit_widget"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
-</com.amazaar.Comman.SlidingLinearLayout>
+    <com.amazaar.Widget.ProfileEditWidget.ProfileEditWidget
+        android:id="@+id/profile_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -12,6 +12,7 @@ import com.amazaar.Activity.HomeActivity;
 import com.amazaar.Enums.TopBarUiEnum;
 import com.amazaar.Protobuff.ItemPbOuterClass;
 import com.amazaar.R;
+import com.amazaar.Utility.Utils;
 import com.amazaar.Widget.ProductListWidget.ProductListWidget;
 
 import javax.inject.Inject;
@@ -55,9 +56,9 @@ public class ProductListFragment extends BaseFragment {
         item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                /*Utils.hideKeyboard(getActivity());
+                Utils.hideKeyboard(getActivity());
                 CartListFragment fragmentProductDetails = new CartListFragment();
-                fragmentProductDetails.setTargetFragment(ProductListFragment.this, 222);*/
+                fragmentProductDetails.setTargetFragment(ProductListFragment.this, 222);
                 //Utils.addNextFragment(get(), fragmentProductDetails, ProductListFragment.this, false);
 
                 return true;
@@ -66,8 +67,8 @@ public class ProductListFragment extends BaseFragment {
     }
 
     public void initToolbar() {
-        ((HomeActivity) getActivity()).setToolbar(TopBarUiEnum.PRODUCT_DETAILS);
-        /*if (getTargetFragment() != null) {
+
+        if (getTargetFragment() != null) {
 
             m_productListWidget.getView().getiFilter().setVisibility(View.GONE);
             ((HomeActivity) getActivity()).setToolbar(TopBarUiEnum.WISH_LIST);
@@ -75,7 +76,7 @@ public class ProductListFragment extends BaseFragment {
         } else {
             m_productListWidget.getView().getiFilter().setVisibility(View.VISIBLE);
             ((HomeActivity) getActivity()).setToolbar(TopBarUiEnum.HOME);
-        }*/
+        }
 
        /* ((HomeActivity) getActivity()).getIvCart().setOnClickListener(new View.OnClickListener() {
             @Override

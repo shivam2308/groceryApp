@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.amazaar.Adapters.OrderListAdapter;
 import com.amazaar.CommonCode.TempListData;
-import com.amazaar.Fragments.OrderSummaryFragment;
+//import com.amazaar.Fragments.OrderSummaryFragment;
 import com.amazaar.Fragments.ProductListFragment;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.ListModels.OrderListModel;
@@ -78,14 +78,14 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
 
     private void initWidget() {
         getListData();
-        orderListAdapter.setOnItemClickListener(new OrderListAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, OrderListModel viewModel) {
-                OrderSummaryFragment fragmentProductDetails = new OrderSummaryFragment();
-                fragmentProductDetails.setModel(viewModel);
-                Utils.addNextFragment(getContext(),fragmentProductDetails, getView().getMainFragment(), false);
-            }
-        });
+//        orderListAdapter.setOnItemClickListener(new OrderListAdapter.OnItemClickListener() {
+//            @Override
+////            public void onItemClick(View view, OrderListModel viewModel) {
+////                OrderSummaryFragment fragmentProductDetails = new OrderSummaryFragment();
+////                fragmentProductDetails.setModel(viewModel);
+////                Utils.addNextFragment(getContext(),fragmentProductDetails, getView().getMainFragment(), false);
+////            }
+//        });
     }
 
     private void injectMembers() {

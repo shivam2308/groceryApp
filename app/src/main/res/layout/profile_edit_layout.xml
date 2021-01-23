@@ -252,7 +252,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_10sdp">
                         <com.amazaar.CustomeComponent.CustomTextView
-                            android:id="@+id/fragment_signup_tvSignup"
+                            android:id="@+id/fragment_save_tvSave"
                             style="@style/ganaral_logintext_btn_style"
                             android:layout_alignParentEnd="true"
                             android:padding="@dimen/_3sdp"
