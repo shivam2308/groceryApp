@@ -29,6 +29,8 @@ public class UrlPathProvider {
                 return "orderList";
             case CONFIRM_ORDER:
                 return "confirmOrder";
+            case CREATE_IMAGE:
+                return "createImage";
             default:
                 throw new IllegalStateException("Unexpected value: " + data);
         }
@@ -47,5 +49,6 @@ public class UrlPathProvider {
         CREATE_BUY,
         ORDERED_LIST,
         CONFIRM_ORDER,
+        CREATE_IMAGE,
     }
 }

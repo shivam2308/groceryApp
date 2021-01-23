@@ -58,14 +58,14 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        qrReaderFragment.getQRCodeReaderWidget().getView().getQrCodeReaderView().stopCamera();
+        //qrReaderFragment.getQRCodeReaderWidget().getView().getQrCodeReaderView().stopCamera();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         AmazaarApplication.setCurrentActivity(this);
-        qrReaderFragment.getQRCodeReaderWidget().getView().getQrCodeReaderView().startCamera();
+       // qrReaderFragment.getQRCodeReaderWidget().getView().getQrCodeReaderView().startCamera();
     }
 
     private void initView() {

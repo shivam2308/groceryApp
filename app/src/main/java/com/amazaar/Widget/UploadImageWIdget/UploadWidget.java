@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.amazaar.Interfaces.IView;
+import com.amazaar.Protobuff.ImagePbOuterClass;
 import com.amazaar.R;
 import com.google.inject.Injector;
 
@@ -51,6 +52,14 @@ public class UploadWidget extends LinearLayout implements IView<UploadView> {
     private void inflateLayout() {
         inflate(getContext(), R.layout.upload_image_layout, this);
 
+    }
+
+    public void setImageType(ImagePbOuterClass.ImageTypeEnum imageType) {
+        getView().setImageType(imageType);
+    }
+
+    public void setImageId(String imageId) {
+        getView().setImageId(imageId);
     }
 
     private void initWidget() {
