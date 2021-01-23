@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.amazaar.Enums.TopBarUiEnum;
 import com.amazaar.Fragments.HomeCategoryFragment;
 import com.amazaar.Fragments.PaymentFragment;
+import com.amazaar.Fragments.QRCodeReaderFragment;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
 import com.amazaar.Widget.TopBarWidget.TopBarWidget;
@@ -22,6 +23,7 @@ public class HomeActivity extends AppCompatActivity {
     private TopBarWidget m_topBar;
     private Fragment mFragment = null;
     private HomeCategoryFragment mainFragment;
+    private QRCodeReaderFragment qrReaderFragment;
     @Inject
     private PaymentFragment paymentFragment;
 
@@ -56,20 +58,24 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        qrReaderFragment.getQRCodeReaderWidget().getView().getQrCodeReaderView().stopCamera();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         AmazaarApplication.setCurrentActivity(this);
+        qrReaderFragment.getQRCodeReaderWidget().getView().getQrCodeReaderView().startCamera();
     }
 
     private void initView() {
         setToolbar(TopBarUiEnum.HOME);
         mainFragment = new HomeCategoryFragment();
+        qrReaderFragment = new QRCodeReaderFragment();
         paymentFragment= new PaymentFragment();
         m_topBar.getView().setMainFragment(mainFragment);
         openFragment(mainFragment);
+       // openFragment(qrReaderFragment);
     }
 
     public void setToolbar(TopBarUiEnum enumm) {

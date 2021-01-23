@@ -2,20 +2,6 @@ package com.amazaar.ServerConfig;
 
 public class UrlPathProvider {
 
-    public enum UrlPathEnum {
-        UNKNOWN_URL_PATH,
-        REGISTRATION_CUSTOMER,
-        CUSTOMER,
-        LOGIN,
-        IMAGE,
-        PUSH_NOTIFICATION,
-        ITEM,
-        BUY,
-        PAYMENT,
-        CREATE_BUY,
-        ORDERED_LIST,
-    }
-
     public static String getPath(UrlPathEnum data) {
         switch (data) {
 
@@ -41,8 +27,25 @@ public class UrlPathProvider {
                 return "createBuy";
             case ORDERED_LIST:
                 return "orderList";
+            case CONFIRM_ORDER:
+                return "confirmOrder";
             default:
                 throw new IllegalStateException("Unexpected value: " + data);
         }
+    }
+
+    public enum UrlPathEnum {
+        UNKNOWN_URL_PATH,
+        REGISTRATION_CUSTOMER,
+        CUSTOMER,
+        LOGIN,
+        IMAGE,
+        PUSH_NOTIFICATION,
+        ITEM,
+        BUY,
+        PAYMENT,
+        CREATE_BUY,
+        ORDERED_LIST,
+        CONFIRM_ORDER,
     }
 }

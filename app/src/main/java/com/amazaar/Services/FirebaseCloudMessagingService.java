@@ -25,8 +25,8 @@ public class FirebaseCloudMessagingService extends FirebaseMessagingService {
     public RegisterPushNorification m_pushNotification;
 
     @Inject
-    public FirebaseCloudMessagingService(){
-        m_pushNotification= new RegisterPushNorification(new LoginEntityDaoHelper(),new PushNotificationClientService());
+    public FirebaseCloudMessagingService(RegisterPushNorification pushNotification){
+        m_pushNotification= pushNotification;
     }
 
     @Override

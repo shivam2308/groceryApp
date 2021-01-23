@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.app.FragmentManager;
 import android.content.Context;
+import android.util.Log;
 
 import androidx.multidex.MultiDex;
 
@@ -11,7 +12,10 @@ import com.amazaar.DatabaseEnitityHelper.CartEntityDaoHelper;
 import com.amazaar.DatabaseEnitityHelper.ItemEntityDaoHelper;
 import com.amazaar.DatabaseEnitityHelper.LoginEntityDaoHelper;
 import com.amazaar.Session.FastSave;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.inject.Stage;
+
+import java.io.IOException;
 
 import javax.inject.Inject;
 
@@ -29,6 +33,8 @@ public class AmazaarApplication extends Application {
     public ItemEntityDaoHelper m_itemDaoHelper;
     @Inject
     public CartEntityDaoHelper m_cartDaoHelper;
+
+    public FirebaseInstanceId m_firebaseInstanse;
 
     public static AmazaarApplication getInstance() {
         return mInstance;
@@ -65,6 +71,16 @@ public class AmazaarApplication extends Application {
         FastSave.init(getContext());
         RoboGuice.setUseAnnotationDatabases(false);
         RoboGuice.setupBaseApplicationInjector(this, Stage.DEVELOPMENT);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    m_deviceToken= FirebaseInstanceId.getInstance().getToken("796220644087", "FCM");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     public LoginEntityDaoHelper getLoginEntityDeo() {
