@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="546a6e8e-d576-42ef-b519-cd736e3d502c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="546a6e8e-d576-42ef-b519-cd736e3d502c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,9 +110,25 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="236" height="268" key="Git.Branch.Popup" timestamp="1611468670679">
+    <state width="238" height="270" key="Git.Branch.Popup" timestamp="1611469211433">
       <screen x="1366" y="0" width="1360" height="738" />
     </state>
-    <state width="236" height="268" key="Git.Branch.Popup/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1611468670679" />
+    <state width="238" height="270" key="Git.Branch.Popup/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1611469211433" />
+    <state width="1300" height="179" key="GridCell.Tab.0.bottom" timestamp="1611469074533">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state width="1300" height="179" key="GridCell.Tab.0.bottom/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1611469074533" />
+    <state width="1300" height="179" key="GridCell.Tab.0.center" timestamp="1611469074533">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state width="1300" height="179" key="GridCell.Tab.0.center/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1611469074533" />
+    <state width="1300" height="179" key="GridCell.Tab.0.left" timestamp="1611469074532">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state width="1300" height="179" key="GridCell.Tab.0.left/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1611469074532" />
+    <state width="1300" height="179" key="GridCell.Tab.0.right" timestamp="1611469074533">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state width="1300" height="179" key="GridCell.Tab.0.right/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1611469074533" />
   </component>
 </project>
