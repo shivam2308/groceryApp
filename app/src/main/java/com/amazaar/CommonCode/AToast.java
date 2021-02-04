@@ -119,4 +119,14 @@ public class AToast {
                 .setDuration(Duration.LONG)
                 .show();
     }
+
+    public static void noDeliveryManFound() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("No Deliery Man Found")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.INFO)
+                .setDuration(Duration.LONG)
+                .show();
+    }
 }

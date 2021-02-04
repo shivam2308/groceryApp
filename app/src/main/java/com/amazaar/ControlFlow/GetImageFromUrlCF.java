@@ -4,6 +4,7 @@ import android.content.Context;
 import android.widget.ImageView;
 
 import com.amazaar.ClientServices.ImageClientService;
+import com.amazaar.CommonCode.CommonHelper;
 import com.amazaar.CommonCode.DefaultImageUrl;
 import com.amazaar.Protobuff.ImagePbOuterClass;
 import com.budiyev.android.imageloader.ImageLoader;
@@ -22,16 +23,18 @@ public class GetImageFromUrlCF extends AControlFlow<GetImageFromUrlCF.States, Vo
     private ImagePbOuterClass.ImagePb m_imagePb;
     private ImagePbOuterClass.ImageRefPb m_imageRef;
     private ImageClientService m_imageService;
+    private CommonHelper m_commanHelper;
 
 
     @Inject
-    public GetImageFromUrlCF(Context context, ImageView imageView, ImagePbOuterClass.ImageRefPb imageRefPb, ImageClientService imageService, DefaultImageUrl.ImageShowTypeEnum imageType) {
+    public GetImageFromUrlCF(Context context, ImageView imageView, ImagePbOuterClass.ImageRefPb imageRefPb, ImageClientService imageService, DefaultImageUrl.ImageShowTypeEnum imageType,CommonHelper commanHelper) {
         super(States.GET_IMAGE_PB, States.DONE);
         m_context = context;
         m_image = imageView;
         m_imageRef = imageRefPb;
         m_imageService = imageService;
         m_imageType = imageType;
+        m_commanHelper=commanHelper;
         addStateHandler(States.GET_IMAGE_PB, new GetImageHandler());
         addStateHandler(States.SET_IMAGE, new SetImageHandler());
     }
@@ -62,7 +65,7 @@ public class GetImageFromUrlCF extends AControlFlow<GetImageFromUrlCF.States, Vo
 
         @Override
         public States handleState() {
-            if (Strings.notEmpty(m_imagePb.getId())) {
+            if (Strings.notEmpty(m_imagepb.getId())) {
                 m_imagePb = m_imagepb;
                 return States.SET_IMAGE;
             } else {

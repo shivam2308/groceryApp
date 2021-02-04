@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package com.amazaar.Protobuff;
+
+enum BooleanEnum{
+    DEFAULT=0;
+    TRUE=1;
+    FALSE=2;
+}
+
+
+
+

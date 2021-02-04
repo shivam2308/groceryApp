@@ -58,7 +58,7 @@ public class TopBarWidget extends LinearLayout implements IView<TopBarView>, Vie
         ivCart.setOnClickListener(this);
     }
 
-    public void setUpToolbar(final String title, final boolean isShowback, boolean isToolbarVisible, boolean isSearch, boolean isCart) {
+    private void setUpToolbar(final String title, final boolean isShowback, boolean isToolbarVisible, boolean isSearch, boolean isCart) {
 
         rlToolbar.setVisibility(isToolbarVisible ? View.VISIBLE : View.GONE);
         ivMenu.setBackgroundResource(isShowback ? R.drawable.ic_menu : R.drawable.ic_back_arror);
@@ -76,10 +76,10 @@ public class TopBarWidget extends LinearLayout implements IView<TopBarView>, Vie
             public void onChange() {
                 switch (getView().getTopBarChange().getVar()) {
                     case HOME:
-                        setUpToolbar(getContext().getString(R.string.nav_menu_home), true, true, true, true);
+                        setUpToolbar(getContext().getString(R.string.nav_menu_home), true, true, false, true);
                         break;
                     case MENU:
-                        setUpToolbar(getContext().getString(R.string.nav_menu_home), false, false, false, false);
+                        setUpToolbar("Menu", false, true, false, false);
                         break;
                     case CART:
                     case PROFILE:

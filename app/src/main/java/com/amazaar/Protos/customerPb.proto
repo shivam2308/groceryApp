@@ -10,12 +10,14 @@ import "contactDetailPb.proto";
 import "genderPb.proto";
 import "imagePb.proto";
 import "timePb.proto";
+import "booleanPb.proto";
 
 
 enum PrivilegeTypeEnum {
     UNKNOWN_PREVILAGE=0;
     NORMAL=1;
     ADMIN =2;
+    DELIVERY_MAN=3;
 }
 
 
@@ -28,6 +30,8 @@ message CustomerPb {
     GenderEnum gender =6;
     ImageRefPb profileImage = 7;
     TimePb time = 8;
+    BooleanEnum isNotifyOn = 9;
+    string adharNo=10;
 }
 
 message CustomerPbRef {
@@ -38,16 +42,14 @@ message CustomerPbRef {
 
 message CustomerSearchRequestPb {
     PrivilegeTypeEnum privilege =1;
+    string mobileNo = 2;
+    string email = 3;
 }
 
 message CustomerSearchResponsePb {
     SummaryPb summary = 1;
     repeated CustomerPb results = 2;
 }
-
-
-
-
 
 
 

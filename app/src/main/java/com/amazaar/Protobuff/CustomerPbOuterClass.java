@@ -31,6 +31,10 @@ public final class CustomerPbOuterClass {
      * <code>ADMIN = 2;</code>
      */
     ADMIN(2),
+    /**
+     * <code>DELIVERY_MAN = 3;</code>
+     */
+    DELIVERY_MAN(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -46,6 +50,10 @@ public final class CustomerPbOuterClass {
      * <code>ADMIN = 2;</code>
      */
     public static final int ADMIN_VALUE = 2;
+    /**
+     * <code>DELIVERY_MAN = 3;</code>
+     */
+    public static final int DELIVERY_MAN_VALUE = 3;
 
 
     public final int getNumber() {
@@ -75,6 +83,7 @@ public final class CustomerPbOuterClass {
         case 0: return UNKNOWN_PREVILAGE;
         case 1: return NORMAL;
         case 2: return ADMIN;
+        case 3: return DELIVERY_MAN;
         default: return null;
       }
     }
@@ -246,6 +255,29 @@ public final class CustomerPbOuterClass {
      * <code>.com.amazaar.Protobuff.TimePb time = 8;</code>
      */
     com.amazaar.Protobuff.TimePbOuterClass.TimePbOrBuilder getTimeOrBuilder();
+
+    /**
+     * <code>.com.amazaar.Protobuff.BooleanEnum isNotifyOn = 9;</code>
+     * @return The enum numeric value on the wire for isNotifyOn.
+     */
+    int getIsNotifyOnValue();
+    /**
+     * <code>.com.amazaar.Protobuff.BooleanEnum isNotifyOn = 9;</code>
+     * @return The isNotifyOn.
+     */
+    com.amazaar.Protobuff.BooleanPb.BooleanEnum getIsNotifyOn();
+
+    /**
+     * <code>string adharNo = 10;</code>
+     * @return The adharNo.
+     */
+    java.lang.String getAdharNo();
+    /**
+     * <code>string adharNo = 10;</code>
+     * @return The bytes for adharNo.
+     */
+    com.google.protobuf.ByteString
+        getAdharNoBytes();
   }
   /**
    * Protobuf type {@code com.amazaar.Protobuff.CustomerPb}
@@ -262,6 +294,8 @@ public final class CustomerPbOuterClass {
     private CustomerPb() {
       privilege_ = 0;
       gender_ = 0;
+      isNotifyOn_ = 0;
+      adharNo_ = "";
     }
 
     @java.lang.Override
@@ -382,6 +416,18 @@ public final class CustomerPbOuterClass {
                 time_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+
+              isNotifyOn_ = rawValue;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              adharNo_ = s;
               break;
             }
             default: {
@@ -610,6 +656,63 @@ public final class CustomerPbOuterClass {
       return getTime();
     }
 
+    public static final int ISNOTIFYON_FIELD_NUMBER = 9;
+    private int isNotifyOn_;
+    /**
+     * <code>.com.amazaar.Protobuff.BooleanEnum isNotifyOn = 9;</code>
+     * @return The enum numeric value on the wire for isNotifyOn.
+     */
+    @java.lang.Override public int getIsNotifyOnValue() {
+      return isNotifyOn_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.BooleanEnum isNotifyOn = 9;</code>
+     * @return The isNotifyOn.
+     */
+    @java.lang.Override public com.amazaar.Protobuff.BooleanPb.BooleanEnum getIsNotifyOn() {
+      @SuppressWarnings("deprecation")
+      com.amazaar.Protobuff.BooleanPb.BooleanEnum result = com.amazaar.Protobuff.BooleanPb.BooleanEnum.valueOf(isNotifyOn_);
+      return result == null ? com.amazaar.Protobuff.BooleanPb.BooleanEnum.UNRECOGNIZED : result;
+    }
+
+    public static final int ADHARNO_FIELD_NUMBER = 10;
+    private volatile java.lang.Object adharNo_;
+    /**
+     * <code>string adharNo = 10;</code>
+     * @return The adharNo.
+     */
+    @java.lang.Override
+    public java.lang.String getAdharNo() {
+      java.lang.Object ref = adharNo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        adharNo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string adharNo = 10;</code>
+     * @return The bytes for adharNo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdharNoBytes() {
+      java.lang.Object ref = adharNo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        adharNo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -647,6 +750,12 @@ public final class CustomerPbOuterClass {
       }
       if (time_ != null) {
         output.writeMessage(8, getTime());
+      }
+      if (isNotifyOn_ != com.amazaar.Protobuff.BooleanPb.BooleanEnum.DEFAULT.getNumber()) {
+        output.writeEnum(9, isNotifyOn_);
+      }
+      if (!getAdharNoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, adharNo_);
       }
       unknownFields.writeTo(output);
     }
@@ -688,6 +797,13 @@ public final class CustomerPbOuterClass {
       if (time_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getTime());
+      }
+      if (isNotifyOn_ != com.amazaar.Protobuff.BooleanPb.BooleanEnum.DEFAULT.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, isNotifyOn_);
+      }
+      if (!getAdharNoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, adharNo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -736,6 +852,9 @@ public final class CustomerPbOuterClass {
         if (!getTime()
             .equals(other.getTime())) return false;
       }
+      if (isNotifyOn_ != other.isNotifyOn_) return false;
+      if (!getAdharNo()
+          .equals(other.getAdharNo())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -775,6 +894,10 @@ public final class CustomerPbOuterClass {
         hash = (37 * hash) + TIME_FIELD_NUMBER;
         hash = (53 * hash) + getTime().hashCode();
       }
+      hash = (37 * hash) + ISNOTIFYON_FIELD_NUMBER;
+      hash = (53 * hash) + isNotifyOn_;
+      hash = (37 * hash) + ADHARNO_FIELD_NUMBER;
+      hash = (53 * hash) + getAdharNo().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -948,6 +1071,10 @@ public final class CustomerPbOuterClass {
           time_ = null;
           timeBuilder_ = null;
         }
+        isNotifyOn_ = 0;
+
+        adharNo_ = "";
+
         return this;
       }
 
@@ -1006,6 +1133,8 @@ public final class CustomerPbOuterClass {
         } else {
           result.time_ = timeBuilder_.build();
         }
+        result.isNotifyOn_ = isNotifyOn_;
+        result.adharNo_ = adharNo_;
         onBuilt();
         return result;
       }
@@ -1077,6 +1206,13 @@ public final class CustomerPbOuterClass {
         }
         if (other.hasTime()) {
           mergeTime(other.getTime());
+        }
+        if (other.isNotifyOn_ != 0) {
+          setIsNotifyOnValue(other.getIsNotifyOnValue());
+        }
+        if (!other.getAdharNo().isEmpty()) {
+          adharNo_ = other.adharNo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1927,6 +2063,136 @@ public final class CustomerPbOuterClass {
           time_ = null;
         }
         return timeBuilder_;
+      }
+
+      private int isNotifyOn_ = 0;
+      /**
+       * <code>.com.amazaar.Protobuff.BooleanEnum isNotifyOn = 9;</code>
+       * @return The enum numeric value on the wire for isNotifyOn.
+       */
+      @java.lang.Override public int getIsNotifyOnValue() {
+        return isNotifyOn_;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.BooleanEnum isNotifyOn = 9;</code>
+       * @param value The enum numeric value on the wire for isNotifyOn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsNotifyOnValue(int value) {
+        
+        isNotifyOn_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.BooleanEnum isNotifyOn = 9;</code>
+       * @return The isNotifyOn.
+       */
+      @java.lang.Override
+      public com.amazaar.Protobuff.BooleanPb.BooleanEnum getIsNotifyOn() {
+        @SuppressWarnings("deprecation")
+        com.amazaar.Protobuff.BooleanPb.BooleanEnum result = com.amazaar.Protobuff.BooleanPb.BooleanEnum.valueOf(isNotifyOn_);
+        return result == null ? com.amazaar.Protobuff.BooleanPb.BooleanEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.BooleanEnum isNotifyOn = 9;</code>
+       * @param value The isNotifyOn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsNotifyOn(com.amazaar.Protobuff.BooleanPb.BooleanEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        isNotifyOn_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.BooleanEnum isNotifyOn = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsNotifyOn() {
+        
+        isNotifyOn_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object adharNo_ = "";
+      /**
+       * <code>string adharNo = 10;</code>
+       * @return The adharNo.
+       */
+      public java.lang.String getAdharNo() {
+        java.lang.Object ref = adharNo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          adharNo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string adharNo = 10;</code>
+       * @return The bytes for adharNo.
+       */
+      public com.google.protobuf.ByteString
+          getAdharNoBytes() {
+        java.lang.Object ref = adharNo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          adharNo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string adharNo = 10;</code>
+       * @param value The adharNo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdharNo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        adharNo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string adharNo = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdharNo() {
+        
+        adharNo_ = getDefaultInstance().getAdharNo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string adharNo = 10;</code>
+       * @param value The bytes for adharNo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdharNoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        adharNo_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2969,6 +3235,30 @@ public final class CustomerPbOuterClass {
      * @return The privilege.
      */
     com.amazaar.Protobuff.CustomerPbOuterClass.PrivilegeTypeEnum getPrivilege();
+
+    /**
+     * <code>string mobileNo = 2;</code>
+     * @return The mobileNo.
+     */
+    java.lang.String getMobileNo();
+    /**
+     * <code>string mobileNo = 2;</code>
+     * @return The bytes for mobileNo.
+     */
+    com.google.protobuf.ByteString
+        getMobileNoBytes();
+
+    /**
+     * <code>string email = 3;</code>
+     * @return The email.
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>string email = 3;</code>
+     * @return The bytes for email.
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
   }
   /**
    * Protobuf type {@code com.amazaar.Protobuff.CustomerSearchRequestPb}
@@ -2984,6 +3274,8 @@ public final class CustomerPbOuterClass {
     }
     private CustomerSearchRequestPb() {
       privilege_ = 0;
+      mobileNo_ = "";
+      email_ = "";
     }
 
     @java.lang.Override
@@ -3020,6 +3312,18 @@ public final class CustomerPbOuterClass {
               int rawValue = input.readEnum();
 
               privilege_ = rawValue;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              mobileNo_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              email_ = s;
               break;
             }
             default: {
@@ -3073,6 +3377,82 @@ public final class CustomerPbOuterClass {
       return result == null ? com.amazaar.Protobuff.CustomerPbOuterClass.PrivilegeTypeEnum.UNRECOGNIZED : result;
     }
 
+    public static final int MOBILENO_FIELD_NUMBER = 2;
+    private volatile java.lang.Object mobileNo_;
+    /**
+     * <code>string mobileNo = 2;</code>
+     * @return The mobileNo.
+     */
+    @java.lang.Override
+    public java.lang.String getMobileNo() {
+      java.lang.Object ref = mobileNo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mobileNo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string mobileNo = 2;</code>
+     * @return The bytes for mobileNo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMobileNoBytes() {
+      java.lang.Object ref = mobileNo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mobileNo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 3;
+    private volatile java.lang.Object email_;
+    /**
+     * <code>string email = 3;</code>
+     * @return The email.
+     */
+    @java.lang.Override
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        email_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string email = 3;</code>
+     * @return The bytes for email.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3090,6 +3470,12 @@ public final class CustomerPbOuterClass {
       if (privilege_ != com.amazaar.Protobuff.CustomerPbOuterClass.PrivilegeTypeEnum.UNKNOWN_PREVILAGE.getNumber()) {
         output.writeEnum(1, privilege_);
       }
+      if (!getMobileNoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mobileNo_);
+      }
+      if (!getEmailBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, email_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3102,6 +3488,12 @@ public final class CustomerPbOuterClass {
       if (privilege_ != com.amazaar.Protobuff.CustomerPbOuterClass.PrivilegeTypeEnum.UNKNOWN_PREVILAGE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, privilege_);
+      }
+      if (!getMobileNoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mobileNo_);
+      }
+      if (!getEmailBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, email_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3119,6 +3511,10 @@ public final class CustomerPbOuterClass {
       com.amazaar.Protobuff.CustomerPbOuterClass.CustomerSearchRequestPb other = (com.amazaar.Protobuff.CustomerPbOuterClass.CustomerSearchRequestPb) obj;
 
       if (privilege_ != other.privilege_) return false;
+      if (!getMobileNo()
+          .equals(other.getMobileNo())) return false;
+      if (!getEmail()
+          .equals(other.getEmail())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3132,6 +3528,10 @@ public final class CustomerPbOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PRIVILEGE_FIELD_NUMBER;
       hash = (53 * hash) + privilege_;
+      hash = (37 * hash) + MOBILENO_FIELD_NUMBER;
+      hash = (53 * hash) + getMobileNo().hashCode();
+      hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getEmail().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3267,6 +3667,10 @@ public final class CustomerPbOuterClass {
         super.clear();
         privilege_ = 0;
 
+        mobileNo_ = "";
+
+        email_ = "";
+
         return this;
       }
 
@@ -3294,6 +3698,8 @@ public final class CustomerPbOuterClass {
       public com.amazaar.Protobuff.CustomerPbOuterClass.CustomerSearchRequestPb buildPartial() {
         com.amazaar.Protobuff.CustomerPbOuterClass.CustomerSearchRequestPb result = new com.amazaar.Protobuff.CustomerPbOuterClass.CustomerSearchRequestPb(this);
         result.privilege_ = privilege_;
+        result.mobileNo_ = mobileNo_;
+        result.email_ = email_;
         onBuilt();
         return result;
       }
@@ -3344,6 +3750,14 @@ public final class CustomerPbOuterClass {
         if (other == com.amazaar.Protobuff.CustomerPbOuterClass.CustomerSearchRequestPb.getDefaultInstance()) return this;
         if (other.privilege_ != 0) {
           setPrivilegeValue(other.getPrivilegeValue());
+        }
+        if (!other.getMobileNo().isEmpty()) {
+          mobileNo_ = other.mobileNo_;
+          onChanged();
+        }
+        if (!other.getEmail().isEmpty()) {
+          email_ = other.email_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3424,6 +3838,158 @@ public final class CustomerPbOuterClass {
       public Builder clearPrivilege() {
         
         privilege_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mobileNo_ = "";
+      /**
+       * <code>string mobileNo = 2;</code>
+       * @return The mobileNo.
+       */
+      public java.lang.String getMobileNo() {
+        java.lang.Object ref = mobileNo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mobileNo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string mobileNo = 2;</code>
+       * @return The bytes for mobileNo.
+       */
+      public com.google.protobuf.ByteString
+          getMobileNoBytes() {
+        java.lang.Object ref = mobileNo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mobileNo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string mobileNo = 2;</code>
+       * @param value The mobileNo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMobileNo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        mobileNo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mobileNo = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMobileNo() {
+        
+        mobileNo_ = getDefaultInstance().getMobileNo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mobileNo = 2;</code>
+       * @param value The bytes for mobileNo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMobileNoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        mobileNo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object email_ = "";
+      /**
+       * <code>string email = 3;</code>
+       * @return The email.
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          email_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string email = 3;</code>
+       * @return The bytes for email.
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string email = 3;</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmail() {
+        
+        email_ = getDefaultInstance().getEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 3;</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        email_ = value;
         onChanged();
         return this;
       }
@@ -4509,28 +5075,32 @@ public final class CustomerPbOuterClass {
       "f\032\016entityPb.proto\032\017summaryPb.proto\032\014name" +
       "Pb.proto\032\017addressPb.proto\032\025contactDetail" +
       "Pb.proto\032\016genderPb.proto\032\rimagePb.proto\032" +
-      "\014timePb.proto\"\254\003\n\nCustomerPb\022/\n\006dbInfo\030\001" +
-      " \001(\0132\037.com.amazaar.Protobuff.EntityPb\022;\n" +
-      "\tprivilege\030\002 \001(\0162(.com.amazaar.Protobuff" +
-      ".PrivilegeTypeEnum\022+\n\004name\030\003 \001(\0132\035.com.a" +
-      "mazaar.Protobuff.NamePb\0221\n\007address\030\004 \001(\013" +
-      "2 .com.amazaar.Protobuff.AddressPb\0227\n\007co" +
-      "ntact\030\005 \001(\0132&.com.amazaar.Protobuff.Cont" +
-      "actDetailPb\0221\n\006gender\030\006 \001(\0162!.com.amazaa" +
-      "r.Protobuff.GenderEnum\0227\n\014profileImage\030\007" +
-      " \001(\0132!.com.amazaar.Protobuff.ImageRefPb\022" +
-      "+\n\004time\030\010 \001(\0132\035.com.amazaar.Protobuff.Ti" +
-      "mePb\"\201\001\n\rCustomerPbRef\022\n\n\002id\030\001 \001(\t\022+\n\004na" +
-      "me\030\002 \001(\0132\035.com.amazaar.Protobuff.NamePb\022" +
-      "7\n\007contact\030\003 \001(\0132&.com.amazaar.Protobuff" +
-      ".ContactDetailPb\"V\n\027CustomerSearchReques" +
-      "tPb\022;\n\tprivilege\030\001 \001(\0162(.com.amazaar.Pro" +
-      "tobuff.PrivilegeTypeEnum\"\201\001\n\030CustomerSea" +
-      "rchResponsePb\0221\n\007summary\030\001 \001(\0132 .com.ama" +
-      "zaar.Protobuff.SummaryPb\0222\n\007results\030\002 \003(" +
-      "\0132!.com.amazaar.Protobuff.CustomerPb*A\n\021" +
-      "PrivilegeTypeEnum\022\025\n\021UNKNOWN_PREVILAGE\020\000" +
-      "\022\n\n\006NORMAL\020\001\022\t\n\005ADMIN\020\002b\006proto3"
+      "\014timePb.proto\032\017booleanPb.proto\"\365\003\n\nCusto" +
+      "merPb\022/\n\006dbInfo\030\001 \001(\0132\037.com.amazaar.Prot" +
+      "obuff.EntityPb\022;\n\tprivilege\030\002 \001(\0162(.com." +
+      "amazaar.Protobuff.PrivilegeTypeEnum\022+\n\004n" +
+      "ame\030\003 \001(\0132\035.com.amazaar.Protobuff.NamePb" +
+      "\0221\n\007address\030\004 \001(\0132 .com.amazaar.Protobuf" +
+      "f.AddressPb\0227\n\007contact\030\005 \001(\0132&.com.amaza" +
+      "ar.Protobuff.ContactDetailPb\0221\n\006gender\030\006" +
+      " \001(\0162!.com.amazaar.Protobuff.GenderEnum\022" +
+      "7\n\014profileImage\030\007 \001(\0132!.com.amazaar.Prot" +
+      "obuff.ImageRefPb\022+\n\004time\030\010 \001(\0132\035.com.ama" +
+      "zaar.Protobuff.TimePb\0226\n\nisNotifyOn\030\t \001(" +
+      "\0162\".com.amazaar.Protobuff.BooleanEnum\022\017\n" +
+      "\007adharNo\030\n \001(\t\"\201\001\n\rCustomerPbRef\022\n\n\002id\030\001" +
+      " \001(\t\022+\n\004name\030\002 \001(\0132\035.com.amazaar.Protobu" +
+      "ff.NamePb\0227\n\007contact\030\003 \001(\0132&.com.amazaar" +
+      ".Protobuff.ContactDetailPb\"w\n\027CustomerSe" +
+      "archRequestPb\022;\n\tprivilege\030\001 \001(\0162(.com.a" +
+      "mazaar.Protobuff.PrivilegeTypeEnum\022\020\n\010mo" +
+      "bileNo\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\"\201\001\n\030Customer" +
+      "SearchResponsePb\0221\n\007summary\030\001 \001(\0132 .com." +
+      "amazaar.Protobuff.SummaryPb\0222\n\007results\030\002" +
+      " \003(\0132!.com.amazaar.Protobuff.CustomerPb*" +
+      "S\n\021PrivilegeTypeEnum\022\025\n\021UNKNOWN_PREVILAG" +
+      "E\020\000\022\n\n\006NORMAL\020\001\022\t\n\005ADMIN\020\002\022\020\n\014DELIVERY_M" +
+      "AN\020\003b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4543,13 +5113,14 @@ public final class CustomerPbOuterClass {
           com.amazaar.Protobuff.GenderPb.getDescriptor(),
           com.amazaar.Protobuff.ImagePbOuterClass.getDescriptor(),
           com.amazaar.Protobuff.TimePbOuterClass.getDescriptor(),
+          com.amazaar.Protobuff.BooleanPb.getDescriptor(),
         });
     internal_static_com_amazaar_Protobuff_CustomerPb_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_com_amazaar_Protobuff_CustomerPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_CustomerPb_descriptor,
-        new java.lang.String[] { "DbInfo", "Privilege", "Name", "Address", "Contact", "Gender", "ProfileImage", "Time", });
+        new java.lang.String[] { "DbInfo", "Privilege", "Name", "Address", "Contact", "Gender", "ProfileImage", "Time", "IsNotifyOn", "AdharNo", });
     internal_static_com_amazaar_Protobuff_CustomerPbRef_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_amazaar_Protobuff_CustomerPbRef_fieldAccessorTable = new
@@ -4561,7 +5132,7 @@ public final class CustomerPbOuterClass {
     internal_static_com_amazaar_Protobuff_CustomerSearchRequestPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_CustomerSearchRequestPb_descriptor,
-        new java.lang.String[] { "Privilege", });
+        new java.lang.String[] { "Privilege", "MobileNo", "Email", });
     internal_static_com_amazaar_Protobuff_CustomerSearchResponsePb_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_amazaar_Protobuff_CustomerSearchResponsePb_fieldAccessorTable = new
@@ -4576,6 +5147,7 @@ public final class CustomerPbOuterClass {
     com.amazaar.Protobuff.GenderPb.getDescriptor();
     com.amazaar.Protobuff.ImagePbOuterClass.getDescriptor();
     com.amazaar.Protobuff.TimePbOuterClass.getDescriptor();
+    com.amazaar.Protobuff.BooleanPb.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

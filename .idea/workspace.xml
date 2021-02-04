@@ -1,17 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="546a6e8e-d576-42ef-b519-cd736e3d502c" name="Default Changelist" comment="" />
+    <list default="true" id="546a6e8e-d576-42ef-b519-cd736e3d502c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ClientServices/AssignDeliveryMenRequestClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ClientServices/CloseAndOutForDeliveryClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Dialog/CloseOrderDailogFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Dialog/DailogDeliveryManAssignment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Dialog/DailogLoading.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Dialog/OutForDeliveryDailogFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/BooleanPb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protos/booleanPb.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/close_order.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/close_order_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_delivery_man.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_loading.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CompileProto.bat" beforeDir="false" afterPath="$PROJECT_DIR$/CompileProto.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Activity/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Activity/HomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/AToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/AToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/CommonHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/CommonHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/GetImageFromUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/GetImageFromUrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/GetImageFromUrlCF.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/GetImageFromUrlCF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/MenuFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/MenuFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/MyAccountFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/MyAccountFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/ProductListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/ProductListFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/UploadImageFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Fragments/UploadImageFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Module/AmazaarApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Module/AmazaarApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/BuyPbOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/BuyPbOuterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/CartPbOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/CartPbOuterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/ConfirmOrderDeliveryPbOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/ConfirmOrderDeliveryPbOuterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/CustomerPbOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/CustomerPbOuterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/OrderedListPbOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/OrderedListPbOuterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/PaymentPbOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protobuff/PaymentPbOuterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protos/customerPb.proto" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protos/customerPb.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ServerConfig/ServerUrlManeger.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ServerConfig/ServerUrlManeger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ServerConfig/UrlPathProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/ServerConfig/UrlPathProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuWidget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/MyAccountWidget/MyAccountView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/MyAccountWidget/MyAccountView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/MyAccountWidget/MyAccountWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/MyAccountWidget/MyAccountWidget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListWidget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderSummaryWidget/OrderSummaryWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/OrderSummaryWidget/OrderSummaryWidget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/order_summary_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/order_summary_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[ZF6524R292]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,10 +97,46 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android-custom-viewC:/Users/shubh/AppData/Local/Android/Sdk/sources/android-29/android/view/View.java_SELECTED" value="View" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/HelpWidget/HelpWidget.java_SELECTED" value="HelpWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ImageDownloadWidget/ImageDownloadWidget.java_SELECTED" value="ImageDownloadWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/LoadingWIdget/LoadingWidget.java_SELECTED" value="LoadingWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuWidget.java_SELECTED" value="MenuWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/MyAccountWidget/MyAccountWidget.java_SELECTED" value="MyAccountWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListWidget.java_SELECTED" value="OrderListWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/OrderSummaryWidget/OrderSummaryWidget.java_SELECTED" value="OrderSummaryWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ProductListWidget/ProductListWidget.java_SELECTED" value="ProductListWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ProfileEditWidget/ProfileEditWidget.java_SELECTED" value="ProfileEditWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/SettingWidget/SettingWidget.java_SELECTED" value="SettingWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java_SELECTED" value="TopBarWidget" />
+    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/UploadImageWIdget/UploadWidget.java_SELECTED" value="UploadWidget" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/amazaar/Protos" />
+    <property name="multi-representation-previewC:/Users/shubh/AppData/Local/Android/Sdk/sources/android-29/android/view/View.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/HelpWidget/HelpWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ImageDownloadWidget/ImageDownloadWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/LoadingWIdget/LoadingWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/MyAccountWidget/MyAccountWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/OrderSummaryWidget/OrderSummaryWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ProductListWidget/ProductListWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ProfileEditWidget/ProfileEditWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/SettingWidget/SettingWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/UploadImageWIdget/UploadWidget.java_selected" value="Custom views" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.amazaar.Dialog" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ShivamProject\groceryApp\app\src\main\java\com\amazaar\Protos" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -109,26 +217,78 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="238" height="270" key="Git.Branch.Popup" timestamp="1611469211433">
+    <state x="1626" y="123" key="AndroidCreateResourceFileDialog" timestamp="1612013764299">
       <screen x="1366" y="0" width="1360" height="738" />
     </state>
-    <state width="238" height="270" key="Git.Branch.Popup/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1611469211433" />
-    <state width="1300" height="179" key="GridCell.Tab.0.bottom" timestamp="1611469074533">
+    <state x="1626" y="123" key="AndroidCreateResourceFileDialog/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1612013764299" />
+    <state x="1890" y="154" key="AndroidCreateXmlResourceDialog" timestamp="1611987573167">
       <screen x="1366" y="0" width="1360" height="738" />
     </state>
-    <state width="1300" height="179" key="GridCell.Tab.0.bottom/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1611469074533" />
-    <state width="1300" height="179" key="GridCell.Tab.0.center" timestamp="1611469074533">
+    <state x="1890" y="154" key="AndroidCreateXmlResourceDialog/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1611987573167" />
+    <state x="1673" y="0" key="CommitChangelistDialog2" timestamp="1611477727821">
       <screen x="1366" y="0" width="1360" height="738" />
     </state>
-    <state width="1300" height="179" key="GridCell.Tab.0.center/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1611469074533" />
-    <state width="1300" height="179" key="GridCell.Tab.0.left" timestamp="1611469074532">
+    <state x="1673" y="0" key="CommitChangelistDialog2/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1611477727821" />
+    <state width="1317" height="245" key="GridCell.Tab.0.bottom" timestamp="1612435207421">
       <screen x="1366" y="0" width="1360" height="738" />
     </state>
-    <state width="1300" height="179" key="GridCell.Tab.0.left/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1611469074532" />
-    <state width="1300" height="179" key="GridCell.Tab.0.right" timestamp="1611469074533">
+    <state width="1317" height="245" key="GridCell.Tab.0.bottom/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1612435207421" />
+    <state width="1317" height="245" key="GridCell.Tab.0.center" timestamp="1612435207421">
       <screen x="1366" y="0" width="1360" height="738" />
     </state>
-    <state width="1300" height="179" key="GridCell.Tab.0.right/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1611469074533" />
+    <state width="1317" height="245" key="GridCell.Tab.0.center/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1612435207421" />
+    <state width="1317" height="245" key="GridCell.Tab.0.left" timestamp="1612435207421">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state width="1317" height="245" key="GridCell.Tab.0.left/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1612435207421" />
+    <state width="1317" height="245" key="GridCell.Tab.0.right" timestamp="1612435207421">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state width="1317" height="245" key="GridCell.Tab.0.right/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1612435207421" />
+    <state width="1317" height="275" key="GridCell.Tab.1.bottom" timestamp="1612012995957">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state width="1317" height="275" key="GridCell.Tab.1.bottom/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1612012995957" />
+    <state width="1317" height="275" key="GridCell.Tab.1.center" timestamp="1612012995957">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state width="1317" height="275" key="GridCell.Tab.1.center/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1612012995957" />
+    <state width="1317" height="275" key="GridCell.Tab.1.left" timestamp="1612012995956">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state width="1317" height="275" key="GridCell.Tab.1.left/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1612012995956" />
+    <state width="1317" height="275" key="GridCell.Tab.1.right" timestamp="1612012995957">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state width="1317" height="275" key="GridCell.Tab.1.right/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1612012995957" />
+    <state x="1709" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1612102761995">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state x="1709" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1612102761995" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/UploadImageWIdget/UploadWidget.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/CommonHelper.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/Dialog/DailogDeliveryManAssignment.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

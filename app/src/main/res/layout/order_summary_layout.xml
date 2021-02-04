@@ -346,11 +346,56 @@
             <LinearLayout
                 android:id="@+id/buttons"
                 android:layout_width="wrap_content"
+                android:layout_gravity="bottom"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <com.amazaar.CustomeComponent.CustomButton
+                android:orientation="vertical">
+                <ImageButton
                     android:id="@+id/qr_code_btn"
                     android:layout_width="wrap_content"
+                    android:src="@drawable/get_qr"
+                    android:background="@android:color/transparent"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:id="@+id/delivery_man_assign_btn"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/assign_order"
+                    android:background="@android:color/transparent"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:id="@+id/call_us_btn"
+                    android:layout_width="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/call_us"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:id="@+id/call_him_btn"
+                    android:layout_width="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/call_him"
+                    android:layout_height="wrap_content"/>
+                <ImageButton
+                    android:id="@+id/close_order_btn"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/close_order"
+                    android:background="@android:color/transparent"
+                    android:layout_height="wrap_content"/>
+
+
+                <ImageButton
+                    android:id="@+id/out_for_delivery_btn"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/out_for_delivery"
+                    android:background="@android:color/transparent"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:id="@+id/scan_qr_btn"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/scan_qr"
+                    android:background="@android:color/transparent"
                     android:layout_height="wrap_content"/>
 
             </LinearLayout>

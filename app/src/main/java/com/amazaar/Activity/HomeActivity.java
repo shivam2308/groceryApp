@@ -12,6 +12,7 @@ import com.amazaar.Enums.TopBarUiEnum;
 import com.amazaar.Fragments.HomeCategoryFragment;
 import com.amazaar.Fragments.PaymentFragment;
 import com.amazaar.Fragments.QRCodeReaderFragment;
+import com.amazaar.Fragments.UploadImageFragment;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
 import com.amazaar.Widget.TopBarWidget.TopBarWidget;
@@ -93,5 +94,6 @@ public class HomeActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         paymentFragment.onActivityResult(requestCode, resultCode, data);
+        m_topBar.getView().getMenuFragment().getMenuWidget().getView().getMyAccountFragment().getMyAccountWidget().getView().getUploadFragment().onActivityResult(requestCode, resultCode, data);
     }
 }

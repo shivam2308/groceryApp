@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Application;
 import android.app.FragmentManager;
 import android.content.Context;
-import android.util.Log;
 
 import androidx.multidex.MultiDex;
 
@@ -23,7 +22,9 @@ import roboguice.RoboGuice;
 
 public class AmazaarApplication extends Application {
 
+    private static final Stage mode = Stage.DEVELOPMENT;
     private static AmazaarApplication mInstance;
+    ;
     private static Activity m_currentActivity = null;
 
     private static String m_deviceToken;
@@ -35,6 +36,10 @@ public class AmazaarApplication extends Application {
     public CartEntityDaoHelper m_cartDaoHelper;
 
     public FirebaseInstanceId m_firebaseInstanse;
+
+    public static Stage getMode() {
+        return mode;
+    }
 
     public static AmazaarApplication getInstance() {
         return mInstance;
@@ -70,12 +75,12 @@ public class AmazaarApplication extends Application {
         super.onCreate();
         FastSave.init(getContext());
         RoboGuice.setUseAnnotationDatabases(false);
-        RoboGuice.setupBaseApplicationInjector(this, Stage.DEVELOPMENT);
+        RoboGuice.setupBaseApplicationInjector(this, mode);
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    m_deviceToken= FirebaseInstanceId.getInstance().getToken("796220644087", "FCM");
+                    m_deviceToken = FirebaseInstanceId.getInstance().getToken("796220644087", "FCM");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

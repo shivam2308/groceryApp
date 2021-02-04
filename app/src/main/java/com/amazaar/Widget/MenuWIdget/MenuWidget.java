@@ -145,6 +145,7 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
         else if (v == cvProfile) {
 
             MyAccountFragment profileFragmentNew = new MyAccountFragment();
+            getView().setMyAccountFragment(profileFragmentNew);
             Utils.addNextFragment(getContext(), profileFragmentNew, getView().getMainFragment(), false);
         }
 //        else if(v==rlLogout)
@@ -152,18 +153,13 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
 //            GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), false);
 //            checkLogin();
 //        }
-        else if(v==rlHelp)
-        {
+        else if (v == rlHelp) {
             HelpFragment helpFragment = new HelpFragment();
             Utils.addNextFragment(getContext(), helpFragment, getView().getMainFragment(), true);
-        }
-        else if(v==rlSetting)
-        {
+        } else if (v == rlSetting) {
             SettingFragment settingFragment = new SettingFragment();
             Utils.addNextFragment(getContext(), settingFragment, getView().getMainFragment(), true);
-        }
-        else if(v==rlOrderHistory)
-        {
+        } else if (v == rlOrderHistory) {
             OrderListFragment orderListFragment = new OrderListFragment();
             Utils.addNextFragment(getContext(), orderListFragment, getView().getMainFragment(), true);
         }

@@ -31,6 +31,10 @@ public class UrlPathProvider {
                 return "confirmOrder";
             case CREATE_IMAGE:
                 return "createImage";
+            case ASSIGN_DELIVERY_MAN:
+                return "assignDeliveryMan";
+            case CLOSE_AND_OUT_FOR_DELIVERY:
+                return "closeAndOutForDelivery";
             default:
                 throw new IllegalStateException("Unexpected value: " + data);
         }
@@ -50,5 +54,7 @@ public class UrlPathProvider {
         ORDERED_LIST,
         CONFIRM_ORDER,
         CREATE_IMAGE,
+        ASSIGN_DELIVERY_MAN,
+        CLOSE_AND_OUT_FOR_DELIVERY
     }
 }

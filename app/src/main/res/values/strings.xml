@@ -207,6 +207,7 @@
     <string name="edit">Edit</string>
     <string name="Address">Address</string>
     <string name="enter_your_address">enter your address</string>
+    <string name="choose_delivery">Choose Delivery Man</string>
 
 
 </resources>

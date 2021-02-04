@@ -43,6 +43,8 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
     private GetImageFromUrl m_imageUrl;
 
 
+
+
     public MyAccountWidget(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
@@ -89,6 +91,7 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
                 UploadImageFragment uploadImageFragment = new UploadImageFragment();
                 uploadImageFragment.setImageId(m_customerSession.getSession().getDbInfo().getId());
                 uploadImageFragment.setImageType(ImagePbOuterClass.ImageTypeEnum.PROFILE_IMAGE);
+                getView().setUploadFragment(uploadImageFragment);
                 Utils.addNextFragmentFadeAnim(uploadImageFragment, getView().getMainFragment());
                 return false;
             }
