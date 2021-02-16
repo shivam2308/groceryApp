@@ -123,4 +123,10 @@ public class OTPVerificationWidget extends LinearLayout implements IView<OTPVeri
     public OTPVerificationView getView() {
         return m_view;
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
+
 }

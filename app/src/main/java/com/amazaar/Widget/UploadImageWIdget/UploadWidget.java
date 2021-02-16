@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.amazaar.Interfaces.IView;
+import com.amazaar.Protobuff.ImagePbOuterClass;
 import com.amazaar.R;
 import com.google.inject.Injector;
 
@@ -53,6 +54,14 @@ public class UploadWidget extends LinearLayout implements IView<UploadView> {
 
     }
 
+    public void setImageType(ImagePbOuterClass.ImageTypeEnum imageType) {
+        getView().setImageType(imageType);
+    }
+
+    public void setImageId(String imageId) {
+        getView().setImageId(imageId);
+    }
+
     private void initWidget() {
         m_choose.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +86,11 @@ public class UploadWidget extends LinearLayout implements IView<UploadView> {
     @Override
     public UploadView getView() {
         return m_view;
+    }
+
+    @Override
+    public void onBackPressed() {
+
     }
 
     //this method must  call in Activity

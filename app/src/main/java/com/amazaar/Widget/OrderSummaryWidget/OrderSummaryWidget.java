@@ -1,32 +1,54 @@
 package com.amazaar.Widget.OrderSummaryWidget;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
+import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amazaar.Adapters.OrderSummaryListAdapter;
 import com.amazaar.CommonCode.Strings;
 import com.amazaar.CustomeComponent.CustomTextView;
+import com.amazaar.Dialog.CloseOrderDailogFragment;
+import com.amazaar.Dialog.DailogDeliveryManAssignment;
+import com.amazaar.Dialog.OutForDeliveryDailogFragment;
 import com.amazaar.EnumFormatter.DeliveryStatusEnumFormatter;
 import com.amazaar.EnumFormatter.PaymentModeEnumFormatter;
 import com.amazaar.EnumFormatter.PaymentStatusEnumFormatter;
+import com.amazaar.Fragments.GenreateQRCodeFragment;
+import com.amazaar.Fragments.QRCodeReaderFragment;
 import com.amazaar.Interfaces.IView;
+import com.amazaar.ListModels.OrderSummaryListModel;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
 import com.amazaar.Protobuff.BuyPbOuterClass;
 import com.amazaar.Protobuff.CustomerPbOuterClass;
 import com.amazaar.R;
+import com.amazaar.SessionManager.CustomerSession;
+import com.amazaar.Utility.Utils;
 import com.google.inject.Injector;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
 import roboguice.RoboGuice;
 
+import static com.amazaar.Module.AmazaarApplication.getCurrentActivity;
+import static com.amazaar.Module.AmazaarApplication.getFragmentManager;
+
 public class OrderSummaryWidget extends LinearLayout implements IView<OrderSummaryView>, View.OnClickListener {
 
+    private List<OrderSummaryListModel> m_orderSummary = new ArrayList<>();
     @Inject
     public OrderSummaryView m_view;
     @Inject
@@ -35,6 +57,8 @@ public class OrderSummaryWidget extends LinearLayout implements IView<OrderSumma
     public PaymentStatusEnumFormatter m_paymentStatusEnumFormatter;
     @Inject
     public PaymentModeEnumFormatter m_paymentModeStatusEnumFormatter;
+    @Inject
+    public CustomerSession m_session;
     private LinearLayout m_name;
     private LinearLayout m_phone;
     private LinearLayout m_email;
@@ -52,6 +76,14 @@ public class OrderSummaryWidget extends LinearLayout implements IView<OrderSumma
     private RecyclerView rvOrderList;
     private LinearLayoutManager mLayoutManager;
     private OrderSummaryListAdapter orderListAdapter;
+    private ImageButton m_qr_codebtn;
+    private ImageButton m_delivery_manBtn;
+    private ImageButton m_call_us;
+    private ImageButton m_call_him;
+    private ImageButton m_closeOeder_btn;
+    private ImageButton m_outForDelivery_btn;
+    private ImageButton m_scan_qr_btn;
+
 
     public OrderSummaryWidget(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -75,6 +107,13 @@ public class OrderSummaryWidget extends LinearLayout implements IView<OrderSumma
         m_payment = (CustomTextView) findViewById(R.id.orderPayment);
         m_payment_mode = (CustomTextView) findViewById(R.id.orderPaymentmode);
         m_orderTotal = (CustomTextView) findViewById(R.id.ordertotal);
+        m_qr_codebtn = (ImageButton) findViewById(R.id.qr_code_btn);
+        m_delivery_manBtn = (ImageButton) findViewById(R.id.delivery_man_assign_btn);
+        m_call_us = (ImageButton) findViewById(R.id.call_us_btn);
+        m_call_him = (ImageButton) findViewById(R.id.call_him_btn);
+        m_closeOeder_btn = (ImageButton) findViewById(R.id.close_order_btn);
+        m_outForDelivery_btn = (ImageButton) findViewById(R.id.out_for_delivery_btn);
+        m_scan_qr_btn = (ImageButton) findViewById(R.id.scan_qr_btn);
         mLayoutManager = new LinearLayoutManager(getContext());
         rvOrderList.setLayoutManager(mLayoutManager);
         inflateLayout();
@@ -82,6 +121,7 @@ public class OrderSummaryWidget extends LinearLayout implements IView<OrderSumma
             injectMembers();
             initWidget();
         }
+
     }
 
     private void inflateLayout() {
@@ -96,6 +136,11 @@ public class OrderSummaryWidget extends LinearLayout implements IView<OrderSumma
     @Override
     public OrderSummaryView getView() {
         return m_view;
+    }
+
+    @Override
+    public void onBackPressed() {
+
     }
 
     private void initWidget() {
@@ -125,13 +170,110 @@ public class OrderSummaryWidget extends LinearLayout implements IView<OrderSumma
                     m_phone.setVisibility(GONE);
                     m_email.setVisibility(GONE);
                 }
+                isButtonShow();
             }
         });
+        m_qr_codebtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GenreateQRCodeFragment genreateQRCodeFragment = new GenreateQRCodeFragment();
+                genreateQRCodeFragment.setListModel(getView().getOrderSummaryListModel());
+                Utils.addNextFragment(getContext(), genreateQRCodeFragment, getView().getMainFragment(), false);
+            }
+        });
+
+        m_delivery_manBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DailogDeliveryManAssignment dailogDeliveryManAssignment = new DailogDeliveryManAssignment();
+                dailogDeliveryManAssignment.setParentId(getView().getOrderParentId().getVar().getOrderId());
+                dailogDeliveryManAssignment.show(getFragmentManager(), getContext().getString(R.string.choose_delivery));
+            }
+        });
+
+        m_call_us.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getAPhoneCall("+919984929589");
+            }
+        });
+        m_call_him.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getAPhoneCall("+91" + getView().getOrderSummaryListModel().get(0).getOnitemChange().getData().getCustomerRef().getContact().getMobile().getMobileNo());
+            }
+        });
+        m_closeOeder_btn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CloseOrderDailogFragment closeOrderDailogFragment = new CloseOrderDailogFragment();
+                Bundle buldle = new Bundle();
+                buldle.putCharSequence("parentOrderId",getView().getOrderParentId().getVar().getOrderId());
+                closeOrderDailogFragment.setArguments(buldle);
+                closeOrderDailogFragment.show(getFragmentManager(), "CLose Order");
+            }
+        });
+        m_outForDelivery_btn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OutForDeliveryDailogFragment outForDeliveryDailogFragment = new OutForDeliveryDailogFragment();
+                Bundle buldle = new Bundle();
+                buldle.putCharSequence("parentOrderId",getView().getOrderParentId().getVar().getOrderId());
+                outForDeliveryDailogFragment.setArguments(buldle);
+                outForDeliveryDailogFragment.show(getFragmentManager(), "Out For Delivery");
+            }
+        });
+        m_scan_qr_btn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                QRCodeReaderFragment QrCodeFragmentNew = new QRCodeReaderFragment();
+                Utils.addNextFragment(getContext(), QrCodeFragmentNew, getView().getMainFragment(), false);
+            }
+        });
+    }
+
+    private void getAPhoneCall(String phoneNo) {
+        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        getCurrentActivity().startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phoneNo)));
     }
 
     private void injectMembers() {
         Injector injector = RoboGuice.getInjector(getContext());
         injector.injectMembers(this);
+    }
+    private void isButtonShow(){
+        if(m_session.getSession().getPrivilege() == CustomerPbOuterClass.PrivilegeTypeEnum.NORMAL  &&  getView().getOrderSummaryListModel().get(0).getOnitemChange().getData().getDeliveryStatus() == BuyPbOuterClass.DeliveryStatusEnum.PENDING){
+            m_qr_codebtn.setVisibility(View.VISIBLE);
+        }
+        else{
+            m_qr_codebtn.setVisibility(View.GONE);
+        }
+        if(m_session.getSession().getPrivilege() == CustomerPbOuterClass.PrivilegeTypeEnum.ADMIN && getView().getOrderSummaryListModel().get(0).getOnitemChange().getData().getDeliveryManRef().getId().isEmpty()){
+            m_delivery_manBtn.setVisibility(View.VISIBLE);
+        }
+        else{
+            m_delivery_manBtn.setVisibility(View.GONE);
+        }
+        if(m_session.getSession().getPrivilege() != CustomerPbOuterClass.PrivilegeTypeEnum.NORMAL){
+            m_call_us.setVisibility(View.GONE);
+        }
+        if(m_session.getSession().getPrivilege() != CustomerPbOuterClass.PrivilegeTypeEnum.DELIVERY_MAN){
+            m_call_him.setVisibility(View.GONE);
+        }
+        if(m_session.getSession().getPrivilege() == CustomerPbOuterClass.PrivilegeTypeEnum.ADMIN && getView().getOrderSummaryListModel().get(0).getOnitemChange().getData().getDeliveryStatus() != BuyPbOuterClass.DeliveryStatusEnum.CLOSED){
+            m_outForDelivery_btn.setVisibility(View.VISIBLE);
+        }
+        else{
+            m_outForDelivery_btn.setVisibility(View.GONE);
+        }
+        if(m_session.getSession().getPrivilege() == CustomerPbOuterClass.PrivilegeTypeEnum.DELIVERY_MAN && getView().getOrderSummaryListModel().get(0).getOnitemChange().getData().getDeliveryStatus()!= BuyPbOuterClass.DeliveryStatusEnum.DELIVERED){
+            m_scan_qr_btn.setVisibility(View.VISIBLE);
+        }
+        else{
+            m_scan_qr_btn.setVisibility(View.GONE);
+        }
     }
 
 }

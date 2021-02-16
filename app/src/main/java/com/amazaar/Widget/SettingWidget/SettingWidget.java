@@ -64,6 +64,11 @@ public class SettingWidget extends LinearLayout implements IView<SettingView>, V
         return m_view;
     }
 
+    @Override
+    public void onBackPressed() {
+
+    }
+
     public void onClick(View v) {
         //super.onClick(v);
 

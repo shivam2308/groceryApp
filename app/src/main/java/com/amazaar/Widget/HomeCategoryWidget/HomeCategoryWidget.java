@@ -1,11 +1,14 @@
 package com.amazaar.Widget.HomeCategoryWidget;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,6 +20,7 @@ import com.amazaar.Interfaces.IView;
 import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.R;
 import com.amazaar.Utility.Utils;
+import com.amazaar.dialog.CloseAppDialogFragment;
 import com.google.inject.Injector;
 import com.yarolegovich.discretescrollview.DSVOrientation;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
@@ -28,6 +32,8 @@ import java.util.List;
 import javax.inject.Inject;
 
 import roboguice.RoboGuice;
+
+import static com.amazaar.Module.AmazaarApplication.getFragmentManager;
 
 public class HomeCategoryWidget extends LinearLayout implements IView<HomeCategoryView>, View.OnClickListener {
 
@@ -54,11 +60,11 @@ public class HomeCategoryWidget extends LinearLayout implements IView<HomeCatego
     private void init(Context context, AttributeSet attrs) {
         inflate(context, R.layout.home_category_layout, this);
         rvProductList = (RecyclerView) findViewById(R.id.fragment_home_rvProductList);
-        discreteScrollView = (DiscreteScrollView) findViewById(R.id.product_picker);
-        tvAll = (TextView) findViewById(R.id.fragment_home_tvAll);
-        tvPopular = (TextView) findViewById(R.id.fragment_home_tvPopular);
-        tvTopSaller = (TextView) findViewById(R.id.fragment_home_tvTopSaller);
-        tvWhatsNew = (TextView) findViewById(R.id.fragment_home_tvWhatsNew);
+        //discreteScrollView = (DiscreteScrollView) findViewById(R.id.product_picker);
+        //tvAll = (TextView) findViewById(R.id.fragment_home_tvAll);
+        //tvPopular = (TextView) findViewById(R.id.fragment_home_tvPopular);
+        //tvTopSaller = (TextView) findViewById(R.id.fragment_home_tvTopSaller);
+        //tvWhatsNew = (TextView) findViewById(R.id.fragment_home_tvWhatsNew);
         inflateLayout();
         if (!isInEditMode()) {
             injectMembers();
@@ -71,10 +77,10 @@ public class HomeCategoryWidget extends LinearLayout implements IView<HomeCatego
         mLayoutManager = new GridLayoutManager(getContext(), 2);
         rvProductList.setLayoutManager(mLayoutManager);
 
-        tvAll.setOnClickListener(this);
-        tvPopular.setOnClickListener(this);
-        tvTopSaller.setOnClickListener(this);
-        tvWhatsNew.setOnClickListener(this);
+        //tvAll.setOnClickListener(this);
+        //tvPopular.setOnClickListener(this);
+        //tvTopSaller.setOnClickListener(this);
+        //tvWhatsNew.setOnClickListener(this);
     }
 
 
@@ -113,24 +119,33 @@ public class HomeCategoryWidget extends LinearLayout implements IView<HomeCatego
         rvProductList.setNestedScrollingEnabled(false);
     }
 
+    @Override
+    public void onBackPressed(){
+        CloseAppDialogFragment closeAppDialogFragment = new CloseAppDialogFragment();
+        Bundle buldle = new Bundle();
+        //buldle.putCharSequence("parentOrderId",getView().getOrderParentId().getVar().getOrderId());
+        closeAppDialogFragment.setArguments(buldle);
+        closeAppDialogFragment.show(getFragmentManager(), "Out For Delivery");
+    }
+
     /**
      * SetUp slider images
      */
 
     private void setUpSliderImages() {
         try {
-            pagerImgList = new ArrayList<>();
-            pagerImgList.add(R.drawable.slider_one);
-            pagerImgList.add(R.drawable.slider_two);
-            pagerImgList.add(R.drawable.slider_three);
-            pagerImgList.add(R.drawable.slider_four);
-            pagerImgList.add(R.drawable.slider_five);
-            pagerImgList.add(R.drawable.slider_siz);
-            discreteScrollView.setOrientation(DSVOrientation.HORIZONTAL);
-
-
-            shopAdapter = InfiniteScrollAdapter.wrap(new ShopAdapter(pagerImgList, getContext()));
-            discreteScrollView.setAdapter(shopAdapter);
+//            pagerImgList = new ArrayList<>();
+//            pagerImgList.add(R.drawable.slider_one);
+//            pagerImgList.add(R.drawable.slider_two);
+//            pagerImgList.add(R.drawable.slider_three);
+//            pagerImgList.add(R.drawable.slider_four);
+//            pagerImgList.add(R.drawable.slider_five);
+//            pagerImgList.add(R.drawable.slider_siz);
+//            discreteScrollView.setOrientation(DSVOrientation.HORIZONTAL);
+//
+//
+//            shopAdapter = InfiniteScrollAdapter.wrap(new ShopAdapter(pagerImgList, getContext()));
+//            discreteScrollView.setAdapter(shopAdapter);
 
 
         } catch (Exception e) {

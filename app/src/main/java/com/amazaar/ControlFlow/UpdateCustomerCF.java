@@ -1,6 +1,7 @@
 package com.amazaar.ControlFlow;
 
 import com.amazaar.ClientServices.CustomerClientService;
+import com.amazaar.Helpers.CustomerHelper;
 import com.amazaar.Protobuff.CustomerPbOuterClass;
 import com.amazaar.SessionManager.CustomerSession;
 import com.prod.basic.common.async.AControlFlow;
@@ -12,12 +13,14 @@ public class UpdateCustomerCF extends AControlFlow<UpdateCustomerCF.States, Cust
     private CustomerClientService m_cusService;
     private CustomerPbOuterClass.CustomerPb m_req;
     private CustomerSession m_customerSession;
+    private CustomerHelper m_customerHelper;
 
-    public UpdateCustomerCF(CustomerPbOuterClass.CustomerPb req, CustomerClientService cusService, CustomerSession customerSession){
+    public UpdateCustomerCF(CustomerPbOuterClass.CustomerPb req, CustomerClientService cusService, CustomerSession customerSession,CustomerHelper customerHelper){
         super(States.UPDATE_CUSTOMER, States.DONE);
         m_cusService = cusService;
         m_req = req;
         m_customerSession = customerSession;
+        m_customerHelper=customerHelper;
         addStateHandler(States.UPDATE_CUSTOMER, new UpdateCustomerPbHandler());
         addStateHandler(States.UPDATE_SESSION, new UpdateSessionHandler());
     }
@@ -27,12 +30,13 @@ public class UpdateCustomerCF extends AControlFlow<UpdateCustomerCF.States, Cust
         DONE,
     }
 
+
     private class UpdateCustomerPbHandler implements StateHandler<States> {
         private CustomerPbOuterClass.CustomerPb m_future;
         @Override
         public void registerCalls() {
             try {
-                m_future = m_cusService.update(m_req);
+                m_future = m_cusService.update(m_customerHelper.getCustomerUpdatedPb(m_customerSession.getSession(),m_req));
             } catch (ExecutionException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {

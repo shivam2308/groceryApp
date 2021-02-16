@@ -11,17 +11,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.amazaar.Enums.TopBarUiEnum;
 import com.amazaar.Fragments.HomeCategoryFragment;
 import com.amazaar.Fragments.PaymentFragment;
+import com.amazaar.Fragments.QRCodeReaderFragment;
+import com.amazaar.Fragments.UploadImageFragment;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
 import com.amazaar.Widget.TopBarWidget.TopBarWidget;
+import com.amazaar.dialog.CloseAppDialogFragment;
 
 import javax.inject.Inject;
+
+import static com.amazaar.Module.AmazaarApplication.getFragmentManager;
 
 public class HomeActivity extends AppCompatActivity {
 
     private TopBarWidget m_topBar;
     private Fragment mFragment = null;
     private HomeCategoryFragment mainFragment;
+    private QRCodeReaderFragment qrReaderFragment;
     @Inject
     private PaymentFragment paymentFragment;
 
@@ -56,20 +62,24 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        //qrReaderFragment.getQRCodeReaderWidget().getView().getQrCodeReaderView().stopCamera();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         AmazaarApplication.setCurrentActivity(this);
+       // qrReaderFragment.getQRCodeReaderWidget().getView().getQrCodeReaderView().startCamera();
     }
 
     private void initView() {
         setToolbar(TopBarUiEnum.HOME);
         mainFragment = new HomeCategoryFragment();
+        qrReaderFragment = new QRCodeReaderFragment();
         paymentFragment= new PaymentFragment();
         m_topBar.getView().setMainFragment(mainFragment);
         openFragment(mainFragment);
+       // openFragment(qrReaderFragment);
     }
 
     public void setToolbar(TopBarUiEnum enumm) {
@@ -87,5 +97,19 @@ public class HomeActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         paymentFragment.onActivityResult(requestCode, resultCode, data);
+        m_topBar.getView().getMenuFragment().getMenuWidget().getView().getMyAccountFragment().getMyAccountWidget().getView().getUploadFragment().onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    public void onBackPressed(){
+
+        int f = AmazaarApplication.getFragmentManager().getBackStackEntryCount();
+
+        if (f < 1) {
+            CloseAppDialogFragment closeAppDialogFragment = new CloseAppDialogFragment();
+            closeAppDialogFragment.show(getFragmentManager(), "EXIT FROM PROJECT");
+        } else {
+            super.onBackPressed();
+        }
     }
 }

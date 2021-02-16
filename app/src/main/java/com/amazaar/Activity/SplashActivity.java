@@ -9,6 +9,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.amazaar.CommonCode.EncryptorAndDecryptor;
 import com.amazaar.ControlFlow.DeviceAutoLogin;
 import com.amazaar.R;
 import com.amazaar.Utility.Utils;
@@ -19,10 +20,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.inject.Injector;
 import com.viksaa.sssplash.lib.activity.AwesomeSplash;
 import com.viksaa.sssplash.lib.cnst.Flags;
 import com.viksaa.sssplash.lib.model.ConfigSplash;
+
+import java.io.IOException;
 
 import javax.inject.Inject;
 
@@ -60,6 +64,7 @@ public class SplashActivity extends AwesomeSplash {
         } else {
         }
         createNotificationChannel();
+
     }
 
     private void createNotificationChannel() {

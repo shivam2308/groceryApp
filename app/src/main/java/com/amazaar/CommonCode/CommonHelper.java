@@ -53,4 +53,18 @@ public class CommonHelper {
             }
         }
     }
+
+
+    public String getUrl(String url) {
+        StringBuilder finalUrl = new StringBuilder();
+        for (int i=0;i<url.length();i++) {
+            if(Strings.areEqual(String.valueOf(url.charAt(i)),"/")){
+                finalUrl.append("\\");
+                finalUrl.append("/");
+            }else{
+                finalUrl.append(url.charAt(i));
+            }
+        }
+        return finalUrl.toString();
+    }
 }

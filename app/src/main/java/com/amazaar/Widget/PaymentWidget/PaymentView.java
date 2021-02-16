@@ -16,6 +16,7 @@ public class PaymentView {
     private PaymentPbOuterClass.PaymentModeEnum m_mode;
     private float m_amount;
     private Activity m_activity;
+    private final String GOOGLE_PAY_PACKAGE_NAME = "com.google.android.apps.nbu.paisa.user";
 
     @Inject
     public PaymentView() {
@@ -32,6 +33,9 @@ public class PaymentView {
 
     public float getAmount() {
         return m_amount;
+    }
+    public String getGpayPackageName() {
+        return GOOGLE_PAY_PACKAGE_NAME;
     }
 
     public void setAmount(float amount) {
@@ -64,7 +68,7 @@ public class PaymentView {
                 .appendQueryParameter("cu", "INR")
                 .build();
 
-        String GOOGLE_PAY_PACKAGE_NAME = "com.google.android.apps.nbu.paisa.user";
+
         int GOOGLE_PAY_REQUEST_CODE = 123;
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(uri);

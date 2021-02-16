@@ -130,6 +130,7 @@
     <orderEntry type="library" name="Gradle: org.bouncycastle:bcprov-jdk15to18:1.67@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.nimbusds:nimbus-jose-jwt:9.1.2@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.stephenc.jcip:jcip-annotations:1.0-1@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.zxing:core:3.3.2@jar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.wear:wear:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.stripe:stripe-android:16.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout:2.0.4@aar" level="project" />
@@ -234,5 +235,7 @@
     <orderEntry type="library" name="Gradle: com.borjabravo:readmoretextview:2.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.yarolegovich:discrete-scrollview:1.5.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.mehrdadsafari:ZadakNotification:0.0.2@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidmads.library.qrgenearator:QRGenearator:1.0.4@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.3@aar" level="project" />
   </component>
 </module>

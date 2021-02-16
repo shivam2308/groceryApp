@@ -66,6 +66,12 @@ public class HelpWidget extends LinearLayout implements IView<HelpView>, View.On
     public HelpView getView() {
         return m_view;
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
+
     @Override
     public void onClick(View v) {
 

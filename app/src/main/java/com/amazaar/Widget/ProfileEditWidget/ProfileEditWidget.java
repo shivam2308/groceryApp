@@ -34,8 +34,8 @@ import static com.amazaar.Module.AmazaarApplication.getFragmentManager;
 
 public class ProfileEditWidget extends LinearLayout implements IView<ProfileEditView>, View.OnClickListener {
 
-    @Inject
     private ImageView m_Close;
+    @Inject
     public ProfileEditView m_view;
     private TextView m_save;
     private EditText m_firstName;
@@ -122,6 +122,11 @@ public class ProfileEditWidget extends LinearLayout implements IView<ProfileEdit
     @Override
     public ProfileEditView getView() {
         return m_view;
+    }
+
+    @Override
+    public void onBackPressed() {
+
     }
 
     @Override

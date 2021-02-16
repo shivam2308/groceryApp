@@ -1,6 +1,7 @@
 cd app\src\main\java\com\amazaar\Protos
 echo [COMPILEING..........]
 protoc addressPb.proto --java_out=..\..\..\
+protoc booleanPb.proto --java_out=..\..\..\
 protoc contactDetailPb.proto --java_out=..\..\..\
 protoc customerPb.proto --java_out=..\..\..\
 protoc deliveryManPb.proto --java_out=..\..\..\
@@ -19,6 +20,8 @@ protoc cartPb.proto --java_out=..\..\..\
 protoc buyPb.proto --java_out=..\..\..\
 protoc paymentPb.proto --java_out=..\..\..\
 protoc orderedListPb.proto --java_out=..\..\..\
+protoc confirmOrderDeliveryPb.proto --java_out=..\..\..\
+
 cd ..
 cd ..
 cd ..

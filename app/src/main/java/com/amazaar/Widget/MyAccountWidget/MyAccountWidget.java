@@ -14,6 +14,7 @@ import com.amazaar.ControlFlow.GetImageFromUrl;
 import com.amazaar.Fragments.ProfileEditFragment;
 import com.amazaar.Fragments.UploadImageFragment;
 import com.amazaar.Interfaces.IView;
+import com.amazaar.Protobuff.ImagePbOuterClass;
 import com.amazaar.R;
 import com.amazaar.SessionManager.CustomerSession;
 import com.amazaar.Utility.Utils;
@@ -32,7 +33,7 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
     private TextView tvChangePsw;
     private ImageView ivProfile;
     private ImageView tvEdit;
-//    private RelativeLayout rlChangePsw;
+    //    private RelativeLayout rlChangePsw;
 //    private RelativeLayout rlHistory;
     private RelativeLayout rlDeActive;
     private TextView m_address;
@@ -40,6 +41,8 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
     private CustomerSession m_customerSession;
     @Inject
     private GetImageFromUrl m_imageUrl;
+
+
 
 
     public MyAccountWidget(Context context, AttributeSet attrs) {
@@ -86,6 +89,9 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 UploadImageFragment uploadImageFragment = new UploadImageFragment();
+                uploadImageFragment.setImageId(m_customerSession.getSession().getDbInfo().getId());
+                uploadImageFragment.setImageType(ImagePbOuterClass.ImageTypeEnum.PROFILE_IMAGE);
+                getView().setUploadFragment(uploadImageFragment);
                 Utils.addNextFragmentFadeAnim(uploadImageFragment, getView().getMainFragment());
                 return false;
             }
@@ -100,6 +106,11 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
     @Override
     public MyAccountView getView() {
         return m_view;
+    }
+
+    @Override
+    public void onBackPressed() {
+
     }
 
 
@@ -123,8 +134,7 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
             DialogFragmentClearHistory dialogFragmentClearHistory = new DialogFragmentClearHistory();
             dialogFragmentClearHistory.show(getFragmentManager(), getString(R.string.lbl_clearhistory));
         }*/
-        if(v==tvEdit)
-        {
+        if (v == tvEdit) {
             ProfileEditFragment ProfileEditFragment = new ProfileEditFragment();
             Utils.addNextFragment(getContext(), ProfileEditFragment, getView().getMainFragment(), true);
         }

@@ -124,6 +124,11 @@ public class ProductDetailsWidget extends LinearLayout implements IView<ProductD
     }
 
     @Override
+    public void onBackPressed() {
+
+    }
+
+    @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.fragment_product_details_ivPlus:

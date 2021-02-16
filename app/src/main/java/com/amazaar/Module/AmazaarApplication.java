@@ -11,7 +11,10 @@ import com.amazaar.DatabaseEnitityHelper.CartEntityDaoHelper;
 import com.amazaar.DatabaseEnitityHelper.ItemEntityDaoHelper;
 import com.amazaar.DatabaseEnitityHelper.LoginEntityDaoHelper;
 import com.amazaar.Session.FastSave;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.inject.Stage;
+
+import java.io.IOException;
 
 import javax.inject.Inject;
 
@@ -19,7 +22,9 @@ import roboguice.RoboGuice;
 
 public class AmazaarApplication extends Application {
 
+    private static final Stage mode = Stage.PRODUCTION;
     private static AmazaarApplication mInstance;
+    ;
     private static Activity m_currentActivity = null;
 
     private static String m_deviceToken;
@@ -29,6 +34,12 @@ public class AmazaarApplication extends Application {
     public ItemEntityDaoHelper m_itemDaoHelper;
     @Inject
     public CartEntityDaoHelper m_cartDaoHelper;
+
+    public FirebaseInstanceId m_firebaseInstanse;
+
+    public static Stage getMode() {
+        return mode;
+    }
 
     public static AmazaarApplication getInstance() {
         return mInstance;
@@ -64,7 +75,17 @@ public class AmazaarApplication extends Application {
         super.onCreate();
         FastSave.init(getContext());
         RoboGuice.setUseAnnotationDatabases(false);
-        RoboGuice.setupBaseApplicationInjector(this, Stage.DEVELOPMENT);
+        RoboGuice.setupBaseApplicationInjector(this, mode);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    m_deviceToken = FirebaseInstanceId.getInstance().getToken("796220644087", "FCM");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     public LoginEntityDaoHelper getLoginEntityDeo() {

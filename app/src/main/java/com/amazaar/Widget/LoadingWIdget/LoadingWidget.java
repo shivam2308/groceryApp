@@ -50,4 +50,9 @@ public class LoadingWidget extends LinearLayout implements IView<LoadingView> {
     public LoadingView getView() {
         return m_view;
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

@@ -63,4 +63,9 @@ public class ImageDownloadWidget extends LinearLayout implements IView<ImageDown
     public ImageDownloadView getView() {
         return m_view;
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }
