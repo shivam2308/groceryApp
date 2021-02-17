@@ -18,7 +18,8 @@ public class ServerUrlManeger {
                     e.printStackTrace();
                 }
             case DEVELOPMENT:
-                return "http://amazaardevel-env.us-east-1.elasticbeanstalk.com/";
+               // return "http://amazaardevel-env.us-east-1.elasticbeanstalk.com/";
+                return "http://amazaar-development.tech/";
             case PRODUCTION:
                 return "https://www.amazaar.in/";
             default:

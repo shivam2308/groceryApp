@@ -9,7 +9,7 @@
         android:id="@+id/loading"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"/>
+        />
 
     <com.amazaar.Widget.OtpVerificationWidget.OTPVerificationWidget
         android:id="@+id/otp_verification"

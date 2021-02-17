@@ -1,16 +1,20 @@
 package com.amazaar.Activity;
 
+import android.app.Activity;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
-import com.amazaar.CommonCode.EncryptorAndDecryptor;
 import com.amazaar.ControlFlow.DeviceAutoLogin;
+import com.amazaar.ControlFlow.RegisterPushNorification;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
 import com.amazaar.Utility.Utils;
 import com.daimajia.androidanimations.library.Techniques;
@@ -20,24 +24,46 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.inject.Injector;
 import com.viksaa.sssplash.lib.activity.AwesomeSplash;
 import com.viksaa.sssplash.lib.cnst.Flags;
 import com.viksaa.sssplash.lib.model.ConfigSplash;
 
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
 import roboguice.RoboGuice;
 
+import static com.amazaar.Utility.Constants.PERMISSIONS;
+
 public class SplashActivity extends AwesomeSplash {
 
+    int[] m_permission = new int[3];
     private FirebaseAuth mAuth;
     private FirebaseUser currentUser;
     @Inject
     private DeviceAutoLogin m_deviceLogin;
+    @Inject
+    private RegisterPushNorification m_pushnitification;
+
+    public static boolean checkPermissions(Activity c, int[] pchk) {
+        List<String> permissionlist = new ArrayList<>();
+
+        for (int i : pchk) {
+            if (ContextCompat.checkSelfPermission(c, PERMISSIONS[i - 1])
+                    != PackageManager.PERMISSION_GRANTED) {
+                permissionlist.add(PERMISSIONS[i - 1]);
+            }
+        }
+
+        if (!permissionlist.isEmpty()) {
+            ActivityCompat.requestPermissions(c, permissionlist.toArray(new String[permissionlist.size()]), 101);
+            return false;
+        }
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +71,9 @@ public class SplashActivity extends AwesomeSplash {
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
         injectMembers();
+        m_permission[0] = 6;
+        m_permission[1] = 15;
+        m_permission[2] = 26;
         if (currentUser == null) {
             mAuth.signInAnonymously().
                     addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -64,15 +93,15 @@ public class SplashActivity extends AwesomeSplash {
         } else {
         }
         createNotificationChannel();
-
+        /// m_pushnitification.registerPushNptificationToken("");
+        checkPermissions(this, m_permission);
     }
 
     private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = "My app notification channel";
-            String description = "Description for this channel";
+            String description = "amazaar";
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel("Hello", name, importance);
+            NotificationChannel channel = new NotificationChannel(getString(R.string.channelId), getString(R.string.channelId), importance);
             channel.setDescription(description);
             NotificationManager notificationManager = getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
@@ -116,11 +145,18 @@ public class SplashActivity extends AwesomeSplash {
     @Override
     public void animationsFinished() {
         m_deviceLogin.doLogin(getApplicationContext());
-        
+
     }
 
     private void injectMembers() {
         Injector injector = RoboGuice.getInjector(getApplicationContext());
         injector.injectMembers(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AmazaarApplication.setCurrentActivity(this);
+        // qrReaderFragment.getQRCodeReaderWidget().getView().getQrCodeReaderView().startCamera();
     }
 }

@@ -78,6 +78,7 @@
     <orderEntry type="library" name="Gradle: com.google.zxing:core:3.3.2" level="project" />
     <orderEntry type="library" name="Gradle: androidx.wear:wear:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.stripe:stripe-android:16.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.vlonjatg:progress-activity:2.0.5@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout:2.0.4@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.stripe:stripe-3ds2-android:4.1.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.material:material:1.2.1@aar" level="project" />

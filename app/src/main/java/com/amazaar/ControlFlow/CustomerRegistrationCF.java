@@ -5,9 +5,12 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.amazaar.Activity.HomeActivity;
+import com.amazaar.ClientServices.CustomerClientService;
 import com.amazaar.ClientServices.RegistrationClientService;
 import com.amazaar.DatabaseEnitityHelper.LoginEntityDaoHelper;
+import com.amazaar.Helpers.CustomerHelper;
 import com.amazaar.LocalDatabase.Enity.LoginEntity;
+import com.amazaar.Protobuff.CustomerPbOuterClass;
 import com.amazaar.Protobuff.RegistrationPbOuterClass;
 import com.amazaar.SessionManager.CustomerSession;
 import com.prod.basic.common.async.AControlFlow;
@@ -25,14 +28,14 @@ public class CustomerRegistrationCF extends AControlFlow<CustomerRegistrationCF.
     private RegisterPushNorification m_registerPushNotification;
 
     public CustomerRegistrationCF(Context comtext, RegistrationPbOuterClass.RegistrationPb req, RegistrationClientService regService, LoginEntityDaoHelper loLoginEntityDaoHelper, CustomerSession customerSession, RegisterPushNorification registerPushNotification) {
-        super(States.GET_REGISTRATION, States.DONE);
+        super(States.CREATE_REGISTRATION, States.DONE);
         m_comtext = comtext;
         m_regService = regService;
         m_req = req;
         m_loLoginEntityDaoHelper = loLoginEntityDaoHelper;
         m_customerSession = customerSession;
         m_registerPushNotification = registerPushNotification;
-        addStateHandler(States.GET_REGISTRATION, new GetRagistrationPbHandler());
+        addStateHandler(States.CREATE_REGISTRATION, new CreateRagistrationPbHandler());
         addStateHandler(States.STORE_LOGIN_INTO_DB, new StoreIntoLocalDBHandler());
         addStateHandler(States.STORE_LOGIN_INTO_DB, new StoreIntoLocalDBHandler());
         addStateHandler(States.SET_SESSION, new SessionStoreHandler());
@@ -41,13 +44,14 @@ public class CustomerRegistrationCF extends AControlFlow<CustomerRegistrationCF.
 
     enum States {
         GET_REGISTRATION,
+        CREATE_REGISTRATION,
         STORE_LOGIN_INTO_DB,
         SET_SESSION,
         CREATE_PUSH_NOTIFICATION,
         DONE,
     }
 
-    private class GetRagistrationPbHandler implements StateHandler<States> {
+    private class CreateRagistrationPbHandler implements StateHandler<States> {
         private RegistrationPbOuterClass.RegistrationPb m_future;
 
         @Override
@@ -123,7 +127,7 @@ public class CustomerRegistrationCF extends AControlFlow<CustomerRegistrationCF.
 
         @Override
         public States handleState() {
-            m_registerPushNotification.registerPushNptificationToken();
+            m_registerPushNotification.registerPushNptificationToken("");
             Intent i = new Intent(m_comtext, HomeActivity.class);
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             m_comtext.startActivity(i);
