@@ -88,6 +88,11 @@ public class UploadWidget extends LinearLayout implements IView<UploadView> {
         return m_view;
     }
 
+    @Override
+    public void onBackPressed() {
+
+    }
+
     //this method must  call in Activity
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == getView().getPICK_IMAGE_REQUEST() && resultCode == RESULT_OK

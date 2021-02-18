@@ -86,6 +86,11 @@ public class GenreateQRCodeWidget extends LinearLayout implements IView<Genreate
     }
 
     @Override
+    public void onBackPressed() {
+
+    }
+
+    @Override
     public void onClick(View v) {
 
     }

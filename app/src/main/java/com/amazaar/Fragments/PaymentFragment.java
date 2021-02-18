@@ -11,7 +11,7 @@ import com.amazaar.Activity.HomeActivity;
 import com.amazaar.CommonCode.AToast;
 import com.amazaar.CommonCode.CommonHelper;
 import com.amazaar.ControlFlow.PayAndOrderItem;
-import com.amazaar.Dialog.PaymentProgressDailogFragment;
+//import com.amazaar.Dialog.PaymentProgressDailogFragment;
 import com.amazaar.Enums.TopBarUiEnum;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;

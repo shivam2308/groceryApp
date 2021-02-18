@@ -15,39 +15,39 @@
         android:layout_marginTop="@dimen/_5sdp">
 
 
+<!--        <ImageView-->
+<!--            android:id="@+id/fragment_menu_ivClose"-->
+<!--            android:layout_width="@dimen/_35sdp"-->
+<!--            android:layout_height="@dimen/_35sdp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:padding="@dimen/_3sdp"-->
+<!--            android:src="@drawable/ic_close" />-->
+
+
         <ImageView
-            android:id="@+id/fragment_menu_ivClose"
-            android:layout_width="@dimen/_35sdp"
+            android:layout_width="@dimen/_350sdp"
             android:layout_height="@dimen/_35sdp"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:padding="@dimen/_3sdp"
-            android:src="@drawable/ic_close" />
-
-
-        <ImageView
-            android:layout_width="@dimen/_120sdp"
-            android:layout_height="@dimen/_25sdp"
             android:layout_centerInParent="true"
-            android:src="@drawable/ic_logo_small" />
+            android:src="@drawable/amazaar_logo" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            app:cardElevation="@dimen/_2sdp"
-            app:cardCornerRadius="@dimen/_2sdp"
-            android:layout_marginEnd="@dimen/_2sdp"
-            android:layout_marginStart="@dimen/_2sdp"
-            android:layout_centerVertical="true">
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            app:cardElevation="@dimen/_2sdp"-->
+<!--            app:cardCornerRadius="@dimen/_2sdp"-->
+<!--            android:layout_marginEnd="@dimen/_2sdp"-->
+<!--            android:layout_marginStart="@dimen/_2sdp"-->
+<!--            android:layout_centerVertical="true">-->
 
-            <ImageView
-                android:id="@+id/fragment_menu_ivLocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/_5sdp"
-                android:src="@drawable/ic_location" />
-        </androidx.cardview.widget.CardView>
+<!--            <ImageView-->
+<!--                android:id="@+id/fragment_menu_ivLocation"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="@dimen/_5sdp"-->
+<!--                android:src="@drawable/ic_location" />-->
+<!--        </androidx.cardview.widget.CardView>-->
 
     </RelativeLayout>
 
@@ -259,6 +259,104 @@
 
     </androidx.cardview.widget.CardView>
 
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/_15sdp"-->
+<!--        android:layout_marginEnd="@dimen/_15sdp"-->
+<!--        android:layout_marginTop="@dimen/_10sdp"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        app:cardBackgroundColor="@color/card_bg_white_transparant"-->
+<!--        app:cardCornerRadius="@dimen/_5sdp"-->
+<!--        app:cardElevation="0dp">-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            android:layout_marginBottom="@dimen/_10sdp"-->
+<!--            android:orientation="vertical">-->
+
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/fragment_menu_rlWishlist"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="@dimen/_5sdp">-->
+
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/fragment_menu_ivWishlist"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentStart="true"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:padding="@dimen/_5sdp"-->
+<!--                    android:src="@drawable/ic_mywhitelist" />-->
+
+<!--                <com.amazaar.CustomeComponent.CustomTextView-->
+<!--                    style="@style/ganaral_greystyle"-->
+<!--                    android:layout_toEndOf="@+id/fragment_menu_ivWishlist"-->
+<!--                    android:padding="@dimen/_5sdp"-->
+<!--                    android:text="@string/my_wishlist"-->
+<!--                    android:textSize="@dimen/_14sdp"-->
+<!--                    app:font_name="NunitoSemiBold.ttf" />-->
+
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:src="@drawable/ic_next" />-->
+
+
+<!--            </RelativeLayout>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/white"/>-->
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/fragment_menu_rlOrderHistory"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="@dimen/_5sdp">-->
+
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/fragment_menu_ivOrderHistory"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentStart="true"-->
+<!--                    android:layout_centerVertical="true"-->
+
+<!--                    android:padding="@dimen/_5sdp"-->
+<!--                    android:src="@drawable/ic_order_history" />-->
+
+<!--                <com.amazaar.CustomeComponent.CustomTextView-->
+<!--                    style="@style/ganaral_greystyle"-->
+<!--                    android:layout_toEndOf="@+id/fragment_menu_ivOrderHistory"-->
+<!--                    android:padding="@dimen/_5sdp"-->
+<!--                    android:text="@string/order_history"-->
+<!--                    android:textSize="@dimen/_14sdp"-->
+<!--                    app:font_name="NunitoSemiBold.ttf" />-->
+
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:src="@drawable/ic_next" />-->
+<!--            </RelativeLayout>-->
+<!--        </LinearLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -278,47 +376,6 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_10sdp"
             android:orientation="vertical">
-
-
-            <RelativeLayout
-                android:id="@+id/fragment_menu_rlWishlist"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_5sdp">
-
-
-                <ImageView
-                    android:id="@+id/fragment_menu_ivWishlist"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/ic_mywhitelist" />
-
-                <com.amazaar.CustomeComponent.CustomTextView
-                    style="@style/ganaral_greystyle"
-                    android:layout_toEndOf="@+id/fragment_menu_ivWishlist"
-                    android:padding="@dimen/_5sdp"
-                    android:text="@string/my_wishlist"
-                    android:textSize="@dimen/_14sdp"
-                    app:font_name="NunitoSemiBold.ttf" />
-
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_next" />
-
-
-            </RelativeLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/white"/>
 
             <RelativeLayout
                 android:id="@+id/fragment_menu_rlOrderHistory"
@@ -353,30 +410,11 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_next" />
             </RelativeLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
 
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_15sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:clickable="true"
-        android:focusable="true"
-        app:cardBackgroundColor="@color/card_bg_white_transparant"
-        app:cardCornerRadius="@dimen/_5sdp"
-        app:cardElevation="0dp">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:orientation="vertical">
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"/>
 
             <RelativeLayout
                 android:id="@+id/fragment_menu_rlSetting"

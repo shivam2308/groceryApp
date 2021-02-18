@@ -125,6 +125,11 @@ public class ProfileEditWidget extends LinearLayout implements IView<ProfileEdit
     }
 
     @Override
+    public void onBackPressed() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         Utils.hideKeyboard(getContext());
         if (v == m_Close) {

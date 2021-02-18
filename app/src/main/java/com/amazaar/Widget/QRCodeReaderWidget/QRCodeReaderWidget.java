@@ -86,6 +86,11 @@ public class QRCodeReaderWidget extends LinearLayout implements IView<QRCodeAppR
     }
 
     @Override
+    public void onBackPressed() {
+
+    }
+
+    @Override
     public void onQRCodeRead(String text, PointF[] points) {
         Log.e("QRCodeReade",text);
         if(m_confirmOrderDelivery.getCallSync().getVar()!= CallSyncStateEnum.SYNC_START){

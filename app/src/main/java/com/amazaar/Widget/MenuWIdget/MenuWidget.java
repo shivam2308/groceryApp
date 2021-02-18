@@ -59,8 +59,8 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
 
     private void init(Context context, AttributeSet attrs) {
         inflate(context, R.layout.menu_layout, this);
-        ivClose = (ImageView) findViewById(R.id.fragment_menu_ivClose);
-        ivLocation = (ImageView) findViewById(R.id.fragment_menu_ivLocation);
+        //ivClose = (ImageView) findViewById(R.id.fragment_menu_ivClose);
+        //ivLocation = (ImageView) findViewById(R.id.fragment_menu_ivLocation);
         tvLogin = (TextView) findViewById(R.id.fragment_menu_tvLogin);
         tvRegister = (TextView) findViewById(R.id.fragment_menu_tvSignup);
         rlProfile = (RelativeLayout) findViewById(R.id.fragment_menu_rlProfile);
@@ -69,7 +69,7 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
         ivProfile = (ImageView) findViewById(R.id.fragment_menu_ivProfile);
         tvName = (TextView) findViewById(R.id.fragment_menu_tvName);
         tvCity = (TextView) findViewById(R.id.fragment_menu_tvCity);
-        rlWhishList = (RelativeLayout) findViewById(R.id.fragment_menu_rlWishlist);
+        //rlWhishList = (RelativeLayout) findViewById(R.id.fragment_menu_rlWishlist);
         rlOrderHistory = (RelativeLayout) findViewById(R.id.fragment_menu_rlOrderHistory);
         rlSetting = (RelativeLayout) findViewById(R.id.fragment_menu_rlSetting);
         rlHelp = (RelativeLayout) findViewById(R.id.fragment_menu_rlHelp);
@@ -84,11 +84,11 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
     private void inflateLayout() {
         inflate(getContext(), R.layout.menu_layout, this);
         rlHelp.setOnClickListener(this);
-        rlWhishList.setOnClickListener(this);
+        //rlWhishList.setOnClickListener(this);
         rlOrderHistory.setOnClickListener(this);
         rlLogout.setOnClickListener(this);
-        ivLocation.setOnClickListener(this);
-        ivClose.setOnClickListener(this);
+        //ivLocation.setOnClickListener(this);
+        //ivClose.setOnClickListener(this);
         tvLogin.setOnClickListener(this);
         tvRegister.setOnClickListener(this);
         cvProfile.setOnClickListener(this);
@@ -121,12 +121,17 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
     }
 
     @Override
+    public void onBackPressed() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         Utils.hideKeyboard(getContext());
 
-        if (v == ivClose) {
-            AmazaarApplication.getFragmentManager().popBackStack();
-        }
+//        if (v == ivClose) {
+//            AmazaarApplication.getFragmentManager().popBackStack();
+//        }
        /* else if (v == tvLogin) {
 
             LoginSignUpFragment menuFragment = new LoginSignUpFragment();
@@ -142,9 +147,10 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
             dialogFragmentChoosPincode.show(getFragmentManager(), getString(R.string.choospincode));
 
         }*/
-        else if (v == cvProfile) {
+        if (v == cvProfile) {
 
             MyAccountFragment profileFragmentNew = new MyAccountFragment();
+            getView().setMyAccountFragment(profileFragmentNew);
             Utils.addNextFragment(getContext(), profileFragmentNew, getView().getMainFragment(), false);
         }
 //        else if(v==rlLogout)
@@ -152,18 +158,13 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
 //            GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), false);
 //            checkLogin();
 //        }
-        else if(v==rlHelp)
-        {
+        else if (v == rlHelp) {
             HelpFragment helpFragment = new HelpFragment();
             Utils.addNextFragment(getContext(), helpFragment, getView().getMainFragment(), true);
-        }
-        else if(v==rlSetting)
-        {
+        } else if (v == rlSetting) {
             SettingFragment settingFragment = new SettingFragment();
             Utils.addNextFragment(getContext(), settingFragment, getView().getMainFragment(), true);
-        }
-        else if(v==rlOrderHistory)
-        {
+        } else if (v == rlOrderHistory) {
             OrderListFragment orderListFragment = new OrderListFragment();
             Utils.addNextFragment(getContext(), orderListFragment, getView().getMainFragment(), true);
         }

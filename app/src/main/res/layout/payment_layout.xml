@@ -149,7 +149,7 @@
                     android:id="@+id/upi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/upi"
+                    android:text="@string/googlepay"
                     android:textAlignment="textStart"
                     android:layoutDirection="rtl"
                     android:textColor="@color/color_black"

@@ -15,14 +15,14 @@
         android:layout_marginTop="@dimen/_5sdp">
 
 
-        <ImageView
-            android:id="@+id/fragment_cartlist_ivClose"
-            android:layout_width="@dimen/_35sdp"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:padding="@dimen/_1sdp"
-            android:src="@drawable/ic_close" />
+<!--        <ImageView-->
+<!--            android:id="@+id/fragment_cartlist_ivClose"-->
+<!--            android:layout_width="@dimen/_35sdp"-->
+<!--            android:layout_height="@dimen/_35sdp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:padding="@dimen/_1sdp"-->
+<!--            android:src="@drawable/ic_close" />-->
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:text="@string/my_cart_4"
+                android:text="@string/my_cart"
                 android:textColor="@color/color_black"
                 android:textSize="@dimen/_16sdp"
                 app:font_name="NunitoExtraBold.ttf" />

@@ -67,8 +67,8 @@ public class ProductListFragment extends BaseFragment {
     }
 
     public void initToolbar() {
-
-        if (getTargetFragment() != null) {
+        ((HomeActivity) getActivity()).setToolbar(TopBarUiEnum.PRODUCT_DETAILS);
+       /* if (getTargetFragment() != null) {
 
             m_productListWidget.getView().getiFilter().setVisibility(View.GONE);
             ((HomeActivity) getActivity()).setToolbar(TopBarUiEnum.WISH_LIST);
@@ -76,7 +76,7 @@ public class ProductListFragment extends BaseFragment {
         } else {
             m_productListWidget.getView().getiFilter().setVisibility(View.VISIBLE);
             ((HomeActivity) getActivity()).setToolbar(TopBarUiEnum.HOME);
-        }
+        }*/
 
        /* ((HomeActivity) getActivity()).getIvCart().setOnClickListener(new View.OnClickListener() {
             @Override

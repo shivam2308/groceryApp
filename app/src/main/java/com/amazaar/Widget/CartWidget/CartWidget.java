@@ -16,10 +16,13 @@ import com.amazaar.Adapters.CartListAdapter;
 import com.amazaar.Convertors.CartPbToCartListModelConvertor;
 import com.amazaar.DatabaseEnitityHelper.CartEntityDaoHelper;
 import com.amazaar.Fragments.CheckOutFragment;
+import com.amazaar.Fragments.HomeCategoryFragment;
 import com.amazaar.Handlers.CartItemHandler;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.ListModels.CartListModel;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
+import com.amazaar.SessionManager.CustomerSession;
 import com.amazaar.Utility.Utils;
 import com.google.inject.Injector;
 import com.prod.basic.common.collect.Lists;
@@ -31,10 +34,14 @@ import javax.inject.Inject;
 
 import roboguice.RoboGuice;
 
+import static com.amazaar.Module.AmazaarApplication.getFragmentManager;
+
 public class CartWidget extends LinearLayout implements IView<CartView>, View.OnClickListener {
 
     @Inject
     public CartView m_view;
+    @Inject
+    public CustomerSession m_session;
     private RecyclerView rvProductList;
     private TextView tvTotalPrice;
     private RelativeLayout rlCheckOut;
@@ -44,6 +51,7 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
     private ImageView ivHome;
     private TextView tvCartCount;
     private TextView m_chkbtn;
+    private TextView tvPinCode;
     private CheckOutFragment checkOutFragment;
     private LinearLayoutManager mLayoutManager;
     @Inject
@@ -74,7 +82,8 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
         rlEmpty = (RelativeLayout) findViewById(R.id.fragment_cartlist_rlEmpty);
         tvTotalPrice = (TextView) findViewById(R.id.fragment_cartlist_tvTotalKg);
         tvCartCount = (TextView) findViewById(R.id.fragment_cartlist_tvCartCount);
-        ivClose = (ImageView) findViewById(R.id.fragment_cartlist_ivClose);
+         tvPinCode = (TextView) findViewById(R.id.fragment_cartlist_tvPinCode);
+        //ivClose = (ImageView) findViewById(R.id.fragment_cartlist_ivClose);
         ivHome = (ImageView) findViewById(R.id.fragment_cartlist_ivHome);
         llSelectPin = (LinearLayout) findViewById(R.id.fragment_cartlist_llSelectPin);
         m_chkbtn = (TextView) findViewById(R.id.checkout_btn);
@@ -86,7 +95,7 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
 
     private void initWidget() {
         rlCheckOut.setOnClickListener(this);
-        ivClose.setOnClickListener(this);
+        //ivClose.setOnClickListener(this);
         ivHome.setOnClickListener(this);
         llSelectPin.setOnClickListener(this);
         m_chkbtn.setOnClickListener(this);
@@ -97,6 +106,7 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
         productListAdapter = new CartListAdapter(getContext(), productListModelArrayList, this);
         rvProductList.setAdapter(productListAdapter);
         tvTotalPrice.setText(getContext().getString(R.string.dolar) + getView().getTotalPrice(getView().getCartListModel()));
+        tvPinCode.setText(String.valueOf(m_session.getSession().getAddress().getPincode()));
     }
 
     private void injectMembers() {
@@ -136,11 +146,21 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
     }
 
     @Override
+    public void onBackPressed() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         //Utils.hideKeyboard(getContext());
         if (v == m_chkbtn) {
             CheckOutFragment checkOutFragment = new CheckOutFragment();
             Utils.addNextFragment(getContext(), checkOutFragment, getView().getMainFragment(), true);
+        }
+        else if (v == ivHome) {
+//            HomeCategoryFragment homeCategoryFragment = new HomeCategoryFragment();
+//            Utils.addNextFragment(getContext(), homeCategoryFragment, getView().getMainFragment(), true);
+            AmazaarApplication.getFragmentManager().popBackStack();
         }
         /*else if (v == llSelectPin) {
 

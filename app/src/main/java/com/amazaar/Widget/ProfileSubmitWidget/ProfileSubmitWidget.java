@@ -122,4 +122,9 @@ public class ProfileSubmitWidget extends LinearLayout implements IView<ProfileSu
     public ProfileSubmitView getView() {
         return m_view;
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

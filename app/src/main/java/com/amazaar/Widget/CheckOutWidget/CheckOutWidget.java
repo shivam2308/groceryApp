@@ -89,6 +89,12 @@ public class CheckOutWidget extends LinearLayout implements IView<CheckOutView>,
     public CheckOutView getView() {
         return m_view;
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
+
     @Override
     public void onClick(View v) {
         //super.onClick(v);

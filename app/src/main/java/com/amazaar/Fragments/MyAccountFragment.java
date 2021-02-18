@@ -10,7 +10,7 @@ import com.amazaar.Enums.TopBarUiEnum;
 import com.amazaar.R;
 import com.amazaar.Widget.MyAccountWidget.MyAccountWidget;
 
-public class MyAccountFragment extends BaseFragment{
+public class MyAccountFragment extends BaseFragment {
 
     private MyAccountWidget m_accountWidget;
 
@@ -32,6 +32,10 @@ public class MyAccountFragment extends BaseFragment{
     public void initComponents(View rootView) {
         m_accountWidget = (MyAccountWidget) rootView.findViewById(R.id.myAccount);
         m_accountWidget.getView().setMainFragment(this);
+    }
+
+    public MyAccountWidget getMyAccountWidget() {
+        return m_accountWidget;
     }
 
     @Override
