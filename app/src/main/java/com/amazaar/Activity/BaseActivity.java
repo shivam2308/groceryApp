@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.amazaar.ControlFlow.CustomerLogin;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
 import com.amazaar.Widget.LoadingWIdget.LoadingWidget;
 import com.amazaar.Widget.OtpVerificationWidget.OTPVerificationWidget;
@@ -23,12 +24,11 @@ import static com.amazaar.Module.AmazaarApplication.getContext;
 
 public class BaseActivity extends AppCompatActivity {
 
+    @Inject
+    public CustomerLogin m_customer_login;
     private OTPVerificationWidget m_otpOtpVerificationWidget;
     private ProfileSubmitWidget m_profileSubmitWidget;
     private LoadingWidget m_loadingWidget;
-    @Inject
-    public CustomerLogin m_customer_login;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,6 @@ public class BaseActivity extends AppCompatActivity {
         m_profileSubmitWidget.setVisibility(View.GONE);
         m_otpOtpVerificationWidget.setVisibility(View.VISIBLE);
         injectMembers();
-        //m_loadingWidget.setVisibility(View.VISIBLE);
         m_otpOtpVerificationWidget.getView().getPhoneNumber().setListener(new VariableValueChange.ChangeListener() {
             @Override
             public void onChange() {
@@ -50,14 +49,22 @@ public class BaseActivity extends AppCompatActivity {
         m_otpOtpVerificationWidget.getView().getPhoneIsVerified().setListener(new VariableValueChange.ChangeListener() {
             @Override
             public void onChange() {
-                if (m_otpOtpVerificationWidget.getView().getPhoneIsVerified().getVar()) {
-                    m_customer_login.login(m_otpOtpVerificationWidget.getView().getPhoneNumber().getVar(),m_profileSubmitWidget);
-                }
+                m_loadingWidget.getView().getProgressLayout().showLoading();
+                m_customer_login.login(m_otpOtpVerificationWidget.getView().getPhoneNumber().getVar(), m_profileSubmitWidget);
             }
+
         });
     }
+
     private void injectMembers() {
         Injector injector = RoboGuice.getInjector(getContext());
         injector.injectMembers(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AmazaarApplication.setCurrentActivity(this);
+        // qrReaderFragment.getQRCodeReaderWidget().getView().getQrCodeReaderView().startCamera();
     }
 }

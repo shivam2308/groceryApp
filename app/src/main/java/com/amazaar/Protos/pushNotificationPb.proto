@@ -35,7 +35,7 @@ enum SendNotificationTypeEnum {
 }
 
 message PushNotificationSearchRequestPb {
-        string customerRef = 1;
+        string customerRefId = 1;
 }
 message PushNotificationSearchResponsePb {
     SummaryPb summary = 1;

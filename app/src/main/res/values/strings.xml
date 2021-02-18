@@ -210,6 +210,7 @@
     <string name="choose_delivery">Choose Delivery Man</string>
     <string name="my_cart">My Cart</string>
     <string name="googlepay">Google Pay</string>
+    <string name="channelId">amazaar_notify</string>
 
 
 </resources>

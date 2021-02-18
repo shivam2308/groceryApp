@@ -32,6 +32,7 @@ enum PaymentStatusEnum{
     SUCCESS=1;
     FAILURE=2;
     SUBMITTED=3;
+    PENDING_OR_NOT_DONE_YET = 4;
 }
 
 enum PaymentModeEnum {

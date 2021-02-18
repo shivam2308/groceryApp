@@ -3376,16 +3376,16 @@ public final class PushNotificationPbOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string customerRef = 1;</code>
-     * @return The customerRef.
+     * <code>string customerRefId = 1;</code>
+     * @return The customerRefId.
      */
-    java.lang.String getCustomerRef();
+    java.lang.String getCustomerRefId();
     /**
-     * <code>string customerRef = 1;</code>
-     * @return The bytes for customerRef.
+     * <code>string customerRefId = 1;</code>
+     * @return The bytes for customerRefId.
      */
     com.google.protobuf.ByteString
-        getCustomerRefBytes();
+        getCustomerRefIdBytes();
   }
   /**
    * Protobuf type {@code com.amazaar.Protobuff.PushNotificationSearchRequestPb}
@@ -3400,7 +3400,7 @@ public final class PushNotificationPbOuterClass {
       super(builder);
     }
     private PushNotificationSearchRequestPb() {
-      customerRef_ = "";
+      customerRefId_ = "";
     }
 
     @java.lang.Override
@@ -3436,7 +3436,7 @@ public final class PushNotificationPbOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              customerRef_ = s;
+              customerRefId_ = s;
               break;
             }
             default: {
@@ -3471,38 +3471,38 @@ public final class PushNotificationPbOuterClass {
               com.amazaar.Protobuff.PushNotificationPbOuterClass.PushNotificationSearchRequestPb.class, com.amazaar.Protobuff.PushNotificationPbOuterClass.PushNotificationSearchRequestPb.Builder.class);
     }
 
-    public static final int CUSTOMERREF_FIELD_NUMBER = 1;
-    private volatile java.lang.Object customerRef_;
+    public static final int CUSTOMERREFID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object customerRefId_;
     /**
-     * <code>string customerRef = 1;</code>
-     * @return The customerRef.
+     * <code>string customerRefId = 1;</code>
+     * @return The customerRefId.
      */
     @java.lang.Override
-    public java.lang.String getCustomerRef() {
-      java.lang.Object ref = customerRef_;
+    public java.lang.String getCustomerRefId() {
+      java.lang.Object ref = customerRefId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        customerRef_ = s;
+        customerRefId_ = s;
         return s;
       }
     }
     /**
-     * <code>string customerRef = 1;</code>
-     * @return The bytes for customerRef.
+     * <code>string customerRefId = 1;</code>
+     * @return The bytes for customerRefId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getCustomerRefBytes() {
-      java.lang.Object ref = customerRef_;
+        getCustomerRefIdBytes() {
+      java.lang.Object ref = customerRefId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        customerRef_ = b;
+        customerRefId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -3523,8 +3523,8 @@ public final class PushNotificationPbOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCustomerRefBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, customerRef_);
+      if (!getCustomerRefIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, customerRefId_);
       }
       unknownFields.writeTo(output);
     }
@@ -3535,8 +3535,8 @@ public final class PushNotificationPbOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCustomerRefBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, customerRef_);
+      if (!getCustomerRefIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, customerRefId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3553,8 +3553,8 @@ public final class PushNotificationPbOuterClass {
       }
       com.amazaar.Protobuff.PushNotificationPbOuterClass.PushNotificationSearchRequestPb other = (com.amazaar.Protobuff.PushNotificationPbOuterClass.PushNotificationSearchRequestPb) obj;
 
-      if (!getCustomerRef()
-          .equals(other.getCustomerRef())) return false;
+      if (!getCustomerRefId()
+          .equals(other.getCustomerRefId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3566,8 +3566,8 @@ public final class PushNotificationPbOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CUSTOMERREF_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomerRef().hashCode();
+      hash = (37 * hash) + CUSTOMERREFID_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerRefId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3701,7 +3701,7 @@ public final class PushNotificationPbOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        customerRef_ = "";
+        customerRefId_ = "";
 
         return this;
       }
@@ -3729,7 +3729,7 @@ public final class PushNotificationPbOuterClass {
       @java.lang.Override
       public com.amazaar.Protobuff.PushNotificationPbOuterClass.PushNotificationSearchRequestPb buildPartial() {
         com.amazaar.Protobuff.PushNotificationPbOuterClass.PushNotificationSearchRequestPb result = new com.amazaar.Protobuff.PushNotificationPbOuterClass.PushNotificationSearchRequestPb(this);
-        result.customerRef_ = customerRef_;
+        result.customerRefId_ = customerRefId_;
         onBuilt();
         return result;
       }
@@ -3778,8 +3778,8 @@ public final class PushNotificationPbOuterClass {
 
       public Builder mergeFrom(com.amazaar.Protobuff.PushNotificationPbOuterClass.PushNotificationSearchRequestPb other) {
         if (other == com.amazaar.Protobuff.PushNotificationPbOuterClass.PushNotificationSearchRequestPb.getDefaultInstance()) return this;
-        if (!other.getCustomerRef().isEmpty()) {
-          customerRef_ = other.customerRef_;
+        if (!other.getCustomerRefId().isEmpty()) {
+          customerRefId_ = other.customerRefId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3811,78 +3811,78 @@ public final class PushNotificationPbOuterClass {
         return this;
       }
 
-      private java.lang.Object customerRef_ = "";
+      private java.lang.Object customerRefId_ = "";
       /**
-       * <code>string customerRef = 1;</code>
-       * @return The customerRef.
+       * <code>string customerRefId = 1;</code>
+       * @return The customerRefId.
        */
-      public java.lang.String getCustomerRef() {
-        java.lang.Object ref = customerRef_;
+      public java.lang.String getCustomerRefId() {
+        java.lang.Object ref = customerRefId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          customerRef_ = s;
+          customerRefId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string customerRef = 1;</code>
-       * @return The bytes for customerRef.
+       * <code>string customerRefId = 1;</code>
+       * @return The bytes for customerRefId.
        */
       public com.google.protobuf.ByteString
-          getCustomerRefBytes() {
-        java.lang.Object ref = customerRef_;
+          getCustomerRefIdBytes() {
+        java.lang.Object ref = customerRefId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          customerRef_ = b;
+          customerRefId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string customerRef = 1;</code>
-       * @param value The customerRef to set.
+       * <code>string customerRefId = 1;</code>
+       * @param value The customerRefId to set.
        * @return This builder for chaining.
        */
-      public Builder setCustomerRef(
+      public Builder setCustomerRefId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        customerRef_ = value;
+        customerRefId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string customerRef = 1;</code>
+       * <code>string customerRefId = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCustomerRef() {
+      public Builder clearCustomerRefId() {
         
-        customerRef_ = getDefaultInstance().getCustomerRef();
+        customerRefId_ = getDefaultInstance().getCustomerRefId();
         onChanged();
         return this;
       }
       /**
-       * <code>string customerRef = 1;</code>
-       * @param value The bytes for customerRef to set.
+       * <code>string customerRefId = 1;</code>
+       * @param value The bytes for customerRefId to set.
        * @return This builder for chaining.
        */
-      public Builder setCustomerRefBytes(
+      public Builder setCustomerRefIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        customerRef_ = value;
+        customerRefId_ = value;
         onChanged();
         return this;
       }
@@ -4982,15 +4982,15 @@ public final class PushNotificationPbOuterClass {
       "istrationIds\030\002 \003(\t\022A\n\010sendType\030\003 \001(\0162/.c" +
       "om.amazaar.Protobuff.SendNotificationTyp" +
       "eEnum\022\025\n\rcustomerRefId\030\004 \001(\t\022\017\n\007subject\030" +
-      "\005 \001(\t\022\014\n\004body\030\006 \001(\t\022\020\n\010imageUrl\030\007 \001(\t\"6\n" +
-      "\037PushNotificationSearchRequestPb\022\023\n\013cust" +
-      "omerRef\030\001 \001(\t\"\221\001\n PushNotificationSearch" +
-      "ResponsePb\0221\n\007summary\030\001 \001(\0132 .com.amazaa" +
-      "r.Protobuff.SummaryPb\022:\n\007results\030\002 \003(\0132)" +
-      ".com.amazaar.Protobuff.PushNotificationP" +
-      "b*F\n\030SendNotificationTypeEnum\022\020\n\014UNKNOWN" +
-      "_TYPE\020\000\022\n\n\006SINGLE\020\001\022\014\n\010MULTIPLE\020\002b\006proto" +
-      "3"
+      "\005 \001(\t\022\014\n\004body\030\006 \001(\t\022\020\n\010imageUrl\030\007 \001(\t\"8\n" +
+      "\037PushNotificationSearchRequestPb\022\025\n\rcust" +
+      "omerRefId\030\001 \001(\t\"\221\001\n PushNotificationSear" +
+      "chResponsePb\0221\n\007summary\030\001 \001(\0132 .com.amaz" +
+      "aar.Protobuff.SummaryPb\022:\n\007results\030\002 \003(\013" +
+      "2).com.amazaar.Protobuff.PushNotificatio" +
+      "nPb*F\n\030SendNotificationTypeEnum\022\020\n\014UNKNO" +
+      "WN_TYPE\020\000\022\n\n\006SINGLE\020\001\022\014\n\010MULTIPLE\020\002b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5023,7 +5023,7 @@ public final class PushNotificationPbOuterClass {
     internal_static_com_amazaar_Protobuff_PushNotificationSearchRequestPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_PushNotificationSearchRequestPb_descriptor,
-        new java.lang.String[] { "CustomerRef", });
+        new java.lang.String[] { "CustomerRefId", });
     internal_static_com_amazaar_Protobuff_PushNotificationSearchResponsePb_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_com_amazaar_Protobuff_PushNotificationSearchResponsePb_fieldAccessorTable = new
