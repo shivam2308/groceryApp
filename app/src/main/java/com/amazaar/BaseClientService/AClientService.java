@@ -11,8 +11,12 @@ public class AClientService<P extends GeneratedMessageV3, Req extends GeneratedM
     private ACreateService<P> m_create;
     private AUpdateService<P> m_update;
     private ASearchService<Req, Resp> m_search;
+    private Class<P> m_Pclazz;
+    private UrlPathProvider.UrlPathEnum m_pathEnum;
 
     public AClientService(Class<P> Pclazz, Class<Resp> Respclazz, UrlPathProvider.UrlPathEnum pathEnum) {
+        m_Pclazz=Pclazz;
+        m_pathEnum= pathEnum;
         m_get = new AGetService<P>(Pclazz, pathEnum);
         m_create = new ACreateService<P>(Pclazz, pathEnum);
         m_update = new AUpdateService<P>(Pclazz, pathEnum);
@@ -21,7 +25,8 @@ public class AClientService<P extends GeneratedMessageV3, Req extends GeneratedM
 
     @Override
     public P get(String id) throws ExecutionException, InterruptedException {
-        return m_get.execute(id).get();
+        //return m_get.execute(id).get();
+        return new AGetService<P>(m_Pclazz, m_pathEnum).execute(id).get();
     }
 
     @Override

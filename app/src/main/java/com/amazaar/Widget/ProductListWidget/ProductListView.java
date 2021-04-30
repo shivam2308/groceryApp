@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import com.amazaar.Adapters.ProductListAdapter;
 import com.amazaar.ClientServices.ItemClientService;
 import com.amazaar.Convertors.ItemPbToProductListModelConvertor;
+import com.amazaar.Fragments.ProductDetailsFragment;
 import com.amazaar.Fragments.ProductListFragment;
 import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
@@ -25,6 +26,7 @@ public class ProductListView {
     private List<ProductListModel> m_productListModelArrayList;
     private ProductListAdapter m_productListAdapter;
     private ProductListFragment m_mainFragment;
+    private ProductDetailsFragment m_fragmentProductDetails;
     @Inject
     private ItemClientService m_itemService;
     private ImageView iFilter;
@@ -127,4 +129,11 @@ public class ProductListView {
     }
 
 
+    public void setProductDetailsFragment(ProductDetailsFragment fragmentProductDetails) {
+        m_fragmentProductDetails = fragmentProductDetails;
+    }
+
+    public ProductDetailsFragment getProductDetailsFragment() {
+        return m_fragmentProductDetails;
+    }
 }

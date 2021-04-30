@@ -1,6 +1,8 @@
 package com.amazaar.Widget.GenreateQRCodeWidget;
 
+import android.content.ContentResolver;
 import android.content.Context;
+import android.provider.Settings;
 import android.util.AttributeSet;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +17,7 @@ import com.amazaar.Fragments.OrderSummaryFragment;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.ListModels.OrderListModel;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
 import com.amazaar.Utility.Utils;
 import com.amazaar.Widget.OrderListWidget.OrderListView;
@@ -68,6 +71,7 @@ public class GenreateQRCodeWidget extends LinearLayout implements IView<Genreate
        getView().getListModel().setListener(new VariableValueChange.ChangeListener() {
            @Override
            public void onChange() {
+               setBrightness(255);
                m_qr_code.setImageBitmap(getView().getQrCode());
            }
        });
@@ -92,6 +96,20 @@ public class GenreateQRCodeWidget extends LinearLayout implements IView<Genreate
 
     @Override
     public void onClick(View v) {
+
+    }
+
+    public void setBrightness(int brightness){
+
+        //constrain the value of brightness
+        if(brightness < 0)
+            brightness = 0;
+        else if(brightness > 255)
+            brightness = 255;
+
+
+        ContentResolver cResolver = AmazaarApplication.getCurrentActivity().getContentResolver();
+        Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, brightness);
 
     }
 

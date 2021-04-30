@@ -3,6 +3,7 @@ package com.amazaar.Widget.ProductDetailsWidget;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -12,10 +13,14 @@ import android.widget.TextView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.amazaar.Adapters.ProductPagerAdapter;
+import com.amazaar.CommonCode.DefaultImageUrl;
+import com.amazaar.ControlFlow.GetImageFromUrl;
+import com.amazaar.Fragments.UploadImageFragment;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
 import com.amazaar.Protobuff.ImagePbOuterClass;
 import com.amazaar.R;
+import com.amazaar.Utility.Utils;
 import com.google.inject.Injector;
 
 import java.util.ArrayList;
@@ -35,11 +40,11 @@ public class ProductDetailsWidget extends LinearLayout implements IView<ProductD
     private ImageView ivPlus;
     private ImageView ivMins;
     private ImageView ivLikeUnLike;
+    private ImageView itemImages;
     private RelativeLayout rlAddTocart;
+    @Inject
+    public GetImageFromUrl m_getImageFromUrl;
 
-    private ProductPagerAdapter imagePagerAdapter;
-
-    private List<ImagePbOuterClass.ImageRefPb> pagerImgList;
     private Bundle bundle;
     private int totalKg = 0;
 
@@ -50,7 +55,7 @@ public class ProductDetailsWidget extends LinearLayout implements IView<ProductD
 
     private void init(Context context, AttributeSet attrs) {
         inflate(context, R.layout.product_deatils_layout, this);
-        viewPagerImages = findViewById(R.id.fragment_product_details_vpSlider);
+        itemImages = findViewById(R.id.fragment_product_details_vpSlider);
         rlAddTocart = findViewById(R.id.fragment_product_details_rlAddToCart);
         tvQuantity = findViewById(R.id.fragment_product_details_tvTotalKg);
         tvName = findViewById(R.id.fragment_product_details_tvTitle);
@@ -71,7 +76,6 @@ public class ProductDetailsWidget extends LinearLayout implements IView<ProductD
         ivPlus.setOnClickListener(this);
         ivMins.setOnClickListener(this);
         ivLikeUnLike.setOnClickListener(this);
-        pagerImgList = new ArrayList<>();
 
     }
 
@@ -80,37 +84,25 @@ public class ProductDetailsWidget extends LinearLayout implements IView<ProductD
         getView().getProductListModel().setListener(new VariableValueChange.ChangeListener() {
             @Override
             public void onChange() {
-                setUpDetails();
-                setUpSliderImages();
+                tvName.setText(getView().getProductListModel().getVar().getProductName());
+                tvQuantity.setText(""+getView().getProductListModel().getVar().getPbModel().getItemName().getFirstName());
+                tvPrice.setText(getView().getProductListModel().getVar().getPbModel().getPrice() + " Kg");
+                totalKg = getView().getProductListModel().getVar().getTotalKg();
+                ivLikeUnLike.setImageDrawable(getView().getProductListModel().getVar().isLike() ? getContext().getResources().getDrawable(R.drawable.ic_fav_select) : getContext().getResources().getDrawable(R.drawable.ic_fav_unselect));
+                m_getImageFromUrl.setImageFromUrl(getContext(), getView().getProductListModel().getVar().getPbModel().getItemImage(), itemImages, DefaultImageUrl.ImageShowTypeEnum.ITEM);
+
             }
         });
-
-    }
-
-    private void setUpDetails() {
-
-        if (getView().getProductListModel() != null) {
-            tvName.setText(getView().getProductListModel().getVar().getProductName());
-            tvQuantity.setText(""+getView().getProductListModel().getVar().getPbModel().getItemName().getFirstName());
-            tvPrice.setText(getView().getProductListModel().getVar().getPbModel().getPrice() + " Kg");
-            totalKg = getView().getProductListModel().getVar().getTotalKg();
-            ivLikeUnLike.setImageDrawable(getView().getProductListModel().getVar().isLike() ? getContext().getResources().getDrawable(R.drawable.ic_fav_select) : getContext().getResources().getDrawable(R.drawable.ic_fav_unselect));
-            if(getView().getProductListModel().getVar().getPbModel()!=null){
-                pagerImgList.add(getView().getProductListModel().getVar().getPbModel().getItemUrl());
-            }else{
-                pagerImgList.add(ImagePbOuterClass.ImageRefPb.getDefaultInstance());
+        itemImages.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UploadImageFragment uploadImageFragment = new UploadImageFragment();
+                uploadImageFragment.setImageId(getView().getProductListModel().getVar().getPbModel().getDbInfo().getId());
+                uploadImageFragment.setImageType(ImagePbOuterClass.ImageTypeEnum.ITEM_IMAGE);
+                getView().setUploadFragment(uploadImageFragment);
+                Utils.addNextFragmentFadeAnim(uploadImageFragment, getView().getMainFragment());
             }
-
-        }
-    }
-
-    private void setUpSliderImages() {
-        try {
-            imagePagerAdapter = new ProductPagerAdapter(getContext(), pagerImgList);
-            viewPagerImages.setAdapter(imagePagerAdapter);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        });
     }
 
     private void injectMembers() {

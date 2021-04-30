@@ -13,11 +13,13 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amazaar.Adapters.ProductListAdapter;
+import com.amazaar.Fragments.ProductDetailsFragment;
 import com.amazaar.Handlers.CartItemHandler;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
 import com.amazaar.R;
+import com.amazaar.Utility.Utils;
 import com.google.inject.Injector;
 
 import java.util.ArrayList;
@@ -84,16 +86,15 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
             }
         });
 
-        productListAdapter = new ProductListAdapter(getContext(), productListModelArrayList, getView().getMainFragment(),this);
+        productListAdapter = new ProductListAdapter(getContext(), productListModelArrayList, getView().getMainFragment(), this);
         rvProductList.setAdapter(productListAdapter);
         productListAdapter.setOnItemClickListener(new ProductListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, ProductListModel viewModel) {
-                /*ProductDetailsFragment fragmentProductDetails = new ProductDetailsFragment();
-                Bundle bundle = new Bundle();
-                bundle.putParcelable(getContext().getString(R.string.bdl_model), viewModel);
-                fragmentProductDetails.setArguments(bundle);
-                Utils.addNextFragment(getContext(),fragmentProductDetails, getView().getMainFragment(), false);*/
+                ProductDetailsFragment fragmentProductDetails = new ProductDetailsFragment();
+                fragmentProductDetails.setProductListModel(viewModel);
+                getView().setProductDetailsFragment(fragmentProductDetails);
+                Utils.addNextFragment(getContext(), fragmentProductDetails, getView().getMainFragment(), false);
             }
         });
 
@@ -124,7 +125,7 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
             int totalKg = productListModelArrayList.get(position).getTotalKg();
             totalKg = totalKg + 1;
             productListModelArrayList.get(position).setTotalKg(totalKg);
-            m_cartHandler.handle(productListModelArrayList.get(position),position);
+            m_cartHandler.handle(productListModelArrayList.get(position), position);
         } else {
             int totalKg = productListModelArrayList.get(position).getTotalKg();
 
@@ -134,7 +135,7 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
             } else {
                 totalKg = totalKg - 1;
                 productListModelArrayList.get(position).setTotalKg(totalKg);
-                m_cartHandler.handle(productListModelArrayList.get(position),position);
+                m_cartHandler.handle(productListModelArrayList.get(position), position);
             }
 
         }

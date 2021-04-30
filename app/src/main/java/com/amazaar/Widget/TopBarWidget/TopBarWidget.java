@@ -150,6 +150,7 @@ public class TopBarWidget extends LinearLayout implements IView<TopBarView>, Vie
 
             } else {
                 MenuFragment menuFragment = new MenuFragment();
+                getView().setMenuFragment(menuFragment);
                 Utils.addNextFragmentFadeAnim(menuFragment, getView().getMainFragment());
             }
 

@@ -27,14 +27,14 @@ public class GetImageFromUrlCF extends AControlFlow<GetImageFromUrlCF.States, Vo
 
 
     @Inject
-    public GetImageFromUrlCF(Context context, ImageView imageView, ImagePbOuterClass.ImageRefPb imageRefPb, ImageClientService imageService, DefaultImageUrl.ImageShowTypeEnum imageType,CommonHelper commanHelper) {
+    public GetImageFromUrlCF(Context context, ImageView imageView, ImagePbOuterClass.ImageRefPb imageRefPb, ImageClientService imageService, DefaultImageUrl.ImageShowTypeEnum imageType, CommonHelper commanHelper) {
         super(States.GET_IMAGE_PB, States.DONE);
         m_context = context;
         m_image = imageView;
         m_imageRef = imageRefPb;
         m_imageService = imageService;
         m_imageType = imageType;
-        m_commanHelper=commanHelper;
+        m_commanHelper = commanHelper;
         addStateHandler(States.GET_IMAGE_PB, new GetImageHandler());
         addStateHandler(States.SET_IMAGE, new SetImageHandler());
     }
@@ -51,9 +51,9 @@ public class GetImageFromUrlCF extends AControlFlow<GetImageFromUrlCF.States, Vo
         @Override
         public void registerCalls() {
             try {
-                if(Strings.notEmpty(m_imageRef.getId())) {
+                if (Strings.notEmpty(m_imageRef.getId())) {
                     m_imagepb = m_imageService.get(m_imageRef.getId());
-                }else{
+                } else {
                     ImageLoader.with(m_context).from(DefaultImageUrl.getImage(m_imageType)).load(m_image);
                 }
             } catch (ExecutionException e) {
@@ -65,9 +65,13 @@ public class GetImageFromUrlCF extends AControlFlow<GetImageFromUrlCF.States, Vo
 
         @Override
         public States handleState() {
-            if (Strings.notEmpty(m_imagepb.getId())) {
-                m_imagePb = m_imagepb;
-                return States.SET_IMAGE;
+            if (m_imagepb != null) {
+                if (Strings.notEmpty(m_imagepb.getId())) {
+                    m_imagePb = m_imagepb;
+                    return States.SET_IMAGE;
+                } else {
+                    return States.DONE;
+                }
             } else {
                 return States.DONE;
             }

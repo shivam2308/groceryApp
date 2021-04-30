@@ -18,8 +18,8 @@ import android.widget.Toast;
 
 import com.amazaar.Activity.SplashActivity;
 import com.amazaar.Module.AmazaarApplication;
-import com.google.android.material.snackbar.Snackbar;
 import com.amazaar.R;
+import com.google.android.material.snackbar.Snackbar;
 
 
 /**
@@ -30,7 +30,6 @@ public class Utils {
 
 
     /**
-     *
      * @param context
      * @param message
      * @return
@@ -176,15 +175,13 @@ public class Utils {
 
     public static void addNextFragmentFadeAnim(Fragment targetedFragment, Fragment shooterFragment) {
         final FragmentTransaction transaction = AmazaarApplication.getFragmentManager().beginTransaction();
-
-        transaction.setCustomAnimations(R.animator.enter,R.animator.exit,R.animator.pop_enter, R.animator.pop_exit);
+        AmazaarApplication.setCurrentFragment(shooterFragment);
+        transaction.setCustomAnimations(R.animator.enter, R.animator.exit, R.animator.pop_enter, R.animator.pop_exit);
         transaction.add(R.id.flcontainer, targetedFragment, targetedFragment.getClass().getSimpleName());
         transaction.hide(shooterFragment);
         transaction.addToBackStack(targetedFragment.getClass().getSimpleName());
         transaction.commit();
     }
-
-
 
 
 }

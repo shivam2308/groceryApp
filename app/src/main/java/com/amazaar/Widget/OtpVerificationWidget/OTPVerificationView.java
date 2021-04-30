@@ -6,6 +6,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
+import com.amazaar.Module.AmazaarApplication;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskExecutors;
@@ -44,7 +45,7 @@ public class OTPVerificationView {
                 "+91" + mobile,
                 60,
                 TimeUnit.SECONDS,
-                TaskExecutors.MAIN_THREAD,
+                AmazaarApplication.getCurrentActivity(),
                 mCallbacks);
     }
 

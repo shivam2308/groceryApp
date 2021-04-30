@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 
 import com.amazaar.Activity.HomeActivity;
 import com.amazaar.Enums.TopBarUiEnum;
+import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.R;
 import com.amazaar.Widget.ProductDetailsWidget.ProductDetailsWidget;
 
@@ -16,7 +17,7 @@ public class ProductDetailsFragment extends BaseFragment {
 
     public ProductDetailsWidget m_productDetailsWidget;
 
-    private Bundle bundle;
+    private ProductListModel m_viewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -34,15 +35,13 @@ public class ProductDetailsFragment extends BaseFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bundle = getArguments();
     }
 
     @Override
     public void initComponents(View rootView) {
         m_productDetailsWidget = (ProductDetailsWidget) rootView.findViewById(R.id.product_details_widget);
-        if (bundle != null) {
-           // m_productDetailsWidget.getView().setProductListModel(bundle.getParcelable(getString(R.string.bdl_model)));
-        }
+        m_productDetailsWidget.getView().getProductListModel().setVar(m_viewModel);
+        m_productDetailsWidget.getView().setMainFragment(this);
     }
 
     public void initToolbar() {
@@ -58,5 +57,13 @@ public class ProductDetailsFragment extends BaseFragment {
             }
         });*/
 
+    }
+
+    public ProductDetailsWidget getProductDetailsWidget(){
+        return m_productDetailsWidget;
+    }
+
+    public void setProductListModel(ProductListModel viewModel) {
+        m_viewModel = viewModel;
     }
 }

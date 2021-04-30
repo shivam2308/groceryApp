@@ -90,10 +90,16 @@ public class PaymentWidget extends LinearLayout implements IView<PaymentView>, V
                     if (m_paymentMode.getCheckedRadioButtonId() == -1) {
                         AToast.noModeSelected();
                     } else {
-                        getView().payUsingUpi(getView().getAmount());
+                        if(getView().getMode()== PaymentPbOuterClass.PaymentModeEnum.GOOGLE_PAY) {
+                            getView().payUsingUpi(getView().getAmount());
+                        }else if(getView().getMode()== PaymentPbOuterClass.PaymentModeEnum.CASH_ON_DELIVERY){
+                             m_payAndOrderItem.createBuyItem("");
+                        }else{
+                            //nothing
+                        }
                         // m_payAndOrderItem.createBuyItem("txnId=AXI4a3428ee58654a938811812c72c0df45&responseCode=00&Status=SUCCESS&txnRef=922118921612");
 
-                        // m_payAndOrderItem.createBuyItem();
+
                     }
                 }
                 return false;

@@ -2,6 +2,7 @@ package com.amazaar.Widget.QRCodeReaderWidget;
 
 import android.content.Context;
 import android.graphics.PointF;
+import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,7 @@ import com.amazaar.ControlFlow.ConfirmOrderDelivery;
 import com.amazaar.Enums.CallSyncStateEnum;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
 import com.dlazaro66.qrcodereaderview.QRCodeReaderView;
 import com.google.inject.Injector;
@@ -94,6 +96,8 @@ public class QRCodeReaderWidget extends LinearLayout implements IView<QRCodeAppR
     public void onQRCodeRead(String text, PointF[] points) {
         Log.e("QRCodeReade",text);
         if(m_confirmOrderDelivery.getCallSync().getVar()!= CallSyncStateEnum.SYNC_START){
+            Vibrator v = (Vibrator) AmazaarApplication.getCurrentActivity().getSystemService(Context.VIBRATOR_SERVICE);
+            v.vibrate(1000);
             m_confirmOrderDelivery.confirmOrder(getView().getConfirmDeliveryPb(text));
         }
     }

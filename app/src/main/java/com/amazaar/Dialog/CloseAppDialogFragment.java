@@ -1,19 +1,14 @@
-package com.amazaar.dialog;
+package com.amazaar.Dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 
-import com.amazaar.ClientServices.CloseAndOutForDeliveryClientService;
 import com.amazaar.Module.AmazaarApplication;
-import com.amazaar.Protobuff.BuyPbOuterClass;
-
-import java.util.concurrent.ExecutionException;
 
 import javax.annotation.Nullable;
 

@@ -63,8 +63,8 @@ public class PaymentView {
                 //.appendQueryParameter("tid", "02125412")
                 .appendQueryParameter("tr", "25584584")
                 .appendQueryParameter("tn", "Amazaar Apka Apna Bazaar")
-                //.appendQueryParameter("am", String.valueOf(amount))
-                .appendQueryParameter("am", "1")
+                .appendQueryParameter("am", String.valueOf(amount))
+                //.appendQueryParameter("am", "1")
                 .appendQueryParameter("cu", "INR")
                 .build();
 

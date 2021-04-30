@@ -41,13 +41,9 @@ public class CartListFragment extends BaseFragment {
         super.onHiddenChanged(hidden);
 
         if (!hidden) {
-            try {
+            if (((HomeActivity) getActivity()) != null) {
                 initToolbar();
-            } catch (Exception e) {
-                e.printStackTrace();
             }
-
-
         }
     }
 }

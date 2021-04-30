@@ -34,7 +34,7 @@
                     android:layout_height="match_parent">
 
 
-                    <androidx.viewpager.widget.ViewPager
+                    <ImageView
                         android:id="@+id/fragment_product_details_vpSlider"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -42,7 +42,7 @@
                         android:orientation="horizontal">
 
 
-                    </androidx.viewpager.widget.ViewPager>
+                    </ImageView>
 
 
                     <ImageView

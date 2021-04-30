@@ -3,6 +3,7 @@ package com.amazaar.Activity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +14,7 @@ import com.amazaar.R;
 import com.amazaar.Widget.LoadingWIdget.LoadingWidget;
 import com.amazaar.Widget.OtpVerificationWidget.OTPVerificationWidget;
 import com.amazaar.Widget.ProfileSubmitWidget.ProfileSubmitWidget;
+import com.github.ybq.android.spinkit.style.Circle;
 import com.google.inject.Injector;
 
 import javax.inject.Inject;
@@ -28,7 +30,7 @@ public class BaseActivity extends AppCompatActivity {
     public CustomerLogin m_customer_login;
     private OTPVerificationWidget m_otpOtpVerificationWidget;
     private ProfileSubmitWidget m_profileSubmitWidget;
-    private LoadingWidget m_loadingWidget;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,11 @@ public class BaseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_base);
         m_otpOtpVerificationWidget = (OTPVerificationWidget) findViewById(R.id.otp_verification);
         m_profileSubmitWidget = (ProfileSubmitWidget) findViewById(R.id.profileSubmit);
-        m_loadingWidget = (LoadingWidget) findViewById(R.id.loading);
+        progressBar = (ProgressBar) findViewById(R.id.progress);
+        Circle circle = new Circle();
+        circle.setBounds(0, 0, 100, 100);
+        circle.setColor(R.color.colorPrimary);
+        progressBar.setIndeterminateDrawable(circle);
         m_profileSubmitWidget.setVisibility(View.GONE);
         m_otpOtpVerificationWidget.setVisibility(View.VISIBLE);
         injectMembers();
@@ -49,8 +55,9 @@ public class BaseActivity extends AppCompatActivity {
         m_otpOtpVerificationWidget.getView().getPhoneIsVerified().setListener(new VariableValueChange.ChangeListener() {
             @Override
             public void onChange() {
-                m_loadingWidget.getView().getProgressLayout().showLoading();
+                circle.start();
                 m_customer_login.login(m_otpOtpVerificationWidget.getView().getPhoneNumber().getVar(), m_profileSubmitWidget);
+                circle.stop();
             }
 
         });

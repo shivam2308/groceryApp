@@ -17,7 +17,6 @@ import com.amazaar.Fragments.MyAccountFragment;
 import com.amazaar.Fragments.OrderListFragment;
 import com.amazaar.Fragments.SettingFragment;
 import com.amazaar.Interfaces.IView;
-import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.Protobuff.CustomerPbOuterClass;
 import com.amazaar.R;
 import com.amazaar.SessionManager.CustomerSession;
@@ -106,6 +105,11 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
                 m_admin.setVisibility(VISIBLE);
             } else {
                 m_admin.setVisibility(GONE);
+            }
+            if (m_customerSession.getSession().getPrivilege() == CustomerPbOuterClass.PrivilegeTypeEnum.DELIVERY_MAN) {
+                rlOrderHistory.setVisibility(GONE);
+            } else {
+                rlOrderHistory.setVisibility(VISIBLE);
             }
         }
     }

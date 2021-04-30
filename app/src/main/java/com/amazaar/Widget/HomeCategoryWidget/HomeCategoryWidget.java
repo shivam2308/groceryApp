@@ -20,7 +20,7 @@ import com.amazaar.Interfaces.IView;
 import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.R;
 import com.amazaar.Utility.Utils;
-import com.amazaar.dialog.CloseAppDialogFragment;
+import com.amazaar.Dialog.CloseAppDialogFragment;
 import com.google.inject.Injector;
 import com.yarolegovich.discretescrollview.DSVOrientation;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
@@ -93,6 +93,7 @@ public class HomeCategoryWidget extends LinearLayout implements IView<HomeCatego
 
                 ProductListFragment fragmentProductDetails = new ProductListFragment();
                 fragmentProductDetails.setItemType(viewModel.getItemType());
+                getView().setProductListFragment(fragmentProductDetails);
                 Utils.addNextFragment(getContext(),fragmentProductDetails, getView().getMainFragment(), false);
             }
         });

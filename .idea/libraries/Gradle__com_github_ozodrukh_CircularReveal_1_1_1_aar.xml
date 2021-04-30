@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.ozodrukh:CircularReveal:1.1.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/12bf74595cfd8323973719fb3946f1a7/jetified-CircularReveal-1.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/407888e62325736dc16f7954178714a2/jetified-CircularReveal-1.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6d6dcadf7f13f52182906682404c36d3/jetified-CircularReveal-1.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/053d4e39fd6ae1bb044ff2a8baac7a3c/jetified-CircularReveal-1.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1b2d1f3cbbcdb38fb2d774c3ed7eab92/jetified-CircularReveal-1.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1b2d1f3cbbcdb38fb2d774c3ed7eab92/jetified-CircularReveal-1.1.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1b2d1f3cbbcdb38fb2d774c3ed7eab92/jetified-CircularReveal-1.1.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ozodrukh/CircularReveal/1.1.1/1602d27c1662f2c6846cc1be9a715aa0aca9c63d/CircularReveal-1.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
