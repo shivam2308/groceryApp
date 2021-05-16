@@ -87,7 +87,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                   // onItemClickListener.onItemClick(v, (ProductListModel) v.getTag());
+                    onItemClickListener.onItemClick(v, (ProductListModel) v.getTag());
                 }
             }, 200);
         }
@@ -141,7 +141,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             tvProductPrice.setText(item.getProductPrice());
             tvTotalKg.setText(""+item.getTotalKg());
             itemView.setTag(item);
-            m_getImageFromUrl.setImageFromUrl(mContext, item.getPbModel().getItemUrl(), ivProImg, DefaultImageUrl.ImageShowTypeEnum.ITEM);
+            m_getImageFromUrl.setImageFromUrl(mContext, item.getPbModel().getItemImage(), ivProImg, DefaultImageUrl.ImageShowTypeEnum.ITEM);
           //  ivProImg.setImageDrawable(mContext.getResources().getDrawable(item.getProductImage()));
             ivLikeUnLike.setImageDrawable(item.isLike()? mContext.getResources().getDrawable(R.drawable.ic_fav_select) : mContext.getResources().getDrawable(R.drawable.ic_fav_unselect));
             rlTotalCartItem.setVisibility(item.getTotalKg() == 0 ? View.GONE : View.VISIBLE);
@@ -156,7 +156,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                //onItemClickListener.onItemClick(v, item);
+                                onItemClickListener.onItemClick(v, item);
                             }
                         }, 200);
                     }

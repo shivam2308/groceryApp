@@ -130,7 +130,7 @@ public class CartListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             tvTotalKg.setText(""+item.getProductQuantity());
             itemView.setTag(item);
             //ivProImg.setImageDrawable(mContext.getResources().getDrawable(item.getProductImages()));
-            m_getImageFromUrl.setImageFromUrl(mContext, item.getOnitemChange().getData().getItem().getItemUrl(), ivProImg, DefaultImageUrl.ImageShowTypeEnum.ITEM);
+            m_getImageFromUrl.setImageFromUrl(mContext, item.getOnitemChange().getData().getItem().getItemImage(), ivProImg, DefaultImageUrl.ImageShowTypeEnum.ITEM);
 
 
             ivPlus.setOnClickListener(new View.OnClickListener() {

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.amazaar.Activity.HomeActivity;
 import com.amazaar.Enums.TopBarUiEnum;
 import com.amazaar.R;
@@ -40,9 +41,10 @@ public class CheckOutFragment extends BaseFragment {
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
 
-        if(!hidden)
-        {
-            initToolbar();
+        if (!hidden) {
+            if (((HomeActivity) getActivity()) != null) {
+                initToolbar();
+            }
         }
     }
 }

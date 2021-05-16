@@ -15,11 +15,6 @@ import com.amazaar.R;
 
 public class DailogLoading extends DialogFragment implements View.OnClickListener{
 
-    private TextView tvAboutUs;
-    private ImageView ivClose;
-
-
-
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final Dialog dialog = new Dialog(getActivity());
@@ -42,10 +37,6 @@ public class DailogLoading extends DialogFragment implements View.OnClickListene
 
     protected void initializeComponent(Dialog v) {
 
-
-        tvAboutUs = (TextView) v.findViewById(R.id.dailog_aboutus_tvAboutUs);
-        ivClose = (ImageView) v.findViewById(R.id.dailog_aboutus_ivClose);
-        ivClose.setOnClickListener(this);
     }
 
 
@@ -61,11 +52,6 @@ public class DailogLoading extends DialogFragment implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-
-        if (v == ivClose) {
-            dismiss();
-        }
-
 
     }
 }

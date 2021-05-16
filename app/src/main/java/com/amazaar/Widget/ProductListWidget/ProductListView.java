@@ -6,10 +6,13 @@ import android.widget.ImageView;
 import com.amazaar.Adapters.ProductListAdapter;
 import com.amazaar.ClientServices.ItemClientService;
 import com.amazaar.Convertors.ItemPbToProductListModelConvertor;
+import com.amazaar.Fragments.ProductDetailsFragment;
 import com.amazaar.Fragments.ProductListFragment;
 import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
 import com.amazaar.Protobuff.ItemPbOuterClass;
+import com.amazaar.Protobuff.CustomerPbOuterClass;
+import com.amazaar.SessionManager.CustomerSession;
 
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -25,9 +28,12 @@ public class ProductListView {
     private List<ProductListModel> m_productListModelArrayList;
     private ProductListAdapter m_productListAdapter;
     private ProductListFragment m_mainFragment;
+    private ProductDetailsFragment m_fragmentProductDetails;
     @Inject
     private ItemClientService m_itemService;
     private ImageView iFilter;
+    @Inject
+    private CustomerSession m_customerSession;
 
     @Inject
     public ProductListView() {
@@ -111,7 +117,10 @@ public class ProductListView {
     public void getItemList(ItemPbOuterClass.ItemTypeEnum itemTypeEnum) {
         ItemPbOuterClass.ItemSearchRequestPb.Builder builder = ItemPbOuterClass.ItemSearchRequestPb.newBuilder();
         builder.setItemType(itemTypeEnum);
-        builder.setAvailabilityStatus(ItemPbOuterClass.AvailabilityStatusEnum.AVAILABLE);
+        if (m_customerSession.getSession().getPrivilege() != CustomerPbOuterClass.PrivilegeTypeEnum.ADMIN){
+            builder.setAvailabilityStatus(ItemPbOuterClass.AvailabilityStatusEnum.AVAILABLE);
+        }
+
         ItemPbOuterClass.ItemSearchResponsePb result = null;
         try {
             result = m_itemService.search(builder.build());
@@ -127,4 +136,11 @@ public class ProductListView {
     }
 
 
+    public void setProductDetailsFragment(ProductDetailsFragment fragmentProductDetails) {
+        m_fragmentProductDetails = fragmentProductDetails;
+    }
+
+    public ProductDetailsFragment getProductDetailsFragment() {
+        return m_fragmentProductDetails;
+    }
 }

@@ -3,15 +3,18 @@ package com.amazaar.Activity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.amazaar.ControlFlow.CustomerLogin;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
 import com.amazaar.Widget.LoadingWIdget.LoadingWidget;
 import com.amazaar.Widget.OtpVerificationWidget.OTPVerificationWidget;
 import com.amazaar.Widget.ProfileSubmitWidget.ProfileSubmitWidget;
+import com.github.ybq.android.spinkit.style.Circle;
 import com.google.inject.Injector;
 
 import javax.inject.Inject;
@@ -23,12 +26,11 @@ import static com.amazaar.Module.AmazaarApplication.getContext;
 
 public class BaseActivity extends AppCompatActivity {
 
-    private OTPVerificationWidget m_otpOtpVerificationWidget;
-    private ProfileSubmitWidget m_profileSubmitWidget;
-    private LoadingWidget m_loadingWidget;
     @Inject
     public CustomerLogin m_customer_login;
-
+    private OTPVerificationWidget m_otpOtpVerificationWidget;
+    private ProfileSubmitWidget m_profileSubmitWidget;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +38,14 @@ public class BaseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_base);
         m_otpOtpVerificationWidget = (OTPVerificationWidget) findViewById(R.id.otp_verification);
         m_profileSubmitWidget = (ProfileSubmitWidget) findViewById(R.id.profileSubmit);
-        m_loadingWidget = (LoadingWidget) findViewById(R.id.loading);
+        progressBar = (ProgressBar) findViewById(R.id.progress);
+        Circle circle = new Circle();
+        circle.setBounds(0, 0, 100, 100);
+        circle.setColor(R.color.colorPrimary);
+        progressBar.setIndeterminateDrawable(circle);
         m_profileSubmitWidget.setVisibility(View.GONE);
         m_otpOtpVerificationWidget.setVisibility(View.VISIBLE);
         injectMembers();
-        //m_loadingWidget.setVisibility(View.VISIBLE);
         m_otpOtpVerificationWidget.getView().getPhoneNumber().setListener(new VariableValueChange.ChangeListener() {
             @Override
             public void onChange() {
@@ -50,14 +55,23 @@ public class BaseActivity extends AppCompatActivity {
         m_otpOtpVerificationWidget.getView().getPhoneIsVerified().setListener(new VariableValueChange.ChangeListener() {
             @Override
             public void onChange() {
-                if (m_otpOtpVerificationWidget.getView().getPhoneIsVerified().getVar()) {
-                    m_customer_login.login(m_otpOtpVerificationWidget.getView().getPhoneNumber().getVar(),m_profileSubmitWidget);
-                }
+                circle.start();
+                m_customer_login.login(m_otpOtpVerificationWidget.getView().getPhoneNumber().getVar(), m_profileSubmitWidget);
+                circle.stop();
             }
+
         });
     }
+
     private void injectMembers() {
         Injector injector = RoboGuice.getInjector(getContext());
         injector.injectMembers(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AmazaarApplication.setCurrentActivity(this);
+        // qrReaderFragment.getQRCodeReaderWidget().getView().getQrCodeReaderView().startCamera();
     }
 }

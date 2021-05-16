@@ -35,6 +35,10 @@ public final class PaymentPbOuterClass {
      * <code>SUBMITTED = 3;</code>
      */
     SUBMITTED(3),
+    /**
+     * <code>PENDING_OR_NOT_DONE_YET = 4;</code>
+     */
+    PENDING_OR_NOT_DONE_YET(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -54,6 +58,10 @@ public final class PaymentPbOuterClass {
      * <code>SUBMITTED = 3;</code>
      */
     public static final int SUBMITTED_VALUE = 3;
+    /**
+     * <code>PENDING_OR_NOT_DONE_YET = 4;</code>
+     */
+    public static final int PENDING_OR_NOT_DONE_YET_VALUE = 4;
 
 
     public final int getNumber() {
@@ -84,6 +92,7 @@ public final class PaymentPbOuterClass {
         case 1: return SUCCESS;
         case 2: return FAILURE;
         case 3: return SUBMITTED;
+        case 4: return PENDING_OR_NOT_DONE_YET;
         default: return null;
       }
     }
@@ -4703,11 +4712,12 @@ public final class PaymentPbOuterClass {
       "ntModeEnum\"\177\n\027PaymentSearchResponsePb\0221\n" +
       "\007summary\030\001 \001(\0132 .com.amazaar.Protobuff.S" +
       "ummaryPb\0221\n\007results\030\002 \003(\0132 .com.amazaar." +
-      "Protobuff.PaymentPb*X\n\021PaymentStatusEnum" +
+      "Protobuff.PaymentPb*u\n\021PaymentStatusEnum" +
       "\022\032\n\026UNKNOWN_PAYMENT_STATUS\020\000\022\013\n\007SUCCESS\020" +
-      "\001\022\013\n\007FAILURE\020\002\022\r\n\tSUBMITTED\020\003*I\n\017Payment" +
-      "ModeEnum\022\020\n\014UNKNOWN_MODE\020\000\022\016\n\nGOOGLE_PAY" +
-      "\020\001\022\024\n\020CASH_ON_DELIVERY\020\002b\006proto3"
+      "\001\022\013\n\007FAILURE\020\002\022\r\n\tSUBMITTED\020\003\022\033\n\027PENDING" +
+      "_OR_NOT_DONE_YET\020\004*I\n\017PaymentModeEnum\022\020\n" +
+      "\014UNKNOWN_MODE\020\000\022\016\n\nGOOGLE_PAY\020\001\022\024\n\020CASH_" +
+      "ON_DELIVERY\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

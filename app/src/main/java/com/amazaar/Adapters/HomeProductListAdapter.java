@@ -111,7 +111,7 @@ public class HomeProductListAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         public void bindData(final ProductListModel item, final int position) {
             itemView.setTag(item);
             if(item.getPbModel()!=null) {
-                m_getImageFromUrl.setImageFromUrl(mContext, item.getPbModel().getItemUrl(), ivProImg, DefaultImageUrl.ImageShowTypeEnum.ITEM);
+                m_getImageFromUrl.setImageFromUrl(mContext, item.getPbModel().getItemImage(), ivProImg, DefaultImageUrl.ImageShowTypeEnum.ITEM);
             }else{
                 ivProImg.setImageDrawable(mContext.getResources().getDrawable(item.getProductImage()));
             }

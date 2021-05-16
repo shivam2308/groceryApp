@@ -5,7 +5,13 @@
 
     <com.amazaar.Widget.HomeCategoryWidget.HomeCategoryWidget
         android:id="@+id/home_category"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <com.amazaar.Widget.OrderListWidget.OrderListWidget
+        android:id="@+id/orderlist_widget_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
 </com.amazaar.Comman.SlidingLinearLayout>

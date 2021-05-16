@@ -130,7 +130,7 @@ public class ProductListModel implements Parcelable, IListModel<ItemPbOuterClass
         if(Strings.notEmpty(m_onitemChange.getData().getDbInfo().getId())) {
             return m_onitemChange.getData();
         }else{
-            return null;
+            return m_onitemChange.getDefaultData();
         }
     }
 

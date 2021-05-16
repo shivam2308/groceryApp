@@ -20,7 +20,7 @@ import com.amazaar.Interfaces.IView;
 import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.R;
 import com.amazaar.Utility.Utils;
-import com.amazaar.dialog.CloseAppDialogFragment;
+import com.amazaar.Dialog.CloseAppDialogFragment;
 import com.google.inject.Injector;
 import com.yarolegovich.discretescrollview.DSVOrientation;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
@@ -45,7 +45,7 @@ public class HomeCategoryWidget extends LinearLayout implements IView<HomeCatego
     private HomeProductListAdapter productListAdapter;
     private InfiniteScrollAdapter<ShopAdapter.ViewHolder> shopAdapter;
     private List<ProductListModel> productListModelArrayList;
-    private List<Integer> pagerImgList;
+    //private List<Integer> pagerImgList;
     private DiscreteScrollView discreteScrollView;
     private TextView tvTopSaller;
     private TextView tvAll;
@@ -74,7 +74,7 @@ public class HomeCategoryWidget extends LinearLayout implements IView<HomeCatego
 
     private void inflateLayout() {
         inflate(getContext(), R.layout.home_category_layout, this);
-        mLayoutManager = new GridLayoutManager(getContext(), 2);
+        mLayoutManager = new GridLayoutManager(getContext(), 1);
         rvProductList.setLayoutManager(mLayoutManager);
 
         //tvAll.setOnClickListener(this);
@@ -93,6 +93,7 @@ public class HomeCategoryWidget extends LinearLayout implements IView<HomeCatego
 
                 ProductListFragment fragmentProductDetails = new ProductListFragment();
                 fragmentProductDetails.setItemType(viewModel.getItemType());
+                getView().setProductListFragment(fragmentProductDetails);
                 Utils.addNextFragment(getContext(),fragmentProductDetails, getView().getMainFragment(), false);
             }
         });

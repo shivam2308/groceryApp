@@ -8,26 +8,34 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.amazaar.Dialog.CloseAppDialogFragment;
 import com.amazaar.Enums.TopBarUiEnum;
 import com.amazaar.Fragments.HomeCategoryFragment;
+import com.amazaar.Fragments.MyAccountFragment;
+import com.amazaar.Fragments.OrderListFragment;
 import com.amazaar.Fragments.PaymentFragment;
 import com.amazaar.Fragments.QRCodeReaderFragment;
-import com.amazaar.Fragments.UploadImageFragment;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
+import com.amazaar.SessionManager.CustomerSession;
 import com.amazaar.Widget.TopBarWidget.TopBarWidget;
-import com.amazaar.dialog.CloseAppDialogFragment;
+import com.google.inject.Injector;
 
 import javax.inject.Inject;
 
-import static com.amazaar.Module.AmazaarApplication.getFragmentManager;
+import roboguice.RoboGuice;
+
+import static com.amazaar.Module.AmazaarApplication.getContext;
 
 public class HomeActivity extends AppCompatActivity {
 
+    @Inject
+    public CustomerSession m_customerSession;
     private TopBarWidget m_topBar;
     private Fragment mFragment = null;
     private HomeCategoryFragment mainFragment;
     private QRCodeReaderFragment qrReaderFragment;
+    private OrderListFragment m_orderLIstFragment;
     @Inject
     private PaymentFragment paymentFragment;
 
@@ -36,7 +44,9 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_actity);
         m_topBar = (TopBarWidget) findViewById(R.id.topBar);
+        injectMembers();
         initView();
+
     }
 
     @Override
@@ -69,17 +79,19 @@ public class HomeActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         AmazaarApplication.setCurrentActivity(this);
-       // qrReaderFragment.getQRCodeReaderWidget().getView().getQrCodeReaderView().startCamera();
+        // qrReaderFragment.getQRCodeReaderWidget().getView().getQrCodeReaderView().startCamera();
     }
 
     private void initView() {
         setToolbar(TopBarUiEnum.HOME);
         mainFragment = new HomeCategoryFragment();
         qrReaderFragment = new QRCodeReaderFragment();
-        paymentFragment= new PaymentFragment();
+        paymentFragment = new PaymentFragment();
+        m_orderLIstFragment = new OrderListFragment();
         m_topBar.getView().setMainFragment(mainFragment);
         openFragment(mainFragment);
-       // openFragment(qrReaderFragment);
+
+        // openFragment(qrReaderFragment);
     }
 
     public void setToolbar(TopBarUiEnum enumm) {
@@ -97,11 +109,14 @@ public class HomeActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         paymentFragment.onActivityResult(requestCode, resultCode, data);
-        m_topBar.getView().getMenuFragment().getMenuWidget().getView().getMyAccountFragment().getMyAccountWidget().getView().getUploadFragment().onActivityResult(requestCode, resultCode, data);
+        mainFragment.getHomeCategoryWidget().getView().getProductListFragment().getProductListWidget().getView().getProductDetailsFragment().getProductDetailsWidget().getView().getUploadFragment().onActivityResult(requestCode, resultCode, data);
+        if (AmazaarApplication.getCurrentFragment().getClass() == MyAccountFragment.class) {
+            m_topBar.getView().getMenuFragment().getMenuWidget().getView().getMyAccountFragment().getMyAccountWidget().getView().getUploadFragment().onActivityResult(requestCode, resultCode, data);
+        }
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
 
         int f = AmazaarApplication.getFragmentManager().getBackStackEntryCount();
 
@@ -111,5 +126,10 @@ public class HomeActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+
+    private void injectMembers() {
+        Injector injector = RoboGuice.getInjector(getContext());
+        injector.injectMembers(this);
     }
 }

@@ -39,12 +39,12 @@ message ItemPbRef {
 message ItemPb {
     EntityPb dbInfo = 1;
     NamePb itemName = 2;
-    ImageRefPb itemUrl = 3;
+    ImageRefPb itemImage = 3;
     string quantity = 4;
     float price = 5;
     ItemTypeEnum itemType = 6;
     AvailabilityStatusEnum availabilityStatus = 7;
-    ItemQuantityTypeEnum quantityType = 8;
+    ItemQuantityTypeEnum itemQuantityType = 8;
     TimePb time = 9;
 }
 message ItemSearchRequestPb {

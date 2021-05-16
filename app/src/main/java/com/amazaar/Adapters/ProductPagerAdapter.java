@@ -1,7 +1,9 @@
 package com.amazaar.Adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -46,6 +48,7 @@ public class ProductPagerAdapter extends PagerAdapter {
         ImageView imageView = itemView.findViewById(R.id.ivCode);
         m_getImageFromUrl.setImageFromUrl(context, imgList.get(position),imageView, DefaultImageUrl.ImageShowTypeEnum.ITEM);
         container.addView(itemView);
+
         return itemView;
     }
 

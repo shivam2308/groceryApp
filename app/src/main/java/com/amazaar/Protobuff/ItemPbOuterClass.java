@@ -1279,19 +1279,19 @@ public final class ItemPbOuterClass {
     com.amazaar.Protobuff.NamePbOuterClass.NamePbOrBuilder getItemNameOrBuilder();
 
     /**
-     * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
-     * @return Whether the itemUrl field is set.
+     * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
+     * @return Whether the itemImage field is set.
      */
-    boolean hasItemUrl();
+    boolean hasItemImage();
     /**
-     * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
-     * @return The itemUrl.
+     * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
+     * @return The itemImage.
      */
-    com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb getItemUrl();
+    com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb getItemImage();
     /**
-     * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
+     * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
      */
-    com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder getItemUrlOrBuilder();
+    com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder getItemImageOrBuilder();
 
     /**
      * <code>string quantity = 4;</code>
@@ -1334,15 +1334,15 @@ public final class ItemPbOuterClass {
     com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum getAvailabilityStatus();
 
     /**
-     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-     * @return The enum numeric value on the wire for quantityType.
+     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+     * @return The enum numeric value on the wire for itemQuantityType.
      */
-    int getQuantityTypeValue();
+    int getItemQuantityTypeValue();
     /**
-     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-     * @return The quantityType.
+     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+     * @return The itemQuantityType.
      */
-    com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum getQuantityType();
+    com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum getItemQuantityType();
 
     /**
      * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
@@ -1375,7 +1375,7 @@ public final class ItemPbOuterClass {
       quantity_ = "";
       itemType_ = 0;
       availabilityStatus_ = 0;
-      quantityType_ = 0;
+      itemQuantityType_ = 0;
     }
 
     @java.lang.Override
@@ -1436,13 +1436,13 @@ public final class ItemPbOuterClass {
             }
             case 26: {
               com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder subBuilder = null;
-              if (itemUrl_ != null) {
-                subBuilder = itemUrl_.toBuilder();
+              if (itemImage_ != null) {
+                subBuilder = itemImage_.toBuilder();
               }
-              itemUrl_ = input.readMessage(com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.parser(), extensionRegistry);
+              itemImage_ = input.readMessage(com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(itemUrl_);
-                itemUrl_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(itemImage_);
+                itemImage_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1473,7 +1473,7 @@ public final class ItemPbOuterClass {
             case 64: {
               int rawValue = input.readEnum();
 
-              quantityType_ = rawValue;
+              itemQuantityType_ = rawValue;
               break;
             }
             case 74: {
@@ -1573,30 +1573,30 @@ public final class ItemPbOuterClass {
       return getItemName();
     }
 
-    public static final int ITEMURL_FIELD_NUMBER = 3;
-    private com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb itemUrl_;
+    public static final int ITEMIMAGE_FIELD_NUMBER = 3;
+    private com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb itemImage_;
     /**
-     * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
-     * @return Whether the itemUrl field is set.
+     * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
+     * @return Whether the itemImage field is set.
      */
     @java.lang.Override
-    public boolean hasItemUrl() {
-      return itemUrl_ != null;
+    public boolean hasItemImage() {
+      return itemImage_ != null;
     }
     /**
-     * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
-     * @return The itemUrl.
+     * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
+     * @return The itemImage.
      */
     @java.lang.Override
-    public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb getItemUrl() {
-      return itemUrl_ == null ? com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.getDefaultInstance() : itemUrl_;
+    public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb getItemImage() {
+      return itemImage_ == null ? com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.getDefaultInstance() : itemImage_;
     }
     /**
-     * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
+     * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
      */
     @java.lang.Override
-    public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder getItemUrlOrBuilder() {
-      return getItemUrl();
+    public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder getItemImageOrBuilder() {
+      return getItemImage();
     }
 
     public static final int QUANTITY_FIELD_NUMBER = 4;
@@ -1686,22 +1686,22 @@ public final class ItemPbOuterClass {
       return result == null ? com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.UNRECOGNIZED : result;
     }
 
-    public static final int QUANTITYTYPE_FIELD_NUMBER = 8;
-    private int quantityType_;
+    public static final int ITEMQUANTITYTYPE_FIELD_NUMBER = 8;
+    private int itemQuantityType_;
     /**
-     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-     * @return The enum numeric value on the wire for quantityType.
+     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+     * @return The enum numeric value on the wire for itemQuantityType.
      */
-    @java.lang.Override public int getQuantityTypeValue() {
-      return quantityType_;
+    @java.lang.Override public int getItemQuantityTypeValue() {
+      return itemQuantityType_;
     }
     /**
-     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-     * @return The quantityType.
+     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+     * @return The itemQuantityType.
      */
-    @java.lang.Override public com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum getQuantityType() {
+    @java.lang.Override public com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum getItemQuantityType() {
       @SuppressWarnings("deprecation")
-      com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum result = com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.valueOf(quantityType_);
+      com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum result = com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.valueOf(itemQuantityType_);
       return result == null ? com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.UNRECOGNIZED : result;
     }
 
@@ -1751,8 +1751,8 @@ public final class ItemPbOuterClass {
       if (itemName_ != null) {
         output.writeMessage(2, getItemName());
       }
-      if (itemUrl_ != null) {
-        output.writeMessage(3, getItemUrl());
+      if (itemImage_ != null) {
+        output.writeMessage(3, getItemImage());
       }
       if (!getQuantityBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, quantity_);
@@ -1766,8 +1766,8 @@ public final class ItemPbOuterClass {
       if (availabilityStatus_ != com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.UNKNOWN_AVAILABILITY_STATUS.getNumber()) {
         output.writeEnum(7, availabilityStatus_);
       }
-      if (quantityType_ != com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.UNKNOWN_ITEM_QUANTITY_TYPE.getNumber()) {
-        output.writeEnum(8, quantityType_);
+      if (itemQuantityType_ != com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.UNKNOWN_ITEM_QUANTITY_TYPE.getNumber()) {
+        output.writeEnum(8, itemQuantityType_);
       }
       if (time_ != null) {
         output.writeMessage(9, getTime());
@@ -1789,9 +1789,9 @@ public final class ItemPbOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getItemName());
       }
-      if (itemUrl_ != null) {
+      if (itemImage_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getItemUrl());
+          .computeMessageSize(3, getItemImage());
       }
       if (!getQuantityBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, quantity_);
@@ -1808,9 +1808,9 @@ public final class ItemPbOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(7, availabilityStatus_);
       }
-      if (quantityType_ != com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.UNKNOWN_ITEM_QUANTITY_TYPE.getNumber()) {
+      if (itemQuantityType_ != com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.UNKNOWN_ITEM_QUANTITY_TYPE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(8, quantityType_);
+          .computeEnumSize(8, itemQuantityType_);
       }
       if (time_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1841,10 +1841,10 @@ public final class ItemPbOuterClass {
         if (!getItemName()
             .equals(other.getItemName())) return false;
       }
-      if (hasItemUrl() != other.hasItemUrl()) return false;
-      if (hasItemUrl()) {
-        if (!getItemUrl()
-            .equals(other.getItemUrl())) return false;
+      if (hasItemImage() != other.hasItemImage()) return false;
+      if (hasItemImage()) {
+        if (!getItemImage()
+            .equals(other.getItemImage())) return false;
       }
       if (!getQuantity()
           .equals(other.getQuantity())) return false;
@@ -1853,7 +1853,7 @@ public final class ItemPbOuterClass {
               other.getPrice())) return false;
       if (itemType_ != other.itemType_) return false;
       if (availabilityStatus_ != other.availabilityStatus_) return false;
-      if (quantityType_ != other.quantityType_) return false;
+      if (itemQuantityType_ != other.itemQuantityType_) return false;
       if (hasTime() != other.hasTime()) return false;
       if (hasTime()) {
         if (!getTime()
@@ -1878,9 +1878,9 @@ public final class ItemPbOuterClass {
         hash = (37 * hash) + ITEMNAME_FIELD_NUMBER;
         hash = (53 * hash) + getItemName().hashCode();
       }
-      if (hasItemUrl()) {
-        hash = (37 * hash) + ITEMURL_FIELD_NUMBER;
-        hash = (53 * hash) + getItemUrl().hashCode();
+      if (hasItemImage()) {
+        hash = (37 * hash) + ITEMIMAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getItemImage().hashCode();
       }
       hash = (37 * hash) + QUANTITY_FIELD_NUMBER;
       hash = (53 * hash) + getQuantity().hashCode();
@@ -1891,8 +1891,8 @@ public final class ItemPbOuterClass {
       hash = (53 * hash) + itemType_;
       hash = (37 * hash) + AVAILABILITYSTATUS_FIELD_NUMBER;
       hash = (53 * hash) + availabilityStatus_;
-      hash = (37 * hash) + QUANTITYTYPE_FIELD_NUMBER;
-      hash = (53 * hash) + quantityType_;
+      hash = (37 * hash) + ITEMQUANTITYTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + itemQuantityType_;
       if (hasTime()) {
         hash = (37 * hash) + TIME_FIELD_NUMBER;
         hash = (53 * hash) + getTime().hashCode();
@@ -2042,11 +2042,11 @@ public final class ItemPbOuterClass {
           itemName_ = null;
           itemNameBuilder_ = null;
         }
-        if (itemUrlBuilder_ == null) {
-          itemUrl_ = null;
+        if (itemImageBuilder_ == null) {
+          itemImage_ = null;
         } else {
-          itemUrl_ = null;
-          itemUrlBuilder_ = null;
+          itemImage_ = null;
+          itemImageBuilder_ = null;
         }
         quantity_ = "";
 
@@ -2056,7 +2056,7 @@ public final class ItemPbOuterClass {
 
         availabilityStatus_ = 0;
 
-        quantityType_ = 0;
+        itemQuantityType_ = 0;
 
         if (timeBuilder_ == null) {
           time_ = null;
@@ -2100,16 +2100,16 @@ public final class ItemPbOuterClass {
         } else {
           result.itemName_ = itemNameBuilder_.build();
         }
-        if (itemUrlBuilder_ == null) {
-          result.itemUrl_ = itemUrl_;
+        if (itemImageBuilder_ == null) {
+          result.itemImage_ = itemImage_;
         } else {
-          result.itemUrl_ = itemUrlBuilder_.build();
+          result.itemImage_ = itemImageBuilder_.build();
         }
         result.quantity_ = quantity_;
         result.price_ = price_;
         result.itemType_ = itemType_;
         result.availabilityStatus_ = availabilityStatus_;
-        result.quantityType_ = quantityType_;
+        result.itemQuantityType_ = itemQuantityType_;
         if (timeBuilder_ == null) {
           result.time_ = time_;
         } else {
@@ -2169,8 +2169,8 @@ public final class ItemPbOuterClass {
         if (other.hasItemName()) {
           mergeItemName(other.getItemName());
         }
-        if (other.hasItemUrl()) {
-          mergeItemUrl(other.getItemUrl());
+        if (other.hasItemImage()) {
+          mergeItemImage(other.getItemImage());
         }
         if (!other.getQuantity().isEmpty()) {
           quantity_ = other.quantity_;
@@ -2185,8 +2185,8 @@ public final class ItemPbOuterClass {
         if (other.availabilityStatus_ != 0) {
           setAvailabilityStatusValue(other.getAvailabilityStatusValue());
         }
-        if (other.quantityType_ != 0) {
-          setQuantityTypeValue(other.getQuantityTypeValue());
+        if (other.itemQuantityType_ != 0) {
+          setItemQuantityTypeValue(other.getItemQuantityTypeValue());
         }
         if (other.hasTime()) {
           mergeTime(other.getTime());
@@ -2458,123 +2458,123 @@ public final class ItemPbOuterClass {
         return itemNameBuilder_;
       }
 
-      private com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb itemUrl_;
+      private com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb itemImage_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder> itemUrlBuilder_;
+          com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder> itemImageBuilder_;
       /**
-       * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
-       * @return Whether the itemUrl field is set.
+       * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
+       * @return Whether the itemImage field is set.
        */
-      public boolean hasItemUrl() {
-        return itemUrlBuilder_ != null || itemUrl_ != null;
+      public boolean hasItemImage() {
+        return itemImageBuilder_ != null || itemImage_ != null;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
-       * @return The itemUrl.
+       * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
+       * @return The itemImage.
        */
-      public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb getItemUrl() {
-        if (itemUrlBuilder_ == null) {
-          return itemUrl_ == null ? com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.getDefaultInstance() : itemUrl_;
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb getItemImage() {
+        if (itemImageBuilder_ == null) {
+          return itemImage_ == null ? com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.getDefaultInstance() : itemImage_;
         } else {
-          return itemUrlBuilder_.getMessage();
+          return itemImageBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
        */
-      public Builder setItemUrl(com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb value) {
-        if (itemUrlBuilder_ == null) {
+      public Builder setItemImage(com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb value) {
+        if (itemImageBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          itemUrl_ = value;
+          itemImage_ = value;
           onChanged();
         } else {
-          itemUrlBuilder_.setMessage(value);
+          itemImageBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
        */
-      public Builder setItemUrl(
+      public Builder setItemImage(
           com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder builderForValue) {
-        if (itemUrlBuilder_ == null) {
-          itemUrl_ = builderForValue.build();
+        if (itemImageBuilder_ == null) {
+          itemImage_ = builderForValue.build();
           onChanged();
         } else {
-          itemUrlBuilder_.setMessage(builderForValue.build());
+          itemImageBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
        */
-      public Builder mergeItemUrl(com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb value) {
-        if (itemUrlBuilder_ == null) {
-          if (itemUrl_ != null) {
-            itemUrl_ =
-              com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.newBuilder(itemUrl_).mergeFrom(value).buildPartial();
+      public Builder mergeItemImage(com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb value) {
+        if (itemImageBuilder_ == null) {
+          if (itemImage_ != null) {
+            itemImage_ =
+              com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.newBuilder(itemImage_).mergeFrom(value).buildPartial();
           } else {
-            itemUrl_ = value;
+            itemImage_ = value;
           }
           onChanged();
         } else {
-          itemUrlBuilder_.mergeFrom(value);
+          itemImageBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
        */
-      public Builder clearItemUrl() {
-        if (itemUrlBuilder_ == null) {
-          itemUrl_ = null;
+      public Builder clearItemImage() {
+        if (itemImageBuilder_ == null) {
+          itemImage_ = null;
           onChanged();
         } else {
-          itemUrl_ = null;
-          itemUrlBuilder_ = null;
+          itemImage_ = null;
+          itemImageBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
        */
-      public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder getItemUrlBuilder() {
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder getItemImageBuilder() {
         
         onChanged();
-        return getItemUrlFieldBuilder().getBuilder();
+        return getItemImageFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
        */
-      public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder getItemUrlOrBuilder() {
-        if (itemUrlBuilder_ != null) {
-          return itemUrlBuilder_.getMessageOrBuilder();
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder getItemImageOrBuilder() {
+        if (itemImageBuilder_ != null) {
+          return itemImageBuilder_.getMessageOrBuilder();
         } else {
-          return itemUrl_ == null ?
-              com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.getDefaultInstance() : itemUrl_;
+          return itemImage_ == null ?
+              com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.getDefaultInstance() : itemImage_;
         }
       }
       /**
-       * <code>.com.amazaar.Protobuff.ImageRefPb itemUrl = 3;</code>
+       * <code>.com.amazaar.Protobuff.ImageRefPb itemImage = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder> 
-          getItemUrlFieldBuilder() {
-        if (itemUrlBuilder_ == null) {
-          itemUrlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getItemImageFieldBuilder() {
+        if (itemImageBuilder_ == null) {
+          itemImageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPb.Builder, com.amazaar.Protobuff.ImagePbOuterClass.ImageRefPbOrBuilder>(
-                  getItemUrl(),
+                  getItemImage(),
                   getParentForChildren(),
                   isClean());
-          itemUrl_ = null;
+          itemImage_ = null;
         }
-        return itemUrlBuilder_;
+        return itemImageBuilder_;
       }
 
       private java.lang.Object quantity_ = "";
@@ -2792,56 +2792,56 @@ public final class ItemPbOuterClass {
         return this;
       }
 
-      private int quantityType_ = 0;
+      private int itemQuantityType_ = 0;
       /**
-       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-       * @return The enum numeric value on the wire for quantityType.
+       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+       * @return The enum numeric value on the wire for itemQuantityType.
        */
-      @java.lang.Override public int getQuantityTypeValue() {
-        return quantityType_;
+      @java.lang.Override public int getItemQuantityTypeValue() {
+        return itemQuantityType_;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-       * @param value The enum numeric value on the wire for quantityType to set.
+       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+       * @param value The enum numeric value on the wire for itemQuantityType to set.
        * @return This builder for chaining.
        */
-      public Builder setQuantityTypeValue(int value) {
+      public Builder setItemQuantityTypeValue(int value) {
         
-        quantityType_ = value;
+        itemQuantityType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-       * @return The quantityType.
+       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+       * @return The itemQuantityType.
        */
       @java.lang.Override
-      public com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum getQuantityType() {
+      public com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum getItemQuantityType() {
         @SuppressWarnings("deprecation")
-        com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum result = com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.valueOf(quantityType_);
+        com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum result = com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.valueOf(itemQuantityType_);
         return result == null ? com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.UNRECOGNIZED : result;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-       * @param value The quantityType to set.
+       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+       * @param value The itemQuantityType to set.
        * @return This builder for chaining.
        */
-      public Builder setQuantityType(com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum value) {
+      public Builder setItemQuantityType(com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum value) {
         if (value == null) {
           throw new NullPointerException();
         }
         
-        quantityType_ = value.getNumber();
+        itemQuantityType_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
+       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
        * @return This builder for chaining.
        */
-      public Builder clearQuantityType() {
+      public Builder clearItemQuantityType() {
         
-        quantityType_ = 0;
+        itemQuantityType_ = 0;
         onChanged();
         return this;
       }
@@ -4882,33 +4882,33 @@ public final class ItemPbOuterClass {
       "to\032\017summaryPb.proto\032\014timePb.proto\"W\n\tIte" +
       "mPbRef\022\n\n\002id\030\001 \001(\t\022/\n\010itemName\030\002 \001(\0132\035.c" +
       "om.amazaar.Protobuff.NamePb\022\r\n\005price\030\003 \001" +
-      "(\002\"\261\003\n\006ItemPb\022/\n\006dbInfo\030\001 \001(\0132\037.com.amaz" +
+      "(\002\"\267\003\n\006ItemPb\022/\n\006dbInfo\030\001 \001(\0132\037.com.amaz" +
       "aar.Protobuff.EntityPb\022/\n\010itemName\030\002 \001(\013" +
-      "2\035.com.amazaar.Protobuff.NamePb\0222\n\007itemU" +
-      "rl\030\003 \001(\0132!.com.amazaar.Protobuff.ImageRe" +
-      "fPb\022\020\n\010quantity\030\004 \001(\t\022\r\n\005price\030\005 \001(\002\0225\n\010" +
-      "itemType\030\006 \001(\0162#.com.amazaar.Protobuff.I" +
-      "temTypeEnum\022I\n\022availabilityStatus\030\007 \001(\0162" +
-      "-.com.amazaar.Protobuff.AvailabilityStat" +
-      "usEnum\022A\n\014quantityType\030\010 \001(\0162+.com.amaza" +
-      "ar.Protobuff.ItemQuantityTypeEnum\022+\n\004tim" +
-      "e\030\t \001(\0132\035.com.amazaar.Protobuff.TimePb\"\323" +
-      "\001\n\023ItemSearchRequestPb\0225\n\010itemType\030\001 \001(\016" +
-      "2#.com.amazaar.Protobuff.ItemTypeEnum\022I\n" +
-      "\022availabilityStatus\030\002 \001(\0162-.com.amazaar." +
-      "Protobuff.AvailabilityStatusEnum\022:\n\ttime" +
-      "Query\030\003 \001(\0132\'.com.amazaar.Protobuff.Time" +
-      "QueryRangePb\"y\n\024ItemSearchResponsePb\0221\n\007" +
-      "summary\030\001 \001(\0132 .com.amazaar.Protobuff.Su" +
-      "mmaryPb\022.\n\007results\030\002 \003(\0132\035.com.amazaar.P" +
-      "rotobuff.ItemPb*X\n\014ItemTypeEnum\022\025\n\021UNKNO" +
-      "WN_ITEM_TYPE\020\000\022\016\n\nVEGETABLES\020\001\022\n\n\006FRUITS" +
-      "\020\002\022\n\n\006KIRANA\020\003\022\t\n\005DAIRY\020\004*g\n\024ItemQuantit" +
-      "yTypeEnum\022\036\n\032UNKNOWN_ITEM_QUANTITY_TYPE\020" +
-      "\000\022\016\n\nKILO_GRAMS\020\001\022\t\n\005GRAMS\020\002\022\t\n\005PIECE\020\003\022" +
-      "\t\n\005LITRE\020\004*[\n\026AvailabilityStatusEnum\022\037\n\033" +
-      "UNKNOWN_AVAILABILITY_STATUS\020\000\022\r\n\tAVAILAB" +
-      "LE\020\001\022\021\n\rNOT_AVAILABLE\020\002b\006proto3"
+      "2\035.com.amazaar.Protobuff.NamePb\0224\n\titemI" +
+      "mage\030\003 \001(\0132!.com.amazaar.Protobuff.Image" +
+      "RefPb\022\020\n\010quantity\030\004 \001(\t\022\r\n\005price\030\005 \001(\002\0225" +
+      "\n\010itemType\030\006 \001(\0162#.com.amazaar.Protobuff" +
+      ".ItemTypeEnum\022I\n\022availabilityStatus\030\007 \001(" +
+      "\0162-.com.amazaar.Protobuff.AvailabilitySt" +
+      "atusEnum\022E\n\020itemQuantityType\030\010 \001(\0162+.com" +
+      ".amazaar.Protobuff.ItemQuantityTypeEnum\022" +
+      "+\n\004time\030\t \001(\0132\035.com.amazaar.Protobuff.Ti" +
+      "mePb\"\323\001\n\023ItemSearchRequestPb\0225\n\010itemType" +
+      "\030\001 \001(\0162#.com.amazaar.Protobuff.ItemTypeE" +
+      "num\022I\n\022availabilityStatus\030\002 \001(\0162-.com.am" +
+      "azaar.Protobuff.AvailabilityStatusEnum\022:" +
+      "\n\ttimeQuery\030\003 \001(\0132\'.com.amazaar.Protobuf" +
+      "f.TimeQueryRangePb\"y\n\024ItemSearchResponse" +
+      "Pb\0221\n\007summary\030\001 \001(\0132 .com.amazaar.Protob" +
+      "uff.SummaryPb\022.\n\007results\030\002 \003(\0132\035.com.ama" +
+      "zaar.Protobuff.ItemPb*X\n\014ItemTypeEnum\022\025\n" +
+      "\021UNKNOWN_ITEM_TYPE\020\000\022\016\n\nVEGETABLES\020\001\022\n\n\006" +
+      "FRUITS\020\002\022\n\n\006KIRANA\020\003\022\t\n\005DAIRY\020\004*g\n\024ItemQ" +
+      "uantityTypeEnum\022\036\n\032UNKNOWN_ITEM_QUANTITY" +
+      "_TYPE\020\000\022\016\n\nKILO_GRAMS\020\001\022\t\n\005GRAMS\020\002\022\t\n\005PI" +
+      "ECE\020\003\022\t\n\005LITRE\020\004*[\n\026AvailabilityStatusEn" +
+      "um\022\037\n\033UNKNOWN_AVAILABILITY_STATUS\020\000\022\r\n\tA" +
+      "VAILABLE\020\001\022\021\n\rNOT_AVAILABLE\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4930,7 +4930,7 @@ public final class ItemPbOuterClass {
     internal_static_com_amazaar_Protobuff_ItemPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_ItemPb_descriptor,
-        new java.lang.String[] { "DbInfo", "ItemName", "ItemUrl", "Quantity", "Price", "ItemType", "AvailabilityStatus", "QuantityType", "Time", });
+        new java.lang.String[] { "DbInfo", "ItemName", "ItemImage", "Quantity", "Price", "ItemType", "AvailabilityStatus", "ItemQuantityType", "Time", });
     internal_static_com_amazaar_Protobuff_ItemSearchRequestPb_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_amazaar_Protobuff_ItemSearchRequestPb_fieldAccessorTable = new

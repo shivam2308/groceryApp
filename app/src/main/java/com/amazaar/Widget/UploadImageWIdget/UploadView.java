@@ -13,6 +13,7 @@ import com.amazaar.CommonCode.AToast;
 import com.amazaar.CommonCode.DataModel;
 import com.amazaar.ControlFlow.CreateImage;
 import com.amazaar.DefaultProviders.ImagePbDefaultProvider;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.Protobuff.ImagePbOuterClass;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -86,7 +87,7 @@ public class UploadView {
             progressDialog.setTitle("Uploading...");
             progressDialog.show();
 
-            StorageReference ref = storageReference.child("images/"+m_ImageType.name()+"/" + UUID.randomUUID().toString());
+            StorageReference ref = storageReference.child("images/"+m_ImageType.name()+"/"+ AmazaarApplication.getMode().name()+ "/" + UUID.randomUUID().toString());
             StorageTask<UploadTask.TaskSnapshot> uploadTask = ref.putFile(m_filePath);
             Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
                 @Override

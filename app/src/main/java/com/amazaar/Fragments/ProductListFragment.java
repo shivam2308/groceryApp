@@ -96,4 +96,8 @@ public class ProductListFragment extends BaseFragment {
             initToolbar();
         }
     }
+
+    public ProductListWidget getProductListWidget() {
+        return m_productListWidget;
+    }
 }

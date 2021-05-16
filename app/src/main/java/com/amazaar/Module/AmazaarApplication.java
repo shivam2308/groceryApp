@@ -2,6 +2,7 @@ package com.amazaar.Module;
 
 import android.app.Activity;
 import android.app.Application;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 
@@ -27,6 +28,8 @@ public class AmazaarApplication extends Application {
     ;
     private static Activity m_currentActivity = null;
 
+    private static Fragment m_currentFragment;
+
     private static String m_deviceToken;
     @Inject
     public LoginEntityDaoHelper m_loginDaoHelper;
@@ -39,6 +42,14 @@ public class AmazaarApplication extends Application {
 
     public static Stage getMode() {
         return mode;
+    }
+
+    public static Fragment getCurrentFragment() {
+        return m_currentFragment;
+    }
+
+    public static void setCurrentFragment(Fragment fragment) {
+        m_currentFragment = fragment;
     }
 
     public static AmazaarApplication getInstance() {

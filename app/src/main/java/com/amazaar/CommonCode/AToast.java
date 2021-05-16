@@ -139,4 +139,24 @@ public class AToast {
                 .setDuration(Duration.LONG)
                 .show();
     }
+
+    public static void permissionGranted() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Permission Granted")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.SUCCESS)
+                .setDuration(Duration.LONG)
+                .show();
+    }
+
+    public static void itemUpdated() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Item Updated")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.SUCCESS)
+                .setDuration(Duration.LONG)
+                .show();
+    }
 }

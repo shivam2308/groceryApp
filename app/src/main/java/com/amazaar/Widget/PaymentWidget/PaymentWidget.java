@@ -1,9 +1,6 @@
 package com.amazaar.Widget.PaymentWidget;
 
-import android.app.AlertDialog;
-import android.app.DialogFragment;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -20,7 +17,6 @@ import com.amazaar.Interfaces.IView;
 import com.amazaar.Protobuff.PaymentPbOuterClass;
 import com.amazaar.R;
 import com.amazaar.Utility.AndroidUtility;
-import com.amazaar.dialog.CloseAppDialogFragment;
 import com.google.inject.Injector;
 
 import javax.inject.Inject;
@@ -68,7 +64,7 @@ public class PaymentWidget extends LinearLayout implements IView<PaymentView>, V
 
 
     private void initWidget() {
-        if(!AndroidUtility.isPackageExisted(getView().getGpayPackageName())){
+        if (!AndroidUtility.isPackageExisted(getView().getGpayPackageName())) {
             m_upi.setVisibility(GONE);
         }
 
@@ -87,22 +83,28 @@ public class PaymentWidget extends LinearLayout implements IView<PaymentView>, V
             }
         });
 
-            rlProceesToPay.setOnTouchListener(new OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                        if (m_paymentMode.getCheckedRadioButtonId() == -1) {
-                            AToast.noModeSelected();
-                        } else {
+        rlProceesToPay.setOnTouchListener(new OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    if (m_paymentMode.getCheckedRadioButtonId() == -1) {
+                        AToast.noModeSelected();
+                    } else {
+                        if(getView().getMode()== PaymentPbOuterClass.PaymentModeEnum.GOOGLE_PAY) {
                             getView().payUsingUpi(getView().getAmount());
-                            // m_payAndOrderItem.createBuyItem("txnId=AXI4a3428ee58654a938811812c72c0df45&responseCode=00&Status=SUCCESS&txnRef=922118921612");
-
-                            // m_payAndOrderItem.createBuyItem();
+                        }else if(getView().getMode()== PaymentPbOuterClass.PaymentModeEnum.CASH_ON_DELIVERY){
+                             m_payAndOrderItem.createBuyItem("");
+                        }else{
+                            //nothing
                         }
+                        // m_payAndOrderItem.createBuyItem("txnId=AXI4a3428ee58654a938811812c72c0df45&responseCode=00&Status=SUCCESS&txnRef=922118921612");
+
+
                     }
-                    return false;
                 }
-            });
+                return false;
+            }
+        });
 
     }
 

@@ -4,6 +4,7 @@ import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.Protobuff.ItemPbOuterClass;
 import com.amazaar.R;
 import com.amazaar.ListModels.OrderListModel;
+import com.prod.basic.common.collect.Lists;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,118 +74,8 @@ public class TempListData {
 
 
         return productListModelArrayList;
-
     }
 
-    public List<ProductListModel> getProductList() {
-
-        List<ProductListModel> productListModelArrayList = new ArrayList<>();
-        ProductListModel productListModel = new ProductListModel();
-
-        productListModel.setProductName("Apple");
-        productListModel.setProductPrice("$10 ");
-        productListModel.setProductImage(R.drawable.p_apple);
-        productListModel.setkG("1Kg");
-        productListModel.setTotalKg(0);
-        productListModelArrayList.add(productListModel);
-
-
-        productListModel = new ProductListModel();
-        productListModel.setProductName("Tomato");
-        productListModel.setProductPrice("$15 ");
-        productListModel.setkG("1Kg");
-        productListModel.setTotalKg(0);
-        productListModel.setProductImage(R.drawable.p_tomato);
-        productListModelArrayList.add(productListModel);
-
-
-        productListModel = new ProductListModel();
-        productListModel.setProductName("Lemon");
-        productListModel.setProductPrice("$25 ");
-        productListModel.setkG("1Kg");
-        productListModel.setTotalKg(0);
-        productListModel.setProductImage(R.drawable.p_lemon);
-        productListModelArrayList.add(productListModel);
-
-        productListModel = new ProductListModel();
-        productListModel.setProductName("Pineapple");
-        productListModel.setProductPrice("$8 ");
-        productListModel.setkG("1Kg");
-        productListModel.setTotalKg(0);
-        productListModel.setProductImage(R.drawable.pineple);
-        productListModelArrayList.add(productListModel);
-
-
-        productListModel.setProductName("Kiwi Fruit");
-        productListModel.setProductPrice("$10 ");
-        productListModel.setkG("1Kg");
-        productListModel.setTotalKg(0);
-        productListModel.setProductImage(R.drawable.p_kiwi);
-        productListModelArrayList.add(productListModel);
-
-
-        productListModel = new ProductListModel();
-        productListModel.setProductName("Guava");
-        productListModel.setProductPrice("$15 ");
-        productListModel.setkG("1Kg");
-        productListModel.setTotalKg(0);
-        productListModel.setProductImage(R.drawable.gw);
-        productListModelArrayList.add(productListModel);
-
-
-        productListModel = new ProductListModel();
-        productListModel.setProductName("Graps");
-        productListModel.setProductPrice("$25 ");
-        productListModel.setkG("1Kg");
-        productListModel.setTotalKg(0);
-        productListModel.setProductImage(R.drawable.graps);
-        productListModelArrayList.add(productListModel);
-
-        productListModel = new ProductListModel();
-        productListModel.setProductName("Pineapple");
-        productListModel.setProductPrice("$8 ");
-        productListModel.setkG("1Kg");
-        productListModel.setTotalKg(0);
-        productListModel.setProductImage(R.drawable.pineple);
-        productListModelArrayList.add(productListModel);
-
-        productListModel.setProductName("Apple");
-        productListModel.setProductPrice("$10 ");
-        productListModel.setkG("1Kg");
-        productListModel.setTotalKg(0);
-        productListModel.setProductImage(R.drawable.p_apple);
-        productListModelArrayList.add(productListModel);
-
-
-        productListModel = new ProductListModel();
-        productListModel.setProductName("Guava");
-        productListModel.setProductPrice("$15 ");
-        productListModel.setkG("1Kg");
-        productListModel.setTotalKg(0);
-        productListModel.setProductImage(R.drawable.gw);
-        productListModelArrayList.add(productListModel);
-
-
-        productListModel = new ProductListModel();
-        productListModel.setProductName("Graps");
-        productListModel.setProductPrice("$25 ");
-        productListModel.setkG("1Kg");
-        productListModel.setTotalKg(0);
-        productListModel.setProductImage(R.drawable.graps);
-        productListModelArrayList.add(productListModel);
-
-        productListModel = new ProductListModel();
-        productListModel.setProductName("Pineapple");
-        productListModel.setProductPrice("$8 ");
-        productListModel.setkG("1Kg");
-        productListModel.setTotalKg(0);
-        productListModel.setProductImage(R.drawable.pineple);
-        productListModelArrayList.add(productListModel);
-
-
-        return productListModelArrayList;
-
-    }
 
 //    public List<DiloagFitterItemModel> getFilterList() {
 //

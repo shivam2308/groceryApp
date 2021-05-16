@@ -89,14 +89,14 @@
                 android:layout_margin="@dimen/_7sdp"
                 android:orientation="horizontal">
 
-                <com.amazaar.CustomeComponent.CustomTextView
-                    android:id="@+id/fragment_home_tvCtegory"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/categories"
-                    android:textColor="@color/color_black"
-                    android:textSize="@dimen/_15sdp"
-                    app:font_name="NunitoExtraBold.ttf" />
+<!--                <com.amazaar.CustomeComponent.CustomTextView-->
+<!--                    android:id="@+id/fragment_home_tvCtegory"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/categories"-->
+<!--                    android:textColor="@color/color_black"-->
+<!--                    android:textSize="@dimen/_15sdp"-->
+<!--                    app:font_name="NunitoExtraBold.ttf" />-->
 
 <!--                <com.amazaar.CustomeComponent.CustomTextView-->
 <!--                    android:id="@+id/fragment_home_tvPopular"-->
