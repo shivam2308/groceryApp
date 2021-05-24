@@ -5,9 +5,10 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bfd7d26230e7199b63bd3f977f921df9/jetified-image-loader-2.5.6/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/105554a767b18efaf2ed497406144329/jetified-image-loader-2.5.6/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f0b1afc0f2178d81a37eaaba3b7d1dc5/jetified-image-loader-2.5.6/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e251be43a4250d3fc373e982aa57b94f/jetified-image-loader-2.5.6/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e251be43a4250d3fc373e982aa57b94f/jetified-image-loader-2.5.6/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e251be43a4250d3fc373e982aa57b94f/jetified-image-loader-2.5.6/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b389726029d1bdce177d3a19f2ff204f/jetified-image-loader-2.5.6/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b389726029d1bdce177d3a19f2ff204f/jetified-image-loader-2.5.6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b389726029d1bdce177d3a19f2ff204f/jetified-image-loader-2.5.6/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.budiyev.android/image-loader/2.5.6/daf8da76660d195dc8de76ebe13323ac262594b5/image-loader-2.5.6-javadoc.jar!/" />

@@ -6,8 +6,8 @@ import android.widget.ImageView;
 import com.amazaar.ClientServices.ImageClientService;
 import com.amazaar.CommonCode.CommonHelper;
 import com.amazaar.CommonCode.DefaultImageUrl;
+import com.amazaar.CommonCode.ImageCacheLoader.ImageLoader;
 import com.amazaar.Protobuff.ImagePbOuterClass;
-import com.budiyev.android.imageloader.ImageLoader;
 import com.prod.basic.common.async.AControlFlow;
 import com.prod.basic.common.code.Strings;
 
@@ -24,10 +24,11 @@ public class GetImageFromUrlCF extends AControlFlow<GetImageFromUrlCF.States, Vo
     private ImagePbOuterClass.ImageRefPb m_imageRef;
     private ImageClientService m_imageService;
     private CommonHelper m_commanHelper;
+    private ImageLoader m_imageLoader;
 
 
     @Inject
-    public GetImageFromUrlCF(Context context, ImageView imageView, ImagePbOuterClass.ImageRefPb imageRefPb, ImageClientService imageService, DefaultImageUrl.ImageShowTypeEnum imageType, CommonHelper commanHelper) {
+    public GetImageFromUrlCF(Context context, ImageView imageView, ImagePbOuterClass.ImageRefPb imageRefPb, ImageClientService imageService, DefaultImageUrl.ImageShowTypeEnum imageType, CommonHelper commanHelper,ImageLoader imageLoader) {
         super(States.GET_IMAGE_PB, States.DONE);
         m_context = context;
         m_image = imageView;
@@ -35,6 +36,7 @@ public class GetImageFromUrlCF extends AControlFlow<GetImageFromUrlCF.States, Vo
         m_imageService = imageService;
         m_imageType = imageType;
         m_commanHelper = commanHelper;
+        m_imageLoader=imageLoader;
         addStateHandler(States.GET_IMAGE_PB, new GetImageHandler());
         addStateHandler(States.SET_IMAGE, new SetImageHandler());
     }
@@ -54,7 +56,8 @@ public class GetImageFromUrlCF extends AControlFlow<GetImageFromUrlCF.States, Vo
                 if (Strings.notEmpty(m_imageRef.getId())) {
                     m_imagepb = m_imageService.get(m_imageRef.getId());
                 } else {
-                    ImageLoader.with(m_context).from(DefaultImageUrl.getImage(m_imageType)).load(m_image);
+                  //  ImageLoader.with(m_context).from(DefaultImageUrl.getImage(m_imageType)).load(m_image);
+                    m_imageLoader.DisplayImage(DefaultImageUrl.getImage(m_imageType),m_image);
                 }
             } catch (ExecutionException e) {
                 e.printStackTrace();
@@ -86,7 +89,7 @@ public class GetImageFromUrlCF extends AControlFlow<GetImageFromUrlCF.States, Vo
 
         @Override
         public States handleState() {
-            ImageLoader.with(m_context).from(m_imagePb.getUrl()).load(m_image);
+            m_imageLoader.DisplayImage(m_imagePb.getUrl(),m_image);
             return States.DONE;
         }
     }

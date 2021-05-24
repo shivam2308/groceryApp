@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import com.amazaar.ClientServices.ImageClientService;
 import com.amazaar.CommonCode.CommonHelper;
 import com.amazaar.CommonCode.DefaultImageUrl;
+import com.amazaar.CommonCode.ImageCacheLoader.ImageLoader;
 import com.amazaar.Protobuff.ImagePbOuterClass;
 import com.google.inject.Injector;
 
@@ -20,14 +21,16 @@ public class GetImageFromUrl {
     public ImageClientService m_imageService;
     @Inject
     public CommonHelper m_helper;
+    public ImageLoader m_imageLoader;
 
     @Inject
     public GetImageFromUrl() {
+        m_imageLoader = new ImageLoader(getContext());
         injectMembers();
     }
 
     public void setImageFromUrl(Context context, ImagePbOuterClass.ImageRefPb imageRef, ImageView image, DefaultImageUrl.ImageShowTypeEnum imageType) {
-        GetImageFromUrlCF cf = new GetImageFromUrlCF(context,image,imageRef, m_imageService,imageType,m_helper);
+        GetImageFromUrlCF cf = new GetImageFromUrlCF(context,image,imageRef, m_imageService,imageType,m_helper,m_imageLoader);
         cf.addLogObjects(cf);
         cf.startAsyncCall();
         cf.getFutureResult();

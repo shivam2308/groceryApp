@@ -69,6 +69,7 @@ public class SplashActivity extends AwesomeSplash {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AmazaarApplication.setCurrentContext(getApplicationContext());
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
         injectMembers();

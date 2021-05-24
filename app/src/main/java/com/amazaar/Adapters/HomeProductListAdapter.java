@@ -1,5 +1,6 @@
 package com.amazaar.Adapters;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -9,11 +10,16 @@ import android.widget.ImageView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.amazaar.CommonCode.AToast;
+import com.amazaar.CommonCode.CustomDailogCallBack;
 import com.amazaar.CommonCode.DefaultImageUrl;
 import com.amazaar.ControlFlow.GetImageFromUrl;
+import com.amazaar.Dialog.DailogLoading;
 import com.amazaar.Fragments.HomeCategoryFragment;
 import com.amazaar.ListModels.ProductListModel;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
+import com.amazaar.Utility.AndroidUtility;
 
 import java.util.List;
 
@@ -83,7 +89,7 @@ public class HomeProductListAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                 public void run() {
                     onItemClickListener.onItemClick(v, (ProductListModel) v.getTag());
                 }
-            }, 200);
+            }, 2);
         }
     }
 
@@ -118,7 +124,7 @@ public class HomeProductListAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(final View v) {
-
+                    CustomDailogCallBack callback = new CustomDailogCallBack();
                     // Give some time to the ripple to finish the effect
                     if (onItemClickListener != null) {
                         new Handler().postDelayed(new Runnable() {
@@ -128,6 +134,7 @@ public class HomeProductListAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                             }
                         }, 200);
                     }
+
                 }
             });
 

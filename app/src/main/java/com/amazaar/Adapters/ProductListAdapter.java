@@ -11,6 +11,7 @@ import android.widget.RelativeLayout;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.amazaar.CommonCode.AToast;
 import com.amazaar.CommonCode.DefaultImageUrl;
 import com.amazaar.ControlFlow.GetImageFromUrl;
 import com.amazaar.CustomeComponent.CustomTextView;
@@ -149,8 +150,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(final View v) {
-
+                public void onClick(final View v){
+                    AToast.getLoadingToast();
                     // Give some time to the ripple to finish the effect
                     if (onItemClickListener != null) {
                         new Handler().postDelayed(new Runnable() {

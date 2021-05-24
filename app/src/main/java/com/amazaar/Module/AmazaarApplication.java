@@ -23,10 +23,11 @@ import roboguice.RoboGuice;
 
 public class AmazaarApplication extends Application {
 
-    private static final Stage mode = Stage.DEVELOPMENT;
+    private static final Stage mode = Stage.PRODUCTION;
     private static AmazaarApplication mInstance;
     ;
     private static Activity m_currentActivity = null;
+    private static Context m_currentContext = null;
 
     private static Fragment m_currentFragment;
 
@@ -78,6 +79,13 @@ public class AmazaarApplication extends Application {
 
     public static FragmentManager getFragmentManager() {
         return m_currentActivity.getFragmentManager();
+    }
+
+    public static void setCurrentContext(Context context) {
+        m_currentContext = context;
+    }
+    public static Context getCurrentContext() {
+        return  m_currentContext;
     }
 
     @Override
