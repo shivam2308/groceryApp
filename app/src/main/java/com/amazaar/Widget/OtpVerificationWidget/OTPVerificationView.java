@@ -42,7 +42,7 @@ public class OTPVerificationView {
         Log.e("otp", mobile);
         m_phonenumber.setVar(mobile);
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                "+91" + mobile,
+                    "+91" + mobile,
                 60,
                 TimeUnit.SECONDS,
                 AmazaarApplication.getCurrentActivity(),
