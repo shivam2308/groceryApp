@@ -13,11 +13,13 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amazaar.Adapters.ProductListAdapter;
+import com.amazaar.CommonCode.AToast;
 import com.amazaar.Fragments.ProductDetailsFragment;
 import com.amazaar.Handlers.CartItemHandler;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
 import com.amazaar.Utility.Utils;
 import com.google.inject.Injector;
@@ -97,6 +99,8 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
                 Utils.addNextFragment(getContext(), fragmentProductDetails, getView().getMainFragment(), false);
             }
         });
+        AmazaarApplication.getLoadingDialog().dismiss();
+        AToast.getLoadingToast();
 
     }
 

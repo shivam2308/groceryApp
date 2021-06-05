@@ -3,9 +3,12 @@ package com.amazaar.Adapters;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Handler;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -124,7 +127,7 @@ public class HomeProductListAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(final View v) {
-                    CustomDailogCallBack callback = new CustomDailogCallBack();
+                    AmazaarApplication.getLoadingDialog().show();
                     // Give some time to the ripple to finish the effect
                     if (onItemClickListener != null) {
                         new Handler().postDelayed(new Runnable() {

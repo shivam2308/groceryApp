@@ -7,6 +7,9 @@ import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.widget.ImageView;
 
+import com.amazaar.CommonCode.DefaultImageUrl;
+import com.amazaar.Module.AmazaarApplication;
+import com.amazaar.Protobuff.ImagePbOuterClass;
 import com.amazaar.R;
 import com.amazaar.Utility.Utils;
 
@@ -26,7 +29,6 @@ import java.util.concurrent.Executors;
 
 public class ImageLoader {
 
-    MemoryCache memoryCache=new MemoryCache();
     FileCache fileCache;
     private Map<ImageView, String> imageViews= Collections.synchronizedMap(new WeakHashMap<ImageView, String>());
     ExecutorService executorService;
@@ -36,21 +38,21 @@ public class ImageLoader {
         executorService= Executors.newFixedThreadPool(5);
     }
 
-    final int stub_id= R.drawable.ic_launcher;
-    public void DisplayImage(String url, ImageView imageView)
+    final int stub_id= DefaultImageUrl.getImage(DefaultImageUrl.ImageShowTypeEnum.ITEM);
+    public void DisplayImage(ImagePbOuterClass.ImagePb imagePb, ImageView imageView)
     {
-        imageViews.put(imageView, url);
-        Bitmap bitmap=memoryCache.get(url);
+        imageViews.put(imageView, imagePb.getUrl());
+        Bitmap bitmap= AmazaarApplication.getItemImageCache().get(imagePb);
         if(bitmap!=null)
             imageView.setImageBitmap(bitmap);
         else
         {
-            queuePhoto(url, imageView);
+            queuePhoto(imagePb, imageView);
             imageView.setImageResource(stub_id);
         }
     }
 
-    private void queuePhoto(String url, ImageView imageView)
+    private void queuePhoto(ImagePbOuterClass.ImagePb url, ImageView imageView)
     {
         PhotoToLoad p=new PhotoToLoad(url, imageView);
         executorService.submit(new PhotosLoader(p));
@@ -83,7 +85,7 @@ public class ImageLoader {
         } catch (Throwable ex){
             ex.printStackTrace();
             if(ex instanceof OutOfMemoryError)
-                memoryCache.clear();
+                AmazaarApplication.getItemImageCache().clear();
             return null;
         }
     }
@@ -119,9 +121,9 @@ public class ImageLoader {
     //Task for the queue
     private class PhotoToLoad
     {
-        public String url;
+        public ImagePbOuterClass.ImagePb url;
         public ImageView imageView;
-        public PhotoToLoad(String u, ImageView i){
+        public PhotoToLoad(ImagePbOuterClass.ImagePb u, ImageView i){
             url=u;
             imageView=i;
         }
@@ -137,8 +139,8 @@ public class ImageLoader {
         public void run() {
             if(imageViewReused(photoToLoad))
                 return;
-            Bitmap bmp=getBitmap(photoToLoad.url);
-            memoryCache.put(photoToLoad.url, bmp);
+            Bitmap bmp=getBitmap(photoToLoad.url.getUrl());
+            AmazaarApplication.getItemImageCache().put(photoToLoad.url, bmp);
             if(imageViewReused(photoToLoad))
                 return;
             BitmapDisplayer bd=new BitmapDisplayer(bmp, photoToLoad);
@@ -149,7 +151,7 @@ public class ImageLoader {
 
     boolean imageViewReused(PhotoToLoad photoToLoad){
         String tag=imageViews.get(photoToLoad.imageView);
-        if(tag==null || !tag.equals(photoToLoad.url))
+        if(tag==null || !tag.equals(photoToLoad.url.getUrl()))
             return true;
         return false;
     }
@@ -172,7 +174,7 @@ public class ImageLoader {
     }
 
     public void clearCache() {
-        memoryCache.clear();
+        AmazaarApplication.getItemImageCache().clear();
         fileCache.clear();
     }
 

@@ -14,21 +14,9 @@ public class CustomDailogCallBack {
     Dialog m_dailog;
     private long currentMIllis = 0l;
 
-    public CustomDailogCallBack() {
-        m_dailog = getLoadingDailog();
-        m_dailog.show();
-        currentMIllis = System.currentTimeMillis();
-        while (true) {
-            if ((System.currentTimeMillis() - currentMIllis) >= 3000) {
-                m_dailog.dismiss();
-                break;
-            } else {
 
-            }
-        }
-    }
 
-    private Dialog getLoadingDailog() {
+    public Dialog getLoadingDailog() {
         final Dialog dialog = new Dialog(AmazaarApplication.getCurrentActivity());
         dialog.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimationTultip;
         dialog.setCanceledOnTouchOutside(true);
@@ -41,6 +29,7 @@ public class CustomDailogCallBack {
         params.width = WindowManager.LayoutParams.MATCH_PARENT;
         params.height = WindowManager.LayoutParams.MATCH_PARENT;
         dialog.getWindow().setAttributes((WindowManager.LayoutParams) params);
+        m_dailog = dialog;
         return dialog;
     }
 

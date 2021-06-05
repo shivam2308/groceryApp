@@ -7,6 +7,7 @@ import com.amazaar.ClientServices.ImageClientService;
 import com.amazaar.CommonCode.CommonHelper;
 import com.amazaar.CommonCode.DefaultImageUrl;
 import com.amazaar.CommonCode.ImageCacheLoader.ImageLoader;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.Protobuff.ImagePbOuterClass;
 import com.prod.basic.common.async.AControlFlow;
 import com.prod.basic.common.code.Strings;
@@ -29,7 +30,7 @@ public class GetImageFromUrlCF extends AControlFlow<GetImageFromUrlCF.States, Vo
 
     @Inject
     public GetImageFromUrlCF(Context context, ImageView imageView, ImagePbOuterClass.ImageRefPb imageRefPb, ImageClientService imageService, DefaultImageUrl.ImageShowTypeEnum imageType, CommonHelper commanHelper,ImageLoader imageLoader) {
-        super(States.GET_IMAGE_PB, States.DONE);
+        super(States.CHECK_IMAGE_IN_CACHE, States.DONE);
         m_context = context;
         m_image = imageView;
         m_imageRef = imageRefPb;
@@ -37,14 +38,35 @@ public class GetImageFromUrlCF extends AControlFlow<GetImageFromUrlCF.States, Vo
         m_imageType = imageType;
         m_commanHelper = commanHelper;
         m_imageLoader=imageLoader;
+        addStateHandler(States.CHECK_IMAGE_IN_CACHE, new GetImageInCacheHandler());
         addStateHandler(States.GET_IMAGE_PB, new GetImageHandler());
         addStateHandler(States.SET_IMAGE, new SetImageHandler());
     }
 
     enum States {
+        CHECK_IMAGE_IN_CACHE,
         GET_IMAGE_PB,
         SET_IMAGE,
         DONE
+    }
+
+    private class GetImageInCacheHandler implements StateHandler<States> {
+
+        @Override
+        public void registerCalls() {
+
+        }
+
+        @Override
+        public States handleState() {
+            ImagePbOuterClass.ImagePb obj = AmazaarApplication.getItemImageCache().isImagePresent(m_imageRef);
+            if(obj!=null){
+                m_imagePb = obj;
+                return States.SET_IMAGE;
+            }else{
+                return States.GET_IMAGE_PB;
+            }
+        }
     }
 
     private class GetImageHandler implements StateHandler<States> {
@@ -57,7 +79,7 @@ public class GetImageFromUrlCF extends AControlFlow<GetImageFromUrlCF.States, Vo
                     m_imagepb = m_imageService.get(m_imageRef.getId());
                 } else {
                   //  ImageLoader.with(m_context).from(DefaultImageUrl.getImage(m_imageType)).load(m_image);
-                    m_imageLoader.DisplayImage(DefaultImageUrl.getImage(m_imageType),m_image);
+                    //m_imageLoader.DisplayImage(DefaultImageUrl.getImage(m_imageType),m_image);
                 }
             } catch (ExecutionException e) {
                 e.printStackTrace();
@@ -89,7 +111,7 @@ public class GetImageFromUrlCF extends AControlFlow<GetImageFromUrlCF.States, Vo
 
         @Override
         public States handleState() {
-            m_imageLoader.DisplayImage(m_imagePb.getUrl(),m_image);
+            m_imageLoader.DisplayImage(m_imagePb,m_image);
             return States.DONE;
         }
     }

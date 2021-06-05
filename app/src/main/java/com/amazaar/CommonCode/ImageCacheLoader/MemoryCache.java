@@ -8,14 +8,19 @@ import java.util.Map.Entry;
 import android.graphics.Bitmap;
 import android.util.Log;
 
-public class MemoryCache {
+import com.google.protobuf.GeneratedMessageV3;
+
+import javax.inject.Inject;
+
+public class MemoryCache<P extends GeneratedMessageV3> {
 
     private static final String TAG = "ImageCache";
-    private Map<String, Bitmap> cache=Collections.synchronizedMap(
-            new LinkedHashMap<String, Bitmap>(10,1.5f,true));//Last argument true for LRU ordering
+    private Map<P, Bitmap> cache=Collections.synchronizedMap(
+            new LinkedHashMap<P, Bitmap>(10,1.5f,true));//Last argument true for LRU ordering
     private long size=0;//current allocated size
     private long limit=1000000;//max memory in bytes
 
+    @Inject
     public MemoryCache(){
         //use 25% of available heap size
         setLimit(Runtime.getRuntime().maxMemory()/4);
@@ -26,7 +31,11 @@ public class MemoryCache {
         Log.i(TAG, "MemoryCache will use up to "+limit/1024./1024.+"MB");
     }
 
-    public Bitmap get(String id){
+    public Iterator<Entry<P, Bitmap>> getEntrySet(){
+        return cache.entrySet().iterator();
+    }
+
+    public Bitmap get(P id){
         try{
             if(!cache.containsKey(id))
                 return null;
@@ -38,7 +47,7 @@ public class MemoryCache {
         }
     }
 
-    public void put(String id, Bitmap bitmap){
+    public void put(P id, Bitmap bitmap){
         try{
             if(cache.containsKey(id))
                 size-=getSizeInBytes(cache.get(id));
@@ -53,9 +62,9 @@ public class MemoryCache {
     private void checkSize() {
         Log.i(TAG, "cache size="+size+" length="+cache.size());
         if(size>limit){
-            Iterator<Entry<String, Bitmap>> iter=cache.entrySet().iterator();//least recently accessed item will be the first one iterated
+            Iterator<Entry<P, Bitmap>> iter=cache.entrySet().iterator();//least recently accessed item will be the first one iterated
             while(iter.hasNext()){
-                Entry<String, Bitmap> entry=iter.next();
+                Entry<P, Bitmap> entry=iter.next();
                 size-=getSizeInBytes(entry.getValue());
                 iter.remove();
                 if(size<=limit)
@@ -64,6 +73,7 @@ public class MemoryCache {
             Log.i(TAG, "Clean cache. New size "+cache.size());
         }
     }
+
 
     public void clear() {
         try{

@@ -46,6 +46,7 @@ public class HomeActivity extends AppCompatActivity implements LoaderManager.Loa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AmazaarApplication.setCurrentActivity(this);
+        AmazaarApplication.createLoadingDailog();
         setContentView(R.layout.activity_home_actity);
         m_topBar = (TopBarWidget) findViewById(R.id.topBar);
         injectMembers();

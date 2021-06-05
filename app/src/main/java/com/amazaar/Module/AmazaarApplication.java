@@ -2,20 +2,28 @@ package com.amazaar.Module;
 
 import android.app.Activity;
 import android.app.Application;
+import android.app.Dialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
+import android.view.Gravity;
+import android.view.Window;
+import android.view.WindowManager;
 
 import androidx.multidex.MultiDex;
 
 import com.amazaar.DatabaseEnitityHelper.CartEntityDaoHelper;
 import com.amazaar.DatabaseEnitityHelper.ItemEntityDaoHelper;
 import com.amazaar.DatabaseEnitityHelper.LoginEntityDaoHelper;
+import com.amazaar.ImageCache.ItemImageCache;
+import com.amazaar.R;
 import com.amazaar.Session.FastSave;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.inject.Stage;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import javax.inject.Inject;
 
@@ -25,13 +33,17 @@ public class AmazaarApplication extends Application {
 
     private static final Stage mode = Stage.PRODUCTION;
     private static AmazaarApplication mInstance;
-    ;
+    private static ExecutorService executorService = Executors.newFixedThreadPool(4);
     private static Activity m_currentActivity = null;
     private static Context m_currentContext = null;
 
     private static Fragment m_currentFragment;
 
+    private static Dialog m_dialog;
+
     private static String m_deviceToken;
+
+    public static ItemImageCache m_memoryCache;
     @Inject
     public LoginEntityDaoHelper m_loginDaoHelper;
     @Inject
@@ -73,6 +85,14 @@ public class AmazaarApplication extends Application {
         return m_deviceToken;
     }
 
+    public static ExecutorService getExecutor() {
+        return executorService;
+    }
+
+    public static Dialog getLoadingDialog() {
+        return m_dialog;
+    }
+
     public static void setDeviceToken(String token) {
         m_deviceToken = token;
     }
@@ -84,8 +104,13 @@ public class AmazaarApplication extends Application {
     public static void setCurrentContext(Context context) {
         m_currentContext = context;
     }
+
     public static Context getCurrentContext() {
-        return  m_currentContext;
+        return m_currentContext;
+    }
+
+    public static ItemImageCache getItemImageCache() {
+        return m_memoryCache;
     }
 
     @Override
@@ -105,6 +130,24 @@ public class AmazaarApplication extends Application {
                 }
             }
         }).start();
+
+        m_memoryCache = new ItemImageCache();
+    }
+
+    public static void createLoadingDailog() {
+        Dialog dialog = new Dialog(getCurrentActivity());
+        dialog.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimationTultip;
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        dialog.getWindow().setGravity(Gravity.CENTER);
+        dialog.setContentView(R.layout.dialog_loading);
+        WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
+        params.width = WindowManager.LayoutParams.MATCH_PARENT;
+        params.height = WindowManager.LayoutParams.MATCH_PARENT;
+        dialog.getWindow().setAttributes((WindowManager.LayoutParams) params);
+        m_dialog = dialog;
     }
 
     public LoginEntityDaoHelper getLoginEntityDeo() {
