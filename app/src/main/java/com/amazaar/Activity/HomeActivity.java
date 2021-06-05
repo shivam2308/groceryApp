@@ -5,8 +5,11 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.Loader;
 
 import com.amazaar.Dialog.CloseAppDialogFragment;
 import com.amazaar.Enums.TopBarUiEnum;
@@ -27,7 +30,7 @@ import roboguice.RoboGuice;
 
 import static com.amazaar.Module.AmazaarApplication.getContext;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String[]> {
 
     @Inject
     public CustomerSession m_customerSession;
@@ -42,6 +45,8 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AmazaarApplication.setCurrentActivity(this);
+        AmazaarApplication.createLoadingDailog();
         setContentView(R.layout.activity_home_actity);
         m_topBar = (TopBarWidget) findViewById(R.id.topBar);
         injectMembers();
@@ -131,5 +136,21 @@ public class HomeActivity extends AppCompatActivity {
     private void injectMembers() {
         Injector injector = RoboGuice.getInjector(getContext());
         injector.injectMembers(this);
+    }
+
+    @NonNull
+    @Override
+    public Loader<String[]> onCreateLoader(int id, @Nullable Bundle args) {
+        return null;
+    }
+
+    @Override
+    public void onLoadFinished(@NonNull Loader<String[]> loader, String[] data) {
+
+    }
+
+    @Override
+    public void onLoaderReset(@NonNull Loader<String[]> loader) {
+
     }
 }

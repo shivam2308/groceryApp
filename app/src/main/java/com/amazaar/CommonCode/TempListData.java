@@ -35,44 +35,6 @@ public class TempListData {
         productListModel.setProductImage(R.drawable.category_branded_food);
         productListModel.setItemType(ItemPbOuterClass.ItemTypeEnum.DAIRY);
         productListModelArrayList.add(productListModel);
-
-        /*productListModel = new ProductListModel();
-        productListModel.setProductImage(R.drawable.category_beauty_personal_care);
-        productListModelArrayList.add(productListModel);
-
-
-        productListModel = new ProductListModel();
-        productListModel.setProductImage(R.drawable.category_home_care_fasihon);
-        productListModelArrayList.add(productListModel);
-
-
-        productListModel = new ProductListModel();
-        productListModel.setProductImage(R.drawable.category_non_veg);
-        productListModelArrayList.add(productListModel);
-
-        productListModel = new ProductListModel();
-        productListModel.setProductImage(R.drawable.category_dairy_bakery_eggs);
-        productListModelArrayList.add(productListModel);
-
-        productListModel = new ProductListModel();
-        productListModel.setProductImage(R.drawable.category_fruits_vegetables);
-        productListModelArrayList.add(productListModel);
-
-
-        productListModel = new ProductListModel();
-        productListModel.setProductImage(R.drawable.category_beverages);
-        productListModelArrayList.add(productListModel);
-
-
-        productListModel = new ProductListModel();
-        productListModel.setProductImage(R.drawable.category_branded_food);
-        productListModelArrayList.add(productListModel);
-
-        productListModel = new ProductListModel();
-        productListModel.setProductImage(R.drawable.category_frozen_veg);
-        productListModelArrayList.add(productListModel);*/
-
-
         return productListModelArrayList;
     }
 

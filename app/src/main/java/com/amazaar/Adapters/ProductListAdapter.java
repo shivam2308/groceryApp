@@ -11,11 +11,13 @@ import android.widget.RelativeLayout;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.amazaar.CommonCode.AToast;
 import com.amazaar.CommonCode.DefaultImageUrl;
 import com.amazaar.ControlFlow.GetImageFromUrl;
 import com.amazaar.CustomeComponent.CustomTextView;
 import com.amazaar.Fragments.ProductListFragment;
 import com.amazaar.ListModels.ProductListModel;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
 import com.amazaar.Widget.ProductListWidget.ProductListWidget;
 
@@ -142,15 +144,15 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             tvTotalKg.setText(""+item.getTotalKg());
             itemView.setTag(item);
             m_getImageFromUrl.setImageFromUrl(mContext, item.getPbModel().getItemImage(), ivProImg, DefaultImageUrl.ImageShowTypeEnum.ITEM);
-          //  ivProImg.setImageDrawable(mContext.getResources().getDrawable(item.getProductImage()));
+            //  ivProImg.setImageDrawable(mContext.getResources().getDrawable(item.getProductImage()));
             ivLikeUnLike.setImageDrawable(item.isLike()? mContext.getResources().getDrawable(R.drawable.ic_fav_select) : mContext.getResources().getDrawable(R.drawable.ic_fav_unselect));
             rlTotalCartItem.setVisibility(item.getTotalKg() == 0 ? View.GONE : View.VISIBLE);
             tvAddToCard.setVisibility(item.getTotalKg() == 0 ? View.VISIBLE : View.GONE);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(final View v) {
-
+                public void onClick(final View v){
+                    AToast.getLoadingToast();
                     // Give some time to the ripple to finish the effect
                     if (onItemClickListener != null) {
                         new Handler().postDelayed(new Runnable() {

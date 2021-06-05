@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.amazaar"
-        minSdkVersion 26
+        minSdkVersion 25
         targetSdkVersion 29
         versionCode 1
         versionName "0.0.1"
@@ -31,6 +31,8 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+   
 
     buildTypes {
         release {
@@ -122,4 +124,7 @@ dependencies {
     implementation 'com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.3'
 
     implementation 'com.github.vlonjatg:progress-activity:2.0.5'
+
+    implementation 'androidx.browser:browser:1.3.0'
+    implementation 'com.google.guava:guava:27.0.1-android'
 }

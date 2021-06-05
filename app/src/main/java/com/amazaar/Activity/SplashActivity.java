@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.pm.PackageManager;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +15,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.amazaar.ControlFlow.DeviceAutoLogin;
+import com.amazaar.ControlFlow.GetImageAndStoreInCache;
 import com.amazaar.ControlFlow.RegisterPushNorification;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
@@ -69,9 +71,19 @@ public class SplashActivity extends AwesomeSplash {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AmazaarApplication.setCurrentContext(getApplicationContext());
         mAuth = FirebaseAuth.getInstance();
+       // mAuth.getFirebaseAuthSettings().setAppVerificationDisabledForTesting(true);
         currentUser = mAuth.getCurrentUser();
         injectMembers();
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                GetImageAndStoreInCache getImageAndStoreInCache = new GetImageAndStoreInCache();
+                getImageAndStoreInCache.storeImageInCache();
+            }
+        };
+        AmazaarApplication.getExecutor().execute(runnable);
         m_permission[0] = 6;
         m_permission[1] = 15;
         m_permission[2] = 26;

@@ -159,4 +159,21 @@ public class AToast {
                 .setDuration(Duration.LONG)
                 .show();
     }
+
+    public static void getLoadingToast() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Loading..")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.INFO)
+                .setDuration(Duration.LONG)
+                .show();
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Loading..")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.INFO)
+                .setDuration(Duration.LONG)
+                .show();
+    }
 }

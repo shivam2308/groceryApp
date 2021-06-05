@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "796220644087-qkiqip2t5kblcc7stfq7k8c9dv6ilss9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amazaar",
+            "certificate_hash": "b569e64172e05a485df13821a00faf9a8b3db683"
+          }
+        },
+        {
           "client_id": "796220644087-s5j9takpo3rck99duhitg39u00hl6l09.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -31,7 +39,7 @@
           }
         },
         {
-          "client_id": "796220644087-t0dlc5oi6qf596rbfeuo3lqs7b03av8q.apps.googleusercontent.com",
+          "client_id": "796220644087-vmvhg651p5tvg5hjuienca5rfcrf7p4u.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.amazaar",

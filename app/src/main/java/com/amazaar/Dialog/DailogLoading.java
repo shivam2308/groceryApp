@@ -15,6 +15,8 @@ import com.amazaar.R;
 
 public class DailogLoading extends DialogFragment implements View.OnClickListener{
 
+    private Dialog dailog = null;
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final Dialog dialog = new Dialog(getActivity());
@@ -24,7 +26,7 @@ public class DailogLoading extends DialogFragment implements View.OnClickListene
         dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         dialog.getWindow().setGravity(Gravity.CENTER);
-
+        setShowsDialog(true);
         dialog.setContentView(R.layout.dialog_loading);
         WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
         params.width = WindowManager.LayoutParams.MATCH_PARENT;
@@ -36,7 +38,7 @@ public class DailogLoading extends DialogFragment implements View.OnClickListene
 
 
     protected void initializeComponent(Dialog v) {
-
+        dailog= v;
     }
 
 
@@ -48,6 +50,16 @@ public class DailogLoading extends DialogFragment implements View.OnClickListene
     @Override
     public void onCancel(DialogInterface dialog) {
         super.onCancel(dialog);
+    }
+
+    @Override
+    public void dismiss() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        dailog.dismiss();
     }
 
     @Override

@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.vlonjatg:progress-activity:2.0.5@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b685e2a4c70cd8fd522a9f60b5c96b9/jetified-progress-activity-2.0.5/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b685e2a4c70cd8fd522a9f60b5c96b9/jetified-progress-activity-2.0.5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b685e2a4c70cd8fd522a9f60b5c96b9/jetified-progress-activity-2.0.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fd8cc8668cb5eef1ef4e7396d10d5a37/jetified-progress-activity-2.0.5/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fd8cc8668cb5eef1ef4e7396d10d5a37/jetified-progress-activity-2.0.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fd8cc8668cb5eef1ef4e7396d10d5a37/jetified-progress-activity-2.0.5/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

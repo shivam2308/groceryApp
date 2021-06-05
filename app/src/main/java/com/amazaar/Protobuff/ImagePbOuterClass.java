@@ -2122,6 +2122,29 @@ public final class ImagePbOuterClass {
   public interface ImageSearchRequestPbOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.amazaar.Protobuff.ImageSearchRequestPb)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string imageId = 1;</code>
+     * @return The imageId.
+     */
+    java.lang.String getImageId();
+    /**
+     * <code>string imageId = 1;</code>
+     * @return The bytes for imageId.
+     */
+    com.google.protobuf.ByteString
+        getImageIdBytes();
+
+    /**
+     * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 2;</code>
+     * @return The enum numeric value on the wire for imageType.
+     */
+    int getImageTypeValue();
+    /**
+     * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 2;</code>
+     * @return The imageType.
+     */
+    com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum getImageType();
   }
   /**
    * Protobuf type {@code com.amazaar.Protobuff.ImageSearchRequestPb}
@@ -2136,6 +2159,8 @@ public final class ImagePbOuterClass {
       super(builder);
     }
     private ImageSearchRequestPb() {
+      imageId_ = "";
+      imageType_ = 0;
     }
 
     @java.lang.Override
@@ -2168,6 +2193,18 @@ public final class ImagePbOuterClass {
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              imageId_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              imageType_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2200,6 +2237,63 @@ public final class ImagePbOuterClass {
               com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb.class, com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb.Builder.class);
     }
 
+    public static final int IMAGEID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object imageId_;
+    /**
+     * <code>string imageId = 1;</code>
+     * @return The imageId.
+     */
+    @java.lang.Override
+    public java.lang.String getImageId() {
+      java.lang.Object ref = imageId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        imageId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string imageId = 1;</code>
+     * @return The bytes for imageId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getImageIdBytes() {
+      java.lang.Object ref = imageId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        imageId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IMAGETYPE_FIELD_NUMBER = 2;
+    private int imageType_;
+    /**
+     * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 2;</code>
+     * @return The enum numeric value on the wire for imageType.
+     */
+    @java.lang.Override public int getImageTypeValue() {
+      return imageType_;
+    }
+    /**
+     * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 2;</code>
+     * @return The imageType.
+     */
+    @java.lang.Override public com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum getImageType() {
+      @SuppressWarnings("deprecation")
+      com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum result = com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum.valueOf(imageType_);
+      return result == null ? com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2214,6 +2308,12 @@ public final class ImagePbOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getImageIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, imageId_);
+      }
+      if (imageType_ != com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum.UNKNOWN_IMAGE_TYPE.getNumber()) {
+        output.writeEnum(2, imageType_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2223,6 +2323,13 @@ public final class ImagePbOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (!getImageIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, imageId_);
+      }
+      if (imageType_ != com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum.UNKNOWN_IMAGE_TYPE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, imageType_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2238,6 +2345,9 @@ public final class ImagePbOuterClass {
       }
       com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb other = (com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb) obj;
 
+      if (!getImageId()
+          .equals(other.getImageId())) return false;
+      if (imageType_ != other.imageType_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2249,6 +2359,10 @@ public final class ImagePbOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IMAGEID_FIELD_NUMBER;
+      hash = (53 * hash) + getImageId().hashCode();
+      hash = (37 * hash) + IMAGETYPE_FIELD_NUMBER;
+      hash = (53 * hash) + imageType_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2382,6 +2496,10 @@ public final class ImagePbOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        imageId_ = "";
+
+        imageType_ = 0;
+
         return this;
       }
 
@@ -2408,6 +2526,8 @@ public final class ImagePbOuterClass {
       @java.lang.Override
       public com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb buildPartial() {
         com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb result = new com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb(this);
+        result.imageId_ = imageId_;
+        result.imageType_ = imageType_;
         onBuilt();
         return result;
       }
@@ -2456,6 +2576,13 @@ public final class ImagePbOuterClass {
 
       public Builder mergeFrom(com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb other) {
         if (other == com.amazaar.Protobuff.ImagePbOuterClass.ImageSearchRequestPb.getDefaultInstance()) return this;
+        if (!other.getImageId().isEmpty()) {
+          imageId_ = other.imageId_;
+          onChanged();
+        }
+        if (other.imageType_ != 0) {
+          setImageTypeValue(other.getImageTypeValue());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2482,6 +2609,136 @@ public final class ImagePbOuterClass {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object imageId_ = "";
+      /**
+       * <code>string imageId = 1;</code>
+       * @return The imageId.
+       */
+      public java.lang.String getImageId() {
+        java.lang.Object ref = imageId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          imageId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string imageId = 1;</code>
+       * @return The bytes for imageId.
+       */
+      public com.google.protobuf.ByteString
+          getImageIdBytes() {
+        java.lang.Object ref = imageId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          imageId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string imageId = 1;</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImageId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        imageId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string imageId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearImageId() {
+        
+        imageId_ = getDefaultInstance().getImageId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string imageId = 1;</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImageIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        imageId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int imageType_ = 0;
+      /**
+       * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 2;</code>
+       * @return The enum numeric value on the wire for imageType.
+       */
+      @java.lang.Override public int getImageTypeValue() {
+        return imageType_;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 2;</code>
+       * @param value The enum numeric value on the wire for imageType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImageTypeValue(int value) {
+        
+        imageType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 2;</code>
+       * @return The imageType.
+       */
+      @java.lang.Override
+      public com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum getImageType() {
+        @SuppressWarnings("deprecation")
+        com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum result = com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum.valueOf(imageType_);
+        return result == null ? com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 2;</code>
+       * @param value The imageType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImageType(com.amazaar.Protobuff.ImagePbOuterClass.ImageTypeEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        imageType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.amazaar.Protobuff.ImageTypeEnum imageType = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearImageType() {
+        
+        imageType_ = 0;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -3570,15 +3827,17 @@ public final class ImagePbOuterClass {
       ".ImageTypeEnum\022@\n\textension\030\005 \001(\0162-.com." +
       "amazaar.Protobuff.ImageExtensionTypeEnum" +
       "\")\n\nImageRefPb\022\n\n\002id\030\001 \001(\t\022\017\n\007imageId\030\002 " +
-      "\001(\t\"\026\n\024ImageSearchRequestPb\"{\n\025ImageSear" +
-      "chResponsePb\0221\n\007summary\030\001 \001(\0132 .com.amaz" +
-      "aar.Protobuff.SummaryPb\022/\n\007results\030\002 \003(\013" +
-      "2\036.com.amazaar.Protobuff.ImagePb*m\n\rImag" +
-      "eTypeEnum\022\026\n\022UNKNOWN_IMAGE_TYPE\020\000\022\021\n\rPRO" +
-      "FILE_IMAGE\020\001\022\016\n\nITEM_IMAGE\020\002\022\020\n\014BANNER_I" +
-      "MAGE\020\003\022\017\n\013BADGE_IMAGE\020\004*Q\n\026ImageExtensio" +
-      "nTypeEnum\022\032\n\026UNKNOWN_EXTENSION_TYPE\020\000\022\r\n" +
-      "\tJPEG_TYPE\020\001\022\014\n\010PNG_TYPE\020\002b\006proto3"
+      "\001(\t\"`\n\024ImageSearchRequestPb\022\017\n\007imageId\030\001" +
+      " \001(\t\0227\n\timageType\030\002 \001(\0162$.com.amazaar.Pr" +
+      "otobuff.ImageTypeEnum\"{\n\025ImageSearchResp" +
+      "onsePb\0221\n\007summary\030\001 \001(\0132 .com.amazaar.Pr" +
+      "otobuff.SummaryPb\022/\n\007results\030\002 \003(\0132\036.com" +
+      ".amazaar.Protobuff.ImagePb*m\n\rImageTypeE" +
+      "num\022\026\n\022UNKNOWN_IMAGE_TYPE\020\000\022\021\n\rPROFILE_I" +
+      "MAGE\020\001\022\016\n\nITEM_IMAGE\020\002\022\020\n\014BANNER_IMAGE\020\003" +
+      "\022\017\n\013BADGE_IMAGE\020\004*Q\n\026ImageExtensionTypeE" +
+      "num\022\032\n\026UNKNOWN_EXTENSION_TYPE\020\000\022\r\n\tJPEG_" +
+      "TYPE\020\001\022\014\n\010PNG_TYPE\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3603,7 +3862,7 @@ public final class ImagePbOuterClass {
     internal_static_com_amazaar_Protobuff_ImageSearchRequestPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_ImageSearchRequestPb_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "ImageId", "ImageType", });
     internal_static_com_amazaar_Protobuff_ImageSearchResponsePb_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_amazaar_Protobuff_ImageSearchResponsePb_fieldAccessorTable = new

@@ -1,7 +1,9 @@
 package com.amazaar.CommonCode;
 
+import android.content.Context;
 import android.util.Log;
 
+import com.amazaar.Module.AmazaarApplication;
 import com.google.gson.JsonObject;
 import com.prod.basic.common.httpCommon.Enums.RequestContentTypeEnum;
 import com.prod.basic.common.httpCommon.Enums.RequestMethodEnum;
@@ -28,11 +30,12 @@ public class HttpCaller extends HttpReqHandler {
             }
         };
         try {
-            return callable.call();
+            JsonObject response = callable.call();
+            return response;
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        return new JsonObject();
     }
 
 

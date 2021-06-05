@@ -55,9 +55,8 @@ public class BaseActivity extends AppCompatActivity {
         m_otpOtpVerificationWidget.getView().getPhoneIsVerified().setListener(new VariableValueChange.ChangeListener() {
             @Override
             public void onChange() {
-                circle.start();
                 m_customer_login.login(m_otpOtpVerificationWidget.getView().getPhoneNumber().getVar(), m_profileSubmitWidget);
-                circle.stop();
+
             }
 
         });

@@ -7,18 +7,19 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import com.amazaar.Module.AmazaarApplication;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amazaar.Adapters.ProductListAdapter;
+import com.amazaar.CommonCode.AToast;
 import com.amazaar.Fragments.ProductDetailsFragment;
 import com.amazaar.Handlers.CartItemHandler;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
-import com.amazaar.Protobuff.ItemPbOuterClass;
 import com.amazaar.R;
 import com.amazaar.SessionManager.CustomerSession;
 import com.amazaar.Utility.Utils;
@@ -104,6 +105,8 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
                 }
             }
         });
+        AmazaarApplication.getLoadingDialog().dismiss();
+        AToast.getLoadingToast();
 
     }
 
