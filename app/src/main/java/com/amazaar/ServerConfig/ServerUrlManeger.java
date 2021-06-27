@@ -25,7 +25,7 @@ public class ServerUrlManeger {
                 return "http://192.168.29.191:8000/";
             default:
                 try {
-                    throw new Exception("No Url Found");
+                    throw new Exception("No Url Found Or Mode is NOt defined Correctly");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
