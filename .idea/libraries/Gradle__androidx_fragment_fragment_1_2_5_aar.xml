@@ -2,11 +2,15 @@
   <library name="Gradle: androidx.fragment:fragment:1.2.5@aar">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a5b5f76c610fceabe01ba53fdc1d14e3/fragment-1.2.5/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8477d1ac2777bd4cb8f2cb8f8055691e/fragment-1.2.5/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a5b5f76c610fceabe01ba53fdc1d14e3/fragment-1.2.5/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a5b5f76c610fceabe01ba53fdc1d14e3/fragment-1.2.5/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a5b5f76c610fceabe01ba53fdc1d14e3/fragment-1.2.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8477d1ac2777bd4cb8f2cb8f8055691e/fragment-1.2.5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8477d1ac2777bd4cb8f2cb8f8055691e/fragment-1.2.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8477d1ac2777bd4cb8f2cb8f8055691e/fragment-1.2.5/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

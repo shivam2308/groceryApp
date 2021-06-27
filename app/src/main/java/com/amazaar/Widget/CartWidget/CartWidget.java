@@ -52,6 +52,7 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
     private TextView tvCartCount;
     private TextView m_chkbtn;
     private TextView tvPinCode;
+    private ImageView m_delete_All;
     private CheckOutFragment checkOutFragment;
     private LinearLayoutManager mLayoutManager;
     @Inject
@@ -87,6 +88,7 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
         ivHome = (ImageView) findViewById(R.id.fragment_cartlist_ivHome);
         llSelectPin = (LinearLayout) findViewById(R.id.fragment_cartlist_llSelectPin);
         m_chkbtn = (TextView) findViewById(R.id.checkout_btn);
+        m_delete_All = (ImageView) findViewById(R.id.fragment_cartlist_delete);
 
         mLayoutManager = new LinearLayoutManager(getContext());
         rvProductList.setLayoutManager(mLayoutManager);
@@ -97,6 +99,7 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
         rlCheckOut.setOnClickListener(this);
         //ivClose.setOnClickListener(this);
         ivHome.setOnClickListener(this);
+        m_delete_All.setOnClickListener(this);
         llSelectPin.setOnClickListener(this);
         m_chkbtn.setOnClickListener(this);
         productListModelArrayList = new ArrayList<>();
@@ -158,6 +161,12 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
             Utils.addNextFragment(getContext(), checkOutFragment, getView().getMainFragment(), true);
         }
         else if (v == ivHome) {
+//            HomeCategoryFragment homeCategoryFragment = new HomeCategoryFragment();
+//            Utils.addNextFragment(getContext(), homeCategoryFragment, getView().getMainFragment(), true);
+            AmazaarApplication.getFragmentManager().popBackStack();
+        }
+        else if (v == m_delete_All) {
+            m_cartHandler.deleteAllItemFromCart();
 //            HomeCategoryFragment homeCategoryFragment = new HomeCategoryFragment();
 //            Utils.addNextFragment(getContext(), homeCategoryFragment, getView().getMainFragment(), true);
             AmazaarApplication.getFragmentManager().popBackStack();

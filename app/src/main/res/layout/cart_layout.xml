@@ -73,6 +73,26 @@
 
         </LinearLayout>
 
+        <ImageView
+            android:id="@+id/fragment_cartlist_refresh"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/fragment_cartlist_delete"
+            android:padding="@dimen/_3sdp"
+            android:visibility="gone"
+            android:src="@mipmap/refresh_icon" />
+
+        <ImageView
+            android:id="@+id/fragment_cartlist_delete"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/fragment_cartlist_ivHome"
+            android:padding="@dimen/_3sdp"
+            android:src="@mipmap/delete_icon" />
 
         <ImageView
             android:id="@+id/fragment_cartlist_ivHome"
@@ -80,6 +100,7 @@
             android:layout_height="@dimen/_38sdp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
+
             android:padding="@dimen/_3sdp"
             android:src="@drawable/ic_home" />
 

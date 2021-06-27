@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.amazaar.ClientServices.RegistrationClientService;
 import com.amazaar.DatabaseEnitityHelper.LoginEntityDaoHelper;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.Protobuff.RegistrationPbOuterClass;
 import com.amazaar.SessionManager.CustomerSession;
 import com.prod.basic.common.httpCommon.Interfaces.IFuture;
@@ -27,9 +28,11 @@ public class CustomerRegistration {
 
 
     public IFuture<RegistrationPbOuterClass.RegistrationPb, Exception> startRegistration(Context context, RegistrationPbOuterClass.RegistrationPb request) {
+        AmazaarApplication.getLoadingDialog().show();
         CustomerRegistrationCF cf = new CustomerRegistrationCF(context, request, m_reqService, m_loLoginEntityDaoHelper, m_customerSession, m_registerPushnotification);
         cf.addLogObjects(cf);
         cf.startAsyncCall();
+        AmazaarApplication.getLoadingDialog().dismiss();
         return cf.getFutureResult();
 
     }

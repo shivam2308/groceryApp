@@ -47,6 +47,10 @@ public class CartItemHandler {
         m_cartEntityDaoHelper.getDeoEntity().deleteByKey((long) position);
     }
 
+    public void deleteAllItemFromCart() {
+        m_cartEntityDaoHelper.getDeoEntity().deleteAll();
+    }
+
     public void deleteItemFromCart(CartPbOuterClass.CartPb cartPb) {
         CartEntity cartEntity = new CartEntity();
         cartEntity.setEid(cartPb.getItem().getDbInfo().getId());

@@ -72,6 +72,8 @@ public class SplashActivity extends AwesomeSplash {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AmazaarApplication.setCurrentContext(getApplicationContext());
+        AmazaarApplication.setCurrentActivity(this);
+        AmazaarApplication.createLoadingDailog();
         mAuth = FirebaseAuth.getInstance();
        // mAuth.getFirebaseAuthSettings().setAppVerificationDisabledForTesting(true);
         currentUser = mAuth.getCurrentUser();
