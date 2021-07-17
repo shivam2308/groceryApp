@@ -12,6 +12,7 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.amazaar.CommonCode.AToast;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
@@ -19,6 +20,7 @@ import com.amazaar.Utility.AndroidUtility;
 import com.amazaar.Utility.Utils;
 import com.amazaar.Widget.ProfileSubmitWidget.ProfileSubmitView;
 import com.google.inject.Injector;
+import com.prod.basic.common.code.Strings;
 
 import org.angmarch.views.NiceSpinner;
 import org.angmarch.views.OnSpinnerItemSelectedListener;
@@ -87,7 +89,11 @@ public class ProfileEditWidget extends LinearLayout implements IView<ProfileEdit
         m_citySpinner.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener() {
             @Override
             public void onItemSelected(NiceSpinner parent, View view, int position, long id) {
-                m_city = parent.getItemAtPosition(position).toString();
+                if (position == 0) {
+                    m_city = "";
+                } else {
+                    m_city = parent.getItemAtPosition(position).toString();
+                }
             }
         });
         List<String> stateDataset = new LinkedList<>(getView().getStateList());
@@ -95,20 +101,40 @@ public class ProfileEditWidget extends LinearLayout implements IView<ProfileEdit
         m_stateSpinner.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener() {
             @Override
             public void onItemSelected(NiceSpinner parent, View view, int position, long id) {
-                m_state = parent.getItemAtPosition(position).toString();
+                if (position == 0) {
+                    m_state = "";
+                } else {
+                    m_state = parent.getItemAtPosition(position).toString();
+                }
             }
         });
         m_save.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                getView().createCustomer(AndroidUtility.getTextFromEditText(m_firstName),
-                        AndroidUtility.getTextFromEditText(m_lastname),
-                        AndroidUtility.getTextFromEditText(m_email),
-                        AndroidUtility.getTextFromEditText(m_houseNo),
-                        AndroidUtility.getTextFromEditText(m_street),
-                        AndroidUtility.getTextFromEditText(m_landmark),
-                        m_city, m_state, Integer.parseInt(AndroidUtility.getTextFromEditText(m_pincode)), getContext());
+                int code = 0;
+                if (Strings.notEmpty(AndroidUtility.getTextFromEditText(m_firstName)) &&
+                        Strings.notEmpty(AndroidUtility.getTextFromEditText(m_lastname)) &&
+                        Strings.notEmpty(AndroidUtility.getTextFromEditText(m_email)) &&
+                        Strings.notEmpty(AndroidUtility.getTextFromEditText(m_houseNo)) &&
+                        Strings.notEmpty(AndroidUtility.getTextFromEditText(m_street)) &&
+                        Strings.notEmpty(AndroidUtility.getTextFromEditText(m_landmark)) &&
+                        Strings.notEmpty(m_city) &&
+                        Strings.notEmpty(m_state) &&
+                        Strings.notEmpty(AndroidUtility.getTextFromEditText(m_pincode))){
+                    code = Integer.parseInt(AndroidUtility.getTextFromEditText(m_pincode));
+                    getView().createCustomer(AndroidUtility.getTextFromEditText(m_firstName),
+                            AndroidUtility.getTextFromEditText(m_lastname),
+                            AndroidUtility.getTextFromEditText(m_email),
+                            AndroidUtility.getTextFromEditText(m_houseNo),
+                            AndroidUtility.getTextFromEditText(m_street),
+                            AndroidUtility.getTextFromEditText(m_landmark),
+                            m_city, m_state, code, getContext());
+                    AndroidUtility.goToHome();
+                }
+                else{
+                    AToast.formFieldMissingToast();
+                }
                 return false;
             }
         });

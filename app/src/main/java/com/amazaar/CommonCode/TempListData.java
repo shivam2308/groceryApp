@@ -15,27 +15,28 @@ public class TempListData {
         List<ProductListModel> productListModelArrayList = new ArrayList<>();
         ProductListModel productListModel = new ProductListModel();
 
-        productListModel.setProductImage(R.drawable.category_fruits_vegetables);
+        productListModel.setProductImage(R.drawable.fruitss);
         productListModel.setItemType(ItemPbOuterClass.ItemTypeEnum.FRUITS);
         productListModelArrayList.add(productListModel);
 
 
         productListModel = new ProductListModel();
-        productListModel.setProductImage(R.drawable.category_frozen_veg);
+        productListModel.setProductImage(R.drawable.vegeeee);
         productListModel.setItemType(ItemPbOuterClass.ItemTypeEnum.VEGETABLES);
         productListModelArrayList.add(productListModel);
 
-
         productListModel = new ProductListModel();
-        productListModel.setProductImage(R.drawable.category_beverages);
-        productListModel.setItemType(ItemPbOuterClass.ItemTypeEnum.KIRANA);
-        productListModelArrayList.add(productListModel);
-
-        productListModel = new ProductListModel();
-        productListModel.setProductImage(R.drawable.category_branded_food);
+        productListModel.setProductImage(R.drawable.dairyyy);
         productListModel.setItemType(ItemPbOuterClass.ItemTypeEnum.DAIRY);
         productListModelArrayList.add(productListModel);
+
+        productListModel = new ProductListModel();
+        productListModel.setProductImage(R.drawable.kiranaa);
+        productListModel.setItemType(ItemPbOuterClass.ItemTypeEnum.KIRANA);
+        productListModelArrayList.add(productListModel);
+        
         return productListModelArrayList;
+
     }
 
 

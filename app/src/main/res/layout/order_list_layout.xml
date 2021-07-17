@@ -9,6 +9,18 @@
     android:orientation="vertical"
     android:padding="@dimen/_5sdp">
 
+    <com.amazaar.CustomeComponent.CustomTextView
+        android:id="@+id/empty_order_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/no_item_available"
+        android:textAlignment="center"
+        android:textColor="@color/login_signup_edithint_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:font_name="NunitoRegular.ttf" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragment_orderlist_rvOrder"
         android:layout_width="match_parent"
@@ -16,5 +28,6 @@
         android:background="@color/white">
 
     </androidx.recyclerview.widget.RecyclerView>
+
 
 </com.amazaar.Comman.SlidingLinearLayout>

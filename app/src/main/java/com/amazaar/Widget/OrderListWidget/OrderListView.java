@@ -3,6 +3,7 @@ package com.amazaar.Widget.OrderListWidget;
 import com.amazaar.ClientServices.OrderedListClientService;
 import com.amazaar.Fragments.OrderListFragment;
 import com.amazaar.ListModels.OrderListModel;
+import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
 import com.amazaar.Protobuff.OrderedListPbOuterClass;
 import com.amazaar.SessionManager.CustomerSession;
 
@@ -16,11 +17,16 @@ public class OrderListView {
     public OrderedListClientService m_orderListClientService;
     public CustomerSession m_customerSesssion;
     private OrderListFragment m_mainFragment;
+    @Inject
+    public VariableValueChange<Boolean> m_isItemAvaliable;
 
     @Inject
     public OrderListView(OrderedListClientService orderListClientService, CustomerSession customerSesssion) {
         m_orderListClientService = orderListClientService;
         m_customerSesssion = customerSesssion;
+    }
+    public VariableValueChange<Boolean> getIsaAvaliable() {
+        return m_isItemAvaliable;
     }
 
     public OrderListFragment getMainFragment() {
@@ -35,7 +41,14 @@ public class OrderListView {
         OrderedListPbOuterClass.OrderedListSearchReqPb.Builder request = OrderedListPbOuterClass.OrderedListSearchReqPb.newBuilder();
         request.setCustomerId(m_customerSesssion.getSession().getDbInfo().getId());
         try {
-            return getOrderListModel(m_orderListClientService.search(request.build()));
+            OrderedListPbOuterClass.OrderedListSearchRespPb resp = m_orderListClientService.search(request.build());
+            if(resp.getSummary().getResultCount() == 0){
+                getIsaAvaliable().setVar(false);
+            }else{
+                getIsaAvaliable().setVar(true);
+//                return getOrderListModel(resp);
+            }
+            return getOrderListModel(resp);
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {

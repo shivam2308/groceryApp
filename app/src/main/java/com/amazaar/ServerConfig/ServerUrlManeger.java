@@ -22,7 +22,7 @@ public class ServerUrlManeger {
                 return "http://amazaar-development.tech/";
             case PRODUCTION:
                 //return "https://www.amazaar.in/";
-                return "http://192.168.29.191:8000/";
+                return "http://192.168.0.105:8000/";
             default:
                 try {
                     throw new Exception("No Url Found Or Mode is NOt defined Correctly");

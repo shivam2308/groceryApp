@@ -5,6 +5,7 @@ import com.amazaar.Convertors.CartPbToCartListModelConvertor;
 import com.amazaar.DatabaseEnitityHelper.CartEntityDaoHelper;
 import com.amazaar.Fragments.CartListFragment;
 import com.amazaar.ListModels.CartListModel;
+import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
 import com.amazaar.Protobuff.CartPbOuterClass;
 
 import java.util.List;
@@ -20,10 +21,16 @@ public class CartView {
     public CartEntityDaoHelper m_cartEntityDeo;
     @Inject
     public CartPbToCartListModelConvertor m_cartPbToCartListModelConvertor;
+    @Inject
+    public VariableValueChange<Boolean> m_isItemAvaliable;
 
     @Inject
     public CartView() {
 
+    }
+
+    public VariableValueChange<Boolean> getIsaAvaliable() {
+        return m_isItemAvaliable;
     }
 
     public CartListFragment getMainFragment() {
@@ -53,15 +60,21 @@ public class CartView {
 
     public String getTotalPrice(List<CartListModel> listModel) {
         float total = 0;
-        for (CartListModel model: listModel) {
-            total+=model.getOnitemChange().getData().getQuantity()*model.getOnitemChange().getData().getItem().getPrice();
+        for (CartListModel model : listModel) {
+            total += model.getOnitemChange().getData().getQuantity() * model.getOnitemChange().getData().getItem().getPrice();
         }
         return String.valueOf(total);
     }
 
     public void getCartList() {
         getCartListModel().clear();
-        getCartListModel().addAll(m_cartPbToCartListModelConvertor.getListModel(m_cartEntityDeo.getCartListPb()));
+        List<CartListModel> cart_list = m_cartPbToCartListModelConvertor.getListModel(m_cartEntityDeo.getCartListPb());
+        if (cart_list.size() == 0) {
+            getIsaAvaliable().setVar(false);
+        } else {
+            getIsaAvaliable().setVar(true);
+            getCartListModel().addAll(cart_list);
+        }
     }
 
     public CartPbOuterClass.CartPb getUpdatedCartItem(CartPbOuterClass.CartPb data, int totalKg) {

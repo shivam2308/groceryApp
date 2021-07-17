@@ -1,16 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.yarolegovich:discrete-scrollview:1.5.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8960851f1e0bc65444c0b4d1bee7734c/jetified-discrete-scrollview-1.5.1/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a103c9b69b3cc060894f5c11f2439ee9/jetified-discrete-scrollview-1.5.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/81a3aede700f8ecf5a2c12f438f78baa/jetified-discrete-scrollview-1.5.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8960851f1e0bc65444c0b4d1bee7734c/jetified-discrete-scrollview-1.5.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8960851f1e0bc65444c0b4d1bee7734c/jetified-discrete-scrollview-1.5.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8960851f1e0bc65444c0b4d1bee7734c/jetified-discrete-scrollview-1.5.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a103c9b69b3cc060894f5c11f2439ee9/jetified-discrete-scrollview-1.5.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a103c9b69b3cc060894f5c11f2439ee9/jetified-discrete-scrollview-1.5.1/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a103c9b69b3cc060894f5c11f2439ee9/jetified-discrete-scrollview-1.5.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/81a3aede700f8ecf5a2c12f438f78baa/jetified-discrete-scrollview-1.5.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/81a3aede700f8ecf5a2c12f438f78baa/jetified-discrete-scrollview-1.5.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/81a3aede700f8ecf5a2c12f438f78baa/jetified-discrete-scrollview-1.5.1/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

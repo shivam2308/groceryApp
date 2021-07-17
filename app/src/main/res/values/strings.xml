@@ -218,6 +218,7 @@
     <string name="enter_your_price">Enter Your Price</string>
     <string name="quantity_type">Quantity Type</string>
     <string name="availability_status">Availability Status</string>
+    <string name="no_item_available">No Item Available</string>
 
 
 </resources>

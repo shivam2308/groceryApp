@@ -25,6 +25,9 @@ public class ProductListView {
     public ItemPbToProductListModelConvertor m_listConvertor;
     @Inject
     public VariableValueChange<ItemPbOuterClass.ItemTypeEnum> m_itemType;
+
+    @Inject
+    public VariableValueChange<Boolean> m_isItemAvaliable;
     private List<ProductListModel> m_productListModelArrayList;
     private ProductListAdapter m_productListAdapter;
     private ProductListFragment m_mainFragment;
@@ -42,6 +45,10 @@ public class ProductListView {
 
     public VariableValueChange<ItemPbOuterClass.ItemTypeEnum> getItemType() {
         return m_itemType;
+    }
+
+    public VariableValueChange<Boolean> getIsaAvaliable() {
+        return m_isItemAvaliable;
     }
 
     public void setItemType(ItemPbOuterClass.ItemTypeEnum itemtype) {
@@ -117,7 +124,7 @@ public class ProductListView {
     public void getItemList(ItemPbOuterClass.ItemTypeEnum itemTypeEnum) {
         ItemPbOuterClass.ItemSearchRequestPb.Builder builder = ItemPbOuterClass.ItemSearchRequestPb.newBuilder();
         builder.setItemType(itemTypeEnum);
-        if (m_customerSession.getSession().getPrivilege() != CustomerPbOuterClass.PrivilegeTypeEnum.ADMIN){
+        if (m_customerSession.getSession().getPrivilege() != CustomerPbOuterClass.PrivilegeTypeEnum.ADMIN) {
             builder.setAvailabilityStatus(ItemPbOuterClass.AvailabilityStatusEnum.AVAILABLE);
         }
 
@@ -131,7 +138,12 @@ public class ProductListView {
         }
         if (result != null) {
             Log.e("RES", String.valueOf(result.getResultsCount()));
-            getProductListModelArrayList().addAll(m_listConvertor.getListModel(result));
+            if (result.getResultsCount() == 0) {
+                getIsaAvaliable().setVar(false);
+            } else {
+                getIsaAvaliable().setVar(true);
+                getProductListModelArrayList().addAll(m_listConvertor.getListModel(result));
+            }
         }
     }
 

@@ -9,6 +9,7 @@ import com.amazaar.EnumFormatter.StateEnumFormatter;
 import com.amazaar.Fragments.ProfileEditFragment;
 import com.amazaar.Protobuff.AddressPbOuterClass;
 import com.amazaar.Protobuff.CustomerPbOuterClass;
+import com.prod.basic.common.code.Strings;
 import com.prod.basic.common.collect.Lists;
 
 import java.util.List;
@@ -69,8 +70,12 @@ public class ProfileEditView {
         customerPb.getAddressBuilder().setHomeNo(houseNo);
         customerPb.getAddressBuilder().setStreet(street);
         customerPb.getAddressBuilder().setLandMark(landMark);
-        customerPb.getAddressBuilder().setCity(m_cityEnumFormatter.getEnum(city));
-        customerPb.getAddressBuilder().setState(m_stateEnumFormatter.getEnum(state));
+        if (Strings.notEmpty(city)) {
+            customerPb.getAddressBuilder().setCity(m_cityEnumFormatter.getEnum(city));
+        }
+        if (Strings.notEmpty(state)) {
+            customerPb.getAddressBuilder().setState(m_stateEnumFormatter.getEnum(state));
+        }
         customerPb.getAddressBuilder().setPincode(pincode);
         m_updateCustomer.updateCustomer(customerPb.build());
     }

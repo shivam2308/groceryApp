@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import com.amazaar.Activity.HomeActivity;
 import com.amazaar.Enums.TopBarUiEnum;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
 import com.amazaar.Widget.MyAccountWidget.MyAccountWidget;
 
@@ -25,7 +26,7 @@ public class MyAccountFragment extends BaseFragment {
     }
 
     public void initToolbar() {
-        ((HomeActivity) getActivity()).setToolbar(TopBarUiEnum.PROFILE);
+        ((HomeActivity) AmazaarApplication.getCurrentActivity()).setToolbar(TopBarUiEnum.PROFILE);
     }
 
     @Override

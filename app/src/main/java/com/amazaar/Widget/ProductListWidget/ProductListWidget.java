@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import com.amazaar.CustomeComponent.CustomTextView;
 import com.amazaar.Module.AmazaarApplication;
 
 import androidx.fragment.app.FragmentActivity;
@@ -46,6 +48,7 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
     private MenuItem item;
     private FragmentActivity myContext;
     private RelativeLayout rlFilter;
+    private CustomTextView no_item_available;
 
     @Inject
     private CartItemHandler m_cartHandler;
@@ -63,6 +66,7 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
         rvProductList = (RecyclerView) findViewById(R.id.fragment_productlist_rvProductList);
         ivFilter = (ImageView) findViewById(R.id.fragment_productlist_ivFilter);
         rlFilter = (RelativeLayout) findViewById(R.id.fragment_productlist_rlFilter);
+        no_item_available = (CustomTextView) findViewById(R.id.no_item_available);
         mLayoutManager = new GridLayoutManager(getContext(), 2);
         rvProductList.setLayoutManager(mLayoutManager);
         inflateLayout();
@@ -91,13 +95,24 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
                 getView().getItemList(getView().getItemType().getVar());
             }
         });
-
+        getView().getIsaAvaliable().setListener(new VariableValueChange.ChangeListener() {
+            @Override
+            public void onChange() {
+                if (getView().getIsaAvaliable().getVar() == false) {
+                    no_item_available.setVisibility(VISIBLE);
+                    rvProductList.setVisibility(GONE);
+                } else {
+                    no_item_available.setVisibility(GONE);
+                    rvProductList.setVisibility(VISIBLE);
+                }
+            }
+        });
         productListAdapter = new ProductListAdapter(getContext(), productListModelArrayList, getView().getMainFragment(), this);
         rvProductList.setAdapter(productListAdapter);
         productListAdapter.setOnItemClickListener(new ProductListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, ProductListModel viewModel) {
-                if (m_customerSession.getSession().getPrivilege() == CustomerPbOuterClass.PrivilegeTypeEnum.ADMIN){
+                if (m_customerSession.getSession().getPrivilege() == CustomerPbOuterClass.PrivilegeTypeEnum.ADMIN) {
                     ProductDetailsFragment fragmentProductDetails = new ProductDetailsFragment();
                     fragmentProductDetails.setProductListModel(viewModel);
                     getView().setProductDetailsFragment(fragmentProductDetails);
@@ -105,8 +120,9 @@ public class ProductListWidget extends LinearLayout implements IView<ProductList
                 }
             }
         });
+
         AmazaarApplication.getLoadingDialog().dismiss();
-        AToast.getLoadingToast();
+        //  AToast.getLoadingToast();
 
     }
 
