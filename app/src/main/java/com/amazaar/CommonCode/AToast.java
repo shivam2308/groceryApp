@@ -150,6 +150,16 @@ public class AToast {
                 .show();
     }
 
+    public static void itemUpdated() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Item Updated")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.SUCCESS)
+                .setDuration(Duration.LONG)
+                .show();
+    }
+
     public static void getLoadingToast() {
         Cue.init()
                 .with(AmazaarApplication.getContext())
@@ -161,6 +171,56 @@ public class AToast {
         Cue.init()
                 .with(AmazaarApplication.getContext())
                 .setMessage("Loading..")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.INFO)
+                .setDuration(Duration.LONG)
+                .show();
+    }
+
+    public static void noItemAvailableToast() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("No Item Available...")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.INFO)
+                .setDuration(Duration.LONG)
+                .show();
+    }
+
+    public static void emptyCart() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Your Cart is Empty")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.INFO)
+                .setDuration(Duration.LONG)
+                .show();
+    }
+
+    public static void updateDetails() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Details Successfully Updated")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.SUCCESS)
+                .setDuration(Duration.LONG)
+                .show();
+    }
+
+    public static void plsWait() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Please Wait")
+                .setGravity(Gravity.BOTTOM)
+                .setType(Type.INFO)
+                .setDuration(Duration.LONG)
+                .show();
+    }
+
+    public static void formFieldMissingToast() {
+        Cue.init()
+                .with(AmazaarApplication.getContext())
+                .setMessage("Form Field Missing")
                 .setGravity(Gravity.BOTTOM)
                 .setType(Type.INFO)
                 .setDuration(Duration.LONG)

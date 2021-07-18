@@ -1,6 +1,7 @@
 package com.amazaar.ControlFlow;
 
 import com.amazaar.ClientServices.CustomerClientService;
+import com.amazaar.CommonCode.AToast;
 import com.amazaar.Helpers.CustomerHelper;
 import com.amazaar.Protobuff.CustomerPbOuterClass;
 import com.amazaar.SessionManager.CustomerSession;
@@ -65,6 +66,7 @@ public class UpdateCustomerCF extends AControlFlow<UpdateCustomerCF.States, Cust
         public States handleState() {
             m_customerSession.clearSession();
             m_customerSession.saveObject(m_req);
+            AToast.updateDetails();
             return States.DONE;
         }
     }

@@ -12,5 +12,6 @@ public enum TopBarUiEnum {
     SETTING,
     HELP,
     ORDER_LIST,
-    PROFILE_EDIT
+    PROFILE_EDIT,
+    PRODUCT_DETAILS_EDIT
 }

@@ -94,7 +94,7 @@ public class HomeCategoryWidget extends LinearLayout implements IView<HomeCatego
     }
 
 
-    private void initWidget() {
+    public void initWidget() {
         setUpSliderImages();
         getListData();
         productListAdapter.setOnItemClickListener(new HomeProductListAdapter.OnItemClickListener() {

@@ -43,7 +43,7 @@ public class LoadingWidget extends LinearLayout implements IView<LoadingView> {
 
     }
 
-    private void initWidget() {
+    public void initWidget(){
         getView().setProgressLayout(m_progressLayout);
         getView().getOnChange().setListener(new VariableValueChange.ChangeListener() {
             @Override

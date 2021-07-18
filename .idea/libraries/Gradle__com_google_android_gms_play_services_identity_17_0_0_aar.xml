@@ -1,14 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-identity:17.0.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cfe5082e2bd3626856ee722568fee700/jetified-play-services-identity-17.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a67421f0866862e8c5c827f2a56f5231/jetified-play-services-identity-17.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bebb477f7aaf5c0bad544f67c04af666/jetified-play-services-identity-17.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7529d38360148a80ed1e61fd04960f2f/jetified-play-services-identity-17.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/28c5a8b250b2170bfe0ca56456350e19/jetified-play-services-identity-17.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/effaeafe32b435106d6fcaf3f7c56a24/jetified-play-services-identity-17.0.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/effaeafe32b435106d6fcaf3f7c56a24/jetified-play-services-identity-17.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/effaeafe32b435106d6fcaf3f7c56a24/jetified-play-services-identity-17.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1dd5e3ac838bf5cdcbee9eecd0e3700a/jetified-play-services-identity-17.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab9b73c51b9dd92686a66e20ea598a3e/jetified-play-services-identity-17.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab9b73c51b9dd92686a66e20ea598a3e/jetified-play-services-identity-17.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab9b73c51b9dd92686a66e20ea598a3e/jetified-play-services-identity-17.0.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

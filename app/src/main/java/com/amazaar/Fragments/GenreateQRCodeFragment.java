@@ -47,6 +47,7 @@ public class GenreateQRCodeFragment extends BaseFragment {
         if (!hidden) {
             try {
                 initToolbar();
+                m_genreateQRCodeWidget.initWidget();
             } catch (Exception e) {
                 e.printStackTrace();
             }

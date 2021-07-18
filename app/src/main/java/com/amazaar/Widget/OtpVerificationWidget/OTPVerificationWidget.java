@@ -65,7 +65,7 @@ public class OTPVerificationWidget extends LinearLayout implements IView<OTPVeri
         m_sendOtpLayout.setVisibility(VISIBLE);
     }
 
-    private void initWidget() {
+    public void initWidget() {
         mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
@@ -102,7 +102,7 @@ public class OTPVerificationWidget extends LinearLayout implements IView<OTPVeri
         m_sendCodeButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                getView().sendVerificationCode(AndroidUtility.getTextFromEditText(m_phoneNumber), mCallbacks);
+                    getView().sendVerificationCode(AndroidUtility.getTextFromEditText(m_phoneNumber), mCallbacks);
                 switchLayout();
                 return false;
             }

@@ -53,7 +53,7 @@ public class HelpWidget extends LinearLayout implements IView<HelpView>, View.On
 
     }
 
-    private void initWidget() {
+    public void initWidget() {
 
     }
 

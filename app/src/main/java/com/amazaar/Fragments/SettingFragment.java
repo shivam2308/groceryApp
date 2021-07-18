@@ -42,6 +42,7 @@ public class SettingFragment extends BaseFragment {
         if(!hidden)
         {
             initToolbar();
+            m_settingWidget.initWidget();
         }
     }
 }

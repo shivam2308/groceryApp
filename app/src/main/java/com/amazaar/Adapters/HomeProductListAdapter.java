@@ -23,6 +23,7 @@ import com.amazaar.ListModels.ProductListModel;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
 import com.amazaar.Utility.AndroidUtility;
+import com.prod.basic.common.code.Strings;
 
 import java.util.List;
 
@@ -119,7 +120,7 @@ public class HomeProductListAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
         public void bindData(final ProductListModel item, final int position) {
             itemView.setTag(item);
-            if(item.getPbModel()!=null) {
+            if(Strings.notEmpty(item.getPbModel().getDbInfo().getId())) {
                 m_getImageFromUrl.setImageFromUrl(mContext, item.getPbModel().getItemImage(), ivProImg, DefaultImageUrl.ImageShowTypeEnum.ITEM);
             }else{
                 ivProImg.setImageDrawable(mContext.getResources().getDrawable(item.getProductImage()));

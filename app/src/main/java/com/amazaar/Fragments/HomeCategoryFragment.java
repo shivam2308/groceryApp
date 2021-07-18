@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.amazaar.Activity.HomeActivity;
 import com.amazaar.Enums.TopBarUiEnum;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.Protobuff.CustomerPbOuterClass;
 import com.amazaar.R;
 import com.amazaar.SessionManager.CustomerSession;
@@ -57,7 +58,7 @@ public class HomeCategoryFragment extends BaseFragment {
     }
 
     public void initToolbar() {
-        ((HomeActivity) getActivity()).setToolbar(TopBarUiEnum.HOME);
+        ((HomeActivity) AmazaarApplication.getCurrentActivity()).setToolbar(TopBarUiEnum.HOME);
 
     }
     @Override
@@ -73,6 +74,10 @@ public class HomeCategoryFragment extends BaseFragment {
         super.onHiddenChanged(hidden);
         if (!hidden) {
             initToolbar();
+            m_homeCategoryWidget.initWidget();
+            if(m_customerSession.getSession().getPrivilege()== CustomerPbOuterClass.PrivilegeTypeEnum.DELIVERY_MAN) {
+                m_orderListWudget.initWidget();
+            }
         }
     }
 

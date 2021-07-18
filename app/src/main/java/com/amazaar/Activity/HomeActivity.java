@@ -19,6 +19,7 @@ import com.amazaar.Fragments.OrderListFragment;
 import com.amazaar.Fragments.PaymentFragment;
 import com.amazaar.Fragments.QRCodeReaderFragment;
 import com.amazaar.Module.AmazaarApplication;
+import com.amazaar.Protobuff.CustomerPbOuterClass;
 import com.amazaar.R;
 import com.amazaar.SessionManager.CustomerSession;
 import com.amazaar.Widget.TopBarWidget.TopBarWidget;
@@ -114,7 +115,9 @@ public class HomeActivity extends AppCompatActivity implements LoaderManager.Loa
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         paymentFragment.onActivityResult(requestCode, resultCode, data);
-        mainFragment.getHomeCategoryWidget().getView().getProductListFragment().getProductListWidget().getView().getProductDetailsFragment().getProductDetailsWidget().getView().getUploadFragment().onActivityResult(requestCode, resultCode, data);
+        if(m_customerSession.getSession().getPrivilege() == CustomerPbOuterClass.PrivilegeTypeEnum.ADMIN){
+            mainFragment.getHomeCategoryWidget().getView().getProductListFragment().getProductListWidget().getView().getProductDetailsFragment().getProductDetailsWidget().getView().getUploadFragment().onActivityResult(requestCode, resultCode, data);
+        }
         if (AmazaarApplication.getCurrentFragment().getClass() == MyAccountFragment.class) {
             m_topBar.getView().getMenuFragment().getMenuWidget().getView().getMyAccountFragment().getMyAccountWidget().getView().getUploadFragment().onActivityResult(requestCode, resultCode, data);
         }

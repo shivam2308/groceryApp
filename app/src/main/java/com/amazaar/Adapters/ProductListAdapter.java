@@ -73,6 +73,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+
+
         ((ViewHolderData) holder).bindData(productModelList.get(position), position);
     }
 

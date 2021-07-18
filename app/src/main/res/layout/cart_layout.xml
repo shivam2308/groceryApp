@@ -73,6 +73,26 @@
 
         </LinearLayout>
 
+        <ImageView
+            android:id="@+id/fragment_cartlist_refresh"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/fragment_cartlist_delete"
+            android:padding="@dimen/_3sdp"
+            android:visibility="gone"
+            android:src="@mipmap/refresh_icon" />
+
+        <ImageView
+            android:id="@+id/fragment_cartlist_delete"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/fragment_cartlist_ivHome"
+            android:padding="@dimen/_3sdp"
+            android:src="@mipmap/delete_icon" />
 
         <ImageView
             android:id="@+id/fragment_cartlist_ivHome"
@@ -80,12 +100,24 @@
             android:layout_height="@dimen/_38sdp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
+
             android:padding="@dimen/_3sdp"
             android:src="@drawable/ic_home" />
 
 
     </RelativeLayout>
 
+    <com.amazaar.CustomeComponent.CustomTextView
+        android:id="@+id/empty_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/no_item_available"
+        android:textAlignment="center"
+        android:textColor="@color/login_signup_edithint_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:font_name="NunitoRegular.ttf" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragment_cartlist_rvProductList"

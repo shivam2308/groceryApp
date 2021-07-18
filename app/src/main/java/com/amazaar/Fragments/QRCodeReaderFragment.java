@@ -47,6 +47,7 @@ public class QRCodeReaderFragment extends BaseFragment {
         if (!hidden) {
             try {
                 initToolbar();
+                m_qr_reader_widget.initWidget();
             } catch (Exception e) {
                 e.printStackTrace();
             }

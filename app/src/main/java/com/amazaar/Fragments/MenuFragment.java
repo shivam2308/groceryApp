@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import com.amazaar.Activity.HomeActivity;
 import com.amazaar.Enums.TopBarUiEnum;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
 import com.amazaar.Widget.MenuWIdget.MenuWidget;
 
@@ -25,7 +26,7 @@ public class MenuFragment extends BaseFragment {
     }
 
     public void initToolbar() {
-        ((HomeActivity) getActivity()).setToolbar(TopBarUiEnum.MENU);
+        ((HomeActivity)AmazaarApplication.getCurrentActivity()).setToolbar(TopBarUiEnum.MENU);
     }
 
     @Override
@@ -43,6 +44,7 @@ public class MenuFragment extends BaseFragment {
         super.onHiddenChanged(hidden);
         if (!hidden) {
             initToolbar();
+            m_menuWidget.initWidget();
         }
     }
 }

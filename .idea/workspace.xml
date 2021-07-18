@@ -6,7 +6,6 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
@@ -31,16 +30,31 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="1ff1cc0f-c2b3-42f6-a6ff-5a27f67ce307" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/ProductListWidget/ProductListWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/ProductListWidget/ProductListWidget.java" afterDir="false" />
+=======
+    <list default="true" id="92ef67b3-1dbb-4992-b1e4-202a114f4752" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" />
+>>>>>>> masterVicky
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@/home/tiwari/.android/avd/Pixel_3a_API_30_x86.avd]" />
+=======
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@ZF6524R292]" />
+>>>>>>> masterVicky
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -49,7 +63,7 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <task path="$PROJECT_DIR$/app">
+        <task path="$PROJECT_DIR$">
           <activation />
         </task>
         <projects_view>
@@ -62,13 +76,25 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Amazaar" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Amazaar" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="android" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Amazaar" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Amazaar" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -77,24 +103,13 @@
       </state>
     </system>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="GenerateSignedApkSettings">
-    <option name="KEY_STORE_PATH" value="D:\ShivamProject\groceryApp\amazaar-key.jks" />
-    <option name="KEY_ALIAS" value="amazaar-key" />
-    <option name="REMEMBER_PASSWORDS" value="true" />
-    <option name="BUILD_TARGET_KEY" value="apk" />
+  <component name="FavoritesManager">
+    <favorites_list name="Amazaar" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1ofsu6WkRodxBo8CGEs7yIt5iLA" />
+  <component name="ProjectId" id="1tWufDSvUaMtcbYWf5ZUYAOGm9R" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -104,52 +119,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ApkExportedModule" value="Amazaar.app" />
-    <property name="ExportApk.ApkPath" value="D:\ShivamProject\groceryApp\app" />
-    <property name="ExportApk.BuildVariants" value="release" />
-    <property name="ExportApk.SignV1" value="true" />
-    <property name="ExportApk.SignV2" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-view/home/tiwari/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/CartWidget/CartWidget.java_SELECTED" value="CartWidget" />
     <property name="android-custom-view/home/tiwari/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/HomeCategoryWidget/HomeCategoryWidget.java_SELECTED" value="HomeCategoryWidget" />
     <property name="android-custom-view/home/tiwari/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ProductListWidget/ProductListWidget.java_SELECTED" value="ProductListWidget" />
-    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/GenreateQRCodeWidget/GenreateQRCodeWidget.java_SELECTED" value="GenreateQRCodeWidget" />
-    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/HomeCategoryWidget/HomeCategoryWidget.java_SELECTED" value="HomeCategoryWidget" />
-    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/LoadingWIdget/LoadingWidget.java_SELECTED" value="LoadingWidget" />
-    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuWidget.java_SELECTED" value="MenuWidget" />
-    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/MyAccountWidget/MyAccountWidget.java_SELECTED" value="MyAccountWidget" />
-    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListWidget.java_SELECTED" value="OrderListWidget" />
-    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ProductDetailsWidget/ProductDetailsWidget.java_SELECTED" value="ProductDetailsWidget" />
-    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ProductListWidget/ProductListWidget.java_SELECTED" value="ProductListWidget" />
-    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ProfileEditWidget/ProfileEditWidget.java_SELECTED" value="ProfileEditWidget" />
-    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/QRCodeReaderWidget/QRCodeReaderWidget.java_SELECTED" value="QRCodeReaderWidget" />
-    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/SettingWidget/SettingWidget.java_SELECTED" value="SettingWidget" />
-    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java_SELECTED" value="TopBarWidget" />
-    <property name="android-custom-viewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/UploadImageWIdget/UploadWidget.java_SELECTED" value="UploadWidget" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi" />
-    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/GenreateQRCodeWidget/GenreateQRCodeWidget.java_selected" value="Custom views" />
-    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/HomeCategoryWidget/HomeCategoryWidget.java_selected" value="Custom views" />
-    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/LoadingWIdget/LoadingWidget.java_selected" value="Custom views" />
-    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/MenuWIdget/MenuWidget.java_selected" value="Custom views" />
-    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/MyAccountWidget/MyAccountWidget.java_selected" value="Custom views" />
-    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/OrderListWidget/OrderListWidget.java_selected" value="Custom views" />
-    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ProductDetailsWidget/ProductDetailsWidget.java_selected" value="Custom views" />
-    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ProductListWidget/ProductListWidget.java_selected" value="Custom views" />
-    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ProfileEditWidget/ProfileEditWidget.java_selected" value="Custom views" />
-    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/QRCodeReaderWidget/QRCodeReaderWidget.java_selected" value="Custom views" />
-    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/SettingWidget/SettingWidget.java_selected" value="Custom views" />
-    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java_selected" value="Custom views" />
-    <property name="multi-representation-previewD:/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/UploadImageWIdget/UploadWidget.java_selected" value="Custom views" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="android-custom-view/home/tiwari/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/ProfileSubmitWidget/ProfileSubmitWidget.java_SELECTED" value="ProfileSubmitWidget" />
+    <property name="android-custom-view/home/tiwari/ShivamProject/groceryApp/app/src/main/java/com/amazaar/Widget/SettingWidget/SettingWidget.java_SELECTED" value="SettingWidget" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi" />
+      <recent name="H:\shivam project\groceryApp\app\src\main\res\drawable" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\shivam project\groceryApp\app\src\main\res\drawable-xxxhdpi" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -161,7 +146,7 @@
       </method>
     </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="Amazaar.app" />
+      <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -218,10 +203,10 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="groceryApp:app [signingReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="groceryApp [signingReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -239,21 +224,21 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.groceryApp:app [signingReport]" />
+        <item itemvalue="Gradle.groceryApp [signingReport]" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1ff1cc0f-c2b3-42f6-a6ff-5a27f67ce307" name="Default Changelist" comment="" />
-      <created>1613689199711</created>
+      <changelist id="92ef67b3-1dbb-4992-b1e4-202a114f4752" name="Default Changelist" comment="" />
+      <created>1622897271665</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1613689199711</updated>
+      <updated>1622897271665</updated>
     </task>
     <servers />
   </component>
@@ -273,156 +258,82 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="200" y="137" width="960" height="533" key="#PSD" timestamp="1622373678772">
+    <state x="399" y="8" key="#app" timestamp="1624789376251">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="399" y="8" key="#app/0.0.1360.728@0.0.1360.728" timestamp="1624789376251" />
+    <state x="485" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1625994545061">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="485" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1360.728@0.0.1360.728" timestamp="1625994545061" />
+    <state x="410" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625983881288">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="410" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1360.728@0.0.1360.728" timestamp="1625983881288" />
+    <state x="532" y="194" key="AndroidCreateXmlResourceDialog" timestamp="1625987740601">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="532" y="194" key="AndroidCreateXmlResourceDialog/0.0.1360.728@0.0.1360.728" timestamp="1625987740601" />
+    <state x="460" y="119" key="FileChooserDialogImpl" timestamp="1625986271154">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="460" y="119" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1625986271154" />
+    <state width="1317" height="124" key="GridCell.Tab.0.bottom" timestamp="1626511031572">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="124" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1626511031572" />
+    <state width="1314" height="420" key="GridCell.Tab.0.bottom/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1623562013394" />
+    <state width="1317" height="124" key="GridCell.Tab.0.center" timestamp="1626511031572">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="124" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1626511031572" />
+    <state width="1314" height="420" key="GridCell.Tab.0.center/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1623562013394" />
+    <state width="1317" height="124" key="GridCell.Tab.0.left" timestamp="1626511031572">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="124" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1626511031572" />
+    <state width="1314" height="420" key="GridCell.Tab.0.left/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1623562013394" />
+    <state width="1317" height="124" key="GridCell.Tab.0.right" timestamp="1626511031572">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="124" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1626511031572" />
+    <state width="1314" height="420" key="GridCell.Tab.0.right/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1623562013394" />
+    <state width="1317" height="124" key="GridCell.Tab.1.bottom" timestamp="1626511031573">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="124" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1626511031573" />
+    <state width="1314" height="420" key="GridCell.Tab.1.bottom/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1623562013394" />
+    <state width="1317" height="124" key="GridCell.Tab.1.center" timestamp="1626511031573">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="124" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1626511031573" />
+    <state width="1314" height="420" key="GridCell.Tab.1.center/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1623562013394" />
+    <state width="1317" height="124" key="GridCell.Tab.1.left" timestamp="1626511031572">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="124" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1626511031572" />
+    <state width="1314" height="420" key="GridCell.Tab.1.left/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1623562013394" />
+    <state width="1317" height="124" key="GridCell.Tab.1.right" timestamp="1626511031573">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1317" height="124" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1626511031573" />
+    <state width="1314" height="420" key="GridCell.Tab.1.right/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1623562013394" />
+    <state x="263" y="148" width="834" height="511" key="IDE.errors.dialog" timestamp="1622951762614">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="200" y="137" width="960" height="533" key="#PSD/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622373678772" />
-    <state x="425" y="169" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1621169904756">
-      <screen x="0" y="0" width="1360" height="736" />
+    <state x="263" y="148" width="834" height="511" key="IDE.errors.dialog/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622951762614" />
+    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1626511695941">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="425" y="169" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1621169904756" />
-    <state x="485" y="74" key="#com.intellij.ide.util.MemberChooser" timestamp="1621158100965">
-      <screen x="0" y="0" width="1360" height="736" />
-    </state>
-    <state x="485" y="74" key="#com.intellij.ide.util.MemberChooser/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1621158100965" />
-    <state x="361" y="103" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1621123130747">
-      <screen x="0" y="0" width="1360" height="736" />
-    </state>
-    <state x="361" y="103" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1621123130747" />
-    <state x="462" y="123" key="FileChooserDialogImpl" timestamp="1621764762124">
-      <screen x="0" y="0" width="1360" height="736" />
-    </state>
-    <state x="462" y="123" key="FileChooserDialogImpl/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1621764762124" />
-    <state width="1314" height="403" key="GridCell.Tab.0.bottom" timestamp="1622873947603">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state width="1317" height="321" key="GridCell.Tab.0.bottom/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1621764780758" />
-    <state width="1317" height="374" key="GridCell.Tab.0.bottom/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1614378521956" />
-    <state width="1317" height="372" key="GridCell.Tab.0.bottom/1360.0.1366.736/0.0.1360.736@0.0.1360.736" timestamp="1614379954158" />
-    <state width="1314" height="403" key="GridCell.Tab.0.bottom/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622873947603" />
-    <state width="1314" height="403" key="GridCell.Tab.0.center" timestamp="1622873947602">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state width="1317" height="321" key="GridCell.Tab.0.center/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1621764780758" />
-    <state width="1317" height="374" key="GridCell.Tab.0.center/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1614378521956" />
-    <state width="1317" height="372" key="GridCell.Tab.0.center/1360.0.1366.736/0.0.1360.736@0.0.1360.736" timestamp="1614379954158" />
-    <state width="1314" height="403" key="GridCell.Tab.0.center/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622873947602" />
-    <state width="1314" height="403" key="GridCell.Tab.0.left" timestamp="1622873947602">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state width="1317" height="321" key="GridCell.Tab.0.left/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1621764780757" />
-    <state width="1317" height="374" key="GridCell.Tab.0.left/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1614378521956" />
-    <state width="1317" height="372" key="GridCell.Tab.0.left/1360.0.1366.736/0.0.1360.736@0.0.1360.736" timestamp="1614379954158" />
-    <state width="1314" height="403" key="GridCell.Tab.0.left/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622873947602" />
-    <state width="1314" height="403" key="GridCell.Tab.0.right" timestamp="1622873947603">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state width="1317" height="321" key="GridCell.Tab.0.right/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1621764780758" />
-    <state width="1317" height="374" key="GridCell.Tab.0.right/0.0.1366.736/1366.0.1360.738@1366.0.1360.738" timestamp="1614378521956" />
-    <state width="1317" height="372" key="GridCell.Tab.0.right/1360.0.1366.736/0.0.1360.736@0.0.1360.736" timestamp="1614379954158" />
-    <state width="1314" height="403" key="GridCell.Tab.0.right/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622873947603" />
-    <state width="1314" height="285" key="GridCell.Tab.1.bottom" timestamp="1622694200333">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state width="1317" height="321" key="GridCell.Tab.1.bottom/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1621764780759" />
-    <state width="1314" height="285" key="GridCell.Tab.1.bottom/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622694200333" />
-    <state width="1314" height="285" key="GridCell.Tab.1.center" timestamp="1622694200333">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state width="1317" height="321" key="GridCell.Tab.1.center/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1621764780759" />
-    <state width="1314" height="285" key="GridCell.Tab.1.center/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622694200333" />
-    <state width="1314" height="285" key="GridCell.Tab.1.left" timestamp="1622694200333">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state width="1317" height="321" key="GridCell.Tab.1.left/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1621764780758" />
-    <state width="1314" height="285" key="GridCell.Tab.1.left/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622694200333" />
-    <state width="1314" height="285" key="GridCell.Tab.1.right" timestamp="1622694200333">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state width="1317" height="321" key="GridCell.Tab.1.right/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1621764780759" />
-    <state width="1314" height="285" key="GridCell.Tab.1.right/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622694200333" />
-    <state x="169" y="35" width="1022" height="733" key="SettingsEditor" timestamp="1622373691330">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state x="169" y="35" width="1022" height="733" key="SettingsEditor/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622373691330" />
-    <state width="685" height="371" key="XDebugger.FullValuePopup" timestamp="1622384375720">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state width="688" height="376" key="XDebugger.FullValuePopup/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1621763952240" />
-    <state width="685" height="371" key="XDebugger.FullValuePopup/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622384375720" />
-    <state x="92" y="92" width="1176" height="552" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1619253241760">
-      <screen x="0" y="0" width="1360" height="736" />
-    </state>
-    <state x="92" y="92" width="1176" height="552" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1619253241760" />
-    <state x="227" y="96" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1621764133983">
-      <screen x="0" y="0" width="1360" height="736" />
-    </state>
-    <state x="227" y="96" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1360.736/1360.0.1366.738@0.0.1360.736" timestamp="1621764133983" />
-    <state x="375" y="0" width="622" height="768" key="find.popup" timestamp="1622373668745">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state x="375" y="0" width="622" height="768" key="find.popup/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622373668745" />
-    <state x="339" y="177" width="672" height="677" key="run.anything.popup" timestamp="1622358876749">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state x="339" y="177" width="672" height="677" key="run.anything.popup/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622358876749" />
-    <state x="345" y="59" width="672" height="708" key="search.everywhere.popup" timestamp="1622882668223">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state x="345" y="59" width="672" height="708" key="search.everywhere.popup/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1622882668223" />
+    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1626511695941" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/CustomDailogCallBack.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/Utility/AndroidUtility.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/AToast.java</url>
-          <line>153</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/Adapters/ProductListAdapter.java</url>
-          <line>154</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/CommonCode/ImageCacheLoader/ImageLoader.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/GetImageFromUrlCF.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/ImageCache/ItemImageCache.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/GetImageAndStoreInCache.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/GetImageAndStoreInCacheCF.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/ControlFlow/GetImageAndStoreInCacheCF.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="42" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/amazaar/Widget/TopBarWidget/TopBarWidget.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

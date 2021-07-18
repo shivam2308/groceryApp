@@ -1,7 +1,10 @@
 package com.amazaar.ControlFlow;
 
+import android.widget.ImageView;
+
 import com.amazaar.ClientServices.CreateImageClientService;
 import com.amazaar.ClientServices.CustomerClientService;
+import com.amazaar.CommonCode.ImageCacheLoader.ImageLoader;
 import com.amazaar.Protobuff.CustomerPbOuterClass;
 import com.amazaar.Protobuff.ImagePbOuterClass;
 import com.amazaar.SessionManager.CustomerSession;
@@ -16,13 +19,17 @@ public class CreateImageCF extends AControlFlow<CreateImageCF.State, Void, Excep
     private final CustomerSession m_customerSession;
     private final CustomerClientService m_customerService;
     private ImagePbOuterClass.ImagePb m_req;
+    private ImageLoader m_imageLoader;
+    private ImageView m_imageToBeSet;
 
-    public CreateImageCF(ImagePbOuterClass.ImagePb req, CreateImageClientService createImageClientService, CustomerSession customerSession, CustomerClientService customerService) {
+    public CreateImageCF(ImagePbOuterClass.ImagePb req, CreateImageClientService createImageClientService, CustomerSession customerSession, CustomerClientService customerService,ImageLoader imageLoader,ImageView imageToBeSet) {
         super(State.CREATE_IMAGE, State.DONE);
         m_req = req;
         m_createImageClientService = createImageClientService;
         m_customerSession = customerSession;
         m_customerService = customerService;
+        m_imageLoader=imageLoader;
+        m_imageToBeSet = imageToBeSet;
         addStateHandler(State.CREATE_IMAGE, new CreateImageHandler());
         addStateHandler(State.GET_AND_UPDATE_CUSTOMER_SESSION, new GetAndUpdateCustomerSession());
     }
@@ -76,6 +83,7 @@ public class CreateImageCF extends AControlFlow<CreateImageCF.State, Void, Excep
         public State handleState() {
             m_customerSession.clearSession();
             m_customerSession.saveObject(m_future);
+            m_imageLoader.DisplayImage(m_req,m_imageToBeSet);
             return State.DONE;
         }
     }

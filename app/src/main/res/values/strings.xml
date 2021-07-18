@@ -211,6 +211,14 @@
     <string name="my_cart">My Cart</string>
     <string name="googlepay">Google Pay</string>
     <string name="channelId">amazaar_notify</string>
+    <string name="product_name">product Name</string>
+    <string name="enter_Product_name">Enter Product Name</string>
+    <string name="quantity">Quantity</string>
+    <string name="enter_your_quantity">Enter your Quantity</string>
+    <string name="enter_your_price">Enter Your Price</string>
+    <string name="quantity_type">Quantity Type</string>
+    <string name="availability_status">Availability Status</string>
+    <string name="no_item_available">No Item Available</string>
 
 
 </resources>

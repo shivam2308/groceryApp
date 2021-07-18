@@ -44,7 +44,7 @@ message ItemPb {
     float price = 5;
     ItemTypeEnum itemType = 6;
     AvailabilityStatusEnum availabilityStatus = 7;
-    ItemQuantityTypeEnum quantityType = 8;
+    ItemQuantityTypeEnum itemQuantityType = 8;
     TimePb time = 9;
 }
 message ItemSearchRequestPb {

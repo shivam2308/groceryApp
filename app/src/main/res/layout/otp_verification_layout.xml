@@ -80,8 +80,8 @@
                             <com.amazaar.CustomeComponent.CustomTextView
                                 android:id="@+id/getCode"
                                 style="@style/ganaral_facebook_style"
-                                android:layout_marginEnd="@dimen/_8sdp"
                                 android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
                                 android:layout_weight="1"
                                 android:gravity="center"
                                 android:padding="@dimen/_6sdp"
@@ -89,13 +89,14 @@
                                 app:font_name="NunitoExtraBold.ttf" />
 
                         </LinearLayout>
+
                         <LinearLayout
                             android:id="@+id/otp_verify"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:visibility="gone"
                             android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:visibility="gone">
 
 
                             <com.amazaar.CustomeComponent.CustomEdittext
@@ -108,8 +109,8 @@
                             <com.amazaar.CustomeComponent.CustomTextView
                                 android:id="@+id/verify"
                                 style="@style/ganaral_facebook_style"
-                                android:layout_marginEnd="@dimen/_8sdp"
                                 android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
                                 android:layout_weight="1"
                                 android:gravity="center"
                                 android:padding="@dimen/_6sdp"

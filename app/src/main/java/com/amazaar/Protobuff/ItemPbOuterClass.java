@@ -1334,15 +1334,15 @@ public final class ItemPbOuterClass {
     com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum getAvailabilityStatus();
 
     /**
-     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-     * @return The enum numeric value on the wire for quantityType.
+     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+     * @return The enum numeric value on the wire for itemQuantityType.
      */
-    int getQuantityTypeValue();
+    int getItemQuantityTypeValue();
     /**
-     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-     * @return The quantityType.
+     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+     * @return The itemQuantityType.
      */
-    com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum getQuantityType();
+    com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum getItemQuantityType();
 
     /**
      * <code>.com.amazaar.Protobuff.TimePb time = 9;</code>
@@ -1375,7 +1375,7 @@ public final class ItemPbOuterClass {
       quantity_ = "";
       itemType_ = 0;
       availabilityStatus_ = 0;
-      quantityType_ = 0;
+      itemQuantityType_ = 0;
     }
 
     @java.lang.Override
@@ -1473,7 +1473,7 @@ public final class ItemPbOuterClass {
             case 64: {
               int rawValue = input.readEnum();
 
-              quantityType_ = rawValue;
+              itemQuantityType_ = rawValue;
               break;
             }
             case 74: {
@@ -1686,22 +1686,22 @@ public final class ItemPbOuterClass {
       return result == null ? com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.UNRECOGNIZED : result;
     }
 
-    public static final int QUANTITYTYPE_FIELD_NUMBER = 8;
-    private int quantityType_;
+    public static final int ITEMQUANTITYTYPE_FIELD_NUMBER = 8;
+    private int itemQuantityType_;
     /**
-     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-     * @return The enum numeric value on the wire for quantityType.
+     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+     * @return The enum numeric value on the wire for itemQuantityType.
      */
-    @java.lang.Override public int getQuantityTypeValue() {
-      return quantityType_;
+    @java.lang.Override public int getItemQuantityTypeValue() {
+      return itemQuantityType_;
     }
     /**
-     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-     * @return The quantityType.
+     * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+     * @return The itemQuantityType.
      */
-    @java.lang.Override public com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum getQuantityType() {
+    @java.lang.Override public com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum getItemQuantityType() {
       @SuppressWarnings("deprecation")
-      com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum result = com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.valueOf(quantityType_);
+      com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum result = com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.valueOf(itemQuantityType_);
       return result == null ? com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.UNRECOGNIZED : result;
     }
 
@@ -1766,8 +1766,8 @@ public final class ItemPbOuterClass {
       if (availabilityStatus_ != com.amazaar.Protobuff.ItemPbOuterClass.AvailabilityStatusEnum.UNKNOWN_AVAILABILITY_STATUS.getNumber()) {
         output.writeEnum(7, availabilityStatus_);
       }
-      if (quantityType_ != com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.UNKNOWN_ITEM_QUANTITY_TYPE.getNumber()) {
-        output.writeEnum(8, quantityType_);
+      if (itemQuantityType_ != com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.UNKNOWN_ITEM_QUANTITY_TYPE.getNumber()) {
+        output.writeEnum(8, itemQuantityType_);
       }
       if (time_ != null) {
         output.writeMessage(9, getTime());
@@ -1808,9 +1808,9 @@ public final class ItemPbOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(7, availabilityStatus_);
       }
-      if (quantityType_ != com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.UNKNOWN_ITEM_QUANTITY_TYPE.getNumber()) {
+      if (itemQuantityType_ != com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.UNKNOWN_ITEM_QUANTITY_TYPE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(8, quantityType_);
+          .computeEnumSize(8, itemQuantityType_);
       }
       if (time_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1853,7 +1853,7 @@ public final class ItemPbOuterClass {
               other.getPrice())) return false;
       if (itemType_ != other.itemType_) return false;
       if (availabilityStatus_ != other.availabilityStatus_) return false;
-      if (quantityType_ != other.quantityType_) return false;
+      if (itemQuantityType_ != other.itemQuantityType_) return false;
       if (hasTime() != other.hasTime()) return false;
       if (hasTime()) {
         if (!getTime()
@@ -1891,8 +1891,8 @@ public final class ItemPbOuterClass {
       hash = (53 * hash) + itemType_;
       hash = (37 * hash) + AVAILABILITYSTATUS_FIELD_NUMBER;
       hash = (53 * hash) + availabilityStatus_;
-      hash = (37 * hash) + QUANTITYTYPE_FIELD_NUMBER;
-      hash = (53 * hash) + quantityType_;
+      hash = (37 * hash) + ITEMQUANTITYTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + itemQuantityType_;
       if (hasTime()) {
         hash = (37 * hash) + TIME_FIELD_NUMBER;
         hash = (53 * hash) + getTime().hashCode();
@@ -2056,7 +2056,7 @@ public final class ItemPbOuterClass {
 
         availabilityStatus_ = 0;
 
-        quantityType_ = 0;
+        itemQuantityType_ = 0;
 
         if (timeBuilder_ == null) {
           time_ = null;
@@ -2109,7 +2109,7 @@ public final class ItemPbOuterClass {
         result.price_ = price_;
         result.itemType_ = itemType_;
         result.availabilityStatus_ = availabilityStatus_;
-        result.quantityType_ = quantityType_;
+        result.itemQuantityType_ = itemQuantityType_;
         if (timeBuilder_ == null) {
           result.time_ = time_;
         } else {
@@ -2185,8 +2185,8 @@ public final class ItemPbOuterClass {
         if (other.availabilityStatus_ != 0) {
           setAvailabilityStatusValue(other.getAvailabilityStatusValue());
         }
-        if (other.quantityType_ != 0) {
-          setQuantityTypeValue(other.getQuantityTypeValue());
+        if (other.itemQuantityType_ != 0) {
+          setItemQuantityTypeValue(other.getItemQuantityTypeValue());
         }
         if (other.hasTime()) {
           mergeTime(other.getTime());
@@ -2792,56 +2792,56 @@ public final class ItemPbOuterClass {
         return this;
       }
 
-      private int quantityType_ = 0;
+      private int itemQuantityType_ = 0;
       /**
-       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-       * @return The enum numeric value on the wire for quantityType.
+       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+       * @return The enum numeric value on the wire for itemQuantityType.
        */
-      @java.lang.Override public int getQuantityTypeValue() {
-        return quantityType_;
+      @java.lang.Override public int getItemQuantityTypeValue() {
+        return itemQuantityType_;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-       * @param value The enum numeric value on the wire for quantityType to set.
+       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+       * @param value The enum numeric value on the wire for itemQuantityType to set.
        * @return This builder for chaining.
        */
-      public Builder setQuantityTypeValue(int value) {
+      public Builder setItemQuantityTypeValue(int value) {
         
-        quantityType_ = value;
+        itemQuantityType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-       * @return The quantityType.
+       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+       * @return The itemQuantityType.
        */
       @java.lang.Override
-      public com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum getQuantityType() {
+      public com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum getItemQuantityType() {
         @SuppressWarnings("deprecation")
-        com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum result = com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.valueOf(quantityType_);
+        com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum result = com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.valueOf(itemQuantityType_);
         return result == null ? com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum.UNRECOGNIZED : result;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
-       * @param value The quantityType to set.
+       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
+       * @param value The itemQuantityType to set.
        * @return This builder for chaining.
        */
-      public Builder setQuantityType(com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum value) {
+      public Builder setItemQuantityType(com.amazaar.Protobuff.ItemPbOuterClass.ItemQuantityTypeEnum value) {
         if (value == null) {
           throw new NullPointerException();
         }
         
-        quantityType_ = value.getNumber();
+        itemQuantityType_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum quantityType = 8;</code>
+       * <code>.com.amazaar.Protobuff.ItemQuantityTypeEnum itemQuantityType = 8;</code>
        * @return This builder for chaining.
        */
-      public Builder clearQuantityType() {
+      public Builder clearItemQuantityType() {
         
-        quantityType_ = 0;
+        itemQuantityType_ = 0;
         onChanged();
         return this;
       }
@@ -4882,7 +4882,7 @@ public final class ItemPbOuterClass {
       "to\032\017summaryPb.proto\032\014timePb.proto\"W\n\tIte" +
       "mPbRef\022\n\n\002id\030\001 \001(\t\022/\n\010itemName\030\002 \001(\0132\035.c" +
       "om.amazaar.Protobuff.NamePb\022\r\n\005price\030\003 \001" +
-      "(\002\"\263\003\n\006ItemPb\022/\n\006dbInfo\030\001 \001(\0132\037.com.amaz" +
+      "(\002\"\267\003\n\006ItemPb\022/\n\006dbInfo\030\001 \001(\0132\037.com.amaz" +
       "aar.Protobuff.EntityPb\022/\n\010itemName\030\002 \001(\013" +
       "2\035.com.amazaar.Protobuff.NamePb\0224\n\titemI" +
       "mage\030\003 \001(\0132!.com.amazaar.Protobuff.Image" +
@@ -4890,25 +4890,25 @@ public final class ItemPbOuterClass {
       "\n\010itemType\030\006 \001(\0162#.com.amazaar.Protobuff" +
       ".ItemTypeEnum\022I\n\022availabilityStatus\030\007 \001(" +
       "\0162-.com.amazaar.Protobuff.AvailabilitySt" +
-      "atusEnum\022A\n\014quantityType\030\010 \001(\0162+.com.ama" +
-      "zaar.Protobuff.ItemQuantityTypeEnum\022+\n\004t" +
-      "ime\030\t \001(\0132\035.com.amazaar.Protobuff.TimePb" +
-      "\"\323\001\n\023ItemSearchRequestPb\0225\n\010itemType\030\001 \001" +
-      "(\0162#.com.amazaar.Protobuff.ItemTypeEnum\022" +
-      "I\n\022availabilityStatus\030\002 \001(\0162-.com.amazaa" +
-      "r.Protobuff.AvailabilityStatusEnum\022:\n\tti" +
-      "meQuery\030\003 \001(\0132\'.com.amazaar.Protobuff.Ti" +
-      "meQueryRangePb\"y\n\024ItemSearchResponsePb\0221" +
-      "\n\007summary\030\001 \001(\0132 .com.amazaar.Protobuff." +
-      "SummaryPb\022.\n\007results\030\002 \003(\0132\035.com.amazaar" +
-      ".Protobuff.ItemPb*X\n\014ItemTypeEnum\022\025\n\021UNK" +
-      "NOWN_ITEM_TYPE\020\000\022\016\n\nVEGETABLES\020\001\022\n\n\006FRUI" +
-      "TS\020\002\022\n\n\006KIRANA\020\003\022\t\n\005DAIRY\020\004*g\n\024ItemQuant" +
-      "ityTypeEnum\022\036\n\032UNKNOWN_ITEM_QUANTITY_TYP" +
-      "E\020\000\022\016\n\nKILO_GRAMS\020\001\022\t\n\005GRAMS\020\002\022\t\n\005PIECE\020" +
-      "\003\022\t\n\005LITRE\020\004*[\n\026AvailabilityStatusEnum\022\037" +
-      "\n\033UNKNOWN_AVAILABILITY_STATUS\020\000\022\r\n\tAVAIL" +
-      "ABLE\020\001\022\021\n\rNOT_AVAILABLE\020\002b\006proto3"
+      "atusEnum\022E\n\020itemQuantityType\030\010 \001(\0162+.com" +
+      ".amazaar.Protobuff.ItemQuantityTypeEnum\022" +
+      "+\n\004time\030\t \001(\0132\035.com.amazaar.Protobuff.Ti" +
+      "mePb\"\323\001\n\023ItemSearchRequestPb\0225\n\010itemType" +
+      "\030\001 \001(\0162#.com.amazaar.Protobuff.ItemTypeE" +
+      "num\022I\n\022availabilityStatus\030\002 \001(\0162-.com.am" +
+      "azaar.Protobuff.AvailabilityStatusEnum\022:" +
+      "\n\ttimeQuery\030\003 \001(\0132\'.com.amazaar.Protobuf" +
+      "f.TimeQueryRangePb\"y\n\024ItemSearchResponse" +
+      "Pb\0221\n\007summary\030\001 \001(\0132 .com.amazaar.Protob" +
+      "uff.SummaryPb\022.\n\007results\030\002 \003(\0132\035.com.ama" +
+      "zaar.Protobuff.ItemPb*X\n\014ItemTypeEnum\022\025\n" +
+      "\021UNKNOWN_ITEM_TYPE\020\000\022\016\n\nVEGETABLES\020\001\022\n\n\006" +
+      "FRUITS\020\002\022\n\n\006KIRANA\020\003\022\t\n\005DAIRY\020\004*g\n\024ItemQ" +
+      "uantityTypeEnum\022\036\n\032UNKNOWN_ITEM_QUANTITY" +
+      "_TYPE\020\000\022\016\n\nKILO_GRAMS\020\001\022\t\n\005GRAMS\020\002\022\t\n\005PI" +
+      "ECE\020\003\022\t\n\005LITRE\020\004*[\n\026AvailabilityStatusEn" +
+      "um\022\037\n\033UNKNOWN_AVAILABILITY_STATUS\020\000\022\r\n\tA" +
+      "VAILABLE\020\001\022\021\n\rNOT_AVAILABLE\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4930,7 +4930,7 @@ public final class ItemPbOuterClass {
     internal_static_com_amazaar_Protobuff_ItemPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_amazaar_Protobuff_ItemPb_descriptor,
-        new java.lang.String[] { "DbInfo", "ItemName", "ItemImage", "Quantity", "Price", "ItemType", "AvailabilityStatus", "QuantityType", "Time", });
+        new java.lang.String[] { "DbInfo", "ItemName", "ItemImage", "Quantity", "Price", "ItemType", "AvailabilityStatus", "ItemQuantityType", "Time", });
     internal_static_com_amazaar_Protobuff_ItemSearchRequestPb_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_amazaar_Protobuff_ItemSearchRequestPb_fieldAccessorTable = new

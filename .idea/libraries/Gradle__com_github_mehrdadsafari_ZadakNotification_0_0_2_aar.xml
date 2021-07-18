@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.mehrdadsafari:ZadakNotification:0.0.2@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7f734ce43570d15706214a1ac4428356/jetified-ZadakNotification-0.0.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7f734ce43570d15706214a1ac4428356/jetified-ZadakNotification-0.0.2/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7f734ce43570d15706214a1ac4428356/jetified-ZadakNotification-0.0.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/96aaa57f30505922cbffc3fe6d1e1575/jetified-ZadakNotification-0.0.2/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/96aaa57f30505922cbffc3fe6d1e1575/jetified-ZadakNotification-0.0.2/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/96aaa57f30505922cbffc3fe6d1e1575/jetified-ZadakNotification-0.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/06fa365f5d42f6607189e09097b7684e/jetified-ZadakNotification-0.0.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/06fa365f5d42f6607189e09097b7684e/jetified-ZadakNotification-0.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/06fa365f5d42f6607189e09097b7684e/jetified-ZadakNotification-0.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ceab1340bc3418032389eff444218cf9/jetified-ZadakNotification-0.0.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ceab1340bc3418032389eff444218cf9/jetified-ZadakNotification-0.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ceab1340bc3418032389eff444218cf9/jetified-ZadakNotification-0.0.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -63,7 +63,7 @@ public class PaymentWidget extends LinearLayout implements IView<PaymentView>, V
     }
 
 
-    private void initWidget() {
+    public void initWidget() {
         if (!AndroidUtility.isPackageExisted(getView().getGpayPackageName())) {
             m_upi.setVisibility(GONE);
         }

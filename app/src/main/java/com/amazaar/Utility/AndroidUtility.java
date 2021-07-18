@@ -11,8 +11,10 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.amazaar.CommonCode.AToast;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
+import com.prod.basic.common.code.Strings;
 
 import java.util.List;
 
@@ -62,5 +64,12 @@ public class AndroidUtility {
         params.height = WindowManager.LayoutParams.MATCH_PARENT;
         dialog.getWindow().setAttributes((WindowManager.LayoutParams) params);
         return dialog;
+    }
+    public static void goToHome(){
+        int f = AmazaarApplication.getFragmentManager().getBackStackEntryCount();
+        while (f>=1){
+            AmazaarApplication.getFragmentManager().popBackStack();
+            f=f-1;
+        }
     }
 }

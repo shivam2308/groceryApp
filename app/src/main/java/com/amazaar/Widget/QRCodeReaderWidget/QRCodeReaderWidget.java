@@ -68,7 +68,7 @@ public class QRCodeReaderWidget extends LinearLayout implements IView<QRCodeAppR
 
     }
 
-    private void initWidget() {
+    public void initWidget() {
         getView().setQrCodeReaderView(qrCodeReaderView);
     }
 

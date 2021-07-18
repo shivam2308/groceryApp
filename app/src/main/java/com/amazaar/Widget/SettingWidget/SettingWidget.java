@@ -50,7 +50,7 @@ public class SettingWidget extends LinearLayout implements IView<SettingView>, V
 
     }
 
-    private void initWidget() {
+    public void initWidget() {
 
     }
 

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.amazaar.Activity.HomeActivity;
 import com.amazaar.Enums.TopBarUiEnum;
@@ -17,6 +18,7 @@ public class UploadImageFragment extends BaseFragment {
     private UploadWidget m_uploadWidget;
     private ImagePbOuterClass.ImageTypeEnum m_ImageType;
     private String m_imageId;
+    private ImageView m_imageToBeSet;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -39,12 +41,16 @@ public class UploadImageFragment extends BaseFragment {
     public void setImageId(String imageId) {
         m_imageId = imageId;
     }
+    public void setImageToBeSet(ImageView imageToBeSet) {
+        m_imageToBeSet = imageToBeSet;
+    }
 
     @Override
     public void initComponents(View rootView) {
         m_uploadWidget = (UploadWidget) rootView.findViewById(R.id.uploadImageWidget);
         m_uploadWidget.setImageId(m_imageId);
         m_uploadWidget.setImageType(m_ImageType);
+        m_uploadWidget.getView().setImageToBeSet(m_imageToBeSet);
     }
 
     @Override
@@ -52,6 +58,7 @@ public class UploadImageFragment extends BaseFragment {
         super.onHiddenChanged(hidden);
         if (!hidden) {
             initToolbar();
+            m_uploadWidget.initWidget();
         }
     }
 

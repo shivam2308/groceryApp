@@ -1,14 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: com.daimajia.easing:library:1.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0499cacf898cb8a827ab3f9713a2b326/jetified-library-1.0.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f43dcbce949fabd3aead39b845517147/jetified-library-1.0.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/32ac1ed9d3d1cb7be64d1ab47249af6c/jetified-library-1.0.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c51a50cd848044330683cd9552a2c2b5/jetified-library-1.0.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2cf9aab1045999b23dee45ca4c0b71b/jetified-library-1.0.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c0549d601e0ce52b34b63f206a6d0715/jetified-library-1.0.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c0549d601e0ce52b34b63f206a6d0715/jetified-library-1.0.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c0549d601e0ce52b34b63f206a6d0715/jetified-library-1.0.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7564b05cafd032cbbc9ea2cf40162a68/jetified-library-1.0.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/650f6c59d39c81a5cf14e790b8df0779/jetified-library-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/650f6c59d39c81a5cf14e790b8df0779/jetified-library-1.0.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/650f6c59d39c81a5cf14e790b8df0779/jetified-library-1.0.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.daimajia.easing/library/1.0.1/a87d9b9243021d29958000cd68f8e6c833d2482b/library-1.0.1-javadoc.jar!/" />

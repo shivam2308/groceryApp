@@ -62,7 +62,7 @@ public class UploadWidget extends LinearLayout implements IView<UploadView> {
         getView().setImageId(imageId);
     }
 
-    private void initWidget() {
+    public void initWidget() {
         m_choose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

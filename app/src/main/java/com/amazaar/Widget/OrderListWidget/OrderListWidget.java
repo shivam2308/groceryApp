@@ -12,10 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.amazaar.Adapters.OrderListAdapter;
 import com.amazaar.CommonCode.TempListData;
 //import com.amazaar.Fragments.OrderSummaryFragment;
+import com.amazaar.CustomeComponent.CustomTextView;
 import com.amazaar.Fragments.OrderSummaryFragment;
 import com.amazaar.Fragments.ProductListFragment;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.ListModels.OrderListModel;
+import com.amazaar.ListnerAndInputHandlers.VariableValueChange;
 import com.amazaar.R;
 import com.amazaar.Utility.Utils;
 import com.google.inject.Injector;
@@ -37,6 +39,7 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
     private OrderListAdapter orderListAdapter;
     private List<OrderListModel> orderListModelList;
     private MenuItem item;
+    private CustomTextView empty_order_list;
 
     public OrderListWidget(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -46,6 +49,7 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
     private void init(Context context, AttributeSet attrs) {
         inflate(context, R.layout.order_list_layout, this);
         rvProductList = (RecyclerView) findViewById(R.id.fragment_orderlist_rvOrder);
+        empty_order_list = (CustomTextView) findViewById(R.id.empty_order_list);
         mLayoutManager = new GridLayoutManager(getContext(), 1);
         rvProductList.setLayoutManager(mLayoutManager);
 
@@ -77,8 +81,21 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
 
     }
 
-    private void initWidget() {
+    public void initWidget() {
         getListData();
+        getView().getIsaAvaliable().setListener(new VariableValueChange.ChangeListener(){
+            @Override
+            public void onChange() {
+                if(getView().getIsaAvaliable().getVar() == false){
+                    empty_order_list.setVisibility(VISIBLE);
+                    rvProductList.setVisibility(GONE);
+                }
+                else{
+                    rvProductList.setVisibility(VISIBLE);
+                    empty_order_list.setVisibility(GONE);
+                }
+            }
+        });
         orderListAdapter.setOnItemClickListener(new OrderListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, OrderListModel viewModel) {

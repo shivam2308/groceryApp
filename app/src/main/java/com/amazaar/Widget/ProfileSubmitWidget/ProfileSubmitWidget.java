@@ -1,5 +1,6 @@
 package com.amazaar.Widget.ProfileSubmitWidget;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -10,10 +11,12 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.amazaar.CommonCode.AToast;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.R;
 import com.amazaar.Utility.AndroidUtility;
 import com.google.inject.Injector;
+import com.prod.basic.common.code.Strings;
 
 import org.angmarch.views.NiceSpinner;
 import org.angmarch.views.OnSpinnerItemSelectedListener;
@@ -73,7 +76,7 @@ public class ProfileSubmitWidget extends LinearLayout implements IView<ProfileSu
         m_genderGroup = (RadioGroup) findViewById(R.id.genderGroup);
     }
 
-    private void initWidget() {
+    public void initWidget() {
         List<String> cityDataset = new LinkedList<>(getView().getCityList());
         m_citySpinner.attachDataSource(cityDataset);
         m_citySpinner.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener() {
@@ -101,13 +104,31 @@ public class ProfileSubmitWidget extends LinearLayout implements IView<ProfileSu
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                getView().createCustomer(AndroidUtility.getTextFromEditText(m_firstName),
-                        AndroidUtility.getTextFromEditText(m_lastname),
-                        AndroidUtility.getTextFromEditText(m_email),
-                        AndroidUtility.getTextFromEditText(m_houseNo),
-                        AndroidUtility.getTextFromEditText(m_street),
-                        AndroidUtility.getTextFromEditText(m_landmark),
-                        m_city, m_state, Integer.parseInt(AndroidUtility.getTextFromEditText(m_pincode)), m_gender, getContext());
+                if (Strings.notEmpty(AndroidUtility.getTextFromEditText(m_firstName)) &&
+                        Strings.notEmpty(AndroidUtility.getTextFromEditText(m_lastname)) &&
+                        Strings.notEmpty(AndroidUtility.getTextFromEditText(m_email)) &&
+                        Strings.notEmpty(AndroidUtility.getTextFromEditText(m_houseNo)) &&
+                        Strings.notEmpty(AndroidUtility.getTextFromEditText(m_street)) &&
+                        Strings.notEmpty(AndroidUtility.getTextFromEditText(m_landmark)) &&
+                        Strings.notEmpty(m_city) &&
+                        Strings.notEmpty(m_state) &&
+                        Strings.notEmpty(AndroidUtility.getTextFromEditText(m_pincode)) &&
+                        Strings.notEmpty(m_gender)){
+                    AToast.plsWait();
+                    final ProgressDialog progressDialog = new ProgressDialog(getContext());
+                    progressDialog.setTitle("Saving...");
+                    progressDialog.show();
+                    getView().createCustomer(AndroidUtility.getTextFromEditText(m_firstName),
+                            AndroidUtility.getTextFromEditText(m_lastname),
+                            AndroidUtility.getTextFromEditText(m_email),
+                            AndroidUtility.getTextFromEditText(m_houseNo),
+                            AndroidUtility.getTextFromEditText(m_street),
+                            AndroidUtility.getTextFromEditText(m_landmark),
+                            m_city, m_state, Integer.parseInt(AndroidUtility.getTextFromEditText(m_pincode)), m_gender, getContext());
+                }
+                else{
+                    AToast.formFieldMissingToast();
+                }
                 return false;
             }
         });

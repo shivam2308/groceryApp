@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 
@@ -13,6 +14,7 @@ import com.amazaar.CommonCode.AToast;
 import com.amazaar.CommonCode.DataModel;
 import com.amazaar.ControlFlow.CreateImage;
 import com.amazaar.DefaultProviders.ImagePbDefaultProvider;
+import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.Protobuff.ImagePbOuterClass;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -37,10 +39,11 @@ public class UploadView {
     private ImagePbOuterClass.ImageTypeEnum m_ImageType;
     private String m_imageId;
     private CreateImage m_createImage;
+    private ImageView m_imageToBeSet;
 
 
     @Inject
-    public UploadView(DataModel<ImagePbOuterClass.ImagePb, ImagePbDefaultProvider> imageModel,CreateImage createImage) {
+    public UploadView(DataModel<ImagePbOuterClass.ImagePb, ImagePbDefaultProvider> imageModel, CreateImage createImage) {
         m_imageModel = imageModel;
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
@@ -71,6 +74,14 @@ public class UploadView {
         return m_imageModel;
     }
 
+    public ImageView getImageToBeSet() {
+        return m_imageToBeSet;
+    }
+
+    public void setImageToBeSet(ImageView imageToBeSet) {
+        m_imageToBeSet = imageToBeSet;
+    }
+
     public void chooseImage(Context context) {
         Intent intent = new Intent();
         intent.setType("image/*");
@@ -86,7 +97,7 @@ public class UploadView {
             progressDialog.setTitle("Uploading...");
             progressDialog.show();
 
-            StorageReference ref = storageReference.child("images/"+m_ImageType.name()+"/" + UUID.randomUUID().toString());
+            StorageReference ref = storageReference.child("images/" + m_ImageType.name() + "/" + AmazaarApplication.getMode().name() + "/" + UUID.randomUUID().toString());
             StorageTask<UploadTask.TaskSnapshot> uploadTask = ref.putFile(m_filePath);
             Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
                 @Override
@@ -105,9 +116,10 @@ public class UploadView {
                     if (task.isSuccessful()) {
                         Uri downloadUri = task.getResult();
                         Log.e("url", downloadUri.toString());
-                        m_createImage.createImage(getImagePb(downloadUri.toString(),m_ImageType,m_imageId));
+                        m_createImage.createImage(getImagePb(downloadUri.toString(), m_ImageType, m_imageId),getImageToBeSet());
                         AToast.uploadToast();
                         progressDialog.dismiss();
+                        AmazaarApplication.getFragmentManager().popBackStack();
                     } else {
                         AToast.failedToast();
                     }
@@ -122,7 +134,7 @@ public class UploadView {
     }
 
     private ImagePbOuterClass.ImagePb getImagePb(String url, ImagePbOuterClass.ImageTypeEnum m_imageType, String m_imageId) {
-        ImagePbOuterClass.ImagePb.Builder builder =  ImagePbOuterClass.ImagePb.newBuilder();
+        ImagePbOuterClass.ImagePb.Builder builder = ImagePbOuterClass.ImagePb.newBuilder();
         builder.setId(m_imageId);
         builder.setImageType(m_imageType);
         builder.setUrl(url);

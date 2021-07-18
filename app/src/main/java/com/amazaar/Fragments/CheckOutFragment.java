@@ -44,6 +44,7 @@ public class CheckOutFragment extends BaseFragment {
         if (!hidden) {
             if (((HomeActivity) getActivity()) != null) {
                 initToolbar();
+                m_checkOutWidget.initWidget();
             }
         }
     }

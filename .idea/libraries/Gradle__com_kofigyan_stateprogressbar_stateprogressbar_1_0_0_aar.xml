@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.kofigyan.stateprogressbar:stateprogressbar:1.0.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/150df8376517a62414609fff7ed44747/jetified-stateprogressbar-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/150df8376517a62414609fff7ed44747/jetified-stateprogressbar-1.0.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/150df8376517a62414609fff7ed44747/jetified-stateprogressbar-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c6a4ed29febdcd583e490c4ff4fae61c/jetified-stateprogressbar-1.0.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c6a4ed29febdcd583e490c4ff4fae61c/jetified-stateprogressbar-1.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c6a4ed29febdcd583e490c4ff4fae61c/jetified-stateprogressbar-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e4341fb3f67ea251f0699cb8e2d4d0b3/jetified-stateprogressbar-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e4341fb3f67ea251f0699cb8e2d4d0b3/jetified-stateprogressbar-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e4341fb3f67ea251f0699cb8e2d4d0b3/jetified-stateprogressbar-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/64375660cfb9b0e8e5328f97da43bc9c/jetified-stateprogressbar-1.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/64375660cfb9b0e8e5328f97da43bc9c/jetified-stateprogressbar-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/64375660cfb9b0e8e5328f97da43bc9c/jetified-stateprogressbar-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kofigyan.stateprogressbar/stateprogressbar/1.0.0/43035ae58c22c1dbc52f44e5fe5635b38fc8477/stateprogressbar-1.0.0-javadoc.jar!/" />

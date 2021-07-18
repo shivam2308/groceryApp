@@ -35,6 +35,15 @@ public class OrderSummaryFragment extends BaseFragment{
         m_orderSummeryWidget.getView().getOrderParentId().setVar(model);
     }
 
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+
+        if (!hidden) {
+            m_orderSummeryWidget.initWidget();
+        }
+    }
+
     public void setModel(OrderListModel viewModel) {
         model=viewModel;
     }
