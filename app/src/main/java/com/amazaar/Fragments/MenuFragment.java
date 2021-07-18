@@ -44,6 +44,7 @@ public class MenuFragment extends BaseFragment {
         super.onHiddenChanged(hidden);
         if (!hidden) {
             initToolbar();
+            m_menuWidget.initWidget();
         }
     }
 }

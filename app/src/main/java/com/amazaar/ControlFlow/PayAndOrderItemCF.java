@@ -125,7 +125,7 @@ public class PayAndOrderItemCF extends AControlFlow<PayAndOrderItemCF.States, Vo
             m_createBuyRequestPb.setCustomerId(m_customerSession.getSession().getDbInfo().getId());
             for (CartPbOuterClass.CartPb cartitem : m_cartEntityDeo.getCartListPb().getCartItemList()) {
                 if (cartitem.getQuantity() > 0) {
-                    m_createBuyRequestPb.addItemIdAndQuantity(com.amazaar.CommonCode.Strings.getJoinString(cartitem.getItem().getDbInfo().getId(), String.valueOf(cartitem.getQuantity()), "@"));
+                    m_createBuyRequestPb.addItemIdAndQuantity(com.amazaar.CommonCode.Strings.getJoinString(cartitem.getItem().getDbInfo().getId(), String.valueOf(cartitem.getQuantity()), "!"));
                     total = total + cartitem.getQuantity() * cartitem.getItem().getPrice();
                 } else {
                     m_cartEntityDeo.getDeoEntity().deleteByKey(cartitem.getItemKey());

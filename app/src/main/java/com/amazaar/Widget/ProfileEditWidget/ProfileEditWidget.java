@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.amazaar.CommonCode.AToast;
+import com.amazaar.Fragments.HomeCategoryFragment;
 import com.amazaar.Interfaces.IView;
 import com.amazaar.Module.AmazaarApplication;
 import com.amazaar.R;
@@ -130,7 +131,9 @@ public class ProfileEditWidget extends LinearLayout implements IView<ProfileEdit
                             AndroidUtility.getTextFromEditText(m_street),
                             AndroidUtility.getTextFromEditText(m_landmark),
                             m_city, m_state, code, getContext());
-                    AndroidUtility.goToHome();
+                    //AndroidUtility.goToHome();
+                    //Utils.replaceFragment(new HomeCategoryFragment());
+                    AmazaarApplication.getFragmentManager().popBackStack();
                 }
                 else{
                     AToast.formFieldMissingToast();

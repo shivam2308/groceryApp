@@ -98,6 +98,10 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
         });
     }
 
+    public void refreshWidget(){
+        initWidget();
+    }
+
     private void injectMembers() {
         Injector injector = RoboGuice.getInjector(getContext());
         injector.injectMembers(this);

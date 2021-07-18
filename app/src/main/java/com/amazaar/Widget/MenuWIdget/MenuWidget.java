@@ -94,7 +94,7 @@ public class MenuWidget extends LinearLayout implements IView<MenuView>, View.On
         rlSetting.setOnClickListener(this);
     }
 
-    private void initWidget() {
+    public void initWidget() {
         if (m_customerSession.getSession() != null) {
             tvLogin.setVisibility(GONE);
             cvProfile.setVisibility(VISIBLE);

@@ -3,6 +3,7 @@ package com.amazaar.Utility;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -201,6 +202,19 @@ public class Utils {
             }
         }
         catch(Exception ex){}
+    }
+    public static void replaceFragment (Fragment fragment){
+        String backStateName = fragment.getClass().getName();
+
+        FragmentManager manager = AmazaarApplication.getFragmentManager();
+        boolean fragmentPopped = manager.popBackStackImmediate (backStateName, 0);
+
+        if (!fragmentPopped){ //fragment not in back stack, create it.
+            FragmentTransaction ft = manager.beginTransaction();
+            //ft.replace(R.id.content_frame, fragment);
+            ft.addToBackStack(backStateName);
+            ft.commit();
+        }
     }
 
 
