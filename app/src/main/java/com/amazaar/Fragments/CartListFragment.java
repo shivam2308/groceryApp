@@ -43,6 +43,7 @@ public class CartListFragment extends BaseFragment {
         if (!hidden) {
             if (((HomeActivity) getActivity()) != null) {
                 initToolbar();
+                m_cart_widget.initWidget();
             }
         }
     }

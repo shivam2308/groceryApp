@@ -94,6 +94,7 @@ public class ProductListFragment extends BaseFragment {
         super.onHiddenChanged(hidden);
         if (!hidden) {
             initToolbar();
+            m_productListWidget.initWidget();
         }
     }
 

@@ -44,6 +44,7 @@ public class ProfileEditFragment extends BaseFragment{
         if (!hidden) {
             try {
                 initToolbar();
+                m_profileEditWidget.initWidget();
             } catch (Exception e) {
                 e.printStackTrace();
             }

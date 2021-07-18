@@ -84,7 +84,7 @@ public class ProfileEditWidget extends LinearLayout implements IView<ProfileEdit
         m_Close.setOnClickListener(this);
     }
 
-    private void initWidget() {
+    public void initWidget() {
         List<String> cityDataset = new LinkedList<>(getView().getCityList());
         m_citySpinner.attachDataSource(cityDataset);
         m_citySpinner.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener() {
@@ -131,8 +131,6 @@ public class ProfileEditWidget extends LinearLayout implements IView<ProfileEdit
                             AndroidUtility.getTextFromEditText(m_street),
                             AndroidUtility.getTextFromEditText(m_landmark),
                             m_city, m_state, code, getContext());
-                    //AndroidUtility.goToHome();
-                    //Utils.replaceFragment(new HomeCategoryFragment());
                     AmazaarApplication.getFragmentManager().popBackStack();
                 }
                 else{

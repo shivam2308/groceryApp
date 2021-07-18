@@ -48,6 +48,7 @@ public class EditProductDetailFragment<itemPb> extends BaseFragment {
         if (!hidden) {
             if (((HomeActivity) getActivity()) != null) {
                 initToolbar();
+                m_editProductDetailWidget.initWidget();
             }
         }
     }

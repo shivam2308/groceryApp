@@ -44,7 +44,7 @@ public class MyAccountFragment extends BaseFragment {
         super.onHiddenChanged(hidden);
         if (!hidden) {
             initToolbar();
-            m_accountWidget.refreshWidget();
+            m_accountWidget.initWidget();
         }
     }
 }

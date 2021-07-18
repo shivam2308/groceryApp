@@ -98,7 +98,7 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
 
     }
 
-    private void initWidget() {
+    public void initWidget() {
         rlCheckOut.setOnClickListener(this);
         //ivClose.setOnClickListener(this);
         ivHome.setOnClickListener(this);
@@ -140,12 +140,11 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
             m_cartHandler.handle(productListModelArrayList.get(position),position);
         } else {
             int totalKg = Integer.parseInt(productListModelArrayList.get(position).getKg());
-
-            if (totalKg < 1) {
+            totalKg = totalKg - 1;
+            if (totalKg == 0) {
                 productListModelArrayList.get(position).getOnitemChange().setVar(getView().getUpdatedCartItem(productListModelArrayList.get(position).getOnitemChange().getData(),totalKg));
                 m_cartHandler.deleteItemFromCart(position);
             } else {
-                totalKg = totalKg - 1;
                 productListModelArrayList.get(position).getOnitemChange().setVar(getView().getUpdatedCartItem(productListModelArrayList.get(position).getOnitemChange().getData(),totalKg));
                 m_cartHandler.handle(productListModelArrayList.get(position),position);
             }

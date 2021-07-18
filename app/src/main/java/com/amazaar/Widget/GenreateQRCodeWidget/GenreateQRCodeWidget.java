@@ -67,7 +67,7 @@ public class GenreateQRCodeWidget extends LinearLayout implements IView<Genreate
 
     }
 
-    private void initWidget() {
+    public void initWidget() {
        getView().getListModel().setListener(new VariableValueChange.ChangeListener() {
            @Override
            public void onChange() {

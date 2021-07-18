@@ -69,7 +69,7 @@ public class CheckOutWidget extends LinearLayout implements IView<CheckOutView>,
     }
 
 
-    private void initWidget() {
+    public void initWidget() {
         addressListAdapterNew = new AddressListAdapter(getView().getAddressListModel(), getContext());
         rvAddressList.setAdapter(addressListAdapterNew);
         orderListAdapter = new OrderSummaryMiniListAdapter(getView().getOrderListModel(), getContext());

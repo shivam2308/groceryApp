@@ -66,4 +66,13 @@ public class ProductDetailsFragment extends BaseFragment {
     public void setProductListModel(ProductListModel viewModel) {
         m_viewModel = viewModel;
     }
+
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        if (!hidden) {
+            initToolbar();
+            m_productDetailsWidget.initWidget();
+        }
+    }
 }

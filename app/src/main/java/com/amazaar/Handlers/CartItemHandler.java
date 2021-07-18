@@ -21,6 +21,7 @@ public class CartItemHandler {
     public void handle(ProductListModel data, int position) {
         CartPbOuterClass.CartPb.Builder builder = CartPbOuterClass.CartPb.newBuilder();
         builder.setItem(data.getPbModel());
+        builder.setItemKey(position);
         builder.setQuantity(data.getTotalKg());
         CartEntity cartEntity = new CartEntity();
         cartEntity.setmId((long) position);
@@ -36,8 +37,10 @@ public class CartItemHandler {
         CartEntity cartEntity = new CartEntity();
         cartEntity.setmId((long) position);
         cartEntity.setEid(data.getOnitemChange().getData().getItem().getDbInfo().getId());
+        CartPbOuterClass.CartPb.Builder builder = CartPbOuterClass.CartPb.newBuilder(data.getOnitemChange().getData());
+        builder.setItemKey(position);
         try {
-            m_cartEntityDaoHelper.getDeoEntity().insertOrReplace(m_cartEntityDaoHelper.fromPb(cartEntity, data.getOnitemChange().getData()));
+            m_cartEntityDaoHelper.getDeoEntity().insertOrReplace(m_cartEntityDaoHelper.fromPb(cartEntity, builder.build()));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -54,6 +57,11 @@ public class CartItemHandler {
     public void deleteItemFromCart(CartPbOuterClass.CartPb cartPb) {
         CartEntity cartEntity = new CartEntity();
         cartEntity.setEid(cartPb.getItem().getDbInfo().getId());
+        if(cartPb.getItemKey()<1){
+            cartEntity.setmId((long) 0);
+        }else {
+            cartEntity.setmId(cartPb.getItemKey());
+        }
         try {
             m_cartEntityDaoHelper.getDeoEntity().delete(m_cartEntityDaoHelper.fromPb(cartEntity, cartPb));
         } catch (Exception e) {

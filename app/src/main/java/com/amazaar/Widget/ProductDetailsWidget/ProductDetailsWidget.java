@@ -95,7 +95,7 @@ public class ProductDetailsWidget extends LinearLayout implements IView<ProductD
     }
 
 
-    private void initWidget() {
+    public void initWidget() {
         getView().getProductListModel().setListener(new VariableValueChange.ChangeListener() {
             @Override
             public void onChange() {
@@ -116,6 +116,7 @@ public class ProductDetailsWidget extends LinearLayout implements IView<ProductD
                 UploadImageFragment uploadImageFragment = new UploadImageFragment();
                 uploadImageFragment.setImageId(getView().getProductListModel().getVar().getPbModel().getDbInfo().getId());
                 uploadImageFragment.setImageType(ImagePbOuterClass.ImageTypeEnum.ITEM_IMAGE);
+                uploadImageFragment.setImageToBeSet(itemImages);
                 getView().setUploadFragment(uploadImageFragment);
                 Utils.addNextFragmentFadeAnim(uploadImageFragment, getView().getMainFragment());
             }

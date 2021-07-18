@@ -43,6 +43,7 @@ public class OrderListFragment extends BaseFragment {
         if(!hidden)
         {
             initToolbar();
+            m_orderListWidget.initWidget();
         }
     }
 }

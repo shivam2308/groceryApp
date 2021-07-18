@@ -77,7 +77,7 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
         rlDeActive.setOnClickListener(this);
     }
 
-    private void initWidget() {
+    public void initWidget() {
         m_imageUrl.setImageFromUrl(getContext(), m_customerSession.getSession().getProfileImage(), ivProfile, DefaultImageUrl.ImageShowTypeEnum.MALE_PROFILE);
         tvName.setText(com.amazaar.CommonCode.Strings.titleCase(m_customerSession.getSession().getName()));
         tvPhone.setText(m_customerSession.getSession().getContact().getMobile().getMobileNo());
@@ -91,6 +91,7 @@ public class MyAccountWidget extends LinearLayout implements IView<MyAccountView
                 UploadImageFragment uploadImageFragment = new UploadImageFragment();
                 uploadImageFragment.setImageId(m_customerSession.getSession().getDbInfo().getId());
                 uploadImageFragment.setImageType(ImagePbOuterClass.ImageTypeEnum.PROFILE_IMAGE);
+                uploadImageFragment.setImageToBeSet(ivProfile);
                 getView().setUploadFragment(uploadImageFragment);
                 Utils.addNextFragmentFadeAnim(uploadImageFragment, getView().getMainFragment());
                 return false;

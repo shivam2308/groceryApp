@@ -76,7 +76,7 @@ public class ProfileSubmitWidget extends LinearLayout implements IView<ProfileSu
         m_genderGroup = (RadioGroup) findViewById(R.id.genderGroup);
     }
 
-    private void initWidget() {
+    public void initWidget() {
         List<String> cityDataset = new LinkedList<>(getView().getCityList());
         m_citySpinner.attachDataSource(cityDataset);
         m_citySpinner.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener() {

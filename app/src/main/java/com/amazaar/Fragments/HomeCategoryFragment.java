@@ -74,6 +74,10 @@ public class HomeCategoryFragment extends BaseFragment {
         super.onHiddenChanged(hidden);
         if (!hidden) {
             initToolbar();
+            m_homeCategoryWidget.initWidget();
+            if(m_customerSession.getSession().getPrivilege()== CustomerPbOuterClass.PrivilegeTypeEnum.DELIVERY_MAN) {
+                m_orderListWudget.initWidget();
+            }
         }
     }
 

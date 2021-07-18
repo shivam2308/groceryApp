@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.amazaar.R;
+import com.amazaar.Widget.CheckOutWidget.CheckOutWidget;
 
 
 public abstract class BaseFragment extends Fragment implements View.OnClickListener {
@@ -28,5 +29,4 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     public void onClick(View v) {
 
     }
-
 }

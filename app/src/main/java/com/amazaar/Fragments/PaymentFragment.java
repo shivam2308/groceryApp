@@ -65,6 +65,7 @@ public class PaymentFragment extends BaseFragment {
 
         if (!hidden) {
             initToolbar();
+            m_paymentWidget.initWidget();
         }
     }
 

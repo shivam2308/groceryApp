@@ -143,7 +143,7 @@ public class OrderSummaryWidget extends LinearLayout implements IView<OrderSumma
 
     }
 
-    private void initWidget() {
+    public void initWidget(){
         orderListAdapter = new OrderSummaryListAdapter(getView().getOrderSummaryListModel(), getContext());
         rvOrderList.setAdapter(orderListAdapter);
         getView().getOrderParentId().setListener(new VariableValueChange.ChangeListener() {

@@ -43,7 +43,7 @@ public class ImageDownloadWidget extends LinearLayout implements IView<ImageDown
 
     }
 
-    private void initWidget() {
+    public void initWidget() {
         getView().getImageUrl().setListener(new VariableValueChange.ChangeListener() {
             @Override
             public void onChange() {

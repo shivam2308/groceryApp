@@ -71,7 +71,7 @@ public class EditProductDetailWidget extends LinearLayout implements IView<EditP
         Injector injector = RoboGuice.getInjector(getContext());
         injector.injectMembers(this);
     }
-    private void initWidget() {
+    public void initWidget() {
         getView().getItemPbMOdel().setListener(new DataModel.ChangeListener() {
             @Override
             public void onChange() {

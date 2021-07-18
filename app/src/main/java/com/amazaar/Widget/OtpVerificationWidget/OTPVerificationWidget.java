@@ -65,7 +65,7 @@ public class OTPVerificationWidget extends LinearLayout implements IView<OTPVeri
         m_sendOtpLayout.setVisibility(VISIBLE);
     }
 
-    private void initWidget() {
+    public void initWidget() {
         mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {

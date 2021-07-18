@@ -70,7 +70,7 @@ public class TopBarWidget extends LinearLayout implements IView<TopBarView>, Vie
 
     }
 
-    private void initWidget() {
+    public void initWidget(){
         getView().getTopBarChange().setListener(new VariableValueChange.ChangeListener() {
             @Override
             public void onChange() {

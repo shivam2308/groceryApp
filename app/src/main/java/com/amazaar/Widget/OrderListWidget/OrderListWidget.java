@@ -81,21 +81,21 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
 
     }
 
-    private void initWidget() {
-        getListData();
+    public void initWidget() {
         getView().getIsaAvaliable().setListener(new VariableValueChange.ChangeListener(){
             @Override
             public void onChange() {
-                if(getView().getIsaAvaliable().getVar() == false){
-                    empty_order_list.setVisibility(VISIBLE);
-                    rvProductList.setVisibility(GONE);
-                }
-                else{
+                if(getView().getIsaAvaliable().getVar() == true){
                     rvProductList.setVisibility(VISIBLE);
                     empty_order_list.setVisibility(GONE);
                 }
+                else{
+                    empty_order_list.setVisibility(VISIBLE);
+                    rvProductList.setVisibility(GONE);
+                }
             }
         });
+        getListData();
         orderListAdapter.setOnItemClickListener(new OrderListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, OrderListModel viewModel) {
@@ -104,6 +104,7 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
                 Utils.addNextFragment(getContext(),fragmentProductDetails, getView().getMainFragment(), false);
            }
         });
+
     }
 
     private void injectMembers() {

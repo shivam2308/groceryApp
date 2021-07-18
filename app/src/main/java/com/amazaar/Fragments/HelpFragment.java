@@ -42,6 +42,7 @@ public class HelpFragment extends BaseFragment {
         if(!hidden)
         {
             initToolbar();
+            m_helpWidget.initWidget();
         }
     }
 }
