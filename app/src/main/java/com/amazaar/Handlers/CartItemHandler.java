@@ -19,12 +19,13 @@ public class CartItemHandler {
     }
 
     public void handle(ProductListModel data, int position) {
+        String[] splitIds = data.getPbModel().getDbInfo().getId().split("@");
         CartPbOuterClass.CartPb.Builder builder = CartPbOuterClass.CartPb.newBuilder();
         builder.setItem(data.getPbModel());
-        builder.setItemKey(position);
+        builder.setItemKey(Integer.parseInt(splitIds[0]));
         builder.setQuantity(data.getTotalKg());
         CartEntity cartEntity = new CartEntity();
-        cartEntity.setmId((long) position);
+        cartEntity.setmId((long) Integer.parseInt(splitIds[0]));
         cartEntity.setEid(builder.getItem().getDbInfo().getId());
         try {
             m_cartEntityDaoHelper.getDeoEntity().insertOrReplace(m_cartEntityDaoHelper.fromPb(cartEntity, builder.build()));
@@ -33,12 +34,13 @@ public class CartItemHandler {
         }
     }
 
-    public void handle(CartListModel data, int position) {
+    public void handle(CartListModel data) {
         CartEntity cartEntity = new CartEntity();
-        cartEntity.setmId((long) position);
+        String[] splitIds = data.getOnitemChange().getData().getItem().getDbInfo().getId().split("@");
+        cartEntity.setmId((long) Integer.parseInt(splitIds[0]));
         cartEntity.setEid(data.getOnitemChange().getData().getItem().getDbInfo().getId());
         CartPbOuterClass.CartPb.Builder builder = CartPbOuterClass.CartPb.newBuilder(data.getOnitemChange().getData());
-        builder.setItemKey(position);
+        builder.setItemKey(Integer.parseInt(splitIds[0]));
         try {
             m_cartEntityDaoHelper.getDeoEntity().insertOrReplace(m_cartEntityDaoHelper.fromPb(cartEntity, builder.build()));
         } catch (Exception e) {
@@ -57,11 +59,7 @@ public class CartItemHandler {
     public void deleteItemFromCart(CartPbOuterClass.CartPb cartPb) {
         CartEntity cartEntity = new CartEntity();
         cartEntity.setEid(cartPb.getItem().getDbInfo().getId());
-        if(cartPb.getItemKey()<1){
-            cartEntity.setmId((long) 0);
-        }else {
-            cartEntity.setmId(cartPb.getItemKey());
-        }
+        cartEntity.setmId(cartPb.getItemKey());
         try {
             m_cartEntityDaoHelper.getDeoEntity().delete(m_cartEntityDaoHelper.fromPb(cartEntity, cartPb));
         } catch (Exception e) {

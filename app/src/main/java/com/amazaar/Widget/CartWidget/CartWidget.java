@@ -137,16 +137,16 @@ public class CartWidget extends LinearLayout implements IView<CartView>, View.On
             int totalKg = Integer.parseInt(productListModelArrayList.get(position).getKg());
             totalKg = totalKg + 1;
             productListModelArrayList.get(position).getOnitemChange().setVar(getView().getUpdatedCartItem(productListModelArrayList.get(position).getOnitemChange().getData(),totalKg));
-            m_cartHandler.handle(productListModelArrayList.get(position),position);
+            m_cartHandler.handle(productListModelArrayList.get(position));
         } else {
             int totalKg = Integer.parseInt(productListModelArrayList.get(position).getKg());
             totalKg = totalKg - 1;
             if (totalKg == 0) {
                 productListModelArrayList.get(position).getOnitemChange().setVar(getView().getUpdatedCartItem(productListModelArrayList.get(position).getOnitemChange().getData(),totalKg));
-                m_cartHandler.deleteItemFromCart(position);
+                m_cartHandler.deleteItemFromCart(productListModelArrayList.get(position).getOnitemChange().getData());
             } else {
                 productListModelArrayList.get(position).getOnitemChange().setVar(getView().getUpdatedCartItem(productListModelArrayList.get(position).getOnitemChange().getData(),totalKg));
-                m_cartHandler.handle(productListModelArrayList.get(position),position);
+                m_cartHandler.handle(productListModelArrayList.get(position));
             }
 
         }
