@@ -1,12 +1,16 @@
 package com.amazaar.Activity;
 
 import android.app.Activity;
+import android.app.FragmentManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -43,6 +47,7 @@ import static com.amazaar.Utility.Constants.PERMISSIONS;
 
 public class SplashActivity extends AwesomeSplash {
 
+    private static final String TAG = ;
     int[] m_permission = new int[3];
     private FirebaseAuth mAuth;
     private FirebaseUser currentUser;
@@ -50,6 +55,8 @@ public class SplashActivity extends AwesomeSplash {
     private DeviceAutoLogin m_deviceLogin;
     @Inject
     private RegisterPushNorification m_pushnitification;
+
+
 
     public static boolean checkPermissions(Activity c, int[] pchk) {
         List<String> permissionlist = new ArrayList<>();
@@ -110,6 +117,7 @@ public class SplashActivity extends AwesomeSplash {
         createNotificationChannel();
         /// m_pushnitification.registerPushNptificationToken("");
         checkPermissions(this, m_permission);
+
     }
 
     private void createNotificationChannel() {

@@ -353,14 +353,14 @@
                 <ImageButton
                     android:id="@+id/qr_code_btn"
                     android:layout_width="wrap_content"
-                    android:src="@drawable/get_qr_btn"
+                    android:src="@drawable/getqr"
                     android:background="@android:color/transparent"
                     android:layout_height="wrap_content"/>
 
                 <ImageButton
                     android:id="@+id/delivery_man_assign_btn"
                     android:layout_width="wrap_content"
-                    android:src="@drawable/assign_order_btn"
+                    android:src="@drawable/assignorder"
                     android:background="@android:color/transparent"
                     android:layout_height="wrap_content"/>
 
@@ -368,19 +368,19 @@
                     android:id="@+id/call_us_btn"
                     android:layout_width="wrap_content"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/call_us_btn"
+                    android:src="@drawable/callus"
                     android:layout_height="wrap_content"/>
 
                 <ImageButton
                     android:id="@+id/call_him_btn"
                     android:layout_width="wrap_content"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/call_him_btn"
+                    android:src="@drawable/callhim"
                     android:layout_height="wrap_content"/>
                 <ImageButton
                     android:id="@+id/close_order_btn"
                     android:layout_width="wrap_content"
-                    android:src="@drawable/close_order_btn"
+                    android:src="@drawable/closeorder"
                     android:background="@android:color/transparent"
                     android:layout_height="wrap_content"/>
 
@@ -388,14 +388,14 @@
                 <ImageButton
                     android:id="@+id/out_for_delivery_btn"
                     android:layout_width="wrap_content"
-                    android:src="@drawable/out_for_delivery_btn"
+                    android:src="@drawable/outofdelivery"
                     android:background="@android:color/transparent"
                     android:layout_height="wrap_content"/>
 
                 <ImageButton
                     android:id="@+id/scan_qr_btn"
                     android:layout_width="wrap_content"
-                    android:src="@drawable/scan_qr_btn"
+                    android:src="@drawable/scanqr"
                     android:background="@android:color/transparent"
                     android:layout_height="wrap_content"/>
 
