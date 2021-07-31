@@ -47,8 +47,7 @@ import static com.amazaar.Utility.Constants.PERMISSIONS;
 
 public class SplashActivity extends AwesomeSplash {
 
-    private static final String TAG = ;
-    int[] m_permission = new int[3];
+    int[] m_permission = new int[4];
     private FirebaseAuth mAuth;
     private FirebaseUser currentUser;
     @Inject
@@ -59,6 +58,7 @@ public class SplashActivity extends AwesomeSplash {
 
 
     public static boolean checkPermissions(Activity c, int[] pchk) {
+
         List<String> permissionlist = new ArrayList<>();
 
         for (int i : pchk) {
@@ -96,6 +96,7 @@ public class SplashActivity extends AwesomeSplash {
         m_permission[0] = 6;
         m_permission[1] = 15;
         m_permission[2] = 26;
+        m_permission[3] = 27;
         if (currentUser == null) {
             mAuth.signInAnonymously().
                     addOnCompleteListener(new OnCompleteListener<AuthResult>() {

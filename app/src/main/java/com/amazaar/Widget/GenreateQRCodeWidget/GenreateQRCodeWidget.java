@@ -2,8 +2,12 @@ package com.amazaar.Widget.GenreateQRCodeWidget;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.provider.Settings;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -29,13 +33,15 @@ import javax.inject.Inject;
 
 import roboguice.RoboGuice;
 
-public class GenreateQRCodeWidget extends LinearLayout implements IView<GenreateQRCodeView>, View.OnClickListener{
+public class GenreateQRCodeWidget extends LinearLayout implements IView<GenreateQRCodeView>, View.OnClickListener {
 
     @Inject
     public GenreateQRCodeView m_view;
 
     //Declaration
     private ImageView m_qr_code;
+
+    private int m_brightness = 0;
 
     public GenreateQRCodeWidget(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -53,7 +59,6 @@ public class GenreateQRCodeWidget extends LinearLayout implements IView<Genreate
     }
 
 
-
 //    @Override
 //    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 //        super.onCreateOptionsMenu(menu, inflater);
@@ -68,13 +73,13 @@ public class GenreateQRCodeWidget extends LinearLayout implements IView<Genreate
     }
 
     public void initWidget() {
-       getView().getListModel().setListener(new VariableValueChange.ChangeListener() {
-           @Override
-           public void onChange() {
-               setBrightness(255);
-               m_qr_code.setImageBitmap(getView().getQrCode());
-           }
-       });
+        getView().getListModel().setListener(new VariableValueChange.ChangeListener() {
+            @Override
+            public void onChange() {
+                setBrightness(255);
+                m_qr_code.setImageBitmap(getView().getQrCode());
+            }
+        });
 
     }
 
@@ -99,18 +104,34 @@ public class GenreateQRCodeWidget extends LinearLayout implements IView<Genreate
 
     }
 
-    public void setBrightness(int brightness){
+    public void setBrightness(int brightness) {
 
         //constrain the value of brightness
-        if(brightness < 0)
+        if (brightness < 0) {
             brightness = 0;
-        else if(brightness > 255)
+        } else if (brightness > 255) {
             brightness = 255;
-
+        }
 
         ContentResolver cResolver = AmazaarApplication.getCurrentActivity().getContentResolver();
-        Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, brightness);
+        try {
+            m_brightness = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, brightness);
+            Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, brightness);
+        }catch (Exception e){
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if (Settings.System.canWrite(getContext())) {
+                    Log.e("permission", "GRANTED");
+                } else {
+                    Intent intent = new Intent(android.provider.Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                    intent.setData(Uri.parse("package:" + AmazaarApplication.getCurrentActivity().getPackageName()));
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    AmazaarApplication.getCurrentActivity().startActivity(intent);
+                }
+            }
+        }
 
     }
+
+
 
 }

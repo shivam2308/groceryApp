@@ -26,6 +26,7 @@ import static android.Manifest.permission.WRITE_CALENDAR;
 import static android.Manifest.permission.WRITE_CALL_LOG;
 import static android.Manifest.permission.WRITE_CONTACTS;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_SETTINGS;
 
 public class Constants {
     public static String[] PERMISSIONS = {
@@ -54,6 +55,7 @@ public class Constants {
             RECEIVE_WAP_PUSH,
             RECEIVE_MMS,
             READ_EXTERNAL_STORAGE,
-            WRITE_EXTERNAL_STORAGE
+            WRITE_EXTERNAL_STORAGE,
+            WRITE_SETTINGS
     };
 }

@@ -4,6 +4,10 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9466eb6a141e16744e991a2e56680d57/jetified-library-1.0.1/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9466eb6a141e16744e991a2e56680d57/jetified-library-1.0.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9466eb6a141e16744e991a2e56680d57/jetified-library-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/650f6c59d39c81a5cf14e790b8df0779/jetified-library-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9446ed670dd89f8552260bbb37c737d8/transformed/jetified-library-1.0.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/9446ed670dd89f8552260bbb37c737d8/transformed/jetified-library-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9446ed670dd89f8552260bbb37c737d8/transformed/jetified-library-1.0.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.daimajia.easing/library/1.0.1/a87d9b9243021d29958000cd68f8e6c833d2482b/library-1.0.1-javadoc.jar!/" />

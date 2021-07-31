@@ -55,4 +55,6 @@ public class QRCodeReaderFragment extends BaseFragment {
 
         }
     }
+
+    
 }
