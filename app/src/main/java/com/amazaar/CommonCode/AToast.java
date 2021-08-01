@@ -218,11 +218,15 @@ public class AToast {
     }
 
     public static void formFieldMissingToast() {
+
+    }
+
+    public static void setDeliveryMan() {
         Cue.init()
                 .with(AmazaarApplication.getContext())
-                .setMessage("Form Field Missing")
+                .setMessage("Assign Delivery Man First")
                 .setGravity(Gravity.BOTTOM)
-                .setType(Type.INFO)
+                .setType(Type.WARNING)
                 .setDuration(Duration.LONG)
                 .show();
     }
