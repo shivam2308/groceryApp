@@ -141,31 +141,31 @@
 
                 </LinearLayout>
 
-                <RelativeLayout
-                    android:id="@+id/row_cancel_order_rlCancelOrder"
-                    android:layout_width="@dimen/_115sdp"
-                    android:layout_height="@dimen/_33sdp"
-                    android:layout_gravity="center_vertical|end"
-                    android:layout_marginEnd="@dimen/_10sdp"
-                    android:background="@drawable/calcelorder_drawable"
-                    android:gravity="end"
-                    android:padding="@dimen/_5sdp"
-                    android:visibility="visible">
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/row_cancel_order_rlCancelOrder"-->
+<!--                    android:layout_width="@dimen/_115sdp"-->
+<!--                    android:layout_height="@dimen/_33sdp"-->
+<!--                    android:layout_gravity="center_vertical|end"-->
+<!--                    android:layout_marginEnd="@dimen/_10sdp"-->
+<!--                    android:background="@drawable/calcelorder_drawable"-->
+<!--                    android:gravity="end"-->
+<!--                    android:padding="@dimen/_5sdp"-->
+<!--                    android:visibility="visible">-->
 
 
-                    <com.amazaar.CustomeComponent.CustomTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_centerVertical="true"
-                        android:text="@string/cancel_order"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/_14sdp"
-                        android:textStyle="bold"
-                        app:font_name="NunitoExtraBold.ttf" />
+<!--                    <com.amazaar.CustomeComponent.CustomTextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:text="@string/cancel_order"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="@dimen/_14sdp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:font_name="NunitoExtraBold.ttf" />-->
 
 
-                </RelativeLayout>
+<!--                </RelativeLayout>-->
 
 
                 <RelativeLayout

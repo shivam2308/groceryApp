@@ -297,7 +297,7 @@
                 <com.amazaar.CustomeComponent.CustomTextView
                     style="@style/order_lable_style"
                     android:id="@+id/row_orderlist_new_tvQuntity1"
-                    android:text="Quntity"
+                    android:text="Quantity"
                     android:layout_weight="1"
                     app:font_name="NunitoSemiBold.ttf"/>
 

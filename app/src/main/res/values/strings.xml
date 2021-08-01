@@ -186,7 +186,7 @@
     <string name="lbl_choosprofile">choos profile</string>
     <string name="order_date">Order Date:</string>
     <string name="order_id">Order Id</string>
-    <string name="to_deliver_on">To Deliver On</string>
+    <string name="to_deliver_on">To Deliver On:</string>
     <string name="cancel_order">Cancel Order</string>
     <string name="view_receipt">View Receipt</string>
     <string name="cancelled">Cancelled</string>

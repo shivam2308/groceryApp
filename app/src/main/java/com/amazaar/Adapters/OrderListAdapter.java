@@ -91,7 +91,7 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         private CustomTextView tvCancelLable;
         private CustomTextView tvDeliveryLable;
         private RelativeLayout rlReportOrder;
-        private RelativeLayout rlCancelOrder;
+//        private RelativeLayout rlCancelOrder;
         private CardView cvMain;
         private ImageView ivStatus;
 
@@ -104,7 +104,7 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             tvOrderId = (CustomTextView) itemView.findViewById(R.id.row_cancel_order_tvOrderID);
             tvCancelLable = (CustomTextView) itemView.findViewById(R.id.row_cancel_order_tvCancelLable);
             tvDeliveryLable = (CustomTextView) itemView.findViewById(R.id.row_cancel_order_tvDeliveryLable);
-            rlCancelOrder = (RelativeLayout) itemView.findViewById(R.id.row_cancel_order_rlCancelOrder);
+//            rlCancelOrder = (RelativeLayout) itemView.findViewById(R.id.row_cancel_order_rlCancelOrder);
             rlReportOrder = (RelativeLayout) itemView.findViewById(R.id.row_cancel_order_rlReportOrder);
             ivStatus = (ImageView) itemView.findViewById(R.id.row_cancel_order_ivStatus);
 
@@ -116,7 +116,7 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 tvOrderId.setText("" + item.getOrderId());
 
                 if (item.getStatus() == BuyPbOuterClass.DeliveryStatusEnum.PENDING) {
-                    rlCancelOrder.setVisibility(View.VISIBLE);
+//                    rlCancelOrder.setVisibility(View.VISIBLE);
                     rlReportOrder.setVisibility(View.GONE);
                     tvDeliveryLable.setText(mContext.getString(R.string.to_deliver_on));
                     tvDeliveryDate.setText(item.getDeliveryDate());
@@ -125,7 +125,7 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                     ivStatus.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_order_pending));
                     cvMain.setCardBackgroundColor(mContext.getResources().getColor(R.color.order_pendig_bgcolro));
                 } else if (item.getStatus() == BuyPbOuterClass.DeliveryStatusEnum.DELIVERED) {
-                    rlCancelOrder.setVisibility(View.GONE);
+//                    rlCancelOrder.setVisibility(View.GONE);
                     rlReportOrder.setVisibility(View.VISIBLE);
                     tvCancelLable.setVisibility(View.GONE);
                     tvDeliveryLable.setText(mContext.getString(R.string.delivery_date));
@@ -133,7 +133,7 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                     ivStatus.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_order_delivred));
                     cvMain.setCardBackgroundColor(mContext.getResources().getColor(R.color.order_delivery_bgcolro));
                 } else if (item.getStatus() == BuyPbOuterClass.DeliveryStatusEnum.CLOSED) {
-                    rlCancelOrder.setVisibility(View.GONE);
+//                    rlCancelOrder.setVisibility(View.GONE);
                     rlReportOrder.setVisibility(View.VISIBLE);
                     tvCancelLable.setVisibility(View.VISIBLE);
                     tvDeliveryDate.setVisibility(View.GONE);

@@ -13,10 +13,12 @@ public class AClientService<P extends GeneratedMessageV3, Req extends GeneratedM
     private ASearchService<Req, Resp> m_search;
     private Class<P> m_Pclazz;
     private UrlPathProvider.UrlPathEnum m_pathEnum;
+    private Class<Resp> m_Respclazz;
 
     public AClientService(Class<P> Pclazz, Class<Resp> Respclazz, UrlPathProvider.UrlPathEnum pathEnum) {
         m_Pclazz=Pclazz;
         m_pathEnum= pathEnum;
+        m_Respclazz = Respclazz;
         m_get = new AGetService<P>(Pclazz, pathEnum);
         m_create = new ACreateService<P>(Pclazz, pathEnum);
         m_update = new AUpdateService<P>(Pclazz, pathEnum);
@@ -41,6 +43,6 @@ public class AClientService<P extends GeneratedMessageV3, Req extends GeneratedM
 
     @Override
     public Resp search(Req request) throws ExecutionException, InterruptedException {
-        return m_search.execute(request).get();
+        return  new ASearchService<Req, Resp>(m_Respclazz, m_pathEnum).execute(request).get();
     }
 }
