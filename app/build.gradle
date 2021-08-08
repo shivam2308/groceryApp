@@ -7,12 +7,12 @@ apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'project-report'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
 
     defaultConfig {
         applicationId "com.amazaar"
-        minSdkVersion 25
-        targetSdkVersion 29
+        minSdkVersion 26
+        targetSdkVersion 30
         versionCode 1
         versionName "0.0.1"
 
