@@ -29,6 +29,7 @@ public class HomeCategoryFragment extends BaseFragment {
     private MenuItem item;
     @Inject
     public CustomerSession m_customerSession;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -44,12 +45,13 @@ public class HomeCategoryFragment extends BaseFragment {
     @Override
     public void initComponents(View rootView) {
         m_homeCategoryWidget = rootView.findViewById(R.id.home_category);
-        m_orderListWudget = rootView.findViewById(R.id.orderlist_widget_);
-        if(m_customerSession.getSession().getPrivilege()== CustomerPbOuterClass.PrivilegeTypeEnum.DELIVERY_MAN){
+        m_orderListWudget = rootView.findViewById(R.id.orderlist_widget_home);
+        if (m_customerSession.getSession().getPrivilege() == CustomerPbOuterClass.PrivilegeTypeEnum.DELIVERY_MAN) {
             m_homeCategoryWidget.setVisibility(View.GONE);
             m_orderListWudget.setVisibility(View.VISIBLE);
             m_orderListWudget.getView().setMainFragment(new OrderListFragment());
-        }else{
+            ((HomeActivity) AmazaarApplication.getCurrentActivity()).setToolbar(TopBarUiEnum.HOME_DELIVERY_MAN);
+        } else {
             m_orderListWudget.setVisibility(View.GONE);
             m_homeCategoryWidget.setVisibility(View.VISIBLE);
             m_homeCategoryWidget.getView().setMainFragment(this);
@@ -58,9 +60,18 @@ public class HomeCategoryFragment extends BaseFragment {
     }
 
     public void initToolbar() {
-        ((HomeActivity) AmazaarApplication.getCurrentActivity()).setToolbar(TopBarUiEnum.HOME);
+        try{
+            if(m_customerSession.getSession().getPrivilege() == CustomerPbOuterClass.PrivilegeTypeEnum.DELIVERY_MAN){
+                ((HomeActivity) AmazaarApplication.getCurrentActivity()).setToolbar(TopBarUiEnum.HOME_DELIVERY_MAN);
+            }else{
+                ((HomeActivity) AmazaarApplication.getCurrentActivity()).setToolbar(TopBarUiEnum.HOME);
+            }
+        }catch (Exception e){
+            ((HomeActivity) AmazaarApplication.getCurrentActivity()).setToolbar(TopBarUiEnum.HOME);
+        }
 
     }
+
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
@@ -75,7 +86,7 @@ public class HomeCategoryFragment extends BaseFragment {
         if (!hidden) {
             initToolbar();
             m_homeCategoryWidget.initWidget();
-            if(m_customerSession.getSession().getPrivilege()== CustomerPbOuterClass.PrivilegeTypeEnum.DELIVERY_MAN) {
+            if (m_customerSession.getSession().getPrivilege() == CustomerPbOuterClass.PrivilegeTypeEnum.DELIVERY_MAN) {
                 m_orderListWudget.initWidget();
             }
         }
@@ -86,7 +97,7 @@ public class HomeCategoryFragment extends BaseFragment {
         injector.injectMembers(this);
     }
 
-    public HomeCategoryWidget getHomeCategoryWidget(){
+    public HomeCategoryWidget getHomeCategoryWidget() {
         return m_homeCategoryWidget;
     }
 }

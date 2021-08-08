@@ -31,7 +31,7 @@ import roboguice.RoboGuice;
 
 public class AmazaarApplication extends Application {
 
-    private static final Stage mode = Stage.PRODUCTION;
+    private static final Stage mode = Stage.DEVELOPMENT;
     private static AmazaarApplication mInstance;
     private static ExecutorService executorService = Executors.newFixedThreadPool(4);
     private static Activity m_currentActivity = null;

@@ -13,5 +13,6 @@ public enum TopBarUiEnum {
     HELP,
     ORDER_LIST,
     PROFILE_EDIT,
-    PRODUCT_DETAILS_EDIT
+    PRODUCT_DETAILS_EDIT,
+    HOME_DELIVERY_MAN,
 }

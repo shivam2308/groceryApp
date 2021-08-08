@@ -84,7 +84,7 @@ public class HomeCategoryWidget extends LinearLayout implements IView<HomeCatego
 
     private void inflateLayout() {
         inflate(getContext(), R.layout.home_category_layout, this);
-        mLayoutManager = new GridLayoutManager(getContext(), 2);
+        mLayoutManager = new GridLayoutManager(getContext(), 1);
         rvProductList.setLayoutManager(mLayoutManager);
 
         //tvAll.setOnClickListener(this);

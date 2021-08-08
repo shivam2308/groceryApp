@@ -76,7 +76,7 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
 //    }
 
     private void inflateLayout() {
-        inflate(getContext(), R.layout.order_list_layout, this);
+        //inflate(getContext(), R.layout.order_list_layout, this);
         //rlConfirmOreder.setOnClickListener(this);
 
     }

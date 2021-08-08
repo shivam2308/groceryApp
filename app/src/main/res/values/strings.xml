@@ -155,7 +155,7 @@
     <string name="Price">PRICE</string>
     <string name="select_offer">SELECT OFFER</string>
     <string name="deactive_account">Deactivate Account</string>
-    <string name="my_cart_4">My Cart (4)</string>
+    <string name="my_cart_4">My Cart</string>
     <string name="pincode_cart">Pincode</string>
     <string name="temp_380005">380015</string>
     <string name="payment">Payment</string>
@@ -219,6 +219,8 @@
     <string name="quantity_type">Quantity Type</string>
     <string name="availability_status">Availability Status</string>
     <string name="no_item_available">No Item Available</string>
+    <string name="upload">Upload</string>
+    <string name="choose">Choose</string>
 
 
 </resources>

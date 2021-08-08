@@ -78,6 +78,9 @@ public class TopBarWidget extends LinearLayout implements IView<TopBarView>, Vie
                     case HOME:
                         setUpToolbar(getContext().getString(R.string.nav_menu_home), true, true, false, true);
                         break;
+                    case HOME_DELIVERY_MAN:
+                        setUpToolbar(getContext().getString(R.string.nav_menu_home), true, true, false, false);
+                        break;
                     case MENU:
                         setUpToolbar("Menu", false, true, false, false);
                         break;

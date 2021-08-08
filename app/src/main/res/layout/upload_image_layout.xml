@@ -1,34 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="2">
 
     <LinearLayout
-        android:id="@+id/layout_button"
-        android:orientation="horizontal"
-        android:layout_alignParentTop="true"
-        android:weightSum="2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <com.amazaar.CustomeComponent.CustomButton
-            android:id="@+id/btnChoose"
-            android:text="Choose"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
 
-        <com.amazaar.CustomeComponent.CustomButton
-            android:id="@+id/btnUpload"
-            android:text="Upload"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/row_choose"
+                android:layout_width="@dimen/_115sdp"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_weight="1"
+                android:background="@drawable/calcelorder_drawable"
+                android:padding="@dimen/_5sdp"
+                android:visibility="visible">
+
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:id="@+id/btnChoose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/choose"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:font_name="NunitoExtraBold.ttf" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/row_upload"
+                android:layout_width="@dimen/_115sdp"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_weight="1"
+                android:background="@drawable/calcelorder_drawable"
+                android:padding="@dimen/_5sdp"
+                android:visibility="visible">
+
+
+                <com.amazaar.CustomeComponent.CustomTextView
+                    android:id="@+id/btnUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/upload"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:font_name="NunitoExtraBold.ttf" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/uploadImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/uploadImg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
 </RelativeLayout>

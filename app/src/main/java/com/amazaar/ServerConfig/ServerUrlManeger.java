@@ -18,11 +18,9 @@ public class ServerUrlManeger {
                     e.printStackTrace();
                 }
             case DEVELOPMENT:
-               // return "http://amazaardevel-env.us-east-1.elasticbeanstalk.com/";
                 return "http://amazaar-development.tech/";
             case PRODUCTION:
                 return "https://www.amazaar.in/";
-                //return "http://192.168.0.105:8000/";
             default:
                 try {
                     throw new Exception("No Url Found Or Mode is NOt defined Correctly");
