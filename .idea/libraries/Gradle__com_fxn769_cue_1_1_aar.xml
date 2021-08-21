@@ -4,9 +4,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20aaaaf38d3599c1d0b7049c3a4d00fd/jetified-cue-1.1/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20aaaaf38d3599c1d0b7049c3a4d00fd/jetified-cue-1.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20aaaaf38d3599c1d0b7049c3a4d00fd/jetified-cue-1.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/10e0dbaf6e49572cad46e1191329e275/transformed/jetified-cue-1.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/10e0dbaf6e49572cad46e1191329e275/transformed/jetified-cue-1.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/10e0dbaf6e49572cad46e1191329e275/transformed/jetified-cue-1.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3b5b2044c060ec4c3d7729106134281e/transformed/jetified-cue-1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3b5b2044c060ec4c3d7729106134281e/transformed/jetified-cue-1.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3b5b2044c060ec4c3d7729106134281e/transformed/jetified-cue-1.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fxn769/cue/1.1/f33b534c382cc4933b4632c1532372dd9a5fa5a4/cue-1.1-javadoc.jar!/" />

@@ -4,9 +4,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/190c01fb35642644c9e1899aa1db2d18/jetified-progress-activity-2.0.5/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/190c01fb35642644c9e1899aa1db2d18/jetified-progress-activity-2.0.5/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/190c01fb35642644c9e1899aa1db2d18/jetified-progress-activity-2.0.5/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a638b4db543b9e2adbb3a7d7720224f2/transformed/jetified-progress-activity-2.0.5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a638b4db543b9e2adbb3a7d7720224f2/transformed/jetified-progress-activity-2.0.5/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a638b4db543b9e2adbb3a7d7720224f2/transformed/jetified-progress-activity-2.0.5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e765e10ba8c6d367a912766b137feef5/transformed/jetified-progress-activity-2.0.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e765e10ba8c6d367a912766b137feef5/transformed/jetified-progress-activity-2.0.5/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e765e10ba8c6d367a912766b137feef5/transformed/jetified-progress-activity-2.0.5/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

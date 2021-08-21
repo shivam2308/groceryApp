@@ -67,7 +67,7 @@ public class OutForDeliveryCF extends AControlFlow<OutForDeliveryCF.State, Void,
         @Override
         public void registerCalls() {
             try {
-                m_CloseAndOutForDeliveryClientService.get(m_req+ "#" + BuyPbOuterClass.DeliveryStatusEnum.OUT_FOR_DELIVERY.name());
+                m_CloseAndOutForDeliveryClientService.get(m_req+ "$" + BuyPbOuterClass.DeliveryStatusEnum.OUT_FOR_DELIVERY.name());
             } catch (ExecutionException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {

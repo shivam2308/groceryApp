@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.amazaar.Adapters.OrderListAdapter;
 import com.amazaar.CommonCode.TempListData;
@@ -40,6 +41,7 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
     private List<OrderListModel> orderListModelList;
     private MenuItem item;
     private CustomTextView empty_order_list;
+    private SwipeRefreshLayout pullToRefresh;
 
     public OrderListWidget(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -50,6 +52,7 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
         inflate(context, R.layout.order_list_layout, this);
         rvProductList = (RecyclerView) findViewById(R.id.fragment_orderlist_rvOrder);
         empty_order_list = (CustomTextView) findViewById(R.id.empty_order_list);
+        pullToRefresh = findViewById(R.id.refreshOrderlist);
         mLayoutManager = new GridLayoutManager(getContext(), 1);
         rvProductList.setLayoutManager(mLayoutManager);
 
@@ -82,6 +85,20 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
     }
 
     public void initWidget() {
+       /* rvProductList.addOnScrollListener(new RecyclerView.OnScrollListener(){
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                int topRowVerticalPosition =
+                        (recyclerView == null || recyclerView.getChildCount() == 0) ? 0 : recyclerView.getChildAt(0).getTop();
+                pullToRefresh.setEnabled(topRowVerticalPosition >= 0);
+
+            }
+
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+        });*/
         getView().getIsaAvaliable().setListener(new VariableValueChange.ChangeListener(){
             @Override
             public void onChange() {
@@ -104,7 +121,14 @@ public class OrderListWidget extends LinearLayout implements IView<OrderListView
                 Utils.addNextFragment(getContext(),fragmentProductDetails, getView().getMainFragment(), false);
            }
         });
-
+        pullToRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                orderListAdapter.clear();
+                getListData();
+                pullToRefresh.setRefreshing(false);
+            }
+        });
     }
 
     private void injectMembers() {

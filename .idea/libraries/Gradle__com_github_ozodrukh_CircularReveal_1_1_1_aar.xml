@@ -5,9 +5,10 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6f321a95ba3b8a86248f8b4891fe70ba/jetified-CircularReveal-1.1.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6f321a95ba3b8a86248f8b4891fe70ba/jetified-CircularReveal-1.1.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/542408848344f2eeed71097c16b82ef3/jetified-CircularReveal-1.1.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9a60549a17744c4f84fc0570e7463f0a/transformed/jetified-CircularReveal-1.1.1/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9a60549a17744c4f84fc0570e7463f0a/transformed/jetified-CircularReveal-1.1.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/9a60549a17744c4f84fc0570e7463f0a/transformed/jetified-CircularReveal-1.1.1/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1e9ad1b7dc97b14e2b8686cb19bf0a27/transformed/jetified-CircularReveal-1.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1e9ad1b7dc97b14e2b8686cb19bf0a27/transformed/jetified-CircularReveal-1.1.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1e9ad1b7dc97b14e2b8686cb19bf0a27/transformed/jetified-CircularReveal-1.1.1/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

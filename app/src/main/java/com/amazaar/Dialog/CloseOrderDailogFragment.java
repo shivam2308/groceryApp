@@ -46,6 +46,6 @@ public class CloseOrderDailogFragment extends DialogFragment {
     }
 
     private String getOrderId() {
-        return getArguments().get("parentOrderId").toString() + "#" + BuyPbOuterClass.DeliveryStatusEnum.CLOSED.name();
+        return getArguments().get("parentOrderId").toString() + "$" + BuyPbOuterClass.DeliveryStatusEnum.CLOSED.name();
     }
 }

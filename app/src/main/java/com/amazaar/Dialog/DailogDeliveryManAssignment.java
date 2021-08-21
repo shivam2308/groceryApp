@@ -131,7 +131,7 @@ public class DailogDeliveryManAssignment extends DialogFragment implements View.
     }
 
     private String getRequestid() {
-        return m_parentOrderid + "#" + m_id;
+        return m_parentOrderid + "$" + m_id;
     }
 
     private void getDeliveryMan() {

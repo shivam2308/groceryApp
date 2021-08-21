@@ -5,9 +5,10 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3cecb17c904cf8641da9fe17a241487c/jetified-firebase-auth-20.0.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3cecb17c904cf8641da9fe17a241487c/jetified-firebase-auth-20.0.2/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/04ce47181fdc768403046a349a6f3c55/jetified-firebase-auth-20.0.2/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/7e6a07e134047c70a48c5591f7a048d7/transformed/jetified-firebase-auth-20.0.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7e6a07e134047c70a48c5591f7a048d7/transformed/jetified-firebase-auth-20.0.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7e6a07e134047c70a48c5591f7a048d7/transformed/jetified-firebase-auth-20.0.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/45b32df542b44b31072a15a44b8aa102/transformed/jetified-firebase-auth-20.0.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/45b32df542b44b31072a15a44b8aa102/transformed/jetified-firebase-auth-20.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/45b32df542b44b31072a15a44b8aa102/transformed/jetified-firebase-auth-20.0.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-auth/20.0.2/f85db635f21ceca05cfc8134c46ba3ed4150b224/firebase-auth-20.0.2-javadoc.jar!/" />

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.amazaar.Comman.SlidingLinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.amazaar.Comman.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_orderlist_llContainer"
     android:layout_width="match_parent"
@@ -8,6 +7,7 @@
     android:background="@color/white"
     android:orientation="vertical"
     android:padding="@dimen/_5sdp">
+
 
     <com.amazaar.CustomeComponent.CustomTextView
         android:id="@+id/empty_order_list"
@@ -21,13 +21,19 @@
         android:textStyle="bold"
         app:font_name="NunitoRegular.ttf" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fragment_orderlist_rvOrder"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshOrderlist"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white">
+        android:layout_height="wrap_content">
 
-    </androidx.recyclerview.widget.RecyclerView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_orderlist_rvOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
 
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </com.amazaar.Comman.SlidingLinearLayout>

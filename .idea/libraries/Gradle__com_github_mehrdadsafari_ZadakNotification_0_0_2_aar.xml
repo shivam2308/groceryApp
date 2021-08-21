@@ -4,9 +4,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e3add482a40b753f37f7823b2d255b03/jetified-ZadakNotification-0.0.2/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e3add482a40b753f37f7823b2d255b03/jetified-ZadakNotification-0.0.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e3add482a40b753f37f7823b2d255b03/jetified-ZadakNotification-0.0.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d086ed2094e5bddb4cfde3782578a103/transformed/jetified-ZadakNotification-0.0.2/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d086ed2094e5bddb4cfde3782578a103/transformed/jetified-ZadakNotification-0.0.2/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d086ed2094e5bddb4cfde3782578a103/transformed/jetified-ZadakNotification-0.0.2/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/293625ca211f413480268168ffaba1d5/transformed/jetified-ZadakNotification-0.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/293625ca211f413480268168ffaba1d5/transformed/jetified-ZadakNotification-0.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/293625ca211f413480268168ffaba1d5/transformed/jetified-ZadakNotification-0.0.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

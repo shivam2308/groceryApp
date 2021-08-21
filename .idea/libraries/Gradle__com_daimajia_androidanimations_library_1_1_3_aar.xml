@@ -5,9 +5,10 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/29fc82461ded369e30ce793512550bf9/jetified-library-1.1.3/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/29fc82461ded369e30ce793512550bf9/jetified-library-1.1.3/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/db598feb47c7c5e97d298bc4835d930e/jetified-library-1.1.3/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/583ab250c634d1f6a2a76bae190b2c75/transformed/jetified-library-1.1.3/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/583ab250c634d1f6a2a76bae190b2c75/transformed/jetified-library-1.1.3/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/583ab250c634d1f6a2a76bae190b2c75/transformed/jetified-library-1.1.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3e552a365635ce9a167fbfabb22a2570/transformed/jetified-library-1.1.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3e552a365635ce9a167fbfabb22a2570/transformed/jetified-library-1.1.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3e552a365635ce9a167fbfabb22a2570/transformed/jetified-library-1.1.3/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.daimajia.androidanimations/library/1.1.3/857e01305f6e9feb5372368cf9877c7156efb265/library-1.1.3-javadoc.jar!/" />

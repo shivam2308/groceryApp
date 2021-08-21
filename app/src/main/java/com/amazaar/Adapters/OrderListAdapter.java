@@ -160,4 +160,10 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             }
     }
 
+    public void clear() {
+        orderListModels.clear();
+        notifyDataSetChanged();
+    }
+
+
 }

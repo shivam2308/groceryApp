@@ -4,9 +4,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/093dd8f13d14fd6f8baa047ac863e0db/jetified-Android-SpinKit-1.4.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/093dd8f13d14fd6f8baa047ac863e0db/jetified-Android-SpinKit-1.4.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/093dd8f13d14fd6f8baa047ac863e0db/jetified-Android-SpinKit-1.4.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/5d9de87ba5881c9c126b96c1ae21c57b/transformed/jetified-Android-SpinKit-1.4.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5d9de87ba5881c9c126b96c1ae21c57b/transformed/jetified-Android-SpinKit-1.4.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5d9de87ba5881c9c126b96c1ae21c57b/transformed/jetified-Android-SpinKit-1.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ece08297c9af02a7c8c543a5e23d410b/transformed/jetified-Android-SpinKit-1.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ece08297c9af02a7c8c543a5e23d410b/transformed/jetified-Android-SpinKit-1.4.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/ece08297c9af02a7c8c543a5e23d410b/transformed/jetified-Android-SpinKit-1.4.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ybq/Android-SpinKit/1.4.0/65342739d3408aec3f1249f21cffa52400ac3508/Android-SpinKit-1.4.0-javadoc.jar!/" />

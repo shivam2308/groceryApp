@@ -4,9 +4,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/692a966920bd31b069c58f48e33b3693/jetified-readmoretextview-2.1.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/692a966920bd31b069c58f48e33b3693/jetified-readmoretextview-2.1.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/692a966920bd31b069c58f48e33b3693/jetified-readmoretextview-2.1.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1c93fcc4f09144135403019a94ebc129/transformed/jetified-readmoretextview-2.1.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1c93fcc4f09144135403019a94ebc129/transformed/jetified-readmoretextview-2.1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1c93fcc4f09144135403019a94ebc129/transformed/jetified-readmoretextview-2.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/7fc15456d8728a0948fec3d389c07229/transformed/jetified-readmoretextview-2.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7fc15456d8728a0948fec3d389c07229/transformed/jetified-readmoretextview-2.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7fc15456d8728a0948fec3d389c07229/transformed/jetified-readmoretextview-2.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.borjabravo/readmoretextview/2.1.0/86c0dc811c02cb645bc1e564212ad38809fee700/readmoretextview-2.1.0-javadoc.jar!/" />
